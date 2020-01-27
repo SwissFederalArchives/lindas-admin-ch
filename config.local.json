@@ -1,0 +1,5 @@
+{
+  "baseConfig": "cwd:config.json",
+  "datasetBaseUrl": "http://lindas.admin.ch/"
+}
+

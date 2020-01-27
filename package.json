@@ -1,0 +1,15 @@
+{
+  "name": "lindas.admin.ch",
+  "version": "0.9.0",
+  "description": "Trifid deployment for lindas.admin.ch",
+  "main": "index.js",
+  "dependencies": {
+    "swiss-styleguide": "^3.0.0",
+    "trifid": "^2.3.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "trifid --config config.json",
+    "start-local": "DEBUG=trifid:* trifid --config config.local.json"
+  }
+}

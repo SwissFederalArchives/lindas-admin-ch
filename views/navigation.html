@@ -1,0 +1,146 @@
+  <header>
+   <nav class="navbar treecrumb pull-left nav-open"></nav>
+   <div class="clearfix">
+    <section class="nav-services clearfix">
+    ${(typeof i18n == 'undefined')?'':`
+      <h2 class="sr-only">${t('admin:Languages')}</h2>
+      <nav class="nav-lang">
+        <ul>
+        ${
+          (i18n.options.menuLng || i18n.options.preload || ["en"]).map(
+            function (lng) {
+              let act = (language===lng)?' class="active"':'';
+              return ` <li>
+                <a href="?${i18n.options.detection.lookupQuerystring}=${lng}" lang="lng" title="{t("admin:"+lng+act?'_active':'')}" aria-label="{t("admin:"+lng+act)}"${act}>${lng.toUpperCase()}</a>
+              </li>`;
+            }
+          ).join("")
+        }
+        </ul>
+      </nav>
+      <nav class="nav-service">
+        <ul class="download-link">
+          <li>
+            <a href="/">${t('admin:Homepage')}</a>
+          </li>
+        </ul>
+      </nav>
+    </section>
+`}
+   </div>
+
+   <div class="clearfix">
+    <a href="/#" class="brand hidden-xs" title="back to home">
+      <img src="/img/logo-CH.svg" onerror="this.onerror=null; this.src='/img/logo-CH.png'" alt="back to home" />
+      <h1>LINDAS - Linked Data Service</h1>
+    </a>
+    <!--<form class="form-horizontal form-search pull-right" role="form" action="/search/municipalities/">
+      <h2 class="sr-only">${t('admin:Search')}</h2>
+      <label for="search-field" class="sr-only">Search:</label>
+      <input id="search-field" name="q" class="form-control search-field" type="text" placeholder="${t('admin:Search')}">
+    </form>-->
+   </div>
+  </header>
+
+  <nav class="nav-main yamm navbar" id="main-navigation" role="navigation">
+  <section class="nav-mobile nav-open">
+    <div class="table-row nav-open">
+      <div class="nav-mobile-header">
+        <div class="table-row">
+          <span class="nav-mobile-logo">
+            <img src="/img/swiss.svg" onerror="this.onerror=null; this.src='/img/swiss.png'" alt="Confederatio Helvetica">
+          </span>
+          <h1><a href="/#">data.admin.ch - Linked Data Pilot</a></h1>
+        </div>
+      </div>
+      ${(typeof config.content.navigation == 'undefined')?'':`
+      <div class="table-cell dropdown">
+        <a href="#" class="nav-mobile-menu dropdown-toggle" data-toggle="dropdown"><span class="icon icon--menu"></span></a>
+        <div class="drilldown dropdown-menu" role="menu">
+          <div class="drilldown-container">
+            <nav class="nav-page-list">
+              <ul>
+               ${
+                  (config.content.navigation || []).map(
+                    function (entry) {
+                      return entry.navigation ? `
+                <li class="list-sub">
+                  <a href="#">${t(`navigation:${entry.title}`)}</a>
+                  <nav class="drilldown-sub">
+                    <a href="#" class="icon icon--before icon--less drilldown-back">${t('admin:Back')}</a>
+                    <ul>
+                    ${entry.navigation.map(function (subentry) {return `
+                        <li><a href="${subentry.link}">${t(`navigationSub:${subentry.title}`)}</a></li>`
+                    }).join("")}
+                    </ul>
+                  </nav>
+                </li>
+                      `:`
+               <li>
+                 <a href="${entry.link}"${(url.pathname===entry.link)?' class="active"':''}>${t(`navigation:${entry.title}`)}</a>
+               </li>`
+
+                    }
+                  ).join("")
+                }
+              </ul>
+              <a href="#" class="yamm-close-bottom"><span class="icon icon--top" aria-hidden="true"></span></a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    `}
+     <div class="table-cell dropdown">
+       <a href="#" class="nav-mobile-menu dropdown-toggle" data-toggle="dropdown"><span class="icon icon--search"></span></a>
+       <div class="dropdown-menu" role="menu">
+         <form class="form" role="form" action="/search/municipalities/">
+           <h2 class="sr-only">${t('admin:Search')}</h2>
+           <label for="search-field" class="sr-only">Search:</label>
+           <input name="q" class="form-control" type="text" placeholder="${t('admin:Search')}">
+           <span class="icon icon--search"></span>
+         </form>
+       </div>
+     </div>
+   </div>
+  </section>
+
+
+  <ul class="nav navbar-nav">
+   ${
+      (config.content.navigation || []).map(
+        function (entry) {
+          return entry.navigation ? `
+    <li class="dropdown yamm-fw${entry.navigation.find( function (subentry) { return url.pathname===subentry.link } ) ? ' current' : ''}">
+      <a href="#" class="dropdown-toggle" data-toggle="dropdown">${t(`navigation:${entry.title}`)}</a>
+      <ul class="dropdown-menu" role="menu">
+        <div class="yamm-content container-fluid">
+          <div class="row">
+            <div class="col-sm-12"><a href="#" class="yamm-close icon icon--after icon--close pull-right" role="menuitem" tabindex="-1">${t('admin:Close')}</a></div>
+          </div>
+          <div class="row">
+          ${entry.navigation.map(function (subentry) {return `
+              <li class="col-sm-3">
+                <div class="yamm-content container-fluid">
+                  <h4><a href="${subentry.link}">${t(`navigationSub:${subentry.title}`)}</a></h4>
+                  <ul role="menu">
+                  </ul>
+                </div>
+              </li>`
+          }).join("")}
+              <div class="clearfix"></div>
+          </div>
+          <a href="#" class="yamm-close-bottom" role="menuitem" tabindex="-1"><span class="icon icon--top"></span></a>
+        </div>
+      </ul>
+    </li>
+      `:`
+    <li class="dropdown yamm-fw${(url.pathname===entry.link)?' current':''}">
+      <a href="${entry.link}">${t(`navigation:${entry.title}`)}</a>
+    </li>`
+        }
+      ).join("")
+    }
+
+  </ul>
+
+  </nav>

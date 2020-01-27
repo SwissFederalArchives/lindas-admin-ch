@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+ <head>
+
+${include('cwd:views/header.html')}
+
+ </head>
+ <body>
+ <div class="container container-main">
+
+${include('cwd:views/navigation.html')}
+
+  <div class="container-fluid">
+   <div class="col-sm-12">
+    <div class="row">
+${m(`
+# About Lindas
+
+Swiss authorities can use LINDAS Linked Data Service to [make their data available](/publish) as „Linked Data“. Developers can access the data via the [Query data](/sparql) section.
+
+**What is Linked Data?**
+
+Linked Data is a technology that allows data on a wide variety of topics and from a wide range of sources to be easily connected. It is part of the Semantic Web. The Semantic University offers [tutorials](http://www.cambridgesemantics.com/semantic-university/getting-started-semantics) on the main principles of Linked Data, RDF and SPARQL.
+
+**Background to LINDAS**
+
+The LINDAS service is a prototype. It was developed in 2015 by the State Secretariat for Economic Affairs SECO and has been operated by the Federal Archives since the start of 2017\. In parallel, the Federal Archives are also conducting a Linked Data project designed to develop the service further. Further information can be found on the [eGovernment Switzerland website](https://www.egovernment.ch/en/umsetzung/e-government-schweiz-2008-2015/lindas/).
+
+If you have any questions about LINDAS, please feel free to contact us at [opendata@bar.admin.ch](mailto:opendata@bar.admin.ch)
+
+This short film explains how LINDAS works:
+
+<figure style="display: block; margin-left: auto; margin-right: auto; width: 850px;"><iframe width="821" height="411" src="https://www.youtube.com/embed/FFrK0ZyYAl4" frameborder="0" allowfullscreen=""></iframe></figure>
+`)}
+    </div>
+   </div>
+  </div>
+
+${include('cwd:views/footer.html')}
+ </div>
+
+ <script src="/js/vendors.min.js"></script>
+ <script src="/js/main.min.js"></script>
+${include('cwd:views/powered.html')}
+ </body>
+</html>

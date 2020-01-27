@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: trifid
+spec:
+  template:
+    spec:
+      securityContext:
+        runAsUser: 65534
+        runAsGroup: 65534
+      containers:
+      - name: trifid
+        image: trifid
+        imagePullPolicy: Always
+
+        ports:
+        - name: http
+          containerPort: 8080
+          protocol: TCP
+
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: http
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: http

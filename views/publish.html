@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+ <head>
+
+${include('cwd:views/header.html')}
+
+ </head>
+ <body>
+ <div class="container container-main">
+
+${include('cwd:views/navigation.html')}
+
+  <div class="container-fluid">
+   <div class="col-sm-12">
+    <div class="row">
+${m(`
+# Publish data
+
+Data from the Confederation, cantons, communes and other organisations with a mandate from the state can be published on LINDAS. Because LINDAS is still a prototype, the Federal Archives are currently only publishing selected datasets on the platform.
+
+Register at [opendata@bar.admin.ch](mailto:opendata@bar.admin.ch) if you are interested in publishing data on LINDAS.
+`)}
+    </div>
+   </div>
+  </div>
+
+${include('cwd:views/footer.html')}
+ </div>
+
+ <script src="/js/vendors.min.js"></script>
+ <script src="/js/main.min.js"></script>
+${include('cwd:views/powered.html')}
+ </body>
+</html>

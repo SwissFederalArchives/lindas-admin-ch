@@ -1,0 +1,70 @@
+{
+  "baseConfig": "trifid:config-sparql.json",
+  "sparqlEndpointUrl": "https://stardog.cluster.ldbar.ch/lindas/query",
+  "sparqlEndpointAuthentication": {
+    "user": "public",
+    "password": "public"
+  },
+  "sparqlProxy": {
+    "default": {
+      "options": {
+        "queryOperation": "postQueryUrlencoded"
+      }
+    }
+  },
+  "staticViews": {
+    "/": "cwd:views/home.html",
+    "/sparql/": "cwd:views/yasgui.html",
+    "/publish/": "cwd:views/publish.html",
+    "/contact/": "cwd:views/contact.html"
+  },
+  "staticFiles": {
+    "dataadminFiles": {
+      "path": "/",
+      "folder": "cwd:public"
+    },
+    "styleFiles": {
+      "path": "/",
+      "folder": "cwd:node_modules/swiss-styleguide/build"
+    },
+    "zackFiles": {
+      "path": "/zack-search/",
+      "folder":  "cwd:node_modules/zack-search/dist"
+    }
+  },
+  "handler": {
+    "root": {
+      "options": {
+        "resourceExistsQuery": "ASK { GRAPH ?g { <${iri}> ?p ?o }}",
+        "resourceGraphQuery": "DESCRIBE <${iri}>"
+      }
+    }
+  },
+  "renderer": {
+    "root": {
+      "template": "cwd:views/index.html",
+      "templateError": "cwd:views/error.html"
+    }
+  },
+  "yasgui": {
+    "default": {
+        "template": "cwd:views/yasgui.html"
+    }
+  },
+  "content": {
+    "navigation": [
+      {
+        "title": "About LINDAS",
+        "link": "/"
+      },
+      {
+        "title": "Query Data",
+        "link": "/sparql/"
+      },
+      {
+        "title": "Publish Data",
+        "link": "/publish/"
+      }
+    ]
+  }
+}
