@@ -1,9 +1,9 @@
 {
   "baseConfig": "trifid:config-sparql.json",
-  "sparqlEndpointUrl": "https://stardog.cluster.ldbar.ch/lindas/query",
+  "sparqlEndpointUrl": "env:SPARQL_ENDPOINT_URL",
   "sparqlEndpointAuthentication": {
-    "user": "public",
-    "password": "public"
+    "user": "env:SPARQL_USERNAME",
+    "password": "env:SPARQL_PASSWORD"
   },
   "sparqlProxy": {
     "default": {
