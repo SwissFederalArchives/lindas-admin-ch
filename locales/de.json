@@ -1,0 +1,17 @@
+{
+	"meta:de_active": "Deutsch ausgewählt",
+	"meta:fr": "Französisch",
+	"meta:it": "Italienisch",
+	"meta:en": "Englisch",
+	"meta:Contact": "Kontakt",
+	"meta:SiteTitle": "LINDAS - Linked Data Service",
+	"meta:Search": "Suche",
+	"navigation:About LINDAS": "navigation:About LINDAS",
+	"navigation:Query Data": "navigation:Query Data",
+	"navigation:Publish Data": "navigation:Publish Data",
+	"meta:Organisation": "Schweizerisches Bundesarchiv BAR",
+	"meta:Disclaimer": "Rechtliches",
+	"meta:Back to top": "Nach oben",
+	"meta:Powered by": "Realisiert mit",
+	"meta:DisclaimerLink": "//www.admin.ch/gov/de/start/rechtliches.html"
+}

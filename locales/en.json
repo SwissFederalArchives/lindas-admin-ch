@@ -1,0 +1,16 @@
+{
+	"meta:de": "German",
+	"meta:en_active": "English selected",
+	"meta:fr": "French",
+	"meta:it": "Italian",
+	"meta:Contact": "Contact",
+	"meta:SiteTitle": "LINDAS - Linked Data Service",
+	"meta:Search": "Search",
+	"navigation:About LINDAS": "About LINDAS",
+	"navigation:Query Data": "Query Data",
+	"navigation:Publish Data": "Publish Data",
+	"meta:Organisation": "Swiss Federal Archives SFA",
+	"meta:Disclaimer": "Legal framework",
+	"meta:Powered by": "Powered by",
+	"meta:DisclaimerLink": "//www.admin.ch/gov/en/start/terms-and-conditions.html"
+}

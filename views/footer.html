@@ -7,11 +7,11 @@ ${get('moduleFoot') || '<h3>&nbsp;</h3>'}
    </div>
 
    <address>
-    <span class="hidden-xs pull-left">©2014-2020 Swiss Federal Archives</span>
+    <span class="hidden-xs pull-left">©2014-${new Date().getYear()+1900} ${t('meta:Organisation')}</span>
     <nav class="pull-right">
      <ul>
-       <li><a href="//www.admin.ch/gov/en/start/terms-and-conditions.html">${t('admin:Disclaimer')}</a></li>
-       <li><a href="/contact/">${t('admin:Contact')}</a></li>
+       <li><a href="${t('meta:DisclaimerLink')}">${t('meta:Disclaimer')}</a></li>
+       <li><a href="/contact/">${t('meta:Contact')}</a></li>
      </ul>
     </nav>
    </address>

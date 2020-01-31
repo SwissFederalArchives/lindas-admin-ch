@@ -40,6 +40,9 @@
       }
     }
   },
+  "i18n": {
+    "locales": ["de", "fr", "it", "en"]
+  },
   "renderer": {
     "root": {
       "template": "cwd:views/index.html",
@@ -66,5 +69,11 @@
         "link": "/publish/"
       }
     ]
+  },
+  "plugins": {
+    "i18n": {
+      "priority": 5,
+      "module": "./lib/i18n"
+    }
   }
 }

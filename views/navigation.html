@@ -2,26 +2,25 @@
    <nav class="navbar treecrumb pull-left nav-open"></nav>
    <div class="clearfix">
     <section class="nav-services clearfix">
-    ${(typeof i18n == 'undefined')?'':`
-      <h2 class="sr-only">${t('admin:Languages')}</h2>
+    ${(typeof getLocales === 'undefined') ? '' : `
+      <h2 class="sr-only">${t('meta:SiteTitle')}</h2>
       <nav class="nav-lang">
         <ul>
         ${
-          (i18n.options.menuLng || i18n.options.preload || ["en"]).map(
-            function (lng) {
-              let act = (language===lng)?' class="active"':'';
-              return ` <li>
-                <a href="?${i18n.options.detection.lookupQuerystring}=${lng}" lang="lng" title="{t("admin:"+lng+act?'_active':'')}" aria-label="{t("admin:"+lng+act)}"${act}>${lng.toUpperCase()}</a>
-              </li>`;
-            }
-          ).join("")
+          getLocales().map(lang => {
+            const act = (locale === lang) 
+            const act_class = act ? ' class="active"' : ''
+            return ` <li>
+              <a${act_class} href="?lang=${lang}" lang="${lang}" title="${t("meta:"+lang+(act?'_active':''))}" aria-label="${t("meta:"+lang+(act?'_active':''))}">${lang.toUpperCase()}</a>
+            </li>`;
+          }).join('')
         }
         </ul>
       </nav>
       <nav class="nav-service">
         <ul class="download-link">
           <li>
-            <a href="/">${t('admin:Homepage')}</a>
+            <a href="/contact/">${t('meta:Contact')}</a>
           </li>
         </ul>
       </nav>
@@ -32,12 +31,12 @@
    <div class="clearfix">
     <a href="/#" class="brand hidden-xs" title="back to home">
       <img src="/img/logo-CH.svg" onerror="this.onerror=null; this.src='/img/logo-CH.png'" alt="back to home" />
-      <h1>LINDAS - Linked Data Service</h1>
+      <h1>${t('meta:SiteTitle')}</h1>
     </a>
     <!--<form class="form-horizontal form-search pull-right" role="form" action="/search/municipalities/">
-      <h2 class="sr-only">${t('admin:Search')}</h2>
+      <h2 class="sr-only">${t('meta:Search')}</h2>
       <label for="search-field" class="sr-only">Search:</label>
-      <input id="search-field" name="q" class="form-control search-field" type="text" placeholder="${t('admin:Search')}">
+      <input id="search-field" name="q" class="form-control search-field" type="text" placeholder="${t('meta:Search')}">
     </form>-->
    </div>
   </header>
@@ -50,7 +49,7 @@
           <span class="nav-mobile-logo">
             <img src="/img/swiss.svg" onerror="this.onerror=null; this.src='/img/swiss.png'" alt="Confederatio Helvetica">
           </span>
-          <h1><a href="/#">data.admin.ch - Linked Data Pilot</a></h1>
+          <h1><a href="/#">${t('meta:SiteTitle')}</a></h1>
         </div>
       </div>
       ${(typeof config.content.navigation == 'undefined')?'':`
@@ -67,7 +66,7 @@
                 <li class="list-sub">
                   <a href="#">${t(`navigation:${entry.title}`)}</a>
                   <nav class="drilldown-sub">
-                    <a href="#" class="icon icon--before icon--less drilldown-back">${t('admin:Back')}</a>
+                    <a href="#" class="icon icon--before icon--less drilldown-back">${t('meta:Back')}</a>
                     <ul>
                     ${entry.navigation.map(function (subentry) {return `
                         <li><a href="${subentry.link}">${t(`navigationSub:${subentry.title}`)}</a></li>`
@@ -90,18 +89,19 @@
         </div>
       </div>
     `}
-     <div class="table-cell dropdown">
+<!--     <div class="table-cell dropdown">
        <a href="#" class="nav-mobile-menu dropdown-toggle" data-toggle="dropdown"><span class="icon icon--search"></span></a>
        <div class="dropdown-menu" role="menu">
          <form class="form" role="form" action="/search/municipalities/">
-           <h2 class="sr-only">${t('admin:Search')}</h2>
+           <h2 class="sr-only">${t('meta:Search')}</h2>
            <label for="search-field" class="sr-only">Search:</label>
-           <input name="q" class="form-control" type="text" placeholder="${t('admin:Search')}">
+           <input name="q" class="form-control" type="text" placeholder="${t('meta:Search')}">
            <span class="icon icon--search"></span>
          </form>
        </div>
      </div>
    </div>
+-->
   </section>
 
 
@@ -115,7 +115,7 @@
       <ul class="dropdown-menu" role="menu">
         <div class="yamm-content container-fluid">
           <div class="row">
-            <div class="col-sm-12"><a href="#" class="yamm-close icon icon--after icon--close pull-right" role="menuitem" tabindex="-1">${t('admin:Close')}</a></div>
+            <div class="col-sm-12"><a href="#" class="yamm-close icon icon--after icon--close pull-right" role="menuitem" tabindex="-1">${t('meta:Close')}</a></div>
           </div>
           <div class="row">
           ${entry.navigation.map(function (subentry) {return `

@@ -1,0 +1,18 @@
+{
+	"meta:de": "allemand",
+	"meta:fr_active": "français selected",
+	"meta:it": "italien",
+	"meta:en": "anglais",
+	"meta:Contact": "Contact",
+	"meta:Homepage": "Page d'accueil",
+	"meta:SiteTitle": "LINDAS - Linked Data Service",
+	"meta:Search": "Chercher",
+	"navigation:About LINDAS": "navigation:About LINDAS",
+	"navigation:Query Data": "navigation:Query Data",
+	"navigation:Publish Data": "navigation:Publish Data",
+	"meta:Organisation": "Archives fédérals suisses AFS",
+	"meta:Disclaimer": "Informations juridiques",
+	"meta:Back to top": "vers en haut",
+	"meta:Powered by": "réalisé avec",
+	"meta:DisclaimerLink": "//www.admin.ch/gov/fr/accueil/conditions-utilisation.html"
+}
