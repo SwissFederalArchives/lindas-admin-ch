@@ -13,22 +13,20 @@ ${include('cwd:views/navigation.html')}
   <div class="container-fluid">
    <div class="col-sm-12">
     <div class="row">
-${m(`
-# Contact
-`)}
+    <h1 id="contact">${t('meta:Contact')}</h1>
     <table class="table" style="margin-left:0;width:50%;">
      <tbody>
       <tr style="margin-left:0;">
-       <td style="margin-left:0;padding-left:0px;"><strong class="ng-binding">Responsible organization</strong></td>
-       <td><p class="ng-binding">Swiss Federal Archives</p>
-         <p class="ng-binding">Archivstrasse 24 </p>
-         <p class="ng-binding">3003 Bern</p>
+       <td style="margin-left:0;padding-left:0px;"><strong class="ng-binding">${t('Responsible organization')}</strong></td>
+       <td><p class="ng-binding">${t('meta:Organisation')}</p>
+         <p class="ng-binding">Archivstrasse 24</p>
+         <p class="ng-binding">3003 ${t('Bern')}</p>
        <p>Tel. +41 58 462 89 89</p>
        <p>Fax +41 58 462 78 23</p>
       </td></tr>
       <tr>
-       <td><strong class="ng-binding">Contact</strong></td>
-       <td><p><a href="mailto:opendata@bar.admin.ch">opendata@bar.admin.ch</a><br>
+       <td><strong class="ng-binding">${t('meta:Contact')}</strong></td>
+       <td><p><a href="mailto:support-lindas@bar.admin.ch">support-lindas@bar.admin.ch</a><br>
        </p></td>
       </tr>
       <tr>
@@ -39,7 +37,6 @@ ${m(`
       </tr>
      </tbody>
     </table>
-
     </div>
    </div>
   </div>

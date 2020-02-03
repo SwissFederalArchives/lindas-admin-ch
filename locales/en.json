@@ -3,6 +3,7 @@
 	"meta:en_active": "English selected",
 	"meta:fr": "French",
 	"meta:it": "Italian",
+	"meta:Homepage": "Homepage",
 	"meta:Contact": "Contact",
 	"meta:SiteTitle": "LINDAS - Linked Data Service",
 	"meta:Search": "Search",
@@ -12,5 +13,14 @@
 	"meta:Organisation": "Swiss Federal Archives SFA",
 	"meta:Disclaimer": "Legal framework",
 	"meta:Powered by": "Powered by",
-	"meta:DisclaimerLink": "//www.admin.ch/gov/en/start/terms-and-conditions.html"
+	"meta:DisclaimerLink": "//www.admin.ch/gov/en/start/terms-and-conditions.html",
+	"Responsible organization": "Responsible organization",
+	"Bern": "Bern",
+	"meta:AboutVideo": "https://www.youtube.com/embed/FFrK0ZyYAl4",
+	"about:LINDAS": "\n### LINDAS\n\nThe Federal Archives are conducting a Linked Data project designed to develop the linked data service LINDAS. By the end of 2020 LINDAS will provide a tool for data conversion and data integration, a triplestore (data storage) and a visualization tool. The visualization tool is being developed by the Federal Office for the Environment. Further information can be found on the [eGovernment Switzerland website](https://www.egovernment.ch/en/umsetzung/e-government-schweiz-2008-2015/lindas/).\n",
+	"about:Linked Data": "\n### What is Linked Data?\n\nLinked Data is a technology that allows data on a wide variety of topics and from a wide range of sources to be easily connected. It is part of the Semantic Web. The Semantic University offers [tutorials](http://www.cambridgesemantics.com/semantic-university/getting-started-semantics) on the main principles of Linked Data, RDF and SPARQL.\n",
+	"about:Questions": "\nIf you have any questions about LINDAS, please feel free to contact us at [support-lindas@bar.admin.ch](mailto:support-lindas@bar.admin.ch).\n",
+	"about:Intro": "Swiss authorities can use LINDAS Linked Data Service to [make their data available](/publish) as „Linked Data“. Developers can access the data via the [Query data](/sparql) section.",
+	"query:Intro": "\n# Query Data\nTo search in data from a specific dataset, use a SPARQL query. SPARQL is the acronym for a query language that can be used for data in RDF format. All data on LINDAS are available in this format. You can re-use them and combine them with other data.",
+	"publish:Intro": "\n# Publish data\n\nData from the Confederation, cantons, communes and other organisations with a mandate from the state can be published on LINDAS. Since LINDAS is still in project mode, the Federal Archives are currently only publishing selected datasets on the platform.\n\nRegister at [support-lindas@bar.admin.ch](mailto:support-lindas@bar.admin.ch) if you are interested in publishing data on LINDAS.\n"
 }

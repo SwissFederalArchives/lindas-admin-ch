@@ -10,31 +10,47 @@ ${include('cwd:views/header.html')}
 
 ${include('cwd:views/navigation.html')}
 
-  <div class="container-fluid">
-   <div class="col-sm-12">
+ <div class="container-fluid">
+  <div class="row">
+   <div class="col-sm-12" id="content">
+    <h1>${t('navigation:About LINDAS')}</h1>
+
     <div class="row">
-${m(`
-# About Lindas
+     <div class="col-sm-6 col-md-5">
+      ${m(t('about:LINDAS'))}
+     </div>
+     <div class="col-sm-6 col-md-4">
+      ${m(t('about:Linked Data'))}
+     </div>
 
-Swiss authorities can use LINDAS Linked Data Service to [make their data available](/publish) as „Linked Data“. Developers can access the data via the [Query data](/sparql) section.
+    ${include('cwd:views/sidebar.html')}
 
-**What is Linked Data?**
-
-Linked Data is a technology that allows data on a wide variety of topics and from a wide range of sources to be easily connected. It is part of the Semantic Web. The Semantic University offers [tutorials](http://www.cambridgesemantics.com/semantic-university/getting-started-semantics) on the main principles of Linked Data, RDF and SPARQL.
-
-**Background to LINDAS**
-
-The LINDAS service is a prototype. It was developed in 2015 by the State Secretariat for Economic Affairs SECO and has been operated by the Federal Archives since the start of 2017\. In parallel, the Federal Archives are also conducting a Linked Data project designed to develop the service further. Further information can be found on the [eGovernment Switzerland website](https://www.egovernment.ch/en/umsetzung/e-government-schweiz-2008-2015/lindas/).
-
-If you have any questions about LINDAS, please feel free to contact us at [opendata@bar.admin.ch](mailto:opendata@bar.admin.ch)
-
-This short film explains how LINDAS works:
-
-<figure style="display: block; margin-left: auto; margin-right: auto; width: 850px;"><iframe width="821" height="411" src="https://www.youtube.com/embed/FFrK0ZyYAl4" frameborder="0" allowfullscreen=""></iframe></figure>
-`)}
     </div>
+
+    <div class="row">
+     <div class="col-sm-12 col-md-9">
+     ${m(t('about:Questions'))}
+     </div>
+    </div>
+
+    <div class="row">
+     <div class="col-md-9 col-sm-12 col-sm-offset-0">
+      <div class="well clearfix">
+      <br>
+      <figure class="col-sm-12">
+       <div style="padding-bottom: 56.25%;">
+        <iframe style="width:100%;height:100%;position:absolute;left:0px;top:0px;" frameborder="0" width="100%" height="100%" src="${t('meta:AboutVideo')}" frameborder="0" allowfullscreen=""></iframe>
+       </div>
+      </figure>
+      <p>&nbsp;</p>
+      ${m(t('about:Intro'))}
+      </div>
+     </div>
+    </div>
+
    </div>
   </div>
+ </div>
 
 ${include('cwd:views/footer.html')}
  </div>

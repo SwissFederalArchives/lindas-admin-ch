@@ -6,12 +6,12 @@ ${set('moduleAbout','<a href="http://about.yasgui.org/" target="_blank">YASGUI</
 ${include('cwd:views/header.html')}
   <link href="dist/yasgui.css" rel="stylesheet" type="text/css" />
   <style>
-    .tab-content {
+    #yasgui .tab-content {
         padding: 0px;
      }
-    .chosen-container {
+    #yasgui .chosen-container {
         margin: 0px!important;
-        visibility: hidden;
+        display: none;
      }
   </style>
  </head>
@@ -23,11 +23,20 @@ ${include('cwd:views/navigation.html')}
  <div class="container-fluid">
    <div class="col-sm-12">
      <div class="row">
-       ${m(`
-# Query Data
-To search in data from a specific dataset, use a SPARQL query. SPARQL is the acronym for a query language that can be used for data in RDF format. All data on LINDAS are available in this format. You can re-use them and combine them with other data.`)}
-       <div id="yasgui"></div>
+
+      <div class="col-sm-12 col-md-9">
+       ${m(t('query:Intro'))}
+      </div>
+${include('cwd:views/sidebar.html')}
+
      </div>
+
+     <div class="row">
+      <div class="col-sm-12">
+       <div id="yasgui"></div>
+      </div>
+     </div>
+
    </div>
   </div>
 
