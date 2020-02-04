@@ -41,6 +41,7 @@
     }
   },
   "i18n": {
+    "updateFiles": false,
     "locales": ["de", "fr", "it", "en"]
   },
   "renderer": {
@@ -73,7 +74,7 @@
   "plugins": {
     "i18n": {
       "priority": 5,
-      "module": "./lib/i18n"
+      "module": "trifid-plugin-i18n"
     }
   }
 }
