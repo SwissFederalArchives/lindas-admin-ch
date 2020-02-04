@@ -12,6 +12,8 @@ docker-build-master:
     - docker push "$CI_REGISTRY_IMAGE"
   only:
     - master
+  except:
+    - tags
 
 docker-build-tags:
   # Official docker image.
