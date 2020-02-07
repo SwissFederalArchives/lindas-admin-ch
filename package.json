@@ -5,8 +5,8 @@
   "main": "index.js",
   "dependencies": {
     "swiss-styleguide": "^3.0.0",
-    "trifid-plugin-i18n": "https://github.com/zazuko/trifid-plugin-i18n",
-    "trifid": "^2.3.3"
+    "trifid": "^2.3.3",
+    "trifid-plugin-i18n": "^1.0.0"
   },
   "devDependencies": {},
   "scripts": {
