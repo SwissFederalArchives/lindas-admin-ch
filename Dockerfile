@@ -2,7 +2,7 @@ FROM node:lts-alpine
 
 WORKDIR /app
 
-RUN apk add --no-cache git
+RUN apk add --no-cache curl git
 
 # Copy the package.json and install the dependencies
 COPY package*.json ./
