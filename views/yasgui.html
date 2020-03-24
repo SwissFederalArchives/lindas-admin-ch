@@ -56,8 +56,16 @@ ${include('cwd:views/footer.html')}
 
     YASGUI.YASR.plugins.leaflet.defaults.defaultMap = 'chmaps';
 
-    var config = {"api":{"urlShortener":"http://yasgui.org/shorten"}};
+    var mbAttr = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors ';
+    var mbUrl = 'https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw';
+    var streets   = L.tileLayer(mbUrl, {id: 'mapbox.streets', attribution: mbAttr});
+
+    YASGUI.YASR.plugins.leaflet.defaults.defaultOverlay = { "OpenStreetMap": streets };
+
+    var config = {"api":{}}
+    ${typeof urlShortener !== 'undefined' ? "config.api.urlShortener = '" + urlShortener + "'" : ''}
     var yasgui = YASGUI(document.getElementById('yasgui'), config)
+
  </script>
 
 ${include('cwd:views/powered.html')}
