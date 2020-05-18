@@ -49,8 +49,8 @@ ${include('cwd:views/footer.html')}
  <script type="text/javascript">
     // set SPARQL endpoint URL
 
-    YASGUI.defaults.yasqe.sparql.endpoint = '${endpointUrl}'
-
+    YASGUI.defaults.yasqe.sparql.endpoint = '${endpointUrl}';
+    YASGUI.defaults.yasqe.value = 'PREFIX schema: <http://schema.org/>\\nPREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>\\nPREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>\\nSELECT * WHERE {\\n\\t?sub a schema:DataCatalog .\\n}';
     YASGUI.YASR.plugins.leaflet.defaults.defaultColor = '#FF8000';
     YASGUI.YASR.plugins.leaflet.defaults.defaultStyle = { fillOpacity: 0.75, fillColor: '#FFFF00' };
 
@@ -62,9 +62,9 @@ ${include('cwd:views/footer.html')}
 
     YASGUI.YASR.plugins.leaflet.defaults.defaultOverlay = { "OpenStreetMap": streets };
 
-    var config = {"api":{}}
-    ${typeof urlShortener !== 'undefined' ? "config.api.urlShortener = '" + urlShortener + "'" : ''}
-    var yasgui = YASGUI(document.getElementById('yasgui'), config)
+    var config = {"api":{}};
+    ${typeof urlShortener !== 'undefined' ? "config.api.urlShortener = '" + urlShortener + "';" : ''}
+    var yasgui = YASGUI(document.getElementById('yasgui'), config);
 
  </script>
 

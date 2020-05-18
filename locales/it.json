@@ -23,5 +23,7 @@
 	"about:Questions": "\nPer ragguagli su LINDAS, inviare un’e-mail a [support-lindas@bar.admin.ch](mailto:support-lindas@bar.admin.ch).\n",
 	"about:Intro": "Con la piattaforma Linked Data Service – LINDAS, le autorità svizzere possono [mettere a disposizione](/publish) i loro dati sotto forma di dati collegati (in inglese: linked data). Gli sviluppatori possono consultarli alla rubrica [Consultare dati](/sparql).",
 	"publish:Intro": "\n# Pubblicare i dati \n\nSu LINDAS possono essere pubblicati dati della Confederazione, dei Cantoni, dei Comuni e di altri enti pubblici. Poiché la piattaforma ancora in fase di progetto, l’Archivio federale vi pubblica soltanto set di dati scelti.\n\nPer pubblicare dati su LINDAS, inviare un’e-mail a [support-lindas@bar.admin.ch](mailto:support-lindas@bar.admin.ch).\n",
-	"query:Intro": "\n# Consultare i dati \n\nPer consultare i dati di un determinato set di dati, occorre utilizzare il linguaggio d’interrogazione SPARQL che consente di consultare i dati nel formato RDF. Tutti i dati di LINDAS sono a disposizione nel formato RDF. I dati possono essere riutilizzati e combinati con altri dati."
+	"query:Intro": "\n# Consultare i dati \n\nPer consultare i dati di un determinato set di dati, occorre utilizzare il linguaggio d’interrogazione SPARQL che consente di consultare i dati nel formato RDF. Tutti i dati di LINDAS sono a disposizione nel formato RDF. I dati possono essere riutilizzati e combinati con altri dati.",
+	"navigation:Datasets": "navigation:Datasets",
+	"dataset:Intro": "dataset:Intro"
 }

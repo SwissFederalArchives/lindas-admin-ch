@@ -14,6 +14,7 @@
   },
   "staticViews": {
     "/": "cwd:views/home.html",
+    "/datasets/": "cwd:views/datasets.html",
     "/sparql/": "cwd:views/yasgui.html",
     "/publish/": "cwd:views/publish.html",
     "/contact/": "cwd:views/contact.html"
@@ -52,7 +53,8 @@
   },
   "yasgui": {
     "default": {
-        "template": "cwd:views/yasgui.html"
+      "template": "cwd:views/yasgui.html",
+      "urlShortener": "https://s.zazuko.com/api/v1/shorten"
     }
   },
   "content": {
@@ -60,6 +62,10 @@
       {
         "title": "About LINDAS",
         "link": "/"
+      },
+      {
+        "title": "Datasets",
+        "link": "/datasets/"
       },
       {
         "title": "Query Data",

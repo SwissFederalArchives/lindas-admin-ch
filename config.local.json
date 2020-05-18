@@ -1,5 +1,13 @@
 {
+  "sparqlEndpointUrl": "http://lindas.admin.ch/query",
+  "sparqlEndpointAuthentication": {
+    "user": "",
+    "password": ""
+  },
+  "i18n": {
+    "updateFiles": false
+  },
   "baseConfig": "cwd:config.json",
-  "datasetBaseUrl": "http://lindas.admin.ch/"
+  "_datasetBaseUrl": "http://lindas.admin.ch/"
 }
 

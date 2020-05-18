@@ -1,0 +1,222 @@
+/* zack */
+
+.zack-content {
+    width: 100%;
+    height: calc(100vh - 340px);
+}
+
+@media only screen and (max-width:768px){
+  .zack-content{
+    width: 100%;
+    height: calc(100vh - 240px);
+  }
+}
+
+.zack-query-box {
+    z-index: 10000;
+}
+
+.zack-filter {
+    padding-top: 2px;
+}
+
+.zack-overview {
+    max-height: 35px;
+    height: 35px;
+    z-index: 4000;
+    padding-top: 8px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.zack-result {
+    height: 95px;
+    border-top: 1px solid #CCC;
+    overflow: hidden;
+    position: relative;
+}
+
+.zack-result-list {
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 30px);
+}
+
+.zack-big {
+    font-size: 120%;
+    margin: 0;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.axis text {
+  font: 10px sans-serif;
+}
+
+.result-main {
+    padding: 5px;
+    padding-left: 10px;
+}
+
+.result-main h4 {
+    margin-top: -3px;
+}
+
+.result-main a {
+    text-decoration: none;
+    color: black;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    display: inline-block;
+}
+
+.result-detail {
+    padding: 5px;
+}
+
+.filter-item {
+    position: relative;
+    margin: 3px 0 2em 5px;
+    padding: 3px 5px 3px 5px;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    background-clip: padding-box;
+    color: #333;
+    line-height: 13px;
+    cursor: default;
+    float: left;
+
+}
+
+.filter-item:after {
+    padding-top: -4px;
+    font-size: 17px;
+    content: "x";
+    margin-left: 5px;
+    font-weight: 600;
+    color: #333;
+    cursor: pointer;
+}
+
+.filterable {
+    font-size: 10px;
+    background-color: lightgray;
+    line-height: 95%;
+    margin: 3px 5px 1px 5px;
+    padding: 3px 5px 1px 5px;
+    border-radius: 5px;
+    overflow: hidden;
+    float: left;
+    cursor: pointer;
+}
+
+.filterable:after {
+   font-size: 14px;
+   margin-left: 5px;
+   font-weight: 600;
+   margin-top: 4px;
+   color: green;
+   content: "⑅";
+   vertical-align: -40%;
+}
+
+.zack-query-form {
+    width: 100%;
+}
+
+.zack-query-input {
+    position: relative;
+    width: 100%!important;
+}
+
+.zack-query-box .filterable {
+    float: right;
+    font-size: 110%;
+}
+
+.zack-query-box .filterable:after {
+    font-size: 110%;
+    vertical-align: -24%;
+}
+
+.level-filterable {
+    font-size: 12px;
+    background-color: lightgray;
+    line-height: 60%;
+    margin: 2px 4px 2px 4px;
+    padding: 2px 4px 2px 0px;
+    border-radius: 5px;
+    color: green;
+    overflow: hidden;
+    cursor: pointer;
+    vertical-align: -18%;
+}
+
+.level-filterable:after {
+   margin-left: 5px;
+   font-weight: 600;
+   margin-top: 4px;
+   color: green;
+   content: "⑅";
+   vertical-align: -18%;
+}
+
+.clusterize-scroll{
+  overflow: auto;
+  max-height: 100%;
+}
+
+.clusterize-extra-row.clusterize-keep-parity{
+  display: none;
+}
+
+.clusterize-content{
+    outline: 0;
+}
+
+.clusterize-no-data {
+}
+
+.space {
+    display: none;
+}
+
+.vertical-text {
+    transform: rotate(-90.0deg) translate(-100%, 0%) ;
+    transform-origin: top left;
+    cursor: pointer;
+}
+
+@media (min-width: 550px) {
+    .space {
+        display: inherit;
+    }
+}
+
+.elip {
+    overflow: hidden;
+    white-space:nowrap;
+    text-overflow:ellipsis;
+    display:inline-block;
+}
+
+
+/* Timline SVG Styles */
+.svg-bar {
+  fill: steelblue;
+  shape-rendering: crispEdges;
+}
+
+.svg-handle {
+  fill: gray;
+  shape-rendering: crispEdges;
+  y: -3px;
+  cursor: ew-resize;
+}

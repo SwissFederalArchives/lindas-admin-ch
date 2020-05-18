@@ -5,8 +5,9 @@
   "main": "index.js",
   "dependencies": {
     "swiss-styleguide": "^3.0.0",
-    "trifid": "^2.3.3",
-    "trifid-plugin-i18n": "^1.0.0"
+    "trifid": "^2.3.5",
+    "trifid-plugin-i18n": "^1.0.0",
+    "zack-search": "^0.8.0"
   },
   "devDependencies": {},
   "scripts": {

@@ -22,5 +22,7 @@
 	"about:Questions": "\nIf you have any questions about LINDAS, please feel free to contact us at [support-lindas@bar.admin.ch](mailto:support-lindas@bar.admin.ch).\n",
 	"about:Intro": "Swiss authorities can use LINDAS Linked Data Service to [make their data available](/publish) as „Linked Data“. Developers can access the data via the [Query data](/sparql) section.",
 	"query:Intro": "\n# Query Data\nTo search in data from a specific dataset, use a SPARQL query. SPARQL (pronounced \"sparkle\", a recursive acronym for SPARQL Protocol and RDF Query Language) is an RDF Query Language. All data on LINDAS are available in the RDF format. You can re-use such queries and combine them with other data.",
-	"publish:Intro": "\n# Publish data\n\nData from the Confederation, cantons, municipalities and other organisations with a mandate from the state can be published on LINDAS. Since LINDAS is still in project mode, the Federal Archives are currently only publishing selected datasets on the platform.\n\nRegister at [support-lindas@bar.admin.ch](mailto:support-lindas@bar.admin.ch) if you are interested in publishing data on LINDAS.\n"
+	"publish:Intro": "\n# Publish data\n\nData from the Confederation, cantons, municipalities and other organisations with a mandate from the state can be published on LINDAS. Since LINDAS is still in project mode, the Federal Archives are currently only publishing selected datasets on the platform.\n\nRegister at [support-lindas@bar.admin.ch](mailto:support-lindas@bar.admin.ch) if you are interested in publishing data on LINDAS.\n",
+	"navigation:Datasets": "Datacatalog",
+	"dataset:Intro": "# Datasets"
 }
