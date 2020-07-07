@@ -17,10 +17,10 @@ ${include('cwd:views/navigation.html')}
 
     <div class="row">
      <div class="col-sm-6 col-md-5">
-      ${m(t('about:LINDAS'))}
+${m(readFile('./content/'+locale+'.md'))}
      </div>
      <div class="col-sm-6 col-md-4">
-      ${m(t('about:Linked Data'))}
+${m(readFile('./content/ld.'+locale+'.md'))}
      </div>
 
     ${include('cwd:views/sidebar.html')}

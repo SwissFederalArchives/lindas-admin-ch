@@ -1,0 +1,3 @@
+### LINDAS
+
+Das Bundesarchiv führt ein Linked-Data Projekt zur Entwicklung des Linked-Data Dienstes LINDAS durch. Bis Ende 2020 wird LINDAS ein Werkzeug zur Datenkonvertierung und Datenintegration, einen Triplestore (Datenspeicher) und ein Visualisierungswerkzeug bereitstellen. Das Visualisierungstool wird vom Bundesamt für Umwelt entwickelt. Weitere Informationen dazu finden Sie auf der [Seite von E-Government Schweiz](https://www.egovernment.ch/de/umsetzung/e-government-schweiz-2008-2015/lindas/).

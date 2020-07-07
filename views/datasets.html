@@ -15,7 +15,7 @@ ${include('cwd:views/navigation.html')}
    <div class="col-sm-12">
      <div class="row">
       <div class="col-sm-12 col-md-9">
-       ${m(t('dataset:Intro'))}
+${m(readFile('./content/dataset.'+locale+'.md'))}
       </div>
      </div>
 

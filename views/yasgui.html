@@ -25,7 +25,8 @@ ${include('cwd:views/navigation.html')}
      <div class="row">
 
       <div class="col-sm-12 col-md-9">
-       ${m(t('query:Intro'))}
+
+${m(readFile('./content/sparql.'+locale+'.md'))}
       </div>
 ${include('cwd:views/sidebar.html')}
 
