@@ -7,7 +7,7 @@ ${get('moduleFoot') || '<h3>&nbsp;</h3>'}
    </div>
 
    <address>
-    <span class="hidden-xs pull-left">©2014-${new Date().getYear()+1900} ${t('meta:Organisation')}</span>
+	   <span class="hidden-xs pull-left"><a style="color: black" href="https://gitlab.ldbar.ch/zazuko/lindas-admin-ch/-/sse/master%2Fcontent%2F${url.pathname.substring(1, url.pathname.length - 1).replace('/','%2F')}.${locale}.md">©</a>2014-${new Date().getYear()+1900} ${t('meta:Organisation')}</span>
     <nav class="pull-right">
      <ul>
        <li><a href="${t('meta:DisclaimerLink')}">${t('meta:Disclaimer')}</a></li>
