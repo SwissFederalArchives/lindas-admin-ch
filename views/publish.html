@@ -15,7 +15,7 @@ ${include('cwd:views/navigation.html')}
      <div class="row">
 
       <div class="col-sm-12 col-md-9">
-       ${m(t('publish:Intro'))}
+${m(readFile('./content/publish.'+t('en')+'.md'))}
       </div>
 ${include('cwd:views/sidebar.html')}
 

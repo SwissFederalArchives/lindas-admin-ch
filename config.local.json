@@ -5,7 +5,7 @@
     "password": ""
   },
   "i18n": {
-    "updateFiles": false
+    "updateFiles": true
   },
   "baseConfig": "cwd:config.json",
   "_datasetBaseUrl": "http://lindas.admin.ch/"

@@ -1,4 +1,5 @@
 {
+	"en": "de",
 	"meta:de_active": "Deutsch ausgewählt",
 	"meta:fr": "Französisch",
 	"meta:it": "Italienisch",
@@ -23,7 +24,6 @@
 	"about:Questions": "\nBei Fragen zu LINDAS stehen wir Ihnen unter [support-lindas@bar.admin.ch](mailto:support-lindas@bar.admin.ch).\n",
 	"about:Intro": "Über den Linked Data Service – LINDAS können Schweizer Behörden Ihre Daten als „Linked Data“ zur [Verfügung stellen](/publish). Entwicklerinnen und Entwickler erhalten über die Rubrik [Daten abfragen](/sparql) Zugang zu diesen Daten.",
 	"query:Intro": "\n# Daten abfragen\n\nWenn Sie Daten aus einem bestimmten Datensatz abfragen möchten, verwenden Sie die SPARQL-Suchanfrage. SPARQL ist die Bezeichnung der Abfragesprache, mit deren Hilfe Sie Daten im RDF-Format abfragen können. Alle Daten auf LINDAS stehen im RDF-Format zur Verfügung. Sie können die Daten weiterverwenden und mit anderen Daten verbinden.",
-	"publish:Intro": "\n# Daten publizieren\n\nAuf LINDAS können Daten von Bund, Kantonen, Gemeinden und weiteren Organisationen mit einem staatlichen Auftrag publiziert werden. Da sich LINDAS noch in der Projektphase befindet, publiziert das Bundesarchiv zurzeit nur ausgewählte Datensätze auf der Plattform.\n\nMelden Sie sich bei [support-lindas@bar.admin.ch](mailto:support-lindas@bar.admin.ch), wenn Sie Interesse haben, Daten auf LINDAS zu publizieren.\n",
 	"navigation:Datasets": "Daten Katalog",
 	"dataset:Intro": "# Datasets"
 }

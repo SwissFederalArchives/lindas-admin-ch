@@ -81,6 +81,10 @@
     "i18n": {
       "priority": 5,
       "module": "trifid-plugin-i18n"
+    },
+    "readFile": {
+      "priority": 110,
+      "module": "./readFile.js"
     }
   }
 }
