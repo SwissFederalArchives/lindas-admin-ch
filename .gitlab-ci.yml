@@ -1,6 +1,7 @@
 # This file is a template, and might need editing before it works on your project.
 before_script:
   - export CI_JOB_TIMESTAMP=$(date '+%FT%T')
+  - echo $CI_JOB_TIMESTAMP
 
 
 docker-build-tags:
