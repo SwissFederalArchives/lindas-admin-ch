@@ -26,4 +26,5 @@ docker-build:
     - docker build --pull -t "$CI_REGISTRY_IMAGE:test_$CI_JOB_TIMESTAMP" .
     - docker push "$CI_REGISTRY_IMAGE:test_$CI_JOB_TIMESTAMP"
   except:
+    - merge_requests
     - tags
