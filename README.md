@@ -39,6 +39,8 @@ All other non-page wide translations are done through the files in [/locales](/l
 Every commit to master creates a new `test_<date_time>` container image in the project [gitlab registry](https://gitlab.ldbar.ch/zazuko/lindas-admin-ch/container_registry/). The [gitops-prod](https://gitlab.ldbar.ch/vshn/gitops-prod) detects new images and deploys them automatically to https://test.lindas.admin.ch.
 
 ### Production
-
-
+To push the current version to production and integration:
+* Go to [CI/CD -> Pipelines -> Run Pipeline](https://gitlab.ldbar.ch/zazuko/lindas-admin-ch/-/pipelines/new).
+* Add the variable `TARGET` with the value `prod`. 
+* Hit "Run Pipeline".
 
