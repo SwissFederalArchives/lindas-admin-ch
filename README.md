@@ -23,7 +23,8 @@ Simple changes can be done through clicking on the (c) symbol on the bottom of t
 
 The web pages are in [./views](/views) defined with and need to be referenced themselfs in the Routing below. Best is to copy a basic site (e.g. [publish.html](/views/publish.html)) to start a new web page.
 
-The web pages themself do refer in the code for the content to the multilingual versions of Markdown formated files in [./content](/content). (Important to adapt also the name here.)
+The web pages themself do refer in the code for the content to the multilingual versions of Markdown formated files in [./content](/content). (It is important to use the same name for the *.html and *.md similar that the link from (c) works.)
+)
 
 The paths and the menu is specified in [./config.json](config.json):
   * Routing: `staticViews` Describes the URL paths and the files.
