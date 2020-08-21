@@ -40,6 +40,5 @@ Every commit to master creates a new `test_<date_time>` container image in the p
 
 ### Production
 
-[Deploy to Production](https://gitlab.ldbar.ch/api/v4/projects/20/ref/REF_NAME/trigger/pipeline?token=307a2cdc716f6f730c56715aad7c42)
 
 
