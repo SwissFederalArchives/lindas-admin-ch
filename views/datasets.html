@@ -1,6 +1,6 @@
 ${set('moduleAbout','<a href="https://github.com/zazuko/zack-search" target="_blank">Zack-Search</a>')}
 <!DOCTYPE html>
-<html>
+${(typeof locale === 'undefined') ? '<html>' : '<html lang="'+locale+'">'}
  <head>
 
 ${include('cwd:views/header.html')}

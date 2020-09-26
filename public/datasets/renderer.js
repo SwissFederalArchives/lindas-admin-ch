@@ -24,11 +24,13 @@ renderer.init = function (metadata) {
 renderer.renderResult = function (page, subject) {
   const root = new Zack.Clownface({ dataset: page, term: subject })
 
+  const language = [document.documentElement.lang, 'de', 'fr', 'it', '*'] || ['de', 'fr', 'it', '*']
+
   var host = location.protocol + '//' + location.hostname + (location.port ? ':' + location.port : '')
 
   // # Main
   // Resource Title
-  var titleString = root.out(terms.name).value
+  var titleString = root.out(terms.name, { language: language }).value
 
   // Link to resource
   var link = root.out(terms.landingPage).value
@@ -39,33 +41,17 @@ renderer.renderResult = function (page, subject) {
   // Postfix
   var titlePostfix = ''
 
-  // ## Administrative Area
-//  if (page.match(subject, terms.type, terms.adm1).toArray().shift()) { titlePostfix = 'Canton' }
-//  if (page.match(subject, terms.type, terms.adm2).toArray().shift()) { titlePostfix = 'District' }
-//  if (page.match(subject, terms.type, terms.adm3).toArray().shift()) { titlePostfix = 'Municipality' }
-
-  // ## Transporation Stop
-//  var operatingPointType = page.match(subject, rdf.namedNode(host + '/def/transportation/operatingPointType')).toArray().shift()
-//  if (operatingPointType) {
-//    var operatingPointTypeLabel = page.match(operatingPointType.object, terms.prefLabel).toArray().filter(function engLit (x) { return (x.object.language == 'en') }).shift()
-//    if (operatingPointTypeLabel) {
-//      titlePostfix = operatingPointTypeLabel.object.toString()
-//    }
-//  }
-
   rendering_main = '<div class="result-main col-md-6 col-sm-6 col-xs-6">' +
-                    '  <a href="' + root.out(terms.landingPage).value + '">' +
-                    '    <span>' + titlePrefix + '</span>' +
-                    '    <h4>' + titleString + ' <span style="font-weight: 100">' + '' + '</span></h4>' +
-                    '    <span>Contact: ' + root.out(terms.contact).out(terms.name).values[0] + '</span><br>' +
-		    '    <span>Published: ' + root.out(terms.published).value + '</span>' +
-                    '  </a>' +
+                    '  <span><a href="' + subject.value + '">' + titlePrefix + '</a></span>' +
+                    '  <h4><a href="' + root.out(terms.url).value + '">' + titleString + ' <span style="font-weight: 100">' + '' + '</span></a></h4>' +
+                    '  <span>Contact: ' + root.out(terms.contact).out(terms.name, { language: language }).value + '</span><br>' +
+		    '  <span>Published: ' + root.out(terms.published).value + '</span>' +
                     '</div>'
 
   // # Detail 1
 
   rendering_detail1 = '<div class="result-detail col-md-3 hidden-sm hidden-xs">' +
-                     '  <span>' +  root.out(terms.description).value + '</span>' +
+                     '  <span>' +  root.out(terms.description, { language: language }).value + '</span>' +
                       '</div>'
 
   // # Detail 2
