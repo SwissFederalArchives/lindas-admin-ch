@@ -1,6 +1,6 @@
 {
   "name": "lindas.admin.ch",
-  "version": "0.11.1",
+  "version": "0.12.0",
   "description": "Trifid deployment for lindas.admin.ch",
   "main": "index.js",
   "dependencies": {
