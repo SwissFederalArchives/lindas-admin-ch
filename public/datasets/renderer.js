@@ -14,6 +14,7 @@ const terms = {
   alternateName: rdf.namedNode('http://schema.org/alternateName'),
   dataset: rdf.namedNode('http://rdfs.org/ns/void#Dataset'),
   published: rdf.namedNode('http://schema.org/datePublished'),
+  modified: rdf.namedNode('http://schema.org/dateModified'),
   contact: rdf.namedNode('http://schema.org/contactPoint'),
   validFrom: rdf.namedNode('http://schema.org/validFrom')
 }
@@ -45,7 +46,7 @@ renderer.renderResult = function (page, subject) {
                     '  <span><a href="' + subject.value + '">' + titlePrefix + '</a></span>' +
                     '  <h4><a href="' + root.out(terms.url).value + '">' + titleString + ' <span style="font-weight: 100">' + '' + '</span></a></h4>' +
                     '  <span>Contact: ' + root.out(terms.contact).out(terms.name, { language: language }).value + '</span><br>' +
-		    '  <span>Published: ' + root.out(terms.published).value + '</span>' +
+		    '  <span>Published: ' + root.out(terms.published).value + '</span> - <span>Modified: ' + root.out(terms.modified).value + '</span>' +
                     '</div>'
 
   // # Detail 1
