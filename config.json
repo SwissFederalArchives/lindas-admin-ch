@@ -37,7 +37,7 @@
     "root": {
       "options": {
         "resourceExistsQuery": "ASK { GRAPH ?g { <${iri}> ?p ?o }}",
-        "resourceGraphQuery": "DESCRIBE <${iri}>"
+        "resourceGraphQuery": "CONSTRUCT { <${iri}> ?p ?o } FROM tag:stardog:api:context:all WHERE { <${iri}> ?p ?o }"
       }
     }
   },
