@@ -15,6 +15,7 @@
   "staticViews": {
     "/": "cwd:views/home.html",
     "/datasets/": "cwd:views/datasets.html",
+    "/datasets-int/": "cwd:views/datasets-int.html",
     "/sparql/": "cwd:views/yasgui.html",
     "/publish/": "cwd:views/publish.html",
     "/contact/": "cwd:views/contact.html"
