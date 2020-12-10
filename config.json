@@ -38,7 +38,7 @@
     "root": {
       "options": {
         "resourceExistsQuery": "ASK { GRAPH ?g { <${iri}> ?p ?o }}",
-        "resourceGraphQuery": "DESCRIBE <${iri}>"
+        "resourceGraphQuery": "CONSTRUCT { <${iri}> ?p ?o } WHERE { <${iri}> ?p ?o }"
       }
     }
   },
