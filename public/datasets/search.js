@@ -8,9 +8,68 @@
       preload: 80
     },
     queries: { 
-      ldcatalogResultset: 'PREFIX : <http://voc.zazuko.com/zack#> PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX  schema: <http://schema.org/> PREFIX  rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX  skos: <http://www.w3.org/2004/02/skos/core#> PREFIX  xsd: <http://www.w3.org/2001/XMLSchema#> CONSTRUCT {:query :result ?sub . ?sub a :resultItem . ?sub ?pred ?obj . ?obj schema:name ?oname.} WHERE {{ SELECT DISTINCT ?sub WHERE {{ SELECT ?sub WHERE { ?sub schema:name|schema:description ?name. ${textmatch} ${filters} } ORDER BY ?resultType ?name } }  OFFSET ${offset} LIMIT ${limit} } { ?sub ?pred ?obj . OPTIONAL {?obj schema:name ?oname.} } }',
-      ldcatalogMeta: 'PREFIX : <http://voc.zazuko.com/zack#> PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#> PREFIX  schema: <http://schema.org/> PREFIX  rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> PREFIX  skos: <http://www.w3.org/2004/02/skos/core#> PREFIX  xsd: <http://www.w3.org/2001/XMLSchema#> CONSTRUCT { _:b0 :numberOfResults ?count.  _:b0 :queryStart ?querystart.  _:b0 :queryEnd ?queryend.  } WHERE { { SELECT (COUNT(DISTINCT ?sub) as ?count) { ?sub schema:name|schema:decription ?name. ${textmatch} ${filters} } } }',
-      ldcatalogFulltextPart: 'FILTER( CONTAINS(LCASE(?name), LCASE("${searchString}")))'
+      ldcatalogResultset: `PREFIX  :     <http://voc.zazuko.com/zack#>
+PREFIX  schema: <http://schema.org/>
+PREFIX  rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX  xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX  skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+CONSTRUCT 
+  { 
+    :query :result ?sub .
+    ?sub rdf:type :resultItem .
+    ?sub ?pred ?obj .
+    ?obj schema:name ?oname .
+  }
+WHERE
+  { { SELECT DISTINCT  ?sub
+      WHERE
+        { { SELECT  ?sub
+            WHERE
+              { ?sub schema:name|schema:description ?name .
+	        \${textmatch}
+	        \${filters}
+	  FILTER NOT EXISTS {?sub schema:validThrough ?x}
+	  FILTER NOT EXISTS {?sub schema:creativeWorkStatus <https://ld.admin.ch/definedTerm/CreativeWorkStatus/Draft>}
+
+              }
+            ORDER BY ?resultType ?name
+          }
+        }
+      OFFSET \${offset} 
+      LIMIT  \${limit} 
+    }
+    SERVICE <db://lindas> {{ ?sub  ?pred  ?obj
+      OPTIONAL
+        { ?obj  schema:name  ?oname }
+    }}
+  }`,
+      ldcatalogMeta: `PREFIX  :     <http://voc.zazuko.com/zack#>
+PREFIX  schema: <http://schema.org/>
+PREFIX  rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX  xsd:  <http://www.w3.org/2001/XMLSchema#>
+PREFIX  skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+CONSTRUCT 
+  { 
+    _:c0 :numberOfResults ?count .
+    _:c0 :queryStart ?querystart .
+    _:c0 :queryEnd ?queryend .
+  }
+WHERE
+  { { SELECT  (COUNT(DISTINCT ?sub) AS ?count)
+      WHERE
+        { ?sub schema:name|schema:decription ?name .
+          \${textmatch}
+          \${filters}
+	  FILTER NOT EXISTS {?sub schema:validThrough ?x}
+	  FILTER NOT EXISTS {?sub schema:creativeWorkStatus <https://ld.admin.ch/definedTerm/CreativeWorkStatus/Draft>}
+	}
+    }
+  }`,
+	    ldcatalogFulltextPart: 'FILTER( CONTAINS(LCASE(?name), LCASE("${searchString}")))'
     },
     endpoints: {
       '/query': {

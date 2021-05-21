@@ -12,6 +12,7 @@
   "devDependencies": {},
   "scripts": {
     "start": "trifid --config config.json",
-    "start-local": "DEBUG=trifid:* trifid --config config.local.json"
+    "start-local": "DEBUG=trifid:* trifid --config config.local.json",
+    "start-local-int": "DEBUG=trifid:* trifid --config config.int.local.json"
   }
 }

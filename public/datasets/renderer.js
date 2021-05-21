@@ -39,26 +39,30 @@ renderer.renderResult = function (page, subject) {
   var titlePrefix = ''
   if (root.out(terms.dataset).terms) { titlePrefix = 'Dataset' }
 
+  function rDate(title, value) {
+	  return (value ? '<span>' + title + ": "+ new Date(value).toLocaleDateString(language[0]) + ' </span>' : '')
+  }
+
   // Postfix
   var titlePostfix = ''
 
   rendering_main = '<div class="result-main col-md-6 col-sm-6 col-xs-6">' +
                     '  <span><a href="' + subject.value + '">' + titlePrefix + '</a></span>' +
-                    '  <h4><a href="' + root.out(terms.url).value + '">' + titleString + ' <span style="font-weight: 100">' + '' + '</span></a></h4>' +
-                    '  <span>Contact: ' + root.out(terms.contact).out(terms.name, { language: language }).value + '</span><br>' +
-		    '  <span>Published: ' + root.out(terms.published).value + '</span> - <span>Modified: ' + root.out(terms.modified).value + '</span>' +
+                    '  <h4><a href="' + subject.value + '">' + titleString + ' <span style="font-weight: 100">' + '' + '</span></a></h4>' +
+                    '  <span>Contact: ' + (root.out(terms.contact).out(terms.name, { language: language }).value || '') + '</span><br>' +
+		    '  ' + rDate('Created', root.out(terms.created).value) + rDate('Published', root.out(terms.published).value) + rDate('Modified', root.out(terms.modified).value) + 
                     '</div>'
 
   // # Detail 1
 
   rendering_detail1 = '<div class="result-detail col-md-3 hidden-sm hidden-xs">' +
-                     '  <span>' +  root.out(terms.description, { language: language }).value + '</span>' +
+                     '  <span>' +  (root.out(terms.description, { language: language }).value || '') + '</span>' +
                       '</div>'
 
   // # Detail 2
 
   rendering_detail2 = '<div class="result-detail col-md-3 col-sm-6 col-xs-6">' +
-                        '  <span><a target="_blank" href="' + root.out(terms.url).value + '">' + root.out(terms.url).value +'</a></span> <br> ' +
+                        '  <span><a target="_blank" href="' + root.out(terms.url).value + '">' + (root.out(terms.url).value || '') +'</a></span> <br> ' +
                         '  <span>SPARQL <a target="_blank" href="' + root.out(terms.sparqlEndpoint).value + '">Endpoint</a></span> / ' +
                         '  <span><a target="_blank" href="' + root.out(terms.landingPage).value + '">GUI</a></span>' +
                         '</div>'
