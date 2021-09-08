@@ -63,7 +63,7 @@
     "default": {
       "path": "/spex",
       "options": {
-        "prefixes": {}
+        "prefixes": []
       }
     }
   },
