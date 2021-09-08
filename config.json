@@ -44,6 +44,37 @@
       }
     }
   },
+  "breakDown": {
+    "graphexplorer": {},
+    "graphexplorer.default": {},
+    "graphexplorer.default.endpointUrl": [
+      "sparqlProxy.default.path",
+      "sparqlEndpointUrl"
+    ],
+    "spex": {},
+    "spex.default": {},
+    "spex.default.options": {},
+    "spex.default.options.url": [
+      "sparqlProxy.default.path",
+      "sparqlEndpointUrl"
+    ]
+  },
+  "spex": {
+    "default": {
+      "path": "/spex",
+      "options": {
+        "prefixes": {}
+      }
+    }
+  },
+  "graphexplorer": {
+    "default": {
+      "path": "/graph-explorer",
+      "options": {
+        "prefixes": {}
+      }
+    }
+  },
   "i18n": {
     "updateFiles": false,
     "locales": ["de", "fr", "it", "en"]
@@ -88,6 +119,14 @@
     "readFile": {
       "priority": 110,
       "module": "./readFile.js"
+    },
+    "graphexplorer": {
+      "priority": 114,
+      "module": "trifid-plugin-graph-explorer"
+    },
+    "spex": {
+      "priority": 114,
+      "module": "trifid-plugin-spex"
     }
   }
 }
