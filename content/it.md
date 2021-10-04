@@ -1,3 +1,8 @@
 ### LINDAS
 
-L'[Archivio federale](https://www.bar.admin.ch/) sta conducendo un progetto Linked Data per lo sviluppo del servizio dati collegato LINDAS. Entro la fine del 2020 LINDAS fornirà uno strumento per la conversione e l'integrazione dei dati, un triplestore (memorizzazione dei dati) e uno strumento di visualizzazione. Lo strumento di visualizzazione è in fase di sviluppo presso l'Ufficio federale dell'ambiente. Per ulteriori informazioni consultare il sito [E-Government Svizzera](https://www.egovernment.ch/it/umsetzung/e-government-schweiz-2008-2015/lindas/).
+L'[Archivio federale](https://www.bar.admin.ch/) fornisce il Linked Data Service LINDAS. Questo servizio include uno strumento di conversione e integrazione dei dati e un'infrastruttura di immagazzinamento dei dati (Triplestore).
+
+Le autorità svizzere possono [rendere disponibili i loro dati](https://lindas.admin.ch/publish) come [grafici di conoscenza](https://en.wikipedia.org/wiki/Knowledge_graph#:~:text=In%20knowledge%20representation%20and%20reasoning,%E2%80%93%20with%20free%2Dform%20semantics.) tramite LINDAS. Gli sviluppatori possono accedere a questi dati tramite la sezione [Consultare i dati](https://lindas.admin.ch/sparql).
+
+[L'Ufficio federale dell'ambiente](https://www.bafu.admin.ch/) usa LINDAS per rendere i dati ambientali accessibili agli uomini e alle macchine e ha sviluppato [Visualize](https://visualize.admin.ch/), un'applicazione web per la visualizzazione di serie di dati. Con questo strumento, i dati forniti da LINDAS possono essere visualizzati e integrati nei siti web.
+
