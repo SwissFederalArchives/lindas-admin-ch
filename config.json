@@ -38,9 +38,9 @@
     "root": {
       "options": {
         "resourceExistsQuery": "ASK { GRAPH ?g { <${iri}> ?p ?o }}",
-        "resourceGraphQuery": "CONSTRUCT { <${iri}> ?p ?o } WHERE { <${iri}> ?p ?o }",
+        "resourceGraphQuery": "#pragma describe.strategy cbd\nDESCRIBE <${iri}>",
         "containerExistsQuery": "ASK { GRAPH ?g { <${iri}> ?p ?o }}",
-        "containerGraphQuery": "CONSTRUCT { <${iri}> ?p ?o } WHERE { <${iri}> ?p ?o }"
+        "containerGraphQuery": "#pragma describe.strategy cbd\nDESCRIBE <${iri}>"
       }
     }
   },
