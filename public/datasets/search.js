@@ -30,7 +30,7 @@ WHERE
               { ?sub schema:name|schema:description ?name .
 	        \${textmatch}
 	        \${filters}
-	  FILTER NOT EXISTS {?sub schema:validThrough ?x}
+	  FILTER NOT EXISTS {?sub schema:expires ?x}
 	  FILTER NOT EXISTS {?sub schema:creativeWorkStatus <https://ld.admin.ch/definedTerm/CreativeWorkStatus/Draft>}
 
               }

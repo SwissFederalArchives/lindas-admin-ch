@@ -62,9 +62,9 @@ renderer.renderResult = function (page, subject) {
   // # Detail 2
 
   rendering_detail2 = '<div class="result-detail col-md-3 col-sm-6 col-xs-6">' +
-                        '  <span><a target="_blank" href="' + root.out(terms.url).value + '">' + (root.out(terms.url).value || '') +'</a></span> <br> ' +
-                        '  <span>SPARQL <a target="_blank" href="' + root.out(terms.sparqlEndpoint).value + '">Endpoint</a></span> / ' +
-                        '  <span><a target="_blank" href="' + root.out(terms.landingPage).value + '">GUI</a></span>' +
+                        '  <span><a target="_blank" href="' + root.out(terms.landingPage).value + '">Info</a></span> <br> ' +
+                        '  <span>SPARQL Endpoint: ' + root.out(terms.sparqlEndpoint).value + '</span> / ' +
+//                        '  <span><a target="_blank" href="' + root.out(terms.landingPage).value + '">GUI</a></span>' +
                         '</div>'
 
   return '<div class="zack-result">' + rendering_main + rendering_detail1 + rendering_detail2 + '</div>'
