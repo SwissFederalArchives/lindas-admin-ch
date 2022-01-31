@@ -27,7 +27,7 @@ WHERE
       WHERE
         { { SELECT  ?sub
             WHERE
-              { VALUES ?services { <https://web-ld-trifid.dev.bgdi.ch/query> <db://lindas> }
+              { VALUES ?services { <https://geo.ld.admin.ch/query> <db://lindas> }
                 SERVICE ?services
                   { ?sub schema:name|schema:description ?name .
 		    \${textmatch}
@@ -46,7 +46,7 @@ WHERE
               { ?obj  schema:name  ?oname }
           }
         UNION
-          { SERVICE <https://web-ld-trifid.dev.bgdi.ch/query>
+          { SERVICE <https://geo.ld.admin.ch/query>
               { ?sub  ?pred  ?obj
                 OPTIONAL
                   { ?obj  schema:name  ?oname }
