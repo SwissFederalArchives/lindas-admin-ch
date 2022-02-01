@@ -70,9 +70,7 @@
   "graphexplorer": {
     "default": {
       "path": "/graph-explorer",
-      "options": {
-        "prefixes": {}
-      }
+      "acceptBlankNodes": true
     }
   },
   "i18n": {
