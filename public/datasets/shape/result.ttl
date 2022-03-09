@@ -1,0 +1,64 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX schema: <http://schema.org/>
+PREFIX void: <http://rdfs.org/ns/void#>
+prefix sh: <http://www.w3.org/ns/shacl#>
+prefix code: <https://code.described.at/>
+
+[
+  a sh:NodeShape ;
+  sh:targetClass void:Dataset ;
+  sh:property
+    [
+      sh:name "title" ;
+      sh:path schema:name ;
+      sh:datatype rdf:langString ;
+    ],
+    [
+      sh:name "descrition" ;
+      sh:path schema:description ;
+      sh:datatype rdf:langString ;
+    ],
+    [
+      sh:name "contactName" ;
+      sh:path ( schema:contactPoint schema:name ) ;
+      sh:datatype rdf:langString ;
+    ],
+    [
+      sh:name "landingPage" ;
+      sh:path dcat:landingPage ;
+    ],
+    [
+      sh:name "sparqlEndpoint" ;
+      sh:path void:sparqlEndpoint ;
+    ],
+    [
+      sh:name "dateCreated" ;
+      sh:path schema:dateCreated ;
+    ],
+    [
+      sh:name "datePublished" ;
+      sh:path schema:datePublished ;
+    ],
+    [
+      sh:name "dateModified" ;
+      sh:path schema:dateModified ;
+    ],
+    [
+      sh:name "dataset" ;
+      sh:path void:dataset ;
+    ];
+  schema:hasPart
+    [
+      schema:name "main" ;
+      code:link "/datasets/templates/main.js" ;
+    ],
+    [
+      schema:name "detail" ;
+      code:link "/datasets/templates/detail.js" ;
+    ],
+    [
+      schema:name "links" ;
+      code:link "/datasets/templates/links.js" ;
+    ] ;
+] .

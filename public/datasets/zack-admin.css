@@ -30,13 +30,6 @@
     right: 0;
 }
 
-.zack-result {
-    height: 95px;
-    border-top: 1px solid #CCC;
-    overflow: hidden;
-    position: relative;
-}
-
 .zack-result-list {
     position: absolute;
     height: 100%;
@@ -57,29 +50,6 @@
 
 .axis text {
   font: 10px sans-serif;
-}
-
-.result-main {
-    padding: 5px;
-    padding-left: 10px;
-}
-
-.result-main h4 {
-    margin-top: -3px;
-    margin-bottom: 0;
-}
-
-.result-main a {
-    text-decoration: none;
-    color: black;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 100%;
-    display: inline-block;
-}
-
-.result-detail {
-    padding: 5px;
 }
 
 .filter-item {

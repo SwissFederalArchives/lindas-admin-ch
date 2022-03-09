@@ -30,8 +30,8 @@
       "folder": "cwd:node_modules/swiss-styleguide/build"
     },
     "zackFiles": {
-      "path": "/zack-search/",
-      "folder":  "cwd:node_modules/zack-search/dist"
+      "path": "/datasets/",
+      "folder":  "cwd:node_modules/zack-search/dist/"
     }
   },
   "handler": {
@@ -109,7 +109,13 @@
       }
     ]
   },
+  "rdfjsProxy": {
+    "root": {}
+  },
   "plugins": {
+    "staticFiles": {
+      "priority": 130
+    },
     "i18n": {
       "priority": 5,
       "module": "trifid-plugin-i18n"
@@ -125,6 +131,9 @@
     "spex": {
       "priority": 114,
       "module": "trifid-plugin-spex"
+    },
+    "rdfjsProxy": {
+      "module": "./trifid/rdfjsProxy.js"
     }
   }
 }

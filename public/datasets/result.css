@@ -1,0 +1,29 @@
+zack-results {
+    --zack-result-columns: [main] 50% [details] 25% [links] 25%;
+    --zack-result-rows: auto;
+}
+
+zack-results::part(result) {
+    height: 95px;
+    border-top: 1px solid #CCC;
+    overflow: hidden;
+}
+
+zack-results::part(fav) {
+    display: none;
+}
+
+zack-results::part(main) {
+    grid-column: main;
+}
+
+zack-results::part(detail) {
+    grid-column: details;
+    line-height: 1.6;
+    padding: 5px;
+    font-size: 14px;
+}
+
+zack-results::part(links) {
+    grid-column: links;
+}

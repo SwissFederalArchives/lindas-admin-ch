@@ -8,6 +8,18 @@
     "updateFiles": true
   },
   "baseConfig": "cwd:config.json",
-  "_datasetBaseUrl": "http://lindas.admin.ch/"
+  "_datasetBaseUrl": "http://lindas.admin.ch/",
+  "esbuild": {
+    "root": {
+      "base": "public/src",
+      "config": "cwd:esbuild.config.json"
+    }
+  },
+  "plugins": {
+    "esbuild": {
+      "priority": 10,
+      "module": "./trifid/esbuild.js"
+    }
+  }
 }
 

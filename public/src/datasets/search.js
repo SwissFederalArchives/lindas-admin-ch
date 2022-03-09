@@ -1,19 +1,25 @@
-  var options = {
+import '/datasets/zack.js'
+
+window.i18next.init({
+  fallbackLng: 'de'
+})
+
+  const options = {
     endpointUrl: '/query',
     filterContainer: 'filter-container',
     resultTypes: ['http://rdfs.org/ns/void#Dataset'],
     resultList: {
-      renderer: window.zack.renderer,
       pageSize: 20,
       preload: 80
     },
-    queries: { 
+    queries: {
       ldcatalogResultset: `PREFIX  :     <http://voc.zazuko.com/zack#>
 PREFIX  schema: <http://schema.org/>
 PREFIX  rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX  xsd:  <http://www.w3.org/2001/XMLSchema#>
 PREFIX  skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix  void: <http://rdfs.org/ns/void#>
 
 CONSTRUCT 
   { 
@@ -51,6 +57,7 @@ PREFIX  rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX  xsd:  <http://www.w3.org/2001/XMLSchema#>
 PREFIX  skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX  rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+prefix  void: <http://rdfs.org/ns/void#>
 
 CONSTRUCT 
   { 
@@ -64,7 +71,7 @@ WHERE
         { ?sub schema:name|schema:decription ?name .
           \${textmatch}
           \${filters}
-	  FILTER NOT EXISTS {?sub schema:validThrough ?x}
+	  FILTER NOT EXISTS {?sub schema:expires ?x}
 	  FILTER NOT EXISTS {?sub schema:creativeWorkStatus <https://ld.admin.ch/definedTerm/CreativeWorkStatus/Draft>}
 	}
     }
@@ -80,19 +87,10 @@ WHERE
         }
       }
     },
-    plugins: [
-      /* new Zack.TypeFilter({
-        predicate: 'http://www.w3.org/1999/02/22-rdf-syntax-ns#type',
-        values: {
-          'http://schema.org/AdministrativeArea': {icon: 'fa-university', title: 'swissBoundaries'},
-          'http://vocab.gtfs.org/terms#Stop': {icon: 'fa-archive', title: 'Public transport stops'}
-        }
-      }) */
-    ]
+    plugins: [],
   }
 
-  window.app = new Zack(options)
+const zack = document.querySelector('zack-search')
+zack.options = options
 
-  window.app.init().catch(function (err) {
-    console.error(err)
-  })
+window.app = zack
