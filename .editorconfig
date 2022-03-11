@@ -1,0 +1,10 @@
+root = true
+
+[*]
+indent_style = space
+
+[*.html]
+indent_size = 1
+
+[*.ttl]
+indent_size = 2

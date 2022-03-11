@@ -5,12 +5,13 @@ ${(typeof locale === 'undefined') ? '<html>' : '<html lang="'+locale+'">'}
 
 ${include('cwd:views/header.html')}
  <link rel="stylesheet" href="zack-admin.css">
+ <link rel="stylesheet" href="result.css">
  </head>
  <body>
  <div class="container container-main">
 
 ${include('cwd:views/navigation.html')}
-
+<zack-search>
  <div class="container-fluid">
    <div class="col-sm-12">
      <div class="row">
@@ -24,9 +25,10 @@ ${m(readFile('./content/datasets.'+locale+'.md'))}
        <div class="col-sm-12 col-md-6">
         <form class="zack-query-form form-search" action="javascript:document.getElementById('query').blur();">
          <h2 class="sr-only">Searchterm</h2>
-         <label for="search-field" class="sr-only">Searchterm</label>
-         <input autofocus id="query" class="zack-query-input zack-big form-control search-field " type="text" placeholder="Searchterm">
-         <button class="icon icon--search icon--before"></button>
+           <zack-query-input>
+             <input autofocus slot="query" id="query" class="zack-query-input zack-big form-control search-field " type="text" placeholder="Searchterm">
+             <button slot="query" class="icon icon--search icon--before"></button>
+           </zack-query-input>
         </form>
        </div>
        <div id="type-filters" class="hidden-sm col-md-6 hidden-xs">
@@ -42,9 +44,10 @@ ${m(readFile('./content/datasets.'+locale+'.md'))}
        <div class="zack-content">
        <div class="zack-result-list">
          <div id="scrollArea" class="clusterize-scroll">
-           <div id="contentArea" class="clusterize-content">
-             <div class="clusterize-no-data">Loading data…</div>
-           </div>
+          <zack-results id="contentArea" class="clusterize-content">
+            <div class="clusterize-no-data">Loading data…</div>
+            <link id="result" class="shape" type="text/turtle" href="./shape/result.ttl">
+           </zack-results>
          </div>
        </div>
        </div>
@@ -61,12 +64,12 @@ ${m(readFile('./content/datasets.'+locale+'.md'))}
      </div>
     </div>
    </div>
+</zack-search>
 ${include('cwd:views/footer.html')}
   </div>
 
-<script src="/zack-search/zack.js"></script>
-<script src="renderer.js"></script>
-<script src="search.js"></script>
+<script src="https://unpkg.com/i18next/dist/umd/i18next.min.js"></script>
+<script type="module" src="search.js"></script>
 
 ${include('cwd:views/powered.html')}
 

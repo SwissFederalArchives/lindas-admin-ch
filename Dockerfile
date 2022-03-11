@@ -1,13 +1,26 @@
-FROM node:12-alpine
+FROM node:12-alpine as builder
 
-WORKDIR /app
+WORKDIR /src
 
 RUN apk add --no-cache curl git
 
 # Copy the package.json and install the dependencies
 COPY package*.json ./
-RUN npm ci --only=production
+RUN npm ci
 COPY . .
+RUN node scripts/build.js
+
+FROM node:12-alpine
+
+WORKDIR /app
+
+COPY package*.json ./
+RUN npm ci --only=production
+
+ADD content/ ./content
+ADD locales/ ./locales
+ADD views/ ./views
+COPY --from=builder /src/public ./public
 
 USER nobody:nobody
 
