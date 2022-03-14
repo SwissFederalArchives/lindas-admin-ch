@@ -20,6 +20,8 @@ RUN npm ci --only=production
 ADD content/ ./content
 ADD locales/ ./locales
 ADD views/ ./views
+ADD trifid/ ./trifid
+ADD config.json .
 COPY --from=builder /src/public ./public
 
 USER nobody:nobody
