@@ -1,5 +1,6 @@
 import {html, css, LitElement} from 'lit'
-import language, {filterTaggedLiterals} from '../lib/languages';
+import only from 'clownface/filter'
+import language from '../lib/languages'
 
 customElements.define('dataset-result-main', class extends LitElement {
     static get properties() {
@@ -36,8 +37,8 @@ customElements.define('dataset-result-main', class extends LitElement {
 
     render() {
         const titlePrefix = this.props.dataset.terms ? 'Dataset' : '';
-        const [titleString] = filterTaggedLiterals(this.props.title)
-        const [contactString] = filterTaggedLiterals(this.props.contactName)
+        const [titleString] = this.props.title.filter(only.taggedLiteral(language)).terms
+        const [contactString] = this.props.contactName.filter(only.taggedLiteral(language)).terms
 
         return html`<span>
             <a href="${this.subject.value}">${titlePrefix}</a>
