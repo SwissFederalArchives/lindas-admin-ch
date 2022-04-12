@@ -13,10 +13,13 @@
 #   only:
 #     - tags
 
+stages:
+  - test
+  - prod
+
 .docker-build:
   # Official docker image.
   image: docker:latest
-  stage: build
   services:
     - docker:dind
   before_script:
@@ -30,9 +33,11 @@
 
 deploy_test:
   extends: .docker-build
+  stage: test
   environment: test
 
 deploy_prod:
   extends: .docker-build
+  stage: prod
   environment: prod
   when: manual
