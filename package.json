@@ -7,7 +7,7 @@
     "@rdf-esm/formats-common": "^0.5.6",
     "@rdfjs/serializer-rdfjs": "^0.0.4",
     "@tpluscode/rdf-ns-builders": "^1.1.0",
-    "clownface": "^1.4.0",
+    "clownface": "^1.5.1",
     "express": "^4.17.3",
     "lit": "^2",
     "swiss-styleguide": "^3.0.0",
