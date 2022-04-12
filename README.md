@@ -40,7 +40,7 @@ Every commit to master creates a new `test_<date_time>` container image in the p
 
 ### Production
 To push the current version to production and integration:
-* Go to [CI/CD -> Pipelines -> Run Pipeline](https://gitlab.ldbar.ch/zazuko/lindas-admin-ch/-/pipelines/new).
-* Add the variable `TARGET` with the value `prod`. 
-* Hit "Run Pipeline".
+* Go to [CI/CD -> Pipelines](https://gitlab.ldbar.ch/zazuko/lindas-admin-ch/-/pipelines).
+* Find your commit
+* Trigger the `deploy_prod` job
 
