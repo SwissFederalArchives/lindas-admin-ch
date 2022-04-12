@@ -8,13 +8,13 @@
     "@rdfjs/serializer-rdfjs": "^0.0.4",
     "@tpluscode/rdf-ns-builders": "^1.1.0",
     "clownface": "^1.5.1",
-    "express": "^4.17.2",
+    "express": "^4.17.3",
     "lit": "^2",
     "swiss-styleguide": "^3.0.0",
-    "trifid": "^2.3.6",
-    "trifid-plugin-graph-explorer": "^0.4.0",
+    "trifid": "^2.3.10",
+    "trifid-plugin-graph-explorer": "^0.5.0",
     "trifid-plugin-i18n": "^1.0.0",
-    "trifid-plugin-spex": "^0.1.1",
+    "trifid-plugin-spex": "^0.1.2",
     "zack-search": "^0.16.9"
   },
   "devDependencies": {
