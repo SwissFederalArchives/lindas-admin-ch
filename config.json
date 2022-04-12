@@ -69,6 +69,7 @@
   },
   "graphexplorer": {
     "default": {
+      "template": "cwd:views/graph-explorer.html",
       "path": "/graph-explorer",
       "acceptBlankNodes": false,
       "dataLabelProperty": "rdfs:label | <http://schema.org/name>",
