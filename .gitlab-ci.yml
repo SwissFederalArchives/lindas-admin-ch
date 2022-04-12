@@ -13,7 +13,7 @@
 #   only:
 #     - tags
 
-docker-build:
+.docker-build:
   # Official docker image.
   image: docker:latest
   stage: build
@@ -27,3 +27,17 @@ docker-build:
     - docker push "$CI_REGISTRY_IMAGE:${TARGET}_$CI_JOB_TIMESTAMP"
   only:
     - master
+
+deploy_test:
+  extends: .docker-build
+  environment: test
+
+deploy_int:
+  extends: .docker-build
+  environment: int
+  when: manual
+
+deploy_prod:
+  extends: .docker-build
+  environment: prod
+  when: manual
