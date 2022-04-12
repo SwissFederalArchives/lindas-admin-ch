@@ -32,11 +32,6 @@ deploy_test:
   extends: .docker-build
   environment: test
 
-deploy_int:
-  extends: .docker-build
-  environment: int
-  when: manual
-
 deploy_prod:
   extends: .docker-build
   environment: prod
