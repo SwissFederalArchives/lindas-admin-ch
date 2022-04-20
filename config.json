@@ -57,6 +57,12 @@
     "spex.default.options.url": [
       "sparqlProxy.default.path",
       "sparqlEndpointUrl"
+    ],
+    "ckan": {},
+    "ckan.default": {},
+    "ckan.default.endpointUrl": [
+      "sparqlProxy.default.path",
+      "sparqlEndpointUrl"
     ]
   },
   "spex": {
@@ -65,6 +71,11 @@
       "options": {
         "prefixes": []
       }
+    }
+  },
+  "ckan": {
+    "default": {
+      "path": "/ckan"
     }
   },
   "graphexplorer": {
@@ -153,6 +164,10 @@
     "spex": {
       "priority": 114,
       "module": "trifid-plugin-spex"
+    },
+    "ckan": {
+      "priority": 114,
+      "module": "@zazuko/trifid-plugin-ckan"
     },
     "rdfjsProxy": {
       "module": "./trifid/rdfjsProxy.js"
