@@ -10,7 +10,8 @@ RUN npm ci
 COPY . .
 RUN node scripts/build.js
 
-FROM node:16-alpine
+# Pinning node because later versions have file access permission problems
+FROM node:16-alpine3.13
 
 WORKDIR /app
 
