@@ -16,7 +16,7 @@
     "trifid-plugin-graph-explorer": "^0.5.0",
     "trifid-plugin-i18n": "^1.0.0",
     "trifid-plugin-spex": "^0.1.2",
-    "zack-search": "^0.16.9"
+    "zack-search": "^0.17.2"
   },
   "devDependencies": {
     "esbuild": "^0.14.25"
