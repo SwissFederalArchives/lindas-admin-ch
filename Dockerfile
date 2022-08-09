@@ -10,8 +10,7 @@ RUN npm ci
 COPY . .
 RUN node scripts/build.js
 
-# Pinning node because later versions have file access permission problems
-FROM node:16-alpine3.13
+FROM node:16-alpine
 
 WORKDIR /app
 
@@ -25,7 +24,7 @@ ADD trifid/ ./trifid
 ADD config.json .
 COPY --from=builder /src/public ./public
 
-USER nobody:nobody
+USER node:node
 
 # Ideally set those for published images. To do so, run something like
 #
