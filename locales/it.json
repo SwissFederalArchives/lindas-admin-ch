@@ -21,5 +21,20 @@
 	"Bern": "Berna",
 	"about:Questions": "\nPer ragguagli su LINDAS, inviare un’e-mail a [support-lindas@bar.admin.ch](mailto:support-lindas@bar.admin.ch).\n",
 	"navigation:Datasets": "Dataset",
-	"about:Intro": "Con la piattaforma Linked Data Service – LINDAS, le autorità svizzere possono [mettere a disposizione](/publish) i loro dati sotto forma di dati collegati (in inglese: linked data). Gli sviluppatori possono consultarli alla rubrica [Consultare dati](/sparql)."
+	"about:Intro": "Con la piattaforma Linked Data Service – LINDAS, le autorità svizzere possono [mettere a disposizione](/publish) i loro dati sotto forma di dati collegati (in inglese: linked data). Gli sviluppatori possono consultarli alla rubrica [Consultare dati](/sparql).",
+	"navigation:Documentation": "navigation:Documentation",
+	"subpage:Lindas the Solution": "subpage:Lindas the Solution",
+	"subpage:Applications": "subpage:Applications",
+	"navigation:Linked Data Governance": "navigation:Linked Data Governance",
+	"subpage:Namespace": "subpage:Namespace",
+	"subpage:Architecture": "subpage:Architecture",
+	"subpage:Core Concepts": "subpage:Core Concepts",
+	"subpage:Guidelines": "subpage:Guidelines",
+	"navigation:Linked Data Technology": "navigation:Linked Data Technology",
+	"subpage:General": "subpage:General",
+	"subpage:Tools": "subpage:Tools",
+	"subpage:Glossary": "subpage:Glossary",
+	"subpage:Help": "subpage:Help",
+	"subpage:Administrative": "subpage:Administrative",
+	"subpage:Technical": "subpage:Technical"
 }

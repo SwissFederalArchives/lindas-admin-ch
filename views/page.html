@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+ <head>
+
+${include('cwd:views/header.html')}
+
+ </head>
+ <body>
+ <div class="container container-main">
+
+${include('cwd:views/navigation.html')}
+
+  <div class="container-fluid">
+
+${config.content.navigation.find(item => item.link == "/"+url.pathname.split('/').at(1)+"/").subpages ? `
+
+   <div class="col-sm-3 drilldown">
+
+${include('cwd:views/nav-page.html')}
+
+   </div>` : ''}
+
+   <div class="col-sm-9">
+     <div class="row">
+
+${m(readFile('./content/'+url.pathname.substring(1).replaceAll('/','.')+locale+'.md'))}
+
+     </div>
+
+   </div>
+${config.content.navigation.find(item => item.link == "/"+url.pathname.split('/').at(1)+"/").subpages ? '' : `
+    ${include('cwd:views/sidebar.html')}
+`}
+
+
+
+  </div>
+
+${include('cwd:views/footer.html')}
+ </div>
+
+ <script src="/js/vendors.min.js"></script>
+ <script src="/js/main.min.js"></script>
+${include('cwd:views/powered.html')}
+ </body>
+</html>

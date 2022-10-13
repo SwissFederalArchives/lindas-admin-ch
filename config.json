@@ -17,8 +17,14 @@
     "/datasets/": "cwd:views/datasets.html",
     "/datasets-int/": "cwd:views/datasets-int.html",
     "/sparql/": "cwd:views/yasgui.html",
-    "/publish/": "cwd:views/publish.html",
-    "/contact/": "cwd:views/contact.html"
+    "/contact/": "cwd:views/contact.html",
+    "/documentation/": "cwd:views/page.html",
+    "/documentation/*": "cwd:views/page.html",
+    "/governance/": "cwd:views/page.html",
+    "/governance/*": "cwd:views/page.html",
+    "/technology/": "cwd:views/page.html",
+    "/technology/*": "cwd:views/page.html"
+
   },
   "staticFiles": {
     "dataadminFiles": {
@@ -137,8 +143,66 @@
         "link": "/sparql/"
       },
       {
-        "title": "Publish Data",
-        "link": "/publish/"
+        "title": "Documentation",
+        "link": "/documentation/",
+        "subpages": [
+          {
+            "title": "Administrative",
+            "link": "/documentation/admin/"
+          },
+          {
+            "title": "Technical",
+            "link": "/documentation/technical/"
+          },
+          {
+            "title": "Applications",
+            "link": "/documentation/applications/"
+          }
+        ]
+      },
+      {
+        "title": "Linked Data Governance",
+        "link": "/governance/",
+        "subpages": [
+          {
+            "title": "Namespace",
+            "link": "/governance/namespace/"
+          },
+          {
+            "title": "Architecture",
+            "link": "/governance/architecture/"
+          },
+          {
+            "title": "Core Concepts",
+            "link": "/governance/core-concepts/"
+          },
+          {
+            "title": "Guidelines",
+            "link": "/governance/guidelines/"
+          }
+        ]
+      },
+      {
+        "title": "Linked Data Technology",
+        "link": "/technology/",
+        "subpages": [
+          {
+            "title": "General",
+            "link": "/technology/general/"
+          },
+          {
+            "title": "Tools",
+            "link": "/technology/tools/"
+          },
+          {
+            "title": "Glossary",
+            "link": "/technology/glossary/"
+          },
+          {
+            "title": "Help",
+            "link": "/technology/help/"
+          }
+        ]
       }
     ]
   },

@@ -1,0 +1,17 @@
+     <div class="drilldown-container">
+      <nav class="nav-page-list" id="secondary-navigation">
+       <ul>
+        <li class="list-emphasis">
+         <span><a href="${config.content.navigation.find(item => item.link == "/"+url.pathname.split('/').at(1)+"/").link}">${t('navigation:'+config.content.navigation.find(item => item.link == "/"+url.pathname.split('/').at(1)+"/").title)}</a></span>
+	 <ul>
+	  ${(config.content.navigation.find(item => item.link == "/"+url.pathname.split('/').at(1)+"/").subpages || []).map(function (subpage) {
+	  return subpage.link == url.pathname ? //active?
+	  `<li class="active"><a href="${subpage.link}">${t('subpage:'+subpage.title)}</a><span class="sr-only"> active</span></li>`
+	  : 
+	  `<li><a href="${subpage.link}">${t('subpage:'+subpage.title)}</a></li>` 
+	  }).join("")}
+         </ul>
+        </li>
+       </ul>
+      </nav>
+     </div>
