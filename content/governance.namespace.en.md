@@ -1,3 +1,4 @@
+
 # Namespaces at the Swiss Confederation
 
 In the Linked Data World, the use of [Namespaces](/technology/glossary/) help to organize the identifiers of [subjects](/technology/glossary/) (data points) and [predicates](/technology/glossary/) (the attributes). A well organized common namespace for all public and also internal data on the level of the Swiss Confederation brings a manyfold of advantages:
