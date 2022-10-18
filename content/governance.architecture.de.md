@@ -4,7 +4,7 @@
 
 #### Lindas
 #### geo.ld.admin.ch
-#### fedlex
+#### fedlex.data.admin.ch
 
 ### Federation von Daten über Datenbanken hinweg
 
