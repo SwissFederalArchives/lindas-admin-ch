@@ -1,17 +1,19 @@
-# Applikationen basierend auf LINDAS
+# Auf LINDAS basierende Applikationen
 
-## Öffentliche Beispiele
+Um Daten für die Publikation in LINDAS aufzubereiten, wurde der [Cube Creator](https://cube-creator.lindas.admin.ch/) entwickelt. Damit lassen sich tabellarische Daten mit Meta Daten anreichern, um daraus RDF Cubes zu erstellen, die auf LINDAS publiziert werden können. Für den Cube Creator wird ein [CH-LOGIN](https://www.eiam.admin.ch) benötigt, welches über [support.lindas@bar.admin.ch](mailto:support.lindas@bar.admin.ch) für den Cube Creator freigeschaltet werden muss.
+
+## Applikationen
+
+Folgende öffentlichen Applikationen nutzen (teilweise im Hintergrund) Daten von LINDAS:
+
 * [visualize.admin.ch](https://visualize.admin.ch/) Visualisierung von Datensätzen (aufgewertet mit Annotationen)
-* [infosm.ld.admin.ch](https://www.infosm.blv.admin.ch/) Applikation zu Tierseuchen
-* [strompreis.elcom.admin.ch](https://www.strompreis.elcom.admin.ch/) Applikation zu Strompreisen
-* [ld.admin.ch/datasets](https://ld.admin.ch/datasets/) Liste aller Verfügbaren Linked Data Datensätze in Lindas
+* [infosm.ld.admin.ch](https://www.infosm.blv.admin.ch/) Applikation zu Tierseuchen und deren Ausbreitung
+* [strompreis.elcom.admin.ch](https://www.strompreis.elcom.admin.ch/) Applikation zu Strompreisen auf Ebene Gemeinde
+* [ld.admin.ch/datasets](https://ld.admin.ch/datasets/) Liste aller verfügbaren Datensätze in LINDAS
 * [bewilligungen.easygov.swiss](https://bewilligungen.easygov.swiss/) Suche nach bewilligungspflichtigen und reglementierten Berufen in der Schweiz
 
-## Bundesinterne Beispiele
+Bundesinterne Beispiele: *tbd*
 
-## Technische Basis
-* [ld.admin.ch](https://ld.admin.ch/) Dereferenzierung (technische Anzeige) aller Datenpunkte in Lindas
-* [ld.admin.ch/sparql](https://ld.admin.ch/sparql) SPARQL Query Abfrage User Interface
+## Rohdaten
 
-## Erstellung und Tranformation von Datasets
-* [cube-creator.lindas.admin.ch](https://cube-creator.lindas.admin.ch/) Transformation und Annotation von tabellarischen Daten in Linked Data.
+Über den [SPARQL Endpunkt](https://ld.admin.ch/sparql) lassen sich Daten programmatisch beziehen und via Dereferenzierung der URI als Website anzeigen (bspw. [Stadt Bern](https://ld.admin.ch/municipality/351)).
