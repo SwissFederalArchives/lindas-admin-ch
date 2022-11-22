@@ -2,6 +2,8 @@
 
 Link mit Hinweisen: https://www.bar.admin.ch/bar/de/home/recherche/suchen/suchmaschinen-portale/linked-data.html
 
+-
+
 ## Publizieren von OGD durch Schweizer Verwaltungen
 
 Mit Hilfe von LINDAS (Linked Data Service) können öffentliche Verwaltungen aus der Schweiz ihre Daten in Form Linke Data zur Verfügung stellen.
