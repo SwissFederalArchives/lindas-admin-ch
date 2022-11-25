@@ -1,6 +1,6 @@
 # Linked Data
 
-Linked Data hat verschiedene Facetten. Kurz zusammengefasst ist es die Kombination einer **spezifischen Idee** mit einer **Sammlung von konkreten Technologien**.
+Linked Data hat verschiedene Facetten. Kurz zusammengefasst ist es die Kombination einer **spezifischen Idee** mit einer **Sammlung von konkreten Technologien**. Auf dieser Seite soll keine allumfassende Einführung ins Thema gegeben werden, sondern ein paar wichtige Aspekte herausgegriffen werden und auf entsprechende Grundlagen, Einführungen und Tutorials verwiesen werden.
 
 ## Idee von Linked Data
 
@@ -32,13 +32,46 @@ Eine REST-API stellt Daten zur Verfügung, die nicht primär von Menschen direkt
 
 Während die Daten aus einer REST-API typischerweise einer gewissen Interpretation resp. zusätzlicher Dokumentation über andere Kanäle benötigen, können die Metadaten zu Linked Data direkt mit den Daten bezogen werden. Weiter erlaubt SPARQL als Abfragesprache auch, die Daten noch vor deren Ausgabe weiter zu verarbeiten (insbesondere Gruppierung).
 
-# Allgemeine Dokumentationen
+# Hindernisse im Umgang mit Linked Data
 
-* [Opendata.swiss Handbook zu Linked Data](https://handbook.opendata.swiss/de/content/glossar/bibliothek/linked-open-data.html)
-* Show a Walk (to discover the data) in a graph.
-* https://dice-research.org/news/2022-07-26_Learn-RDF/ 
-* https://classifications.data.admin.ch/linked-data/
+## Hindernisse für Datenprovider
 
-### Forums und Hilfsplatformen
+Datenprovider, die ihre Daten als Linked Data veröffentlichen wollen (im Gegensatz zu bspw. CSV) haben verschiedene Herausforderungen zu bewältigen:
 
-### Auflistung von Ausbildungen und Kursen zu Linked Data
+* Wissen rund um Linked Data ist in Entwicklerkreisen weniger stark verbreitet im Vergleich zu "klassischen" Technologien wie relationale Datenbanken und SQL
+* Linked Data verlangt nach einer klaren Beschreibung der Daten was voraussetzt, dass der Datenprovider eine klare Vorstellung der eigenen Daten hat was häufig mit grossen Vorinvestitionen verbunden ist, die sich aber typischerweise langfristig auszahlen
+* Linked Data im Sinne der Verlinkung verlangt nach einem Durchbrechen von Silo Mentalität, was häufig kulturell eine Herausforderung darstellen kann
+
+## Hindernisse für Datennutzer
+
+* der Zugang zu Linked Data via SPARQL Abfragen stellt eine Anfangshürde dar, die relativ hoch ist
+* werden Linked Data vie Dereferenzierung über HTML Seiten genutzt, liefern diese häufig unübersichtliche Informationen und laden auch nicht zu einem explorativen weiterklicken ein
+* es existieren kaum gute Suchfunktionen via Volltextsuche für Graphdatenbanken
+
+# Grundlagen, Einführungen und Tutorials
+
+## Linked Data allgemein
+
+* Text: [Einführung zu Linked Data bei opendata.swiss](https://handbook.opendata.swiss/de/content/glossar/bibliothek/linked-open-data.html)
+* Video: [TED Talk von Tim Berners-Lee](https://youtu.be/OM6XIICm_qo)
+* Video: [Europeana Linked Data Introduction](https://vimeo.com/36752317)
+* Buch: [Linked Open Data: The Essentials](https://semantic-web.com/LOD-TheEssentials.pdf)
+
+## RDF
+
+* [W3C RDF Primer](https://www.w3.org/TR/rdf11-primer/)
+
+## Weitere Link Sammlungen
+
+* Show a Walk (to discover the data) in a graph???
+* [Data Science Group Uni Paderborn: Semantic Web learning resources](https://dice-research.org/news/2022-07-26_Learn-RDF/)
+
+## SPARQL
+
+* [Wikidata SPARQL Tutorial](https://www.wikidata.org/wiki/Wikidata:SPARQL_tutorial)
+
+# Wo und wie kann ich Hilfe erhalten
+
+## Foren und Meetups
+
+## Aus- und Weiterbildungen
