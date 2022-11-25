@@ -1,5 +1,6 @@
 # Glossary
 
+see also [W3C Linked Data Glossary](https://www.w3.org/TR/ld-glossary/)
 
 ## D
 
