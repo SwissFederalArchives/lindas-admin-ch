@@ -20,7 +20,7 @@ The _Named Graph_ is normally used for data management purposes, e.g. to replace
 
 Sometimes a _Named Graph_ is also compared to a file which include the Triples. Altough a Triplestore does manage Named Graphs not as files.
 
-<h3 id="namespace">Namespace</h3>
+### Namespace
 
 
 ## O
