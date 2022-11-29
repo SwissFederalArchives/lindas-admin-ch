@@ -1,6 +1,6 @@
 # Linked Data
 
-Linked Data hat verschiedene Facetten. Kurz zusammengefasst ist es die Kombination einer **spezifischen Idee** mit einer **Sammlung von konkreten Technologien**. Auf diesen Seiten soll keine allumfassende Einführung ins Thema gegeben werden, sondern ein paar wichtige Aspekte herausgegriffen werden und auf entsprechende [Grundlagen, Einführungen und Tutorials](...) verwiesen werden.
+Linked Data hat verschiedene Facetten. Kurz zusammengefasst ist es die Kombination einer **spezifischen Idee** mit einer **Sammlung von konkreten Technologien**. Auf diesen Seiten soll keine allumfassende Einführung ins Thema gegeben werden, sondern ein paar wichtige Aspekte herausgegriffen werden und auf entsprechende [Grundlagen, Einführungen und Tutorials](/technology/help/) verwiesen werden.
 
 ## Idee von Linked Data
 
