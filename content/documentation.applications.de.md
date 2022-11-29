@@ -1,8 +1,10 @@
 # Auf LINDAS basierende Applikationen
 
-Um Daten für die Publikation in LINDAS aufzubereiten, wurde der [Cube Creator](https://cube-creator.lindas.admin.ch/) entwickelt. Damit lassen sich tabellarische Daten mit Meta Daten anreichern, um daraus RDF Cubes zu erstellen, die auf LINDAS publiziert werden können. Für den Cube Creator wird ein [CH-LOGIN](https://www.eiam.admin.ch) benötigt, welches über [support.lindas@bar.admin.ch](mailto:support.lindas@bar.admin.ch) für den Cube Creator freigeschaltet werden muss.
+## Daten auf LINDAS veröffentlichen
 
-## Applikationen
+Um Daten für die Publikation in LINDAS aufzubereiten, wurde der [Cube Creator](https://cube-creator.lindas.admin.ch/) entwickelt. Damit lassen sich tabellarische Daten mit Meta Daten anreichern, um daraus [RDF Cubes](https://cube.link) zu erstellen, die auf LINDAS publiziert werden können. Für den Cube Creator wird ein [CH-LOGIN](https://www.eiam.admin.ch) benötigt, welches über [support.lindas@bar.admin.ch](mailto:support.lindas@bar.admin.ch) für den Cube Creator freigeschaltet werden muss.
+
+## Applikationen, die LINDAS Daten nutzen
 
 Folgende öffentlichen Applikationen nutzen (teilweise im Hintergrund) Daten von LINDAS:
 
@@ -12,8 +14,11 @@ Folgende öffentlichen Applikationen nutzen (teilweise im Hintergrund) Daten von
 * [ld.admin.ch/datasets](https://ld.admin.ch/datasets/) Liste aller verfügbaren Datensätze in LINDAS
 * [bewilligungen.easygov.swiss](https://bewilligungen.easygov.swiss/) Suche nach bewilligungspflichtigen und reglementierten Berufen in der Schweiz
 
-Bundesinterne Beispiele: *tbd*
+Folgende verwaltungsinterne Applikationen nutzen Daten von LINDAS:
 
-## Rohdaten
+* ...
 
-Über den [SPARQL Endpunkt](https://ld.admin.ch/sparql) lassen sich Daten programmatisch beziehen und via Dereferenzierung der URI als Website anzeigen (bspw. [Stadt Bern](https://ld.admin.ch/municipality/351)).
+## Bezug von Rohdaten von LINDAS
+
+* Abfrage der Daten mit Hilfe der Abfragesprache SPARQL über den [SPARQL Endpunkt](https://ld.admin.ch/sparql)
+* Dereferenzierung der URI als HTML Page anzeigen (bspw. [Stadt Bern](https://ld.admin.ch/municipality/351)
