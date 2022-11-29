@@ -1,6 +1,6 @@
 # Linked Data
 
-Linked Data hat verschiedene Facetten. Kurz zusammengefasst ist es die Kombination einer **spezifischen Idee** mit einer **Sammlung von konkreten Technologien**. Auf dieser Seite soll keine allumfassende Einführung ins Thema gegeben werden, sondern ein paar wichtige Aspekte herausgegriffen werden und auf entsprechende Grundlagen, Einführungen und Tutorials verwiesen werden.
+Linked Data hat verschiedene Facetten. Kurz zusammengefasst ist es die Kombination einer **spezifischen Idee** mit einer **Sammlung von konkreten Technologien**. Auf diesen Seiten soll keine allumfassende Einführung ins Thema gegeben werden, sondern ein paar wichtige Aspekte herausgegriffen werden und auf entsprechende [Grundlagen, Einführungen und Tutorials](...) verwiesen werden.
 
 ## Idee von Linked Data
 
@@ -17,6 +17,20 @@ Die Idee von Linked Date beinhaltet verschiedene Aspekte:
 * für die eindeutigen Identifier wird der **IRI** Mechanismus verwendet
 * für die Speicherung von Linked Data werden **Graphdatenbanken** (auch Triple Stores genannt) verwendet
 * mit Hilfe der Abfragesprache **SPARQL** können die Daten aus der Datenbank abgefragt und verarbeitet werden
+
+# Vorteile dank der Nutzung von Linked Data
+
+## Vorteile für Datenprovider
+
+* Linked Data verlangt vom Datenprovider eine klare Vorstellung der eigenen Daten. Nur wer genau weiss, was die Daten bedeuten, kann dies auch als Metadaten klar formulieren. Linked Data kann helfen, eine solche klare Vorstellung zu entwickeln
+* Linked Data kann behilflich sein, eine eindeutige und klare Strategie zur Identifikation von Datenpunkten mit Hilfe von IRI zu entwickeln
+* Linked Data zahlt sich langfristig aus, da Daten und Datenmodelle nicht für einzelne Anwendungen optimiert werden, sondern als klare, sich selbst beschreibende Rohdaten erstellt werden, die sich einfacher in verschiedene Strukturen transformieren lassen können
+* Linked Data verlangt vom Datenprovider eine Sicht/Zusammenarbeit über die eigene Organisation hinaus, was ingesamt zu qualitativ besseren Daten führt
+
+## Vorteile für Datennutzerinnen
+
+* Linked Data und SPARQL stellen ein sehr universaler Mechanismus dar, um mit Daten zu arbeiten
+* Erlangtes Wissen rund um Linked Data und SPARQL lässt sich sehr viel einfacher auf andere Domänen übertragen
 
 # Linked Data im Vergleich zu
 
@@ -42,7 +56,7 @@ Datenprovider, die ihre Daten als Linked Data veröffentlichen wollen (im Gegens
 * Linked Data verlangt nach einer klaren Beschreibung der Daten was voraussetzt, dass der Datenprovider eine klare Vorstellung der eigenen Daten hat was häufig mit grossen Vorinvestitionen verbunden ist, die sich aber typischerweise langfristig auszahlen
 * Linked Data im Sinne der Verlinkung verlangt nach einem Durchbrechen von Silo Mentalität, was häufig kulturell eine Herausforderung darstellen kann
 
-## Hindernisse für Datennutzer
+## Hindernisse für Datennutzerinnen
 
 * der Zugang zu Linked Data via SPARQL Abfragen stellt eine Anfangshürde dar, die relativ hoch ist
 * werden Linked Data vie Dereferenzierung über HTML Seiten genutzt, liefern diese häufig unübersichtliche Informationen und laden auch nicht zu einem explorativen weiterklicken ein
