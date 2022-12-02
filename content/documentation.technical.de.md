@@ -1,11 +1,21 @@
 # LINDAS Technische Themen
+Dieser Abschnitt behandelt technische Themen rund um LINDAS.
+
+## LINDAS Architektur
+LINDAS besteht im Kern aus einem Triplestore (Graphdatenbank). Als Produkt wird dafür [Stardog](https://www.stardog.com/platform/) eingesetzt. Zusätzlich existiert eine [GitLab Instanz](https://gitlab.ldbar.ch/), auf welcher das Issue Management durchgeführt wird und mit Hilfe von CI/CD Piplelines Daten für LINDAS aufbereitet und im Triplestore abgelegt werden.
 
 LINDAS umfasst drei Umgebungen (_PROD_, _INT_, _TEST_) von Triplestores (basierend auf Stardog). Zusätzlich gibt es eine GitLab Instanz welche duch CI/CD Pipelines viele der Daten in LINDAS aktuell hält und überprüft.
 
-In diesem Abschnitt werden wir auf die technischen Gegebenheiten der Umsetzung von LINDAS eingehen.
-
 ## Umgebungen (Environments)
-Es gibt folgende Umgebungen, jeweils mit einem öffentlichen Leseendpunkt frei zugänglich. Die Lese/schrebendpunkte hingegen benötigen in jedem fall ein Benutzername, und zughöriges Passwort für den Zugriff.
+Das LINDAS Ökosystem ist in drei sogenannte Environments aufgeteilt:
+
+- **PROD**
+- **INT**
+- **TEST**
+
+Das PROD Environment ist für die produktive Nutzung der Daten vorgesehen. Im INT Environment wird die Integration der Daten vorbereitet und durchgeführt, also die Umwandlung der Daten zu Linked Data im RDF Format. Das TEST Environment ist insbesondere für Sofware Tests der eingesetzten Produkte gedacht.
+
+Alle drei Environments verfügen jeweils über einen offenen Leseendpunkt und einen nur für registrierte Benutzer zugänglichen Lese- und Schreibendpunkt.
 
 | Umgebung | Leseendpunkt                   | Lese-/schreibendpunkt                        | Garantien  |
 |----------|--------------------------------|----------------------------------------------|---|
@@ -13,42 +23,41 @@ Es gibt folgende Umgebungen, jeweils mit einem öffentlichen Leseendpunkt frei z
 | INT      | https://int.ld.admin.ch/query  | https://stardog-int.cluster.ldbar.ch/lindas  | 24h Verfügbarkeit, Anpassungen um Integrationstests mit Applikationen durchzuführen|
 | TEST     | https://test.ld.admin.ch/query | https://stardog-test.cluster.ldbar.ch/lindas | keine Garantie, Anpassungen um Datenbank zu testen.   |
 
+### Empfohlene Benutzung der Umgebungen
 
-### Empfholene Benutzung der Umgebungen
-
-#### Daten Pipeline 
+#### Daten Pipelines 
 Pipelines benutzten LINDAS TEST für die Entwicklung. LINDAS INT wird für die Intergration der Daten mit anderen Datensets benutzt. Schlussendlich wird auf LINDAS PROD publiziert.
 
 #### Lese-/Schreibe Applikation
-Datenschreibende Anwendungen benutzen die LINDAS INT Umgebung für die Entwicklung, sowie Intergrations. Die LINDAS PROD Umgebung wird für das produktive Deployment benutzt. (LINDAS TEST bietet keine Garantie zur Datenpersistenz und Verfügbarkeit.)
+Datenschreibende Anwendungen benutzen die LINDAS INT Umgebung für die Entwicklung, sowie Intergration. Die LINDAS PROD Umgebung wird für das produktive Deployment benutzt. LINDAS TEST bietet keine Garantie zur Datenpersistenz und Verfügbarkeit.
 
 #### Lesende Applikation
-Rein lesende Applikationen benutzten auschliesslich LINDAS PROD für alle Umgebungen. Als ausnahme kann LINDAS INT benutzt werden, wenn die zu lesenden Daten noch in Entwicklung sind.
-
+Rein lesende Applikationen benutzten auschliesslich LINDAS PROD. Als Ausnahme kann LINDAS INT benutzt werden, wenn die zu lesenden Daten noch in Entwicklung sind.
 
 ### Cache Server
-Zusätzlich zu den direkten Endpunkten gibt es des weiteren noch mit Varnish umgesetzte Cache Server für den Leseendpunkt `https://ld.admin.ch/query` unter https://lindas-cached.cluster.ldbar.ch/query.
+Zusätzlich zum PROD Leseendpunkt `https://ld.admin.ch/query` wird ein mit [Varnish](https://varnish-cache.org/) umgesetzter Cache Server unter https://lindas-cached.cluster.ldbar.ch/query betrieben.
 
 ## Namespaces, Namedgraphs und Benutzernamen
+Die Daten in LINDAS werden mit Hilfe von verschiedenen Namespaces organisiert und strukturiert. Die Zugriffskontrolle zu den Daten basiert auf Namedgraphs in Kombination mit Benutzernamen.
 
-Namespaces werden hergenommen um die Inhalte bundesweit einzuordnen und zu strukturieren. Das Datenmanagement in LINDAS wird über die Zugriffskontrolle basierend auf Namedgraphs in Kombination mit Benutzernamen gelöst. Folgend sind die zu benutzen Konventionen des Datenmagements geschildert.
-
+Nachfolgend sind die Konventionen bzgl. des Datenmanagements aufgeführt.
 
 ### LINDAS Namespace Konventionen
-Für Namespaces zu Daten welche in die Autorität des Bundesverwaltung fallen muss nach [I003](https://www.bk.admin.ch/bk/de/home/digitale-transformation-ikt-lenkung/ikt-vorgaben/standards/i003-domain_name_system_dns.html) ein Namespace unter `*.ld.admin.ch` benutzt werden.
+Für Daten, welche in die Autorität des Bundesverwaltung fallen, muss gemäss [I003](https://www.bk.admin.ch/bk/de/home/digitale-transformation-ikt-lenkung/ikt-vorgaben/standards/i003-domain_name_system_dns.html) ein Namespace unter der Basis-URI `*.ld.admin.ch` benutzt werden.
 
-Damit die publizierten Daten eine stabile URI behalten ist die Organisation kein Teil des Namespace. Der Projektname (`<dataset>`) muss im Anschluss an die Domain agefügt werden, es sollte auf darauf geachtet werden keine allzu generische Namen die bereits existieren könnten zu wählen. Dem Basis-URI wird ein Thema (Domain) vorangestellt.
+Damit die publizierten Daten eine stabile URI behalten, ist der Name der veröffentlichenden Verwaltungseinheit (oder deren Abkürzung) kein Teil des Namespaces. Der Basis-URI wird das Thema als Subdomain (`<subdomain>`) vorangestellt. Der Projektname (`<dataset>`) wird im Anschluss an die Domain agefügt. Es sollte auf darauf geachtet werden, keine allzu generische Namen zu wählen. Insbesondere muss geprüft werden, ob der Projektname nicht bereits existiert.
 
-Namespace haben den Pfad `https://<domain>.ld.admin.ch/<dataset>/*`. (Beispiel https://culture.ld.admin.ch/isil)
+Namespaces haben somit den Pfad `https://<domain>.ld.admin.ch/<dataset>/*`.
 
 * `<domain>` ist das Thema (auf Englisch), mit dem sich das Dataset befasst
-* `<dataset>` ist der Name des Datasets (wie vom jeweiligen Projekt gewählt).
+* `<dataset>` ist der Name des Datasets wie vom jeweiligen Projekt gewählt
 
-#### Mögliche Sub-Domains Themen
+Beispiel: Die Daten zum "International Standard Identifier for Libraries and Related Organizations" sind unter https://culture.ld.admin.ch/isil zu finden.
 
-Folgend die Liste der bisherig benutzen Themen. Wenn für ein neues Datenset kein passendes Thema vorhanden ist kann dies per LINDAS Support angefragt werden. Nach [I003](https://www.bk.admin.ch/bk/de/home/digitale-transformation-ikt-lenkung/ikt-vorgaben/standards/i003-domain_name_system_dns.html) liegt die abschliessende Entscheidung bei der BK.
+#### Themenbasierte Subdomains
+Folgende Subdomains werden bereits verwendet. Falls für ein neues Datenset kein passendes Thema vorhanden ist, kann dieses über den LINDAS Support angefragt werden. Nach [I003](https://www.bk.admin.ch/bk/de/home/digitale-transformation-ikt-lenkung/ikt-vorgaben/standards/i003-domain_name_system_dns.html) liegt die abschliessende Entscheidung über den Gebrauch der Subdomains bei der Bundeskanzlei (BK).
 
-| ld.admin.ch             | Themen übergreifende Konzepte          | Beispiele Ämter |
+| *.ld.admin.ch           | Themen                                 | Beispiele Ämter |
 |-------------------------|----------------------------------------|-----------------|
 | culture.ld.admin.ch     | Kultur                                 | NB              |
 | energy.ld.admin.ch      | Energie                                | Elcom, BFE      |
@@ -57,40 +66,39 @@ Folgend die Liste der bisherig benutzen Themen. Wenn für ein neues Datenset kei
 | environment.ld.admin.ch | Umwelt                                 | BAFU            |
 | finance.ld.admin.ch     | Finanzen                               | BAR             |
 | politics.ld.admin.ch    | Politik                                | BK              |
-| register.ld.admin.ch    | Themen unabhängig, bestehende Register | BJ, BAR, BK     |
+| register.ld.admin.ch    | bestehende Register (Themenunabhängig) | BJ, BAR, BK     |
 
 ### LINDAS Namedgraph Konventionen
-Namedgraphs in LINDAS kümmern sich ausschliesslich um das Datenmanagement und Berechtigungskonzept. (Namedgraphs dürfen nicht für das Versions Management oder auf Applikationsebene gebraucht werden.) Alle Named Graphs sind unter `https://lindas.admin.ch/*` angesiedelt, unabhängig vom Namespace oder der Organisation.
+Namedgraphs in LINDAS werden ausschliesslich für das Datenmanagement und Berechtigungskonzept benutzt. Namedgraphs dürfen nicht für die Versionsverwaltung oder auf Applikationsebene benutzt werden. Alle Namedgraphs befinden sind unter `https://lindas.admin.ch/*`, unabhängig vom Namespace oder der Organisation.
 
-Namedgraphs haben den Pfad `https://lindas.admin.ch/<orga>/<dataset>`. (Beispiel https://lindas.admin.ch/nl/isil)
+Namedgraphs haben den Aufbau `https://lindas.admin.ch/<orga>/<dataset>`. (Beispiel https://lindas.admin.ch/nl/isil)
 
 * `<orga>` ist die englische [Termdat](https://www.termdat.bk.admin.ch/) Abkürzung der Organisation
-* `<dataset>` ist der Name des Datasets (wie vom jeweiligen Projekt gewählt).
+* `<dataset>` ist der Name des Datasets wie vom jeweiligen Projekt gewählt
 
 
 ### LINDAS Username Konventionen
-Usernames sollen wo möglich nach folgendem schema aufgebaut werden: lindas-<orga>-<dataset/application> (Beispiel. lindas-nl-isil)
+Usernames sollen wo möglich nach folgendem Schema aufgebaut werden: lindas-<orga>-<dataset> oder lindas-<orga>-<application> (Beispiel. lindas-nl-isil)
 
-* `<orga>` ist identisch der Namedgraph Convention zu verwenden.
-* `<dataset>` identisch der Namedgraph Convention, wenn es sich um ein Dataset handelt welches manuell oder per pipeline geschrieben wird.
-* `<application>` wenn es sich um eine Applikation handelt die schreibt.
+* `<orga>` ist gemäss den Namedgraph Konventionen zu verwenden
+* `<dataset>` ist gemäss der Namedgraph Konvention zu verwenden, wenn es sich um ein Dataset handelt, welches manuell oder per Pipeline geschrieben wird
+* `<application>` ist der Name der Applikation, falls eine Applikation die Daten schreibt 
 
 ## Interne Triplestores
+Oben genannte technischen Details beziehen sich alle auf den öffentlich zugänglichen und offenen Teil von LINDAS, welcher technisch in der Datenbank mit dem Namen 'lindas' umgesetzt ist. Für interne Applikationen ist es möglich, vom offenen Teil unabhängige Datenbanken mit anderen Regelwerken zu benützen. Für Details hierzu kann der LINDAS Support kontaktiert werden.
 
-Die obig genannten technischen Details beziehen sich alle auf den öffentlich zugänglichen Teil von LINDAS welcher technisch in der Datenbank mit dem Namen 'lindas' umgesetzt ist. Für interne Applikationen ist es möglich vom öffentlichen Teil unabhängige Datenbanken mit anderen Regelwerken zu benützen. Für Details hierzu kann der LINDAS Support kontaktiert werden.
+## Anforderungen an die Datenpublikation
+Jede Publikation welche auf PROD zugelassen werden soll, muss ein definiertes Minimum an Metadaten aufweisen. Die nötigen Attribute der [Dataset](https://www.w3.org/TR/void/) Klasse welche unter der jeweiligen `<domain>/.well-known/void` Adresse verfügbar sein müssen, sind unter https://schema.ld.admin.ch/LindasDataset definiert. 
 
-## Anforderungen an Datenpublikation
-Jede Publikation welche auf PROD zugelassen werden soll, muss ein minimum an Metadaten mitliefern. Die nötigen Attribute der [Dataset](https://www.w3.org/TR/void/) Klasse welche unter der jeweiligen `<domain>/.well-known/void` angeschlossen werden muss, sind unter https://schema.ld.admin.ch/LindasDataset auffindbar. 
-
-Als Beispiel kann https://culture.ld.admin.ch/.well-known/dataset/isil herangenommen werden.
+Als Beispiel kann https://culture.ld.admin.ch/.well-known/dataset/isil konsultiert werden.
 
 ## Betrieb, Status und Support
 
 ### Allgemeiner und Administrativer Support
-Zu allgemeinen Fragen, auch für neue interessierte welche LINDAS nutzen möchten melden sich per eMail über [support-lindas@bar.admin.ch](mailto:support-lindas@bar.admin.ch).
+Für allgemeinen Fragen, auch für neue Interessierte, welche LINDAS nutzen möchten, steht der Lindas Support [support-lindas@bar.admin.ch](mailto:support-lindas@bar.admin.ch) zur Verfügung.
 
-### Technischer Support
-Der Betrieb von LINDAS wird durch [VSHN](https://www.vshn.ch/) sichergestellt. Datenlieferanten bekommen einen Zugang zum [Ticket System](https://control.vshn.net/) welches für sämtliche Anfragen zu neuen Namedgraphs, Benutzern und anderweitige Fragen zum Betrieb benutzt werden kann.
+### Technischer Betrieb und Support
+Der Betrieb von LINDAS wird durch [VSHN](https://www.vshn.ch/) sichergestellt. Datenlieferanten bekommen einen Zugang zum [Ticket System](https://control.vshn.net/), welches für sämtliche Anfragen zu neuen Namedgraphs, Benutzern und weiteren Fragen zum Betrieb benutzt werden kann.
 
 ### Status
-Der allgemeine Status sowie geplante Wartungsarbeiten können unter https://status.ldbar.ch/ eingesehen werden. Es ist auch möglich hier eine eMail Adresse zu hinterlegen um aktiv informiert zu werden.
+Der allgemeine Status der technischen Systeme, sowie geplante Wartungsarbeiten können unter https://status.ldbar.ch/ abgerufen werden. Es ist auch möglich, dort eine eMail Adresse zu hinterlegen um aktiv informiert zu werden.
