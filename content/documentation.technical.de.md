@@ -88,9 +88,9 @@ Usernames sollen wo möglich nach folgendem Schema aufgebaut werden: lindas-<org
 Oben genannte technischen Details beziehen sich alle auf den öffentlich zugänglichen und offenen Teil von LINDAS, welcher technisch in der Datenbank mit dem Namen 'lindas' umgesetzt ist. Für interne Applikationen ist es möglich, vom offenen Teil unabhängige Datenbanken mit anderen Regelwerken zu benützen. Für Details hierzu kann der LINDAS Support kontaktiert werden.
 
 ## Anforderungen an die Datenpublikation
-Jede Publikation welche auf PROD zugelassen werden soll, muss ein definiertes Minimum an Metadaten aufweisen. Die nötigen Attribute der [Dataset](https://www.w3.org/TR/void/) Klasse welche unter der jeweiligen `<domain>/.well-known/void` Adresse verfügbar sein müssen, sind unter https://schema.ld.admin.ch/LindasDataset definiert. 
+Jede Publikation welche auf PROD zugelassen werden soll, muss ein definiertes Minimum an Metadaten aufweisen. Die dazu nötigen Attribute der [Dataset](https://www.w3.org/TR/void/) Klasse, sind unter https://schema.ld.admin.ch/LindasDataset definiert und müssen unter `<domain>/.well-known/dataset/<dataset>` verfügbar sein. Zusätzlich müssen alle Datasets unter der jeweiligen `<domain>/.well-known/void` Adresse zur Bekanntmachung aufgeführt sein.
 
-Als Beispiel kann https://culture.ld.admin.ch/.well-known/dataset/isil konsultiert werden.
+Als Beispiel können https://culture.ld.admin.ch/.well-known/dataset/isil und https://culture.ld.admin.ch/.well-known/void konsultiert werden.
 
 ## Betrieb, Status und Support
 
