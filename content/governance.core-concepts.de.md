@@ -15,11 +15,8 @@ Controlled Vocabularies werden als Klasse `https://schema.org/DefinedTermSet` mo
 
 
 ## Core Entities
+Unter den Core Entities versteht man diejenigen Resourcen, die wichtig sind, weil sie überall und immer wieder benötigt werden. Dazu gehören:
 
-
-
-
-
-* Teritorial: Länder, Kantone, Bezirke, Gemeinden
-* Organisatorisch Bund: Departemente, Ämter, ...
-* Generisch: Zeit Konzepte (Wochen, Semester, Quartale)
+* Teritoriale Entitäten: Länder, Kantone, Bezirke, Gemeinden, ...
+* Organisatorische Entitäten: Departemente, Ämter, ...
+* Temporale Entitäten: Monate, Wochen, Semester, Quartale, ...
