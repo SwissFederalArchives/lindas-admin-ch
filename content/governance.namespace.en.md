@@ -1,10 +1,11 @@
 # Namespaces at the Swiss Confederation
 
-In the Linked Data World, the use of [namespaces](/technology/glossary/#namespace) help to organize the identifiers of [subjects](/technology/glossary/) (data points) and [predicates](/technology/glossary/) (the attributes). A well organized common namespace for all public and also internal data on the level of the Swiss Confederation brings a variety of advantages:
+In the Linked Data World, the use of [namespaces](/technology/glossary/#namespace) help to organize the identifiers of [subjects](/technology/glossary/) (data points) and [predicates](/technology/glossary/) (the attributes). A well defined and organized common namespace for all public and also internal data on the level of the Swiss Confederation brings a variety of advantages:
 
-* Stable, internal and external projects can build long-term of the published namespace.
-* Data can mostly discovered and described directly itself. There is no need for external documentation to discover the data.
-* A common contract on availability of data in certain namespaces can be defined.
+* A well constructed namespace results in stable and reliable IRI.
+* Stable IRI are important for reuse of the data in other projects and applications. 
+* A well and logical organised namespace leads to the data being self-descriptive via namespace. This results in a reduced need for external documentation to discover the data.
+* A common contract on status and availability of data in certain namespaces can be defined and communicated.
 
 ## ld.admin.ch
 
