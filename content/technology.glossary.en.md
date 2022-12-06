@@ -2,6 +2,12 @@
 
 see also [W3C Linked Data Glossary](https://www.w3.org/TR/ld-glossary/)
 
+## C
+
+### Controlled Vocabulary
+
+### Core Entity
+
 ## D
 
 ### Dereferencing
@@ -26,6 +32,8 @@ Sometimes a _Named Graph_ is also compared to a file which include the Triples. 
 ## O
 
 ### Object
+
+### Ontology
 
 ## P
 
@@ -60,4 +68,4 @@ Or with an _IRI_ at the Object place:
 
 ### URI
 
-See _IRI_.
+See [_IRI_](/technology/glossary/#iri).
