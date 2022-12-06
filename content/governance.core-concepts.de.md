@@ -15,7 +15,12 @@ Controlled Vocabularies werden als Klasse `https://schema.org/DefinedTermSet` mo
 
 
 ## Core Entities
-Unter den Core Entities versteht man diejenigen Resourcen, die wichtig sind, weil sie überall und immer wieder benötigt werden. Dazu gehören:
+Core Entities sind zentrale Ressourcen und aus zweierlei Gründen wichtig:
+
+- Core Entities werden benötigt, weil sie in sehr vielen verschiedenen Datensätzen eine Rolle spielen (bspw. Kantone oder Ämter)
+- Core Entities sind der zentrale Punkt, um Detailinformationen aus verschiedenen anderen Quellen anzuhängen (bspw. wird einem Kanton aus verwiesen auf geografische Informationen oder Bevölkerungsstatistiken für den jeweiligen Kanton)
+
+Zu den Core Entities gehören:
 
 * Teritoriale Entitäten: Länder, Kantone, Bezirke, Gemeinden, ...
 * Organisatorische Entitäten: Departemente, Ämter, ...
