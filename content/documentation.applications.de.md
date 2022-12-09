@@ -10,10 +10,23 @@ Folgende öffentlichen Applikationen nutzen (teilweise im Hintergrund) Daten von
 * [ld.admin.ch/datasets](https://ld.admin.ch/datasets/) Liste aller verfügbaren Datensätze in LINDAS
 * [bewilligungen.easygov.swiss](https://bewilligungen.easygov.swiss/) Suche nach bewilligungspflichtigen und reglementierten Berufen in der Schweiz
 
-## Bezug von Rohdaten von LINDAS
+## Daten direkt nutzen
+
+Um direkt mit den Daten von LINDAS zu arbeiten, gibt es verschiedene Möglichkeiten
+
+### Follow your Nose Prinzip
+
+Linked Data sollten grundsätzlich auch durch Personen ohne grosses technisches Wissen zu durchforsten sein. Dies geschieht mit Hilfe des sogennaten **Dereferenzierens**. In der Praxis bedeutet das, dass über einen Browser die IRI einer Linked Data Ressource aufgerufen wird und der Server entsprechende Informationen zur Ressource (normalerweise alle Triples, bei der die aufgerufene IRI auf der Subjektposition vorkommt) als HTML Seite liefert. Dieser Weg kann ein wenig holprig sein und folgende Tips können dabei helfen:
+
+- Unter https://ld.admin.ch/.well-known/void steht der Datenkatalog von LINDAS zur Verfügung, also eine Auflistung, welche Datasets auf LINDAS publiziert sind. Da die Datasets nicht direkt unter ld.admin.ch publiziert werden, stehen dort nur `rdfs:seeAlso` angaben zur Verfügung, die auf Subdomains verweisen, also bspw. auf https://energy.ld.admin.ch/.well-known/void.
+- Über den Datenkatalog der Subdomain kann man die `schema:dataset` erreichen, die dann eine `dcterms:description` aufweisen, die auch für Menschen verständlich ist.
+- Das Dataset (bspw. https://energy.ld.admin.ch/sfoe/bfe_ogd17_fuellungsgrad_speicherseen/5) ist häufig von der Klasse `cube:Cube` und besitzt damit ein `cube:ObersvationSet`.
+- Das `cube:ObservationSet` (bspw. https://energy.ld.admin.ch/sfoe/bfe_ogd17_fuellungsgrad_speicherseen/5/observation/) weist dann die eigentlichen Daten als `cube:Observation` auf (bspw. https://energy.ld.admin.ch/sfoe/bfe_ogd17_fuellungsgrad_speicherseen/5/observation/2015-02-23).
+- Damit kann ein erster Überblick über die Daten auf LINDAS erhalten werden.
+
+### SPARQL
 
 * Abfrage der Daten mit Hilfe der Abfragesprache SPARQL über den [SPARQL Endpunkt](https://ld.admin.ch/sparql)
-* Dereferenzierung der URI als HTML Page anzeigen (bspw. [Stadt Bern](https://ld.admin.ch/municipality/351)
 
 ## Daten auf LINDAS veröffentlichen
 
