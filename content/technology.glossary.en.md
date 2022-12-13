@@ -11,6 +11,7 @@ see also [W3C Linked Data Glossary](https://www.w3.org/TR/ld-glossary/)
 ## D
 
 ### Defined Term Set
+<a href="https://ld.admin.ch/sparql/#query=PREFIX+schema%3A+%3Chttp%3A%2F%2Fschema.org%2F%3E%0APREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0ASELECT+*+WHERE+%7B%0A%09%3FDefinedTermSet+a+schema%3ADefinedTermSet.%0A++%09FILTER(regex(str(%3FDefinedTermSet)%2C+%22vocabulary%22+)+)%0A%7D&contentTypeConstruct=text%2Fturtle&contentTypeSelect=application%2Fsparql-results%2Bjson&endpoint=https%3A%2F%2Fld.admin.ch%2Fquery&requestMethod=POST&tabTitle=Query+2&headers=%7B%7D&outputFormat=table" target="_blank">SPARQL Query for all Defined Term Sets in LINDAS</a>
 
 ### Dereferencing
 Query on the URI of the namespace to collect the data. (e.g. https://ld.admin.ch/canton/23). Different formats (serializations of the rdf model) can be requested through content-negotiation (by setting a specific HTTP Request Header asking specific format, e.g. RDF/XML, JSON-LD, Turtle in the ).
