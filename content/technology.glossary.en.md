@@ -10,6 +10,8 @@ see also [W3C Linked Data Glossary](https://www.w3.org/TR/ld-glossary/)
 
 ## D
 
+### Defined Term Set
+
 ### Dereferencing
 Query on the URI of the namespace to collect the data. (e.g. https://ld.admin.ch/canton/23). Different formats (serializations of the rdf model) can be requested through content-negotiation (by setting a specific HTTP Request Header asking specific format, e.g. RDF/XML, JSON-LD, Turtle in the ).
 
@@ -45,6 +47,8 @@ Sometimes a _Named Graph_ is also compared to a file which include the Triples. 
 Query in SPARQL Language to the database endpoint (e.g. https://lindas.admin.ch/query)
 
 ## S
+
+### Shared Dimension
 
 ### Subject
 
