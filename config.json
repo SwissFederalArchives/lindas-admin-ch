@@ -14,6 +14,7 @@
   },
   "staticViews": {
     "/": "cwd:views/home.html",
+    "/linked-data-day/": "cwd:views/linked-data-day.html",
     "/datasets/": "cwd:views/datasets.html",
     "/datasets-int/": "cwd:views/datasets-int.html",
     "/sparql/": "cwd:views/yasgui.html",
@@ -131,7 +132,11 @@
   "content": {
     "navigation": [
       {
-        "title": "About LINDAS",
+        "title": "Linked Data Day",
+        "link": "/linked-data-day/"
+      },
+      {
+        "title": "About",
         "link": "/"
       },
       {
