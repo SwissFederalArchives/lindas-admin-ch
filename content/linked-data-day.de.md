@@ -2,5 +2,5 @@
 
 ## Program
 
-## Referenten
+## Referenten
 
