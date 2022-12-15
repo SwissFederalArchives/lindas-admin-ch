@@ -8,7 +8,8 @@
 	"meta:Contact": "Contatto",
 	"meta:SiteTitle": "LINDAS - Linked Data Service",
 	"meta:Search": "Cercare",
-	"navigation:About LINDAS": "LINDAS",
+	"navigation:About": "Introduzione",
+	"navigation:About LINDAS": "Informazioni su LINDAS",
 	"navigation:Query Data": "Consultare i dati",
 	"navigation:Publish Data": "Pubblicare i dati",
 	"meta:Organisation": "Archivio federale svizzero AFS",
@@ -36,5 +37,6 @@
 	"subpage:Glossary": "subpage:Glossary",
 	"subpage:Help": "subpage:Help",
 	"subpage:Administrative": "subpage:Administrative",
-	"subpage:Technical": "subpage:Technical"
+	"subpage:Technical": "subpage:Technical",
+	"navigation:Linked Data Day": "Giornata dei dati collegati"
 }

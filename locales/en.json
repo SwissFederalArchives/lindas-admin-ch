@@ -8,6 +8,7 @@
 	"meta:Contact": "Contact",
 	"meta:SiteTitle": "LINDAS - Linked Data Service",
 	"meta:Search": "Search",
+	"navigation:About": "About",
 	"navigation:About LINDAS": "About LINDAS",
 	"navigation:Query Data": "Query Data",
 	"navigation:Publish Data": "Publish Data",
@@ -37,5 +38,6 @@
 	"subpage:Glossary": "Glossary",
 	"subpage:Help": "Help",
 	"subpage:Administrative": "Administrative",
-	"subpage:Technical": "Technical"
+	"subpage:Technical": "Technical",
+	"navigation:Linked Data Day": "Linked Data Day"
 }
