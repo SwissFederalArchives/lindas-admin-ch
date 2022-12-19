@@ -39,6 +39,8 @@ Die Veranstaltung wird in Deutsch und Französisch durchgeführt und die Keynote
 
 ![Philippe Künzler, BAR](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
 
+![Stefan Kwasnitza, BAR](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
+
 ![Sabine Zeller, BAFU](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
 
 ### Use Cases (alphabetisch)
