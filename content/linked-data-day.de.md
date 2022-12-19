@@ -15,6 +15,8 @@ Die Veranstaltung wird in Deutsch und Französisch durchgeführt und die Keynote
 
 ![Erwin Folmer](/Referierende/LDD_Erwin-Folmer-Kadaster.png {width=100px height=100px}"Keynote Erwin Folmer")
 
+![Erwin Folmer](/Referierende/LDD_Erwin-Folmer-Kadaster.png "Keynote Erwin Folmer"){width=75%}
+
 ### Inputreferate unter Anderem von folgenden Akteuren
 - Bundesarchiv, BAR
 - Bundesamt für Statistik, BFS
