@@ -30,7 +30,7 @@ Die Veranstaltung wird in Deutsch und Französisch durchgeführt und die Keynote
 
 ## Referentinnen und Referenten
 
-![alt text](/Referierende/Flurina-Wäspi-Referentin.jpg "Test")
+![alt text](/Referierende/Flurina-Wäspi-Referentin.jpg "Referent"){width=100 height=100px}
 
 - Liste mit Namen (Notiz: evt. mit Foto, später mit Titel des Beitrages oder ganzes Programm als Tabelle)
 - ...
