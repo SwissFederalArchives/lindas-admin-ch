@@ -13,6 +13,8 @@ Die Veranstaltung wird in Deutsch und Französisch durchgeführt und die Keynote
 
 - Internationale Keynote von Erwin Folmer von [Kadaster](https://www.kadaster.nl/about-us "dieser Link führt zu Kadaster!"), Niederlande 
 
+![Erwin Folmer](/Referierende/LDD_Erwin-Folmer-Kadaster-900x900.jpg "Keynote Erwin Folmer"{width=100 height=100px})
+
 ### Inputreferate unter Anderem von folgenden Akteuren
 - Bundesarchiv, BAR
 - Bundesamt für Statistik, BFS
@@ -29,8 +31,6 @@ Die Veranstaltung wird in Deutsch und Französisch durchgeführt und die Keynote
 - Crash Course zu Linked Data
 
 ### Referate, Reflektion, Diskussion
-
-![Erwin Folmer, Kadaster](/Referierende/Erwin-Folmer-Kadaster.jpg "Referent"{width=100 height=100px})
 
 ![Philippe Künzler, BAR](img/markdown_logo.png "Title Text"{width=100 height=100px})
 
