@@ -46,13 +46,13 @@ Die Veranstaltung wird in Deutsch und Französisch durchgeführt und die Keynote
 
 ![Sara Schärrer, BLV](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
 
-![Barbara Wyss, ElCom](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
+![Rolf Schenker, SSZ](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
 
 ![Hansjörg Stalder, SSZ](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
 
-![Rolf Schenker, SSZ](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
-
 ![Christian Trachsel, SBB](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
+
+![Barbara Wyss, ElCom](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
 
 ```
 Die Anmeldung für den Linked Data Day wird im Januar 2023 eröffnet.
