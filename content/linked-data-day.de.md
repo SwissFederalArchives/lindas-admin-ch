@@ -1,11 +1,11 @@
-# Linked Data Day am Donnerstag 9. März 2023
-## Bern, Welle 7 
+# Linked Data Day 
+## Donnerstag 9. März 2023 in der Welle 7, Bern
 
 Ziel dieser Konferenz ist es, die Verbindungen innerhalb der LINDAS-Nutzergemeinschaft zu stärken. Es geht in erster Linie darum, Datenanbieter, die Linked Data auf LINDAS veröffentlichen und Akteure, die das künftig tun möchten, untereinander zu vernetzen. 
 
-Wir möchten sowohl Anwender und Anwenderinnen von LINDAS sowie Führungskräfte ansprechen, die LINDAS auf ihrem Themengebiet noch nicht verwenden. Dazu bieten wir einen parallelen Track mit einem Crash Course Workshop für Manager an, während dem sich die LINDAS-Anwenderinnen und Anwender über aktuelle Entwicklungen austauschen.
+Wir möchten sowohl Anwender und Anwenderinnen von LINDAS sowie Führungskräfte ansprechen, die LINDAS auf ihrem Themengebiet noch nicht verwenden. Dazu bieten wir einen parallelen Track mit einem Crash Course Workshop für Manager an, während dem sich LINDAS-Anwenderinnen und Anwender über aktuelle Entwicklungen austauschen können.
 
-Die Veranstaltung wird in Deutsch und Französisch durchgeführt und die Keynote ist in Englisch gehalten. 
+Die Veranstaltung wird in Deutsch und Französisch durchgeführt und die Keynote in Englisch gehalten.
 
 ## Provisorisches Programm
 
@@ -33,6 +33,6 @@ Die Veranstaltung wird in Deutsch und Französisch durchgeführt und die Keynote
 - Liste mit Namen (Notiz: evt. mit Foto, später mit Titel des Beitrages oder ganzes Programm als Tabelle)
 
 ```
-Die Anmeldung für den Linked Data Day wird im Januar 2023 eröffnet
-Weitere Informationen folgen auf dieser Seite hier
+Die Anmeldung für den Linked Data Day wird im Januar 2023 eröffnet.
+Weitere Informationen folgen auf dieser Seite. 
 ```
