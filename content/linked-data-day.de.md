@@ -13,7 +13,7 @@ Die Veranstaltung wird in Deutsch und Französisch durchgeführt und die Keynote
 
 - Internationale Keynote von Erwin Folmer von [Kadaster](https://www.kadaster.nl/about-us "dieser Link führt zu Kadaster!"), Niederlande 
 
-![Erwin Folmer](/Referierende/LDD_Erwin-Folmer-Kadaster-900x900.jpg "Keynote Erwin Folmer"{width=100 height=100px})
+![Erwin Folmer](/Referierende/LDD_Erwin-Folmer-Kadaster.png "Keynote Erwin Folmer"{width=100 height=100px})
 
 ### Inputreferate unter Anderem von folgenden Akteuren
 - Bundesarchiv, BAR
