@@ -32,6 +32,7 @@ Die Veranstaltung wird in Deutsch und Französisch durchgeführt und die Keynote
 
 - Liste mit Namen (Notiz: evt. mit Foto, später mit Titel des Beitrages oder ganzes Programm als Tabelle)
 - ...
+- ...
 
 ```
 Die Anmeldung für den Linked Data Day wird im Januar 2023 eröffnet.
