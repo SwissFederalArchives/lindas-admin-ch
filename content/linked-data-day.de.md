@@ -3,9 +3,9 @@
 
 Ziel dieser Konferenz ist es, die Verbindungen innerhalb der LINDAS-Nutzergemeinschaft zu stärken. Es geht in erster Linie darum, Datenanbieter, die Linked Data auf LINDAS veröffentlichen und Akteure, die das künftig tun möchten, untereinander zu vernetzen. 
 
-Wir möchten sowohl Anwender und Anwenderinnen von LINDAS sowie Führungskräfte ansprechen, die LINDAS auf ihrem Themengebiet noch nicht verwenden. Dazu bieten wir einen parallelen Track mit einem Crash Course Workshop für Manager an, während dem sich LINDAS-Anwenderinnen und Anwender über aktuelle Entwicklungen austauschen können.
+Wir möchten sowohl Anwender und Anwenderinnen von LINDAS sowie Führungskräfte ansprechen, die LINDAS auf ihrem Themengebiet noch nicht verwenden. Dazu bieten wir einen parallelen Track mit einem Crash Course Workshop für Manager an, während dem sich LINDAS-Anwenderinnen und Anwender über aktuelle Entwicklungen austauschen können. Für Verwaltungsmitarbeitende und Staatsnahe Betriebe ist der Besuch der Veranstaltung kostenlos. 
 
-Die Veranstaltung wird in Deutsch und Französisch durchgeführt und die Keynote in Englisch gehalten.
+Die Veranstaltung wird in Deutsch und Französisch durchgeführt und die Keynote in Englisch gehalten. 
 
 ## Provisorisches Programm
 
@@ -13,7 +13,7 @@ Die Veranstaltung wird in Deutsch und Französisch durchgeführt und die Keynote
 
 - Internationale Keynote von Erwin Folmer von [Kadaster](https://www.kadaster.nl/about-us "dieser Link führt zu Kadaster!"), Niederlande 
 
-![Erwin Folmer](/Referierende/LDD_Erwin-Folmer-Kadaster.png "Keynote Erwin Folmer"){width=100 height=100px}
+![Erwin Folmer](/Referierende/LDD_Erwin-Folmer-Kadaster.png "Keynote Erwin Folmer" {width=100 height=100px})
 
 ### Inputreferate unter Anderem von folgenden Akteuren
 - Bundesarchiv, BAR
@@ -30,27 +30,27 @@ Die Veranstaltung wird in Deutsch und Französisch durchgeführt und die Keynote
 ### Workshop
 - Crash Course zu Linked Data
 
-### Referate, Reflektion, Diskussion
-
-![Philippe Künzler, BAR](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
+### Referate, Reflektion, Diskussion 
 
 ![Jean-Luc Cochard, BAR](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
+
+![Philippe Künzler, BAR](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
 
 ![Sabine Zeller, BAFU](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
 
 ### Use Cases (alphabetisch)
 
-![Pasquale Di Donato, swisstopo](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
+![Pasquale Di Donato, Projektkoordinator Geoinformation und Geoservices, KOGIS - swisstopo](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
 
 ![Ambrogio Foletti, BFE](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
 
-![Sara Schärrer, BLV](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
+![Sara Schärrer, Dr. Sara Schärrer, Wissenschaftliche Mitarbeiterin, Datenmanagerin, Bundesamt für Veterinärwesen](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
 
-![Rolf Schenker, SSZ](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
+![Rolf Schenker, Wissenschaftlicher Mitarbeiter, SSZ](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
 
-![Hansjörg Stalder, SSZ](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
+![Hansjörg Stalder, Projektleiter Fachanwendungen, SSZ](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
 
-![Christian Trachsel, SBB](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
+![Christian Trachsel, Open Dataverantwortlicher, SBB](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
 
 ![Barbara Wyss, ElCom](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
 
