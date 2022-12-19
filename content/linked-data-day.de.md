@@ -13,7 +13,7 @@ Die Veranstaltung wird in Deutsch und Französisch durchgeführt und die Keynote
 
 - Internationale Keynote von Erwin Folmer von [Kadaster](https://www.kadaster.nl/about-us "dieser Link führt zu Kadaster!"), Niederlande 
 
-![Erwin Folmer](/Referierende/LDD_Erwin-Folmer-Kadaster.png"Keynote Erwin Folmer"{width=100px height=100px})
+![Erwin Folmer](/Referierende/LDD_Erwin-Folmer-Kadaster.jpg"Keynote Erwin Folmer"{width=100px height=100px})
 
 
 ![Erwin Folmer](/Referierende/LDD_Erwin-Folmer-Kadaster.png"Keynote Erwin Folmer"{width=75% height=75%})
@@ -35,7 +35,7 @@ Die Veranstaltung wird in Deutsch und Französisch durchgeführt und die Keynote
 
 ### Referate, Reflektion, Diskussion 
 
-![Jean-Luc Cochard, BAR](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
+![Jean-Luc Cochard, BAR](/Referierende/Platzhalter-Person.jpg "Title Text"{width=100 height=100px})
 
 ![Philippe Künzler, BAR](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
 
