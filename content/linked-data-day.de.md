@@ -28,13 +28,31 @@ Die Veranstaltung wird in Deutsch und Französisch durchgeführt und die Keynote
 ### Workshop
 - Crash Course zu Linked Data
 
-## Referentinnen und Referenten
+### Referate, Reflektion, Diskussion
 
-![alt text](/Referierende/Flurina-Wäspi-Referentin.jpg "Referent"){width=100 height=100px}
+![Erwin Folmer, Kadaster](/Referierende/Erwin-Folmer-Kadaster.jpg "Referent"{width=100 height=100px})
 
-- Liste mit Namen (Notiz: evt. mit Foto, später mit Titel des Beitrages oder ganzes Programm als Tabelle)
-- ...
-- ...
+![Philippe Künzler, BAR](img/markdown_logo.png "Title Text"{width=100 height=100px})
+
+![Jean-Luc Cochard, BAR](img/markdown_logo.png "Title Text"{width=100 height=100px})
+
+![Sabine Zeller, BAFU](img/markdown_logo.png "Title Text"{width=100 height=100px})
+
+### Use Cases (alphabetisch)
+
+![Pasquale Di Donato, swisstopo](img/markdown_logo.png "Title Text"{width=100 height=100px})
+
+![Ambrogio Foletti, BFE](img/markdown_logo.png "Title Text"{width=100 height=100px})
+
+![Sara Schärrer, BLV](img/markdown_logo.png "Title Text"{width=100 height=100px})
+
+![Barbara Wyss, ElCom](img/markdown_logo.png "Title Text"{width=100 height=100px})
+
+![Hansjörg Stalder, SSZ](img/markdown_logo.png "Title Text"{width=100 height=100px})
+
+![Rolf Schenker, SSZ](img/markdown_logo.png "Title Text"{width=100 height=100px})
+
+![Christian Trachsel, SBB](img/markdown_logo.png "Title Text"{width=100 height=100px})
 
 ```
 Die Anmeldung für den Linked Data Day wird im Januar 2023 eröffnet.
