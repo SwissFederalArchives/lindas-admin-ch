@@ -49,6 +49,8 @@ Query in SPARQL Language to the database endpoint (e.g. https://lindas.admin.ch/
 
 ## S
 
+### schema.ld.admin.ch
+
 ### Shared Dimension
 
 ### Subject
