@@ -32,27 +32,27 @@ Die Veranstaltung wird in Deutsch und Französisch durchgeführt und die Keynote
 
 ### Referate, Reflektion, Diskussion
 
-![Philippe Künzler, BAR](/Referierende/Platzhalter-Person.jpg "Title Text"{width=100 height=100px})
+![Philippe Künzler, BAR](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
 
-![Jean-Luc Cochard, BAR](/Referierende/Platzhalter-Person.jpg "Title Text"{width=100 height=100px})
+![Jean-Luc Cochard, BAR](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
 
-![Sabine Zeller, BAFU](/Referierende/Platzhalter-Person.jpg "Title Text"{width=100 height=100px})
+![Sabine Zeller, BAFU](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
 
 ### Use Cases (alphabetisch)
 
-![Pasquale Di Donato, swisstopo](/Referierende/Platzhalter-Person.jpg "Title Text"{width=100 height=100px})
+![Pasquale Di Donato, swisstopo](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
 
-![Ambrogio Foletti, BFE](/Referierende/Platzhalter-Person.jpg "Title Text"{width=100 height=100px})
+![Ambrogio Foletti, BFE](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
 
-![Sara Schärrer, BLV](/Referierende/Platzhalter-Person.jpg "Title Text"{width=100 height=100px})
+![Sara Schärrer, BLV](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
 
-![Barbara Wyss, ElCom](/Referierende/Platzhalter-Person.jpg "Title Text"{width=100 height=100px})
+![Barbara Wyss, ElCom](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
 
-![Hansjörg Stalder, SSZ](img/markdown_logo.png "Title Text"{width=100 height=100px})
+![Hansjörg Stalder, SSZ](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
 
-![Rolf Schenker, SSZ](img/markdown_logo.png "Title Text"{width=100 height=100px})
+![Rolf Schenker, SSZ](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
 
-![Christian Trachsel, SBB](img/markdown_logo.png "Title Text"{width=100 height=100px})
+![Christian Trachsel, SBB](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
 
 ```
 Die Anmeldung für den Linked Data Day wird im Januar 2023 eröffnet.
