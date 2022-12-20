@@ -13,7 +13,7 @@ Die Veranstaltung wird in Deutsch und Französisch durchgeführt und die Keynote
 
 - Internationale Keynote von Erwin Folmer von [Kadaster](https://www.kadaster.nl/about-us "dieser Link führt zu Kadaster!"), Niederlande 
 
-![Erwin Folmer](/Referierende/LDD_Erwin-Folmer-Kadaster.jpg"Keynote Erwin Folmer"| width=100 )
+![Erwin Folmer](/Referierende/LDD_Erwin-Folmer-Kadaster.jpg | width=100 )
 
 ### Inputreferate unter Anderem von folgenden Akteuren (alphabetisch)
 - Bundesamt für Energie, BFE
