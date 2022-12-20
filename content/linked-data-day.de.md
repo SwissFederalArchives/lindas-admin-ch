@@ -32,7 +32,7 @@ Die Veranstaltung wird in Deutsch und Französisch durchgeführt und die Keynote
 
 ### Referate, Reflektion, Diskussion 
 
-![Jean-Luc Cochard, BAR](/Referierende/Platzhalter-Person.jpg "Title Text"{width=100 height=100px})
+![Jean-Luc Cochard, BAR](/Referierende/Platzhalter-Person.jpg "Title Text" width=100 height=100px)
 
 ![Philippe Künzler, BAR](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
 
