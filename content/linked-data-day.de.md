@@ -13,12 +13,9 @@ Die Veranstaltung wird in Deutsch und Französisch durchgeführt und die Keynote
 
 - Internationale Keynote von Erwin Folmer von [Kadaster](https://www.kadaster.nl/about-us "dieser Link führt zu Kadaster!"), Niederlande 
 
-![Erwin Folmer](/Referierende/LDD_Erwin-Folmer-Kadaster.jpg"Keynote Erwin Folmer"{width=100px height=100px})
+![Erwin Folmer](/Referierende/LDD_Erwin-Folmer-Kadaster.jpg"Keynote Erwin Folmer"{(width=100px height=100px}))
 
-
-![Erwin Folmer](/Referierende/LDD_Erwin-Folmer-Kadaster.png"Keynote Erwin Folmer"{width=75% height=75%})
-
-### Inputreferate unter Anderem von folgenden Akteuren
+### Inputreferate unter Anderem von folgenden Akteuren (alphabetisch)
 - Bundesamt für Energie, BFE
 - Bundesamt für Landestopografie, swisstopo
 - Bundesamt für Statistik, BFS
@@ -31,7 +28,7 @@ Die Veranstaltung wird in Deutsch und Französisch durchgeführt und die Keynote
 - Statistik Stadt Zürich, SSZ 
 
 ### Workshop
-- Crash Course zu Linked Data
+- Crash Course zu Linked Data für Manager
 
 ### Referate, Reflektion, Diskussion 
 
