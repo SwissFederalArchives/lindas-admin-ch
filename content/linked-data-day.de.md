@@ -13,51 +13,51 @@ Die Veranstaltung wird in Deutsch und Französisch durchgeführt und die Keynote
 
 - Internationale Keynote von Erwin Folmer von [Kadaster](https://www.kadaster.nl/about-us "dieser Link führt zu Kadaster!"), Niederlande 
 
-![Erwin Folmer](piblic/Referierende/LDD_Erwin-Folmer-Kadaster.jpg"Keynote Erwin Folmer"{width=100px height=100px})
+![Erwin Folmer](/Referierende/LDD_Erwin-Folmer-Kadaster.jpg"Keynote Erwin Folmer"{width=100px height=100px})
 
 
-![Erwin Folmer](public/Referierende/LDD_Erwin-Folmer-Kadaster.png"Keynote Erwin Folmer"{width=75% height=75%})
+![Erwin Folmer](/Referierende/LDD_Erwin-Folmer-Kadaster.png"Keynote Erwin Folmer"{width=75% height=75%})
 
 ### Inputreferate unter Anderem von folgenden Akteuren
-- Bundesarchiv, BAR
+- Bundesamt für Energie, BFE
+- Bundesamt für Landestopografie, swisstopo
 - Bundesamt für Statistik, BFS
 - Bundesamt für Umwelt, BAFU
-- Bundeskanzlei, BK
-- Bundesamt für Landestopografie, swisstopo
 - Bundesamt für Veterinärwesen, BLV
-- Bundesamt für Energie, BFE
+- Bundesarchiv, BAR
+- Bundeskanzlei, BK
 - Eidgenössische Elektrizitätskommission, Elcom 
-- Statistik Stadt Zürich, SSZ 
 - Schweizerische Bundesbahnen, SBB
+- Statistik Stadt Zürich, SSZ 
 
 ### Workshop
 - Crash Course zu Linked Data
 
 ### Referate, Reflektion, Diskussion 
 
-![Jean-Luc Cochard, BAR](/public/Referierende/Platzhalter-Person.jpg "Title Text"{width=100 height=100px})
+![Jean-Luc Cochard, BAR](/Referierende/Platzhalter-Person.jpg "Title Text"{width=100 height=100px})
 
-![Philippe Künzler, BAR](/public/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
+![Philippe Künzler, BAR](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
 
-![Stefan Kwasnitza, BAR](/public/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
+![Stefan Kwasnitza, BAR](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
 
-![Sabine Zeller, BAFU](/public/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
+![Sabine Zeller, BAFU](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
 
 ### Use Cases (alphabetisch)
 
-![Pasquale Di Donato, Projektkoordinator Geoinformation und Geoservices, KOGIS - swisstopo](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
+![Pasquale Di Donato, Projektkoordinator Geoinformation und Geoservices, KOGIS - swisstopo](/Referierende/LDD-Pasquale-Di-Donato.jpg "Title Text"{width=100 height=100px})
 
-![Ambrogio Foletti, BFE](/public/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
+![Ambrogio Foletti, BFE](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
 
 ![Sara Schärrer, Dr. Sara Schärrer, Wissenschaftliche Mitarbeiterin, Datenmanagerin, Bundesamt für Veterinärwesen](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
 
-![Rolf Schenker, Wissenschaftlicher Mitarbeiter, SSZ](/public/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
+![Rolf Schenker, Wissenschaftlicher Mitarbeiter, SSZ](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
 
-![Hansjörg Stalder, Projektleiter Fachanwendungen, SSZ](/public/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
+![Hansjörg Stalder, Projektleiter Fachanwendungen, SSZ](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
 
-![Christian Trachsel, Open Dataverantwortlicher, SBB](/public/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
+![Christian Trachsel, Open Dataverantwortlicher, SBB](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
 
-![Barbara Wyss, ElCom](/public/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
+![Barbara Wyss, ElCom](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
 
 ```
 Die Anmeldung für den Linked Data Day wird im Januar 2023 eröffnet.
