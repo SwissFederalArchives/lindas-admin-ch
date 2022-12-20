@@ -42,7 +42,7 @@ Die Veranstaltung wird in Deutsch und Französisch durchgeführt und die Keynote
 
 ### Use Cases (alphabetisch)
 
-![Pasquale Di Donato, Projektkoordinator Geoinformation und Geoservices, KOGIS - swisstopo](/Referierende/LDD-Pasquale-Di-Donato.jpg "Title Text"{width=100 height=100px})
+![Pasquale Di Donato, Projektkoordinator Geoinformation und Geoservices, KOGIS - swisstopo](/public/Referierende/LDD-Pasquale-Di-Donato.jpg "Title Text"{width=100 height=100px})
 
 ![Ambrogio Foletti, BFE](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
 
