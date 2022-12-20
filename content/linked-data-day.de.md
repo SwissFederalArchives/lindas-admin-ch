@@ -32,13 +32,13 @@ Die Veranstaltung wird in Deutsch und Französisch durchgeführt und die Keynote
 
 ### Referate, Reflektion, Diskussion 
 
-![Jean-Luc Cochard, BAR](/Referierende/Platzhalter-Person.jpg "Title Text" width=100 height=100px)
+![Jean-Luc Cochard, Leiter Ressort Informationstechnologie, BAR](/Referierende/Platzhalter-Person.jpg "Title Text" width=100 height=100px)
 
-![Philippe Künzler, BAR](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
+![Philippe Künzler, Direktor, BAR](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
 
-![Stefan Kwasnitza, BAR](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
+![Stefan Kwasnitza, Stellvertretender Direktor, BAR](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
 
-![Sabine Zeller, BAFU](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
+![Sabine Zeller, Projektleiterin visualize.admin.ch, BAFU](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
 
 ### Use Cases (alphabetisch)
 
@@ -54,7 +54,7 @@ Die Veranstaltung wird in Deutsch und Französisch durchgeführt und die Keynote
 
 ![Christian Trachsel, Open Dataverantwortlicher, SBB](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
 
-![Barbara Wyss, ElCom](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
+![Barbara Wyss, Leiterin Sektion Preise und Tarife, ElCom](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
 
 ```
 Die Anmeldung für den Linked Data Day wird im Januar 2023 eröffnet.
