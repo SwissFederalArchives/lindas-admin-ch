@@ -21,6 +21,11 @@ Zentrale Entitäten sind immer auch Teil eines Controlled Vocabularies und als s
         <td>Beispiel</td>
     </tr>
     <tr>
+        <td>Länder</td>
+        <td><a href="https://ld.admin.ch/sparql/#query=PREFIX+schema%3A+%3Chttp%3A%2F%2Fschema.org%2F%3E%0APREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0ASELECT+*+WHERE+%7B%0A%09%3Fcountry+schema%3AinDefinedTermSet+%3Chttps%3A%2F%2Fld.admin.ch%2Fdimension%2Fcountry%3E%3B%0A++%09%09schema%3Aname+%3Fname.%0A++FILTER(lang(%3Fname)+%3D+%22de%22)%0A%7D&contentTypeConstruct=text%2Fturtle&contentTypeSelect=application%2Fsparql-results%2Bjson&endpoint=https%3A%2F%2Fld.admin.ch%2Fquery&requestMethod=POST&tabTitle=Query+4&headers=%7B%7D&outputFormat=table" target="_blank">SPARQL Query</a></td>
+        <td>Frankreich: https://ld.admin.ch/country/FRA</td>
+    </tr>
+    <tr>
         <td>Kantone</td>
         <td><a href="https://ld.admin.ch/sparql/#query=PREFIX+schema%3A+%3Chttp%3A%2F%2Fschema.org%2F%3E%0APREFIX+rdf%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0APREFIX+rdfs%3A+%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0ASELECT+*+WHERE+%7B%0A%09%3Fcanton+a+%3Chttps%3A%2F%2Fschema.ld.admin.ch%2FCanton%3E%3B%0A+++++++++schema%3AalternateName+%3Fabbr.%0A%7D&contentTypeConstruct=text%2Fturtle&contentTypeSelect=application%2Fsparql-results%2Bjson&endpoint=https%3A%2F%2Fld.admin.ch%2Fquery&requestMethod=POST&tabTitle=Query&headers=%7B%7D&outputFormat=table" target="_blank">SPARQL Query</a></td>
         <td>Jura: https://ld.admin.ch/canton/26</td>
@@ -41,5 +46,8 @@ Zentrale Entitäten sind immer auch Teil eines Controlled Vocabularies und als s
         <td>Bundesarchiv: https://ld.admin.ch/office/II.1.4</td>
     </tr>
 </table>
+
+Diese Aufzählung hat keinen Anspruch auf Vollständigkeit.
+
 
 
