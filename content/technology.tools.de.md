@@ -7,6 +7,10 @@
 * [RIOT](https://jena.apache.org/documentation/io/) 
 * [RAPPER](https://librdf.org/raptor/rapper.html)
 
+## Cubes
+* Cube Creator
+* [Cubes validieren](https://cube.link/#validate-the-cube)
+
 ## Tranformationen von nicht Linked Data Quellen nach Linked Data
 ### ETL
 #### Standards
