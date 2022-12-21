@@ -17,11 +17,32 @@ Das PROD Environment ist für die produktive Nutzung der Daten vorgesehen. Im IN
 
 Alle drei Environments verfügen jeweils über einen offenen Leseendpunkt und einen nur für registrierte Benutzer zugänglichen Lese- und Schreibendpunkt.
 
-| Umgebung | Leseendpunkt                   | Lese-/schreibendpunkt                        | Garantien  |
-|----------|--------------------------------|----------------------------------------------|---|
-| PROD     | https://ld.admin.ch/query      | https://stardog.cluster.ldbar.ch/lindas      | 24h Verfügbarkeit, Anpassungen nur nach Integrationstests mit Applikationen |
-| INT      | https://int.ld.admin.ch/query  | https://stardog-int.cluster.ldbar.ch/lindas  | 24h Verfügbarkeit, Anpassungen um Integrationstests mit Applikationen durchzuführen|
-| TEST     | https://test.ld.admin.ch/query | https://stardog-test.cluster.ldbar.ch/lindas | keine Garantie, Anpassungen um Datenbank zu testen.   |
+<table class="table">
+    <tr>
+        <td>Umgebung</td>
+        <td>Leseendpunkt</td>
+        <td>Lese-/schreibendpunkt</td>
+        <td>Garantien</td>
+    </tr>
+    <tr>
+        <td>PROD</td>
+        <td>https://ld.admin.ch/query</td>
+        <td>https://stardog.cluster.ldbar.ch/lindas</td>
+        <td>24h Verfügbarkeit, Anpassungen nur nach Integrationstests mit Applikationen</td>
+    </tr>
+    <tr>
+        <td>INT</td>
+        <td>https://int.ld.admin.ch/query</td>
+        <td>https://stardog-int.cluster.ldbar.ch/lindas</td>
+        <td>24h Verfügbarkeit, Anpassungen um Integrationstests mit Applikationen durchzuführen</td>
+    </tr>
+    <tr>
+        <td>TEST</td>
+        <td>https://test.ld.admin.ch/query</td>
+        <td>https://stardog-test.cluster.ldbar.ch/lindas</td>
+        <td>keine Garantie, Anpassungen um Datenbank zu testen.</td>
+    </tr>
+</table>
 
 ### Empfohlene Benutzung der Umgebungen
 
@@ -57,16 +78,53 @@ Beispiel: Die Daten zum "International Standard Identifier for Libraries and Rel
 #### Themenbasierte Subdomains
 Folgende Subdomains werden bereits verwendet. Falls für ein neues Datenset kein passendes Thema vorhanden ist, kann dieses über den LINDAS Support angefragt werden. Nach [I003](https://www.bk.admin.ch/bk/de/home/digitale-transformation-ikt-lenkung/ikt-vorgaben/standards/i003-domain_name_system_dns.html) liegt die abschliessende Entscheidung über den Gebrauch der Subdomains bei der Bundeskanzlei (BK).
 
-| *.ld.admin.ch           | Themen                                 | Beispiele Ämter |
-|-------------------------|----------------------------------------|-----------------|
-| culture.ld.admin.ch     | Kultur                                 | NB              |
-| energy.ld.admin.ch      | Energie                                | Elcom, BFE      |
-| education.ld.admin.ch   | Ausbildung                             | BAR             |
-| agriculture.ld.admin.ch | Landwirtschaft                         | BLW, Agroscope  |
-| environment.ld.admin.ch | Umwelt                                 | BAFU            |
-| finance.ld.admin.ch     | Finanzen                               | BAR             |
-| politics.ld.admin.ch    | Politik                                | BK              |
-| register.ld.admin.ch    | bestehende Register (Themenunabhängig) | BJ, BAR, BK     |
+<table class="table">
+    <tr>
+        <td>*.ld.admin.ch</td>
+        <td>Themen</td>
+        <td>Beispiele Ämter</td>
+    </tr>
+    <tr>
+        <td>culture.ld.admin.ch</td>
+        <td>Kultur</td>
+        <td>NB</td>
+    </tr>
+    <tr>
+        <td>energy.ld.admin.ch</td>
+        <td>Energie</td>
+        <td>Elcom, BFE</td>
+    </tr>
+    <tr>
+        <td>education.ld.admin.ch</td>
+        <td>Ausbildung</td>
+        <td>BAR</td>
+    </tr>
+    <tr>
+        <td>agriculture.ld.admin.ch</td>
+        <td>Landwirtschaft</td>
+        <td>BLW, Agroscope</td>
+    </tr>
+    <tr>
+        <td>environment.ld.admin.ch</td>
+        <td>Umwelt</td>
+        <td>BAFU</td>
+    </tr>
+    <tr>
+        <td>finance.ld.admin.ch</td>
+        <td>Finanzen</td>
+        <td>BAR</td>
+    </tr>
+    <tr>
+        <td>politics.ld.admin.ch</td>
+        <td>Politik</td>
+        <td>BK</td>
+    </tr>
+    <tr>
+        <td>register.ld.admin.ch</td>
+        <td>bestehende Register (Themenunabhängig)</td>
+        <td>BJ, BAR, BK</td>
+    </tr>
+</table>
 
 ### LINDAS Namedgraph Konventionen
 Namedgraphs in LINDAS werden ausschliesslich für das Datenmanagement und Berechtigungskonzept benutzt. Namedgraphs dürfen nicht für die Versionsverwaltung oder auf Applikationsebene benutzt werden. Alle Namedgraphs befinden sind unter `https://lindas.admin.ch/*`, unabhängig vom Namespace oder der Organisation.
