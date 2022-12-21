@@ -27,6 +27,9 @@ Mit Hilfe des [Graph Explorers](https://ld.admin.ch/graph-explorer/) können die
 ### SPARQL
 Die Daten aus LINDAS können auch mit Hilfe der Abfragesprache SPARQL über den [SPARQL Endpunkt](https://ld.admin.ch/sparql) abgefragt werden.
 
+### Volltextsuche
+Der von LINDAS verwendete Stardog Triplestore erlaubt die Volltextsuche via SPARQL. Details dazu sind in der [Stardog Dokumentation](https://docs.stardog.com/query-stardog/full-text-search#integration-with-sparql) zu finden. Hier eine <a href="https://ld.admin.ch/sparql/#query=SELECT+DISTINCT+%3Fs+%3Fp+%3Fl%0AWHERE+%7B%0A++%3Fs+%3Fp+%3Fl.%0A++(%3Fl+%3Fscore)+%3Ctag%3Astardog%3Aapi%3Aproperty%3AtextMatch%3E+'Fraum%C3%BCnster'.%0A%7D%0A&contentTypeConstruct=text%2Fturtle&contentTypeSelect=application%2Fsparql-results%2Bjson&endpoint=https%3A%2F%2Fld.admin.ch%2Fquery&requestMethod=POST&tabTitle=Query+5&headers=%7B%7D&outputFormat=table" target="_blank">Beispiel-Volltextsuche</a>, die nach dem Vorkommen des Begriffs 'Fraumünster' in allen Literals sucht.
+
 ## Daten auf LINDAS veröffentlichen
 
 ### Cube Creator
