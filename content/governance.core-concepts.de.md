@@ -4,11 +4,15 @@ Zentrale Entitäten (en: Core Entities) sind wichtige Ressourcen in LINDAS:
 - Zentrale Entitäten werden benötigt, weil diese in sehr vielen verschiedenen Datensätzen eine Rolle spielen (werden) (bspw. Kantone oder Ämter) und somit wiederververwendbar sein sollen.
 - Zentrale Entitäten sind der zentrale Punkt, um Detailinformationen aus verschiedenen anderen Quellen (Registern) zu verlinken (bspw. wird die zentrale Entität "Kanton XY" mit geografischen Informationen und Bevölkerungsstatistiken verlinkt)
 
+<br>
+
 Zu den Zentrale Entitäten gehören:
 
 * Teritoriale Entitäten: Länder, Kantone, Bezirke, Gemeinden, ...
 * Organisatorische Entitäten: Departemente, Ämter, ...
 * Temporale Entitäten: Monate, Wochen, Semester, Quartale, ...
+
+<br>
 
 Zentrale Entitäten sind immer auch Teil eines Controlled Vocabularies und als solche vom Typ [schema:DefinedTerm](https://schema.org/DefinedTerm), sie sind jedoch nicht als eigentliche zentrale Entität klassifiziert in den Linked Data.
 
