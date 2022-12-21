@@ -24,6 +24,10 @@ Query on the URI of the namespace to collect the data. (e.g. https://ld.admin.ch
 
 ### IRI
 
+## L
+
+### Literal
+
 ## N
 
 ### Named Graph
@@ -52,8 +56,6 @@ Sometimes a _Named Graph_ is also compared to a file which include the Triples. 
 Query in SPARQL Language to the database endpoint (e.g. https://lindas.admin.ch/query)
 
 ## S
-
-### schema.ld.admin.ch
 
 ### Shared Dimension
 
