@@ -18,10 +18,10 @@ Um direkt mit den Daten von LINDAS zu arbeiten, gibt es verschiedene Möglichkei
 
 Linked Data sollten grundsätzlich auch durch Personen ohne grosses technisches Wissen zu durchforsten sein. Dies geschieht mit Hilfe des sogennaten **Dereferenzierens**. In der Praxis bedeutet das, dass über einen Browser die IRI einer Linked Data Ressource aufgerufen wird und der Server entsprechende Informationen zur Ressource (normalerweise alle Triples, bei der die aufgerufene IRI auf der Subjektposition vorkommt) als HTML Seite liefert. Dieser Weg kann ein wenig holprig sein und folgende Tips können dabei helfen:
 
-- Unter https://ld.admin.ch/.well-known/void steht der Datenkatalog von LINDAS zur Verfügung, also eine Auflistung, welche Datasets auf LINDAS publiziert sind. Da die Datasets nicht direkt unter ld.admin.ch publiziert werden, stehen dort nur `rdfs:seeAlso` angaben zur Verfügung, die auf Subdomains verweisen, also bspw. auf https://energy.ld.admin.ch/.well-known/void.
-- Über den Datenkatalog der Subdomain kann man die `schema:dataset` erreichen, die dann eine `dcterms:description` aufweisen, die auch für Menschen verständlich ist.
-- Das Dataset (bspw. https://energy.ld.admin.ch/sfoe/bfe_ogd17_fuellungsgrad_speicherseen/5) ist häufig von der Klasse `cube:Cube` und besitzt damit ein `cube:ObersvationSet`.
-- Das `cube:ObservationSet` (bspw. https://energy.ld.admin.ch/sfoe/bfe_ogd17_fuellungsgrad_speicherseen/5/observation/) weist dann die eigentlichen Daten als `cube:Observation` auf (bspw. https://energy.ld.admin.ch/sfoe/bfe_ogd17_fuellungsgrad_speicherseen/5/observation/2015-02-23).
+- Unter https://ld.admin.ch/.well-known/void steht der Datenkatalog von LINDAS zur Verfügung, also eine Auflistung, welche Datasets auf LINDAS publiziert sind. Da die Datasets nicht direkt unter ld.admin.ch publiziert werden, stehen dort nur [`rdfs:seeAlso`](www.w3.org/2000/01/rdf-schema#seeAlso) angaben zur Verfügung, die auf Subdomains verweisen, also bspw. auf https://energy.ld.admin.ch/.well-known/void.
+- Über den Datenkatalog der Subdomain kann man die [`schema:dataset`](https://schema.org/Dataset) erreichen, die dann eine [`dcterms:description`](https://www.dublincore.org/specifications/dublin-core/dcmi-terms/#description) aufweisen, die auch für Menschen verständlich ist.
+- Das Dataset (bspw. https://energy.ld.admin.ch/sfoe/bfe_ogd17_fuellungsgrad_speicherseen/5) ist häufig von der Klasse [`cube:Cube`](https://cube.link/#Cube) und besitzt damit ein [`cube:ObersvationSet`](https://cube.link/#ObservationSet).
+- Das [`cube:ObservationSet`](https://cube.link/#ObservationSet) (bspw. https://energy.ld.admin.ch/sfoe/bfe_ogd17_fuellungsgrad_speicherseen/5/observation/) weist dann die eigentlichen Daten als [`cube:Observation`](https://cube.link/#Observation) auf (bspw. https://energy.ld.admin.ch/sfoe/bfe_ogd17_fuellungsgrad_speicherseen/5/observation/2015-02-23).
 - Damit kann ein erster Überblick über die Daten auf LINDAS erhalten werden.
 
 ### SPARQL
@@ -30,4 +30,8 @@ Linked Data sollten grundsätzlich auch durch Personen ohne grosses technisches 
 
 ## Daten auf LINDAS veröffentlichen
 
-Um Daten für die Publikation in LINDAS aufzubereiten, wurde der [Cube Creator](https://cube-creator.lindas.admin.ch/) entwickelt. Damit lassen sich tabellarische Daten mit Meta Daten anreichern, um daraus [RDF Cubes](https://cube.link) zu erstellen, die auf LINDAS publiziert werden können. Für den Cube Creator wird ein [CH-LOGIN](https://www.eiam.admin.ch) benötigt, welches über [support.lindas@bar.admin.ch](mailto:support.lindas@bar.admin.ch) für den Cube Creator freigeschaltet werden muss.
+### Cube Creator
+Um die Integration von tabellarischen Daten in LINDAS mit möglichst wenig Aufwand zu bewerkstelligen, wurde der [Cube Creator](https://cube-creator.lindas.admin.ch/) entwickelt. Damit lassen sich tabellarische Daten mit Meta Daten anreichern, um daraus [RDF Cubes](https://cube.link) zu erstellen, die auf LINDAS publiziert werden können. Für den Cube Creator wird ein [CH-LOGIN](https://www.eiam.admin.ch) benötigt, welches über [support.lindas@bar.admin.ch](mailto:support.lindas@bar.admin.ch) für den Cube Creator freigeschaltet werden muss.
+
+### Integration via spezifischer Pipelines
+Sollen Daten automatisiert regelmässig in LINDAS publiziert werden oder handelt es sich um nicht tabellarische Daten mit hoher Komplexität, dann sind individualisierte Pipelines die richtige Lösung, um Daten in LINDAS zu integrieren. Diese Pipelines verarbeiten regelmässig automatisiert Daten aus elektronischen Quellen, reichern sie mit den entsprechendenen Meta Daten an und transformieren diese in Linked Data.
