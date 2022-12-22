@@ -16,7 +16,6 @@ Die Veranstaltung wird in Deutsch und Französisch durchgeführt und die Keynote
 ### Inputs unter Anderem von folgenden Akteuren (alphabetisch aufgeführt)
 - Bundesamt für Energie, BFE
 - Bundesamt für Landestopografie, swisstopo
-- Bundesamt für Statistik, BFS
 - Bundesamt für Umwelt, BAFU
 - Bundesamt für Veterinärwesen, BLV
 - Bundesarchiv, BAR
