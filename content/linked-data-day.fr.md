@@ -18,7 +18,6 @@ La manifestation se déroulera en allemand et en français et la keynote sera do
 - Chancellerie fédérale, ChF
 - Chemins de fer fédéraux suisses, CFF- Office fédéral de l'énergie, OFEN
 - Commission fédérale de l'électricité, Elcom 
-- Office fédéral de la statistique, OFS
 - Office fédéral de la topographie, swisstopo
 - Office fédéral de l'environnement, OFEV
 - Office vétérinaire fédéral, OFAG
