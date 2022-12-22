@@ -9,9 +9,8 @@ La manifestation se déroulera en allemand et en français et la keynote sera do
 
 ##  Programme provisoire
 
-### Keynote 
-
-- Keynote internationale par Erwin Folmer de [Kadaster](https://www.kadaster.nl/about-us "dieser Link führt zu Kadaster!"), Pays-Bas 
+### Keynote "The Knowledge Graph as Interoperability Foundation - The Case at the Dutch Land Registry"
+- Erwin Folmer de [Kadaster](https://www.kadaster.nl/about-us "dieser Link führt zu Kadaster!"), Pays-Bas 
 
 ### Exposés, entre autres, par les acteurs suivants (par ordre alphabétique)
 - Archives fédérales, AFS
