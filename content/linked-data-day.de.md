@@ -1,5 +1,5 @@
 # Linked Data Day 
-## Donnerstag 9. März 2023 in der Welle 7, Bern
+## Donnerstag, 9. März 2023 in der Welle 7, Bern
 
 Ziel dieser Konferenz ist es, die Verbindungen innerhalb der LINDAS-Nutzergemeinschaft zu stärken. Es geht in erster Linie darum, Datenanbieter, die Linked Data auf LINDAS veröffentlichen und Akteure, die das künftig tun möchten, untereinander zu vernetzen. 
 
@@ -13,7 +13,7 @@ Die Veranstaltung wird in Deutsch und Französisch durchgeführt und die Keynote
 
 - Internationale Keynote von Erwin Folmer von [Kadaster](https://www.kadaster.nl/about-us "dieser Link führt zu Kadaster!"), Niederlande 
 
-### Inputreferate unter Anderem von folgenden Akteuren (alphabetisch aufgeführt)
+### Inputs unter Anderem von folgenden Akteuren (alphabetisch aufgeführt)
 - Bundesamt für Energie, BFE
 - Bundesamt für Landestopografie, swisstopo
 - Bundesamt für Statistik, BFS
@@ -26,9 +26,9 @@ Die Veranstaltung wird in Deutsch und Französisch durchgeführt und die Keynote
 - Statistik Stadt Zürich, SSZ 
 
 ### Workshop
-- Crash Course zu Linked Data für Manager
+- Crash Course zu Linked Data für Managerinnen und Manager
 
-### Referate, Reflektion, Diskussion 
+### Referate und Diskussion zum Thema "Wo stehen wir heute mit Linked Data?
 
 - Jean-Luc Cochard, Leiter Ressort Informationstechnologie, BAR
 
@@ -38,7 +38,7 @@ Die Veranstaltung wird in Deutsch und Französisch durchgeführt und die Keynote
 
 - Sabine Zeller, Projektleiterin visualize.admin.ch, BAFU
 
-### Use Cases 
+### Referate zu Use Cases 
 
 - Pasquale Di Donato, Projektkoordinator Geoinformation und Geoservices, KOGIS - swisstopo
 
