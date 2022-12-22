@@ -13,7 +13,7 @@ Die Veranstaltung wird in Deutsch und Französisch durchgeführt und die Keynote
 
 - Internationale Keynote von Erwin Folmer von [Kadaster](https://www.kadaster.nl/about-us "dieser Link führt zu Kadaster!"), Niederlande 
 
-### Inputreferate unter Anderem von folgenden Akteuren (alphabetisch)
+### Inputreferate unter Anderem von folgenden Akteuren (alphabetisch aufgeführt)
 - Bundesamt für Energie, BFE
 - Bundesamt für Landestopografie, swisstopo
 - Bundesamt für Statistik, BFS
@@ -30,33 +30,33 @@ Die Veranstaltung wird in Deutsch und Französisch durchgeführt und die Keynote
 
 ### Referate, Reflektion, Diskussion 
 
-Jean-Luc Cochard, Leiter Ressort Informationstechnologie, BAR
+- Jean-Luc Cochard, Leiter Ressort Informationstechnologie, BAR
 
-Philippe Künzler, Direktor, BAR
+- Philippe Künzler, Direktor, BAR
 
-Stefan Kwasnitza, Stellvertretender Direktor, BAR
+- Stefan Kwasnitza, Stellvertretender Direktor, BAR
 
-Sabine Zeller, Projektleiterin visualize.admin.ch, BAFU
+- Sabine Zeller, Projektleiterin visualize.admin.ch, BAFU
 
-### Use Cases (alphabetisch)
+### Use Cases 
 
-Pasquale Di Donato, Projektkoordinator Geoinformation und Geoservices, KOGIS - swisstopo
+- Pasquale Di Donato, Projektkoordinator Geoinformation und Geoservices, KOGIS - swisstopo
 
-Ambrogio Foletti, Open Government Data Spezialist, BFE
+- Ambrogio Foletti, Open Government Data Spezialist, BFE
 
-Sara Schärrer, Dr. Sara Schärrer, Wissenschaftliche Mitarbeiterin, Datenmanagerin, Bundesamt für Veterinärwesen
+- Sara Schärrer, Dr. Sara Schärrer, Wissenschaftliche Mitarbeiterin, Datenmanagerin, Bundesamt für Veterinärwesen
 
-Rolf Schenker, Wissenschaftlicher Mitarbeiter, SSZ
+- Rolf Schenker, Wissenschaftlicher Mitarbeiter, SSZ
 
-Hansjörg Stalder, Projektleiter Fachanwendungen, SSZ
+- Hansjörg Stalder, Projektleiter Fachanwendungen, SSZ
 
-Christian Trachsel, Open Dataverantwortlicher, SBB
+- Christian Trachsel, Open Dataverantwortlicher, SBB
 
-Barbara Wyss, Leiterin Sektion Preise und Tarife, ElCom
+- Barbara Wyss, Leiterin Sektion Preise und Tarife, ElCom
 
 ```
-Die Anmeldung für den Linked Data Day wird im Januar 2023 eröffnet.
-Weitere Informationen über die Referate, das Programm und die Anmeldung folgen auf dieser Seite. 
+Weitere Informationen zum Programm folgen auf dieser Seite und die Anmeldung für den Linked Data Day wird im Januar 2023 eröffnet.
+
 ```
 
 Der Linked Data Day wurde vom Bundesarchiv initiiert und wird mit Unterstützung der Bernerfachhochschule (BFH - Wirtschaft) durchgeführt. 
