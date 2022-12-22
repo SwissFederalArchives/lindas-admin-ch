@@ -55,6 +55,7 @@ Die Veranstaltung wird in Deutsch und Französisch durchgeführt und die Keynote
 - Barbara Wyss, Leiterin Sektion Preise und Tarife, ElCom
 
 
+
 Weitere Informationen zum Programm folgen auf dieser Seite und die Anmeldung für den Linked Data Day wird im Januar 2023 eröffnet.
 
 Der Linked Data Day wurde vom Bundesarchiv initiiert und wird mit Unterstützung der Bernerfachhochschule (BFH - Wirtschaft) durchgeführt. 
