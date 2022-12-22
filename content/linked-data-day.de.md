@@ -11,10 +11,9 @@ Der Linked Data Day wird in Deutsch und Französisch durchgeführt. Die Keynote 
 
 ## Provisorisches Programm
 
-### Keynote Präsentation "The Knowledge Graph as Interoperability Foundation - The case at the Dutch Land Registry"
+### Keynote Präsentation "The Knowledge Graph as Interoperability Foundation - The Case at the Dutch Land Registry"
 
-
-- Internationale Keynote von Erwin Folmer von [Kadaster](https://www.kadaster.nl/about-us "dieser Link führt zu Kadaster!"), Niederlande 
+- Keynote von Erwin Folmer von [Kadaster](https://www.kadaster.nl/about-us "dieser Link führt zu Kadaster!"), Niederlande 
 
 ### Inputs unter Anderem von folgenden Akteuren (alphabetisch aufgeführt)
 - Bundesamt für Energie, BFE
