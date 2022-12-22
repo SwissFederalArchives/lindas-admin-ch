@@ -13,8 +13,6 @@ Die Veranstaltung wird in Deutsch und Französisch durchgeführt und die Keynote
 
 - Internationale Keynote von Erwin Folmer von [Kadaster](https://www.kadaster.nl/about-us "dieser Link führt zu Kadaster!"), Niederlande 
 
-![Erwin Folmer](/Referierende/LDD_Erwin-Folmer-Kadaster.png)
-
 ### Inputreferate unter Anderem von folgenden Akteuren (alphabetisch)
 - Bundesamt für Energie, BFE
 - Bundesamt für Landestopografie, swisstopo
@@ -32,31 +30,33 @@ Die Veranstaltung wird in Deutsch und Französisch durchgeführt und die Keynote
 
 ### Referate, Reflektion, Diskussion 
 
-![Jean-Luc Cochard, Leiter Ressort Informationstechnologie, BAR](/Referierende/Platzhalter-Person.jpg "Title Text" width=100 height=100px)
+Jean-Luc Cochard, Leiter Ressort Informationstechnologie, BAR
 
-![Philippe Künzler, Direktor, BAR](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
+Philippe Künzler, Direktor, BAR
 
-![Stefan Kwasnitza, Stellvertretender Direktor, BAR](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
+Stefan Kwasnitza, Stellvertretender Direktor, BAR
 
-![Sabine Zeller, Projektleiterin visualize.admin.ch, BAFU](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
+Sabine Zeller, Projektleiterin visualize.admin.ch, BAFU
 
 ### Use Cases (alphabetisch)
 
-![Pasquale Di Donato, Projektkoordinator Geoinformation und Geoservices, KOGIS - swisstopo](/public/Referierende/LDD-Pasquale-Di-Donato.jpg "Title Text"{width=100 height=100px})
+Pasquale Di Donato, Projektkoordinator Geoinformation und Geoservices, KOGIS - swisstopo
 
-![Ambrogio Foletti, BFE](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
+Ambrogio Foletti, Open Government Data Spezialist, BFE
 
-![Sara Schärrer, Dr. Sara Schärrer, Wissenschaftliche Mitarbeiterin, Datenmanagerin, Bundesamt für Veterinärwesen](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
+Sara Schärrer, Dr. Sara Schärrer, Wissenschaftliche Mitarbeiterin, Datenmanagerin, Bundesamt für Veterinärwesen
 
-![Rolf Schenker, Wissenschaftlicher Mitarbeiter, SSZ](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
+Rolf Schenker, Wissenschaftlicher Mitarbeiter, SSZ
 
-![Hansjörg Stalder, Projektleiter Fachanwendungen, SSZ](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
+Hansjörg Stalder, Projektleiter Fachanwendungen, SSZ
 
-![Christian Trachsel, Open Dataverantwortlicher, SBB](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
+Christian Trachsel, Open Dataverantwortlicher, SBB
 
-![Barbara Wyss, Leiterin Sektion Preise und Tarife, ElCom](/Referierende/Platzhalter-Person.png "Title Text"{width=100 height=100px})
+Barbara Wyss, Leiterin Sektion Preise und Tarife, ElCom
 
 ```
 Die Anmeldung für den Linked Data Day wird im Januar 2023 eröffnet.
-Weitere Informationen folgen auf dieser Seite. 
+Weitere Informationen über die Referate, das Programm und die Anmeldung folgen auf dieser Seite. 
 ```
+
+Der Linked Data Day wurde vom Bundesarchiv initiiert und wird mit Unterstützung der Bernerfachhochschule (BFH - Wirtschaft) durchgeführt. 
