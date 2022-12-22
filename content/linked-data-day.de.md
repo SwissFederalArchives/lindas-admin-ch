@@ -1,15 +1,18 @@
 # Linked Data Day 
 ## Donnerstag, 9. März 2023 in der Welle 7, Bern
 
-Ziel dieser Konferenz ist es, die Verbindungen innerhalb der LINDAS-Nutzergemeinschaft zu stärken. Es geht in erster Linie darum, Datenanbieter, die Linked Data auf LINDAS veröffentlichen und Akteure, die das künftig tun möchten, untereinander zu vernetzen. 
+Der erste Linked Data Day der Bundesverwaltung will die Verbindungen innerhalb der LINDAS-Nutzergemeinschaft stärken. Der Tag soll Datenanbietern und solchen, die es werden möchten, die Gelegenheit geben, sich untereinander zu vernetzen. 
 
-Wir möchten sowohl Anwender und Anwenderinnen von LINDAS sowie Führungskräfte ansprechen, die LINDAS auf ihrem Themengebiet noch nicht verwenden. Dazu bieten wir einen parallelen Track mit einem Crash Course Workshop für Manager an, während dem sich LINDAS-Anwenderinnen und Anwender über aktuelle Entwicklungen austauschen können. Für Verwaltungsmitarbeitende und Staatsnahe Betriebe ist der Besuch der Veranstaltung kostenlos. 
+Die Veranstaltung bietet unterschiedliche Beispiele von LINDAS-Anwendungen, die Möglichkeit für LINDAS Anwenderinnen und Anwender, sich zu aktuellen Entwicklungen auszutauschen sowie ein Crash Course für Führungskräfte, die sich dafür interessieren, Linked Data auch in ihrem Zuständigkeitsbereich zu nutzen. 
 
-Die Veranstaltung wird in Deutsch und Französisch durchgeführt und die Keynote in Englisch gehalten. 
+Für Mitarbeiterinnen und Mitarbeiter der Verwaltung sowie von staatsnahen Betrieben ist der Besuch der Veranstaltung kostenlos. 
+
+Der Linked Data Day wird in Deutsch und Französisch durchgeführt. Die Keynote wird in Englisch gehalten. 
 
 ## Provisorisches Programm
 
-### Keynote Präsentation 
+### Keynote Präsentation "The Knowledge Graph as Interoperability Foundation - The case at the Dutch Land Registry"
+
 
 - Internationale Keynote von Erwin Folmer von [Kadaster](https://www.kadaster.nl/about-us "dieser Link führt zu Kadaster!"), Niederlande 
 
