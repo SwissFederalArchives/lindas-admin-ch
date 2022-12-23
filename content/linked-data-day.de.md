@@ -60,7 +60,7 @@ Der Linked Data Day wird in Deutsch und Französisch durchgeführt. Die Keynote 
 **Weitere Informationen zum Programm folgen auf dieser Seite im Januar 2023**
 
  
-[Anmeldung für den Linked Data Day](https://campaign.bfh.ch/anmeldung-linked-data-day-2023/ "Anmeldung auf der BFH Webseite!") 
+**[Anmeldung für den Linked Data Day](https://campaign.bfh.ch/anmeldung-linked-data-day-2023/ "Anmeldung auf der BFH Webseite!")**
 
 
 Der Linked Data Day wird vom Bundesarchiv finanziert und wird mit Unterstützung der Berner Fachhochschule (BFH) durchgeführt. 
