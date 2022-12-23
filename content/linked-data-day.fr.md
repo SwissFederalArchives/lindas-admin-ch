@@ -52,6 +52,8 @@ La manifestation se déroulera en allemand et en français et la keynote sera do
 - Barbara Wyss, Leiterin Sektion Preise und Tarife, ElCom
 
 
-**De plus amples informations sur le programme suivront sur cette page et les inscriptions pour le Linked Data Day seront ouvertes en janvier 2023.**
+**De plus amples informations sur le programme suivront sur cette page en janvier 2023.**
+
+**[Anmeldung für den Linked Data Day](https://campaign.bfh.ch/anmeldung-linked-data-day-2023/ "Anmeldung auf der BFH Webseite!")**
 
 Le Linked Data Day est financé par les Archives fédérales et organisé avec le soutien de la Haute école spécialisée bernoise (HESB). 
