@@ -45,7 +45,7 @@ Der Linked Data Day wird in Deutsch und Französisch durchgeführt. Die Keynote 
 
 - Ambrogio Foletti, Open Government Data Spezialist, BFE
 
-- Sara Schärrer, Dr. Sara Schärrer, Wissenschaftliche Mitarbeiterin, Datenmanagerin, Bundesamt für Veterinärwesen
+- Sara Schärrer, Dr. Sara Schärrer, Wissenschaftliche Mitarbeiterin & Datenmanagerin, BLV
 
 - Rolf Schenker, Wissenschaftlicher Mitarbeiter, SSZ
 
@@ -57,6 +57,10 @@ Der Linked Data Day wird in Deutsch und Französisch durchgeführt. Die Keynote 
 
 
 
-Weitere Informationen zum Programm folgen auf dieser Seite und die Anmeldung für den Linked Data Day wird im Januar 2023 eröffnet.
+**Weitere Informationen zum Programm folgen auf dieser Seite im Januar 2023**
+
+ 
+[Anmeldung für den Linked Data Day](https://campaign.bfh.ch/anmeldung-linked-data-day-2023/ "Anmeldung auf der BFH Webseite!") 
+
 
 Der Linked Data Day wird vom Bundesarchiv finanziert und wird mit Unterstützung der Berner Fachhochschule (BFH) durchgeführt. 
