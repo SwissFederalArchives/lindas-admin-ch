@@ -7,7 +7,7 @@ Nous souhaitons nous adresser aussi bien aux utilisateurs et utilisatrices de LI
 
 La manifestation se déroulera en allemand et en français et la keynote sera donnée en anglais.
 
-##  Programme provisoire
+## Programm provisoire
 
 ### Keynote "The Knowledge Graph as Interoperability Foundation - The Case at the Dutch Land Registry"
 - Erwin Folmer de [Kadaster](https://www.kadaster.nl/about-us "dieser Link führt zu Kadaster!"), Pays-Bas 
@@ -15,7 +15,8 @@ La manifestation se déroulera en allemand et en français et la keynote sera do
 ### Exposés, entre autres, par les acteurs suivants (par ordre alphabétique)
 - Archives fédérales, AFS
 - Chancellerie fédérale, ChF
-- Chemins de fer fédéraux suisses, CFF- Office fédéral de l'énergie, OFEN
+- Chemins de fer fédéraux suisses, CFF
+- Office fédéral de l'énergie, OFEN
 - Commission fédérale de l'électricité, Elcom 
 - Office fédéral de la topographie, swisstopo
 - Office fédéral de l'environnement, OFEV
