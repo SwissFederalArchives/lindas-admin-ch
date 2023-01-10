@@ -51,7 +51,7 @@ Zentrale Entitäten sind immer auch Teil eines Controlled Vocabularies und als s
     </tr>
 </table>
 
-Diese Aufzählung hat keinen Anspruch auf Vollständigkeit.
+Diese Aufzählung hat einen Anspruch auf Vollständigkeit.
 
 
 
