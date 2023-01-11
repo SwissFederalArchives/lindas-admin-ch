@@ -18,6 +18,7 @@ Der Linked Data Day wird in Deutsch und Französisch durchgeführt. Die Keynote 
 ### Inputs unter Anderem von folgenden Akteuren (alphabetisch aufgeführt)
 - Bundesamt für Energie, BFE
 - Bundesamt für Landestopografie, swisstopo
+- Bundesamt für Statistik, BFS
 - Bundesamt für Umwelt, BAFU
 - Bundesamt für Veterinärwesen, BLV
 - Bundesarchiv, BAR
@@ -44,6 +45,8 @@ Der Linked Data Day wird in Deutsch und Französisch durchgeführt. Die Keynote 
 - Pasquale Di Donato, Projektkoordinator Geoinformation und Geoservices, KOGIS - swisstopo
 
 - Ambrogio Foletti, Open Government Data Spezialist, BFE
+
+- Maik Roth, Bundesamt für Statistik, BFS
 
 - Sara Schärrer, Dr. Sara Schärrer, Wissenschaftliche Mitarbeiterin & Datenmanagerin, BLV
 
