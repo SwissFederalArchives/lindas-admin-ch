@@ -7,7 +7,7 @@ Nous souhaitons nous adresser aussi bien aux utilisateurs et utilisatrices de LI
 
 La manifestation se déroulera en allemand et en français et la keynote sera donnée en anglais.
 
-## Programm provisoire
+## Programme provisoire
 
 ### Keynote "The Knowledge Graph as Interoperability Foundation - The Case at the Dutch Land Registry"
 - Erwin Folmer de [Kadaster](https://www.kadaster.nl/about-us "dieser Link führt zu Kadaster!"), Pays-Bas 
@@ -16,6 +16,7 @@ La manifestation se déroulera en allemand et en français et la keynote sera do
 - Archives fédérales, AFS
 - Chancellerie fédérale, ChF
 - Chemins de fer fédéraux suisses, CFF
+- Office fédéral de la statistique, OFS
 - Office fédéral de l'énergie, OFEN
 - Commission fédérale de l'électricité, Elcom 
 - Office fédéral de la topographie, swisstopo
@@ -24,33 +25,35 @@ La manifestation se déroulera en allemand et en français et la keynote sera do
 - Statistique de la ville de Zurich, SSZ 
 
 ### Workshop 
-- Crash Course zu Linked Data pour les managers
+- Crash Course Linked Data pour le management
 
-### Referate, Reflektion, Diskussion 
+### Exposés, réflexion, discussion 
 
-- Jean-Luc Cochard, Leiter Ressort Informationstechnologie, BAR
+- Jean-Luc Cochard, Chef Unité des techniques de l'information, AFS
 
-- Philippe Künzler, Direktor, BAR
+- Philippe Künzler, directeur, AFS
 
-- Stefan Kwasnitza, Stellvertretender Direktor, BAR
+- Stefan Kwasnitza, directeur adjoint, AFS
 
-- Sabine Zeller, Projektleiterin visualize.admin.ch, BAFU
+- Sabine Zeller, responsable du projet visualize.admin.ch, OFEV
 
 ### Use Cases (par ordre alphabétique)
 
-- Pasquale Di Donato, Projektkoordinator Geoinformation und Geoservices, KOGIS - swisstopo
+- Pasquale Di Donato, coordinateur de projet géoinformation et géoservices, COGIS - swisstopo
 
-- Ambrogio Foletti, Open Government Data Spezialist, BFE
+- Ambrogio Foletti, spéciealiste d'Open Government Data, OFEN
 
-- Sara Schärrer, Dr. Sara Schärrer, Wissenschaftliche Mitarbeiterin, Datenmanagerin, Bundesamt für Veterinärwesen
+- Maik Roth, Office fédéral de la statistique, OFS
 
-- Rolf Schenker, Wissenschaftlicher Mitarbeiter, SSZ
+- Sara Schärrer, Dr. Sara Schärrer, collaboratrice scientifique, gestionnaire de données, office fédéral des affaires vétérinaire, OSAV
 
-- Hansjörg Stalder, Projektleiter Fachanwendungen, SSZ
+- Rolf Schenker, collaborateur scientifique, SSZ
 
-- Christian Trachsel, Open Dataverantwortlicher, SBB
+- Hansjörg Stalder, chef de projet applications spécialisées, SSZ
 
-- Barbara Wyss, Leiterin Sektion Preise und Tarife, ElCom
+- Christian Trachsel, responsable Open Data, CFF
+
+- Barbara Wyss, responsable de la section prix et tarifs, ElCom
 
 
 **De plus amples informations sur le programme suivront sur cette page en janvier 2023.**
