@@ -45,7 +45,7 @@ La manifestation se déroulera en allemand et en français et la keynote sera do
 
 - Maik Roth, Office fédéral de la statistique, OFS
 
-- Sara Schärrer, Dr. Sara Schärrer, collaboratrice scientifique, gestionnaire de données, office fédéral des affaires vétérinaire, OSAV
+- Sara Schärrer, collaboratrice scientifique, gestionnaire de données, office fédéral des affaires vétérinaire, OSAV
 
 - Rolf Schenker, collaborateur scientifique, SSZ
 
