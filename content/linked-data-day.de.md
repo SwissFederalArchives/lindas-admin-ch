@@ -28,7 +28,7 @@ Der Linked Data Day wird in Deutsch und Französisch durchgeführt. Die Keynote 
 - Statistik Stadt Zürich, SSZ 
 
 ### Workshop
-- Crash Course zu Linked Data für Führungskräfte
+- Crash Course zu Linked Data für Führungskräfte mit Michael Rauch, Zazuko
 
 ### Referate und Diskussion zum Thema "Wo stehen wir heute mit Linked Data?
 
