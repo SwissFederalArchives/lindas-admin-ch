@@ -28,7 +28,7 @@ Der Linked Data Day wird in Deutsch und Französisch durchgeführt. Die Keynote 
 - Statistik Stadt Zürich, SSZ 
 
 ### Workshop
-- Crash Course zu Linked Data für Managerinnen und Manager
+- Crash Course zu Linked Data für Führungskräfte
 
 ### Referate und Diskussion zum Thema "Wo stehen wir heute mit Linked Data?
 
@@ -46,7 +46,7 @@ Der Linked Data Day wird in Deutsch und Französisch durchgeführt. Die Keynote 
 
 - Ambrogio Foletti, Open Government Data Spezialist, BFE
 
-- Name Name (wird bald bekannt gegeben), Bundesamt für Statistik, BFS
+- (Referent*in wird bald bekannt gegeben), Bundesamt für Statistik, BFS
 
 - Sara Schärrer, Wissenschaftliche Mitarbeiterin & Datenmanagerin, BLV
 
