@@ -25,7 +25,7 @@ La manifestation se déroulera en allemand et en français et la keynote sera do
 - Statistique de la ville de Zurich, SSZ 
 
 ### Workshop 
-- Crash Course Linked Data pour le management
+- Crash Course Linked Data avec Michael Rauch, Zazuko
 
 ### Exposés, réflexion, discussion 
 
