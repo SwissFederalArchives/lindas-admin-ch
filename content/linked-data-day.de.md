@@ -46,7 +46,7 @@ Der Linked Data Day wird in Deutsch und Französisch durchgeführt. Die Keynote 
 
 - Ambrogio Foletti, Open Government Data Spezialist, BFE
 
-- Maik Roth, Bundesamt für Statistik, BFS
+- Name Name (wird bald bekannt gegeben), Bundesamt für Statistik, BFS
 
 - Sara Schärrer, Wissenschaftliche Mitarbeiterin & Datenmanagerin, BLV
 
