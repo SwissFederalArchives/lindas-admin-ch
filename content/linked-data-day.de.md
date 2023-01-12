@@ -48,7 +48,7 @@ Der Linked Data Day wird in Deutsch und Französisch durchgeführt. Die Keynote 
 
 - Maik Roth, Bundesamt für Statistik, BFS
 
-- Sara Schärrer, Dr. Sara Schärrer, Wissenschaftliche Mitarbeiterin & Datenmanagerin, BLV
+- Sara Schärrer, Wissenschaftliche Mitarbeiterin & Datenmanagerin, BLV
 
 - Rolf Schenker, Wissenschaftlicher Mitarbeiter, SSZ
 
