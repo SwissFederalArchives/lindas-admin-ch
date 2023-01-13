@@ -55,7 +55,7 @@ La manifestation se déroulera en allemand et en français et la keynote sera do
 
 - Christian Trachsel, responsable Open Data, CFF
 
-- Barbara Wyss, responsable de la section prix et tarifs, ElCom
+- Barbara Wyss, cheffe de la section prix et tarifs / Responsable du projet EDES, ElCom
 
 
 **De plus amples informations sur le programme suivront sur cette page en janvier 2023.**
