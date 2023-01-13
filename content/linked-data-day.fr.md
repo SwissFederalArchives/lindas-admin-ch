@@ -43,7 +43,9 @@ La manifestation se déroulera en allemand et en français et la keynote sera do
 
 - Ambrogio Foletti, spéciealiste d'Open Government Data, OFEN
 
-- Prénom Nom, Office fédéral de la statistique, OFS
+- Michael Luggen, Chancellerie fédérale, ChF
+
+- Michèle Spichtig, Office fédéral de la statistique, OFS
 
 - Sara Schärrer, collaboratrice scientifique, gestionnaire de données, office fédéral des affaires vétérinaire, OSAV
 
