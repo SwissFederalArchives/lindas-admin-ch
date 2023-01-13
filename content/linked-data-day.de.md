@@ -46,7 +46,9 @@ Der Linked Data Day wird in Deutsch und Französisch durchgeführt. Die Keynote 
 
 - Ambrogio Foletti, Open Government Data Spezialist, BFE
 
-- (Referent*in wird bald bekannt gegeben), Bundesamt für Statistik, BFS
+- Michael Luggen, Bundeskanzlei
+
+- Michèle Spichtig, Bundesamt für Statistik, BFS
 
 - Sara Schärrer, Wissenschaftliche Mitarbeiterin & Datenmanagerin, BLV
 
@@ -54,7 +56,7 @@ Der Linked Data Day wird in Deutsch und Französisch durchgeführt. Die Keynote 
 
 - Hansjörg Stalder, Projektleiter Fachanwendungen, SSZ
 
-- Christian Trachsel, Open Dataverantwortlicher, SBB
+- Christian Trachsel, Open Data-Verantwortlicher, SBB
 
 - Barbara Wyss, Leiterin Sektion Preise und Tarife, ElCom
 
