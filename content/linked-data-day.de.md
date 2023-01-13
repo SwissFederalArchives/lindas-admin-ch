@@ -58,8 +58,7 @@ Der Linked Data Day wird in Deutsch und Französisch durchgeführt. Die Keynote 
 
 - Christian Trachsel, Open Data-Verantwortlicher, SBB
 
-- Barbara Wyss, Leiterin Sektion Preise und Tarife, ElCom
-
+- Barbara Wyss, Leiterin Sektion Preise und Tarife / Business Prozessverantwortliche im Projekt EDES, ElCom
 
 
 **Weitere Informationen zum Programm folgen auf dieser Seite im Januar 2023**
