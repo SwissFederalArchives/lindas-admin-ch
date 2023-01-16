@@ -62,4 +62,4 @@ La manifestation se déroulera en allemand et en français et la keynote sera do
 
 **[Inscription pour le Linked Data Day](https://campaign.bfh.ch/anmeldung-linked-data-day-2023/ "Inscription sur le site de la HESB!")**
 
-Le Linked Data Day est inicié par les Archives fédérales et organisé avec le soutien de la Haute école spécialisée bernoise (HESB). 
+Le Linked Data Day est organisé par les Archives fédérales avec le soutien de la Haute école spécialisée bernoise (HESB). 
