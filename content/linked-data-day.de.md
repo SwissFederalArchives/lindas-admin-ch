@@ -44,9 +44,13 @@ Der Linked Data Day wird in Deutsch und Französisch durchgeführt. Die Keynote 
 
 - Pasquale Di Donato, Projektkoordinator Geoinformation und Geoservices, KOGIS - swisstopo
 
+- Erica Dubach, Leiterin Transformation und Interoperabilität, BK
+
 - Ambrogio Foletti, Open Government Data Spezialist, BFE
 
-- Michael Luggen, Bundeskanzlei
+- Michael Luggen, BK
+
+- Stefan Nellen, Leiter Abteilung Informationszugang, BAR 
 
 - Sara Schärrer, Wissenschaftliche Mitarbeiterin & Datenmanagerin, BLV
 
