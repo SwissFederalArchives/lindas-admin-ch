@@ -61,10 +61,10 @@ Der Linked Data Day wird in Deutsch und Französisch durchgeführt. Die Keynote 
 - Barbara Wyss, Leiterin Sektion Preise und Tarife / Business Prozessverantwortliche im Projekt EDES, ElCom
 
 
-**Weitere Informationen zum Programm folgen auf dieser Seite im Januar 2023**
+**Weitere Informationen zum Programm finden Sie hier auf unserer Veranstaltungswebseite**
 
  
 **[Anmeldung für den Linked Data Day](https://campaign.bfh.ch/anmeldung-linked-data-day-2023/ "Anmeldung auf der BFH Webseite!")**
 
 
-Der Linked Data Day wird vom Bundesarchiv finanziert und wird mit Unterstützung der Berner Fachhochschule (BFH) durchgeführt. 
+Der Linked Data Day wird vom Bundesarchiv ausgerichtet und wird mit Unterstützung der Berner Fachhochschule (BFH) durchgeführt. 
