@@ -21,7 +21,7 @@ La manifestation se déroulera en allemand et en français et la keynote sera do
 - Commission fédérale de l'électricité, Elcom 
 - Office fédéral de la topographie, swisstopo
 - Office fédéral de l'environnement, OFEV
-- Office vétérinaire fédéral, OFAG
+- Office fédéral de la sécurité alimentaire et des affaires vétérinaires (OSAV) 
 - Statistique de la ville de Zurich, SSZ 
 
 ### Workshop 
