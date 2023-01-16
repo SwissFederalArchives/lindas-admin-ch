@@ -48,11 +48,11 @@ Der Linked Data Day wird in Deutsch und Französisch durchgeführt. Die Keynote 
 
 - Michael Luggen, Bundeskanzlei
 
-- Michèle Spichtig, Bundesamt für Statistik, BFS
-
 - Sara Schärrer, Wissenschaftliche Mitarbeiterin & Datenmanagerin, BLV
 
 - Rolf Schenker, Wissenschaftlicher Mitarbeiter, SSZ
+
+- Michèle Spichtig, Bundesamt für Statistik, BFS
 
 - Hansjörg Stalder, Projektleiter Fachanwendungen, SSZ
 
