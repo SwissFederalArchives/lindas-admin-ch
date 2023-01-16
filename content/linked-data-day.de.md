@@ -20,7 +20,7 @@ Der Linked Data Day wird in Deutsch und Französisch durchgeführt. Die Keynote 
 - Bundesamt für Landestopografie, swisstopo
 - Bundesamt für Statistik, BFS
 - Bundesamt für Umwelt, BAFU
-- Bundesamt für Veterinärwesen, BLV
+- Bundesamt für Lebensmittelsicherheit und Veterinärwesen, BLV
 - Bundesarchiv, BAR
 - Bundeskanzlei, BK
 - Eidgenössische Elektrizitätskommission, Elcom 
