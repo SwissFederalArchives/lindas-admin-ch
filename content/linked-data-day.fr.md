@@ -58,8 +58,8 @@ La manifestation se déroulera en allemand et en français et la keynote sera do
 - Barbara Wyss, cheffe de la section prix et tarifs / Responsable du projet EDES, ElCom
 
 
-**De plus amples informations sur le programme suivront sur cette page en janvier 2023.**
+**De plus amples informations sur le programme suivront sur cette page.**
 
 **[Inscription pour le Linked Data Day](https://campaign.bfh.ch/anmeldung-linked-data-day-2023/ "Inscription sur le site de la HESB!")**
 
-Le Linked Data Day est financé par les Archives fédérales et organisé avec le soutien de la Haute école spécialisée bernoise (HESB). 
+Le Linked Data Day est inicié par les Archives fédérales et organisé avec le soutien de la Haute école spécialisée bernoise (HESB). 
