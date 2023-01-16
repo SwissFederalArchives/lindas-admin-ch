@@ -47,7 +47,7 @@ La manifestation se déroulera en allemand et en français et la keynote sera do
 
 - Michael Luggen, Chancellerie fédérale, ChF
 
-- Stephan Nellen, Division de l'accès à l'information, AFS
+- Stefan Nellen, Division de l'accès à l'information, AFS
 
 - Sara Schärrer, collaboratrice scientifique, gestionnaire de données, office fédéral des affaires vétérinaire, OSAV
 
