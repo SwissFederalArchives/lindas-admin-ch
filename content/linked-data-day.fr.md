@@ -41,9 +41,13 @@ La manifestation se déroulera en allemand et en français et la keynote sera do
 
 - Pasquale Di Donato, coordinateur de projet géoinformation et géoservices, COGIS - swisstopo
 
+- Erica Dubach, Directrice de la section transformation et interopérabilité, ChF
+
 - Ambrogio Foletti, spéciealiste d'Open Government Data, OFEN
 
 - Michael Luggen, Chancellerie fédérale, ChF
+
+- Stephan Nellen, Division de l'accès à l'information, AFS
 
 - Sara Schärrer, collaboratrice scientifique, gestionnaire de données, office fédéral des affaires vétérinaire, OSAV
 
