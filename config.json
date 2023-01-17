@@ -146,70 +146,8 @@
       {
         "title": "Query Data",
         "link": "/sparql/"
-      },
-      {
-        "title": "Documentation",
-        "link": "/documentation/",
-        "subpages": [
-          {
-            "title": "Administrative",
-            "link": "/documentation/admin/"
-          },
-          {
-            "title": "Technical",
-            "link": "/documentation/technical/"
-          },
-          {
-            "title": "Applications",
-            "link": "/documentation/applications/"
-          }
-        ]
-      },
-      {
-        "title": "Linked Data Governance",
-        "link": "/governance/",
-        "subpages": [
-          {
-            "title": "Namespace",
-            "link": "/governance/namespace/"
-          },
-          {
-            "title": "Architecture",
-            "link": "/governance/architecture/"
-          },
-          {
-            "title": "Core Concepts",
-            "link": "/governance/core-concepts/"
-          },
-          {
-            "title": "Guidelines",
-            "link": "/governance/guidelines/"
-          }
-        ]
-      },
-      {
-        "title": "Linked Data Technology",
-        "link": "/technology/",
-        "subpages": [
-          {
-            "title": "General",
-            "link": "/technology/general/"
-          },
-          {
-            "title": "Tools",
-            "link": "/technology/tools/"
-          },
-          {
-            "title": "Glossary",
-            "link": "/technology/glossary/"
-          },
-          {
-            "title": "Help",
-            "link": "/technology/help/"
-          }
-        ]
       }
-    ]
+   ]
   },
   "rdfjsProxy": {
     "root": {}
