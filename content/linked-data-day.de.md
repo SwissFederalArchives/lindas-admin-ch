@@ -48,7 +48,7 @@ Der Linked Data Day wird in Deutsch und Französisch durchgeführt. Die Keynote 
 
 - Ambrogio Foletti, Open Government Data Spezialist, BFE
 
-- Michael Luggen, BK
+- Michael Luggen, Datenarchitekt, BK
 
 - Stefan Nellen, Leiter Abteilung Informationszugang, BAR 
 
