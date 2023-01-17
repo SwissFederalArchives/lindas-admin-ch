@@ -3,7 +3,9 @@
 
 L'objectif de cette conférence est de renforcer les liens au sein de la communauté des utilisateurs et utilisatrices de LINDAS. Il s'agit en premier lieu à mettre en réseau les fournisseurs de données qui publient des Linked Data sur LINDAS et les acteurs qui souhaitent le faire à l'avenir.
 
-Nous souhaitons nous adresser aussi bien aux utilisateurs et utilisatrices de LINDAS qu'aux membres du management qui n'utilisent pas encore LINDAS dans leur domaine. Pour ce faire, nous proposons une piste parallèle avec un atelier de "crash course" pour les managers, au cours duquel les utilisateurs et utilisatrices de LINDAS peuvent échanger sur les développements actuels. Pour les collaborateurs de l'administration et les entreprises proches de l'Etat, la participation à la manifestation est gratuite.
+Nous souhaitons nous adresser aussi bien aux utilisateurs et utilisatrices de LINDAS qu'aux membres du management qui n'utilisent pas encore LINDAS dans leur domaine. Pour ce faire, nous proposons une piste parallèle avec un atelier de "crash course" pour les managers, au cours duquel les utilisateurs et utilisatrices de LINDAS peuvent échanger sur les développements actuels. 
+
+Pour les collaborateurs de l'administration et les entreprises proches de l'Etat, la participation à la manifestation est gratuite.
 
 La manifestation se déroulera en allemand et en français et la keynote sera donnée en anglais.
 
