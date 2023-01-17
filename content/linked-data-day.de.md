@@ -5,7 +5,7 @@ Der erste Linked Data Day der Bundesverwaltung will die Verbindungen innerhalb d
 
 Die Veranstaltung bietet unterschiedliche Beispiele von LINDAS-Anwendungen, die Möglichkeit für LINDAS Anwenderinnen und Anwender, sich zu aktuellen Entwicklungen auszutauschen sowie ein Crash Course für Führungskräfte, die sich dafür interessieren, Linked Data auch in ihrem Zuständigkeitsbereich zu nutzen. 
 
-Diese Veranstaltung ist reserviert für Mitarbeiterinnen und Mitarbeiter der schweizerischen Verwaltungen sowie von staatsnahen Betrieben und ist für diese kostenlos. 
+Diese Veranstaltung ist reserviert für Mitarbeiterinnen und Mitarbeiter der schweizerischen Verwaltungen sowie von staatsnahen Betrieben. 
 
 Der Linked Data Day wird in Deutsch und Französisch durchgeführt. Die Keynote wird in Englisch gehalten. 
 
