@@ -5,7 +5,7 @@ L'objectif de cette conférence est de renforcer les liens au sein de la communa
 
 Nous souhaitons nous adresser aussi bien aux utilisateurs et utilisatrices de LINDAS qu'aux membres du management qui n'utilisent pas encore LINDAS dans leur domaine. Pour ce faire, nous proposons une piste parallèle avec un atelier de "crash course" pour les managers, au cours duquel les utilisateurs et utilisatrices de LINDAS peuvent échanger sur les développements actuels. 
 
-Pour les collaborateurs de l'administration et les entreprises proches de l'Etat, la participation à la manifestation est gratuite.
+Cette manifestation est réservée aux collaboratrices et collaborateurs des administrations suisses ainsi qu’aux entreprises proches de l’Etat.
 
 La manifestation se déroulera en allemand et en français et la keynote sera donnée en anglais.
 
@@ -24,7 +24,7 @@ La manifestation se déroulera en allemand et en français et la keynote sera do
 - Office fédéral de la topographie, swisstopo
 - Office fédéral de l'environnement, OFEV
 - Office fédéral de la sécurité alimentaire et des affaires vétérinaires (OSAV) 
-- Statistique de la ville de Zurich, SSZ 
+- Statistique de la ville de Zurich, SSZ
 
 ### Workshop 
 - Crash Course Linked Data avec Michael Rauch, Zazuko
@@ -47,7 +47,7 @@ La manifestation se déroulera en allemand et en français et la keynote sera do
 
 - Ambrogio Foletti, spéciealiste d'Open Government Data, OFEN
 
-- Michael Luggen, Chancellerie fédérale, ChF
+- Michael Luggen, Architecte de données, ChF
 
 - Stefan Nellen, Division de l'accès à l'information, AFS
 
