@@ -5,7 +5,7 @@ Der erste Linked Data Day der Bundesverwaltung will die Verbindungen innerhalb d
 
 Die Veranstaltung bietet unterschiedliche Beispiele von LINDAS-Anwendungen, die Möglichkeit für LINDAS Anwenderinnen und Anwender, sich zu aktuellen Entwicklungen auszutauschen sowie ein Crash Course für Führungskräfte, die sich dafür interessieren, Linked Data auch in ihrem Zuständigkeitsbereich zu nutzen. 
 
-Für Mitarbeiterinnen und Mitarbeiter der Verwaltung sowie von staatsnahen Betrieben ist der Besuch der Veranstaltung kostenlos. 
+Diese Veranstaltung ist reserviert für Mitarbeiterinnen und Mitarbeiter der schweizerischen Verwaltungen sowie von staatsnahen Betrieben und ist für diese kostenlos. 
 
 Der Linked Data Day wird in Deutsch und Französisch durchgeführt. Die Keynote wird in Englisch gehalten. 
 
@@ -23,9 +23,9 @@ Der Linked Data Day wird in Deutsch und Französisch durchgeführt. Die Keynote 
 - Bundesamt für Lebensmittelsicherheit und Veterinärwesen, BLV
 - Bundesarchiv, BAR
 - Bundeskanzlei, BK
-- Eidgenössische Elektrizitätskommission, Elcom 
+- Eidgenössische Elektrizitätskommission, Elcom
 - Schweizerische Bundesbahnen, SBB
-- Statistik Stadt Zürich, SSZ 
+- Statistik Stadt Zürich, SSZ
 
 ### Workshop
 - Crash Course zu Linked Data für Führungskräfte mit Michael Rauch, Zazuko
