@@ -60,3 +60,37 @@ Tabellarische Daten können mit Hilfe der [cube.link](https://cube.link) Ontolog
 
 ## Versionierte Daten: version.link
 Falls sich Resourcen über die Zeit ändern und der zeitliche Verlauf wichtig ist, kann mit Hilfe der [version.link](https://version.link) Ontologie diese zeitliche Entwicklung abgebildet werden.
+
+## Evolution der einzelnen Konzepte
+<table class="table">
+<tr>
+    <th>Konzept</th>
+    <th>Ändernungshäufigkeit</th>
+    <th>Konsens</th>
+    <th>Bemerkungen</th>
+</tr>
+<tr>
+    <td>Ontologie</td>
+    <td>Wenige Änderungen pro Jahr</td>
+    <td>Breiter Konsens nötig</td>
+    <td></td>
+</tr>
+<tr>
+    <td>Controlled Vocabularies</td>
+    <td>Wenige Änderungen pro Jahr</td>
+    <td>Konsens der Nutzerinnen nötig</td>
+    <td>Bestehende Terme dürfe nicht gelöscht werden</td>
+</tr>
+<tr>
+    <td>Core Entities</td>
+    <td>Wenige Änderungen pro Jahr</td>
+    <td>Daten werden auf übergeodneter Ebene definiert</td>
+    <td>Bestehende Terme dürfe nicht gelöscht werden</td>
+</tr>
+<tr>
+    <td>Register</td>
+    <td>Tägliche Änderungen</td>
+    <td>Daten vom Data-Owner alleine definiert</td>
+    <td>Automatisierte Verarbeitung nötig</td>
+</tr>
+</table>
