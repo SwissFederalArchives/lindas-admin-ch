@@ -44,7 +44,7 @@ Die Idee der Controlled Voacabularies entspricht eigentlich nicht den Grundprinz
 Zentrale Entitäten (Core Entities) sind ein Spezialfall von Controlled Vocabularies. Das spezifische an den zentralen Entitäten ist die (mutmasslich) sehr häufige Wiederverwendung von solchen Entitäten. Mehr dazu siehe [hier](/governance/core-concepts/).
 
 ## Register
-Als Register werden im LINDAS Ökosystem insbesondere bestehende Datenbankwerke verstanden, die als Linked Data transformiert wurden und sonst typsichwerweise als tabellarische CSV Daten vorliegen würden. Register Daten werden also immer automatisiert verarbeitet. Wichtig ist, dass diese Register mit den entsprechendenden zentralen Entitäten verlinkt sind. Dafür werden in den Registern typischerweise eigene IRI der zentralen Entitäten erstellt, die aber entsprechend verlinkt sind. Ein Grund dafür ist, dass die zentralen Entitäten überschaubar bleiben sollen und nicht mit sehr spezifischen Informationen "überflutet" werden sollen.
+Als Register werden im LINDAS Ökosystem insbesondere bestehende Datenbankwerke verstanden, die als Linked Data transformiert wurden und sonst typsichwerweise als tabellarische CSV Daten vorliegen würden. Register Daten werden also immer automatisiert verarbeitet. Wichtig ist, dass diese Register mit den entsprechendenden zentralen Entitäten verlinkt sind. Dafür werden in den Registern typischerweise eigene IRI der zentralen Entitäten erstellt, die aber entsprechend verlinkt sind. Ein Grund dafür ist, dass die zentralen Entitäten überschaubar bleiben sollen und nicht mit sehr spezifischen Informationen "überflutet" werden sollen. Registerdaten sind immer unter der Domain https://register.ld.admin.ch zu finden.
 
 Beispiel mit einem Kanton: Die zentrale Entität für den Kanton Fribourg ist unter https://ld.admin.ch/canton/10 zu finden. Dort stehen aber nur wenige Informationen. Die Informationen zu den geographischen Grenzen, also die GIS Daten beruhen aber auf einer anderen IRI, nämlich https://geo.ld.admin.ch/boundaries/canton/10 und wenn man etwas zur Kantonsentwicklung wissen möchte, dann wird man unter https://register.ld.admin.ch/agvch/canton/10 fündig. Diese Daten sind aber alle über die zentrale Entität verknüpft.
 
@@ -53,8 +53,7 @@ Beispiel mit einem Kanton: Die zentrale Entität für den Kanton Fribourg ist un
 * Änderungen erfolgen automatisiert aus bestehendenden Datenbanksystemen
 
 ## Shared Dimensions
-to do
-
+Shared Dimensions sind ein Begriff aus dem Cube Creator und bezeichnet letztlich Controlled Vocabularies resp. Core Entities, die benötigt werden, um CSV Daten in Linked Data zu transformieren. Also beispielsweise die Kantone oder bestimmte Kategorien in der Holzwirtschaft etc.
 
 ## Tabellarische Daten: cube.link
 Tabellarische Daten können mit Hilfe der [cube.link](https://cube.link) Ontologie in Linked Data transformiert werden. Eine Hilfe dazu ist der Cube Creator, der speziell für die Datenintegration in LINDAS erstellt wurde.
