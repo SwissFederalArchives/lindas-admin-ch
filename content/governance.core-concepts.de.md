@@ -14,14 +14,14 @@ Zu den Zentrale Entitäten gehören:
 
 <br>
 
-Zentrale Entitäten sind immer auch Teil eines Controlled Vocabularies und als solche vom Typ [schema:DefinedTerm](https://schema.org/DefinedTerm), sie sind jedoch nicht als eigentliche zentrale Entität klassifiziert in den Linked Data.
+Zentrale Entitäten werden als Teil eines Controlled Vocabularies vom Typ [schema:DefinedTerm](https://schema.org/DefinedTerm) modelliert. Es gibt keine eigentliche Klasse "Zentrale Entität".
 
 ## Tabellarische Sammlung von zentralen Entitäten
 
 <table class="table">
     <tr>
         <td>Was</td>
-        <td>SPARQL Query</td>
+        <td>Liste der Entitäten</td>
         <td>Beispiel</td>
     </tr>
     <tr>
@@ -51,7 +51,7 @@ Zentrale Entitäten sind immer auch Teil eines Controlled Vocabularies und als s
     </tr>
 </table>
 
-Diese Aufzählung keinen Anspruch auf Vollständigkeit.
+Diese Aufzählung hat keinen Anspruch auf Vollständigkeit.
 
 
 
