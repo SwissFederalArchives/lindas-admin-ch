@@ -38,6 +38,8 @@ Der Linked Data Day wird in Deutsch und Französisch durchgeführt. Die Keynote 
 
 - Stefan Kwasnitza, Stellvertretender Direktor, BAR
 
+- Michael Luggen, Datenarchitekt, BK
+
 - Sabine Zeller, Projektleiterin visualize.admin.ch, BAFU
 
 ### Referate zu Use Cases 
@@ -47,8 +49,6 @@ Der Linked Data Day wird in Deutsch und Französisch durchgeführt. Die Keynote 
 - Erica Dubach, Leiterin Transformation und Interoperabilität, BK
 
 - Ambrogio Foletti, Open Government Data Spezialist, BFE
-
-- Michael Luggen, Datenarchitekt, BK
 
 - Stefan Nellen, Leiter Abteilung Informationszugang, BAR 
 
