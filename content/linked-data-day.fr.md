@@ -37,6 +37,8 @@ La manifestation se déroulera en allemand et en français et la keynote sera do
 
 - Stefan Kwasnitza, directeur adjoint, AFS
 
+- Michael Luggen, Architecte de données, ChF
+
 - Sabine Zeller, responsable du projet visualize.admin.ch, OFEV
 
 ### Use Cases (par ordre alphabétique)
@@ -46,8 +48,6 @@ La manifestation se déroulera en allemand et en français et la keynote sera do
 - Erica Dubach, Directrice de la section transformation et interopérabilité, ChF
 
 - Ambrogio Foletti, spéciealiste d'Open Government Data, OFEN
-
-- Michael Luggen, Architecte de données, ChF
 
 - Stefan Nellen, Division de l'accès à l'information, AFS
 
