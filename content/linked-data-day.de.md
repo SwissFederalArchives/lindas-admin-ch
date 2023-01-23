@@ -1,6 +1,3 @@
-# Linked Data Day 
-## Donnerstag, 9. März 2023 in der Welle 7, Bern
-
 Der erste Linked Data Day der Bundesverwaltung will die Verbindungen innerhalb der LINDAS-Nutzergemeinschaft stärken. Der Tag soll Datenanbietern und solchen, die es werden möchten, die Gelegenheit geben, sich untereinander zu vernetzen. 
 
 Die Veranstaltung bietet unterschiedliche Beispiele von LINDAS-Anwendungen, die Möglichkeit für LINDAS Anwenderinnen und Anwender, sich zu aktuellen Entwicklungen auszutauschen sowie ein Crash Course für Führungskräfte, die sich dafür interessieren, Linked Data auch in ihrem Zuständigkeitsbereich zu nutzen. 
