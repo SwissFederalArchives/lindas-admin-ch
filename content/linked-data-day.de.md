@@ -53,7 +53,7 @@ Der Linked Data Day wird in Deutsch und Französisch durchgeführt. Die Keynote 
 
 - Rolf Schenker, Wissenschaftlicher Mitarbeiter, SSZ
 
-- Michèle Spichtig, Bundesamt für Statistik, BFS
+- Michèle Spichtig, Datenspezialistin bei der Geschäftsstelle Open Government Data, BFS
 
 - Hansjörg Stalder, Projektleiter Fachanwendungen, SSZ
 
