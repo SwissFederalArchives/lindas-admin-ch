@@ -15,9 +15,9 @@ Der Linked Data Day wird in Deutsch und Französisch durchgeführt. Die Keynote 
 ### Inputs unter Anderem von folgenden Akteuren (alphabetisch aufgeführt)
 - Bundesamt für Energie, BFE
 - Bundesamt für Landestopografie, swisstopo
+- Bundesamt für Lebensmittelsicherheit und Veterinärwesen, BLV
 - Bundesamt für Statistik, BFS
 - Bundesamt für Umwelt, BAFU
-- Bundesamt für Lebensmittelsicherheit und Veterinärwesen, BLV
 - Bundesarchiv, BAR
 - Bundeskanzlei, BK
 - Eidgenössische Elektrizitätskommission, Elcom
