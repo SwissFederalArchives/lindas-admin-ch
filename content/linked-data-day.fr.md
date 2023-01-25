@@ -28,7 +28,7 @@ La manifestation se déroulera en allemand et en français et la keynote sera do
 
 ### Exposés, réflexion, discussion 
 
-- Jean-Luc Cochard, Chef Unité des techniques de l'information, AFS
+- Jean-Luc Cochard, Product Manager LINDAS, AFS
 
 - Philippe Künzler, directeur, AFS
 
@@ -52,7 +52,7 @@ La manifestation se déroulera en allemand et en français et la keynote sera do
 
 - Rolf Schenker, collaborateur scientifique, SSZ
 
-- Michèle Spichtig, Office fédéral de la statistique, OFS
+- Michèle Spichtig, Spécialiste des données, Open Government Data, OFS
 
 - Hansjörg Stalder, chef de projet applications spécialisées, SSZ
 
