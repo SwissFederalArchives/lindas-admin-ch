@@ -2,7 +2,7 @@ L'objectif de cette conférence est de renforcer les liens au sein de la communa
 
 Nous souhaitons nous adresser aussi bien aux utilisateurs et utilisatrices de LINDAS qu'aux membres du management qui n'utilisent pas encore LINDAS dans leur domaine. Pour ce faire, nous proposons une piste parallèle avec un atelier de "crash course" pour les managers, au cours duquel les utilisateurs et utilisatrices de LINDAS peuvent échanger sur les développements actuels. 
 
-Cette manifestation est réservée aux collaboratrices et collaborateurs des administrations suisses ainsi qu’aux entreprises proches de l’Etat.
+Cette manifestation est réservée aux collaboratrices et collaborateurs des administrations suisses (fédérales, cantonales et communales) ainsi qu’aux entreprises proches de l’Etat.
 
 La manifestation se déroulera en allemand et en français et la keynote sera donnée en anglais.
 
