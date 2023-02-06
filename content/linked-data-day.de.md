@@ -6,23 +6,14 @@ Diese Veranstaltung ist reserviert für Mitarbeiterinnen und Mitarbeiter der sch
 
 Der Linked Data Day wird in Deutsch und Französisch durchgeführt. Die Keynote wird in Englisch gehalten. 
 
-## Provisorisches Programm
+## Programm
+[Programm Linked Data Day 2023 (PDF)](/Linked-Data-Day-2023-Programm.pdf)
+
+## Referierende
 
 ### Keynote Präsentation "The Knowledge Graph as Interoperability Foundation - The Case at the Dutch Land Registry"
 
 - Erwin Folmer von [Kadaster](https://www.kadaster.nl/about-us "dieser Link führt zu Kadaster!"), Niederlande 
-
-### Inputs unter Anderem von folgenden Akteuren (alphabetisch aufgeführt)
-- Bundesamt für Energie, BFE
-- Bundesamt für Landestopografie, swisstopo
-- Bundesamt für Lebensmittelsicherheit und Veterinärwesen, BLV
-- Bundesamt für Statistik, BFS
-- Bundesamt für Umwelt, BAFU
-- Bundesarchiv, BAR
-- Bundeskanzlei, BK
-- Eidgenössische Elektrizitätskommission, Elcom
-- Schweizerische Bundesbahnen, SBB
-- Statistik Stadt Zürich, SSZ
 
 ### Workshop
 - Crash Course zu Linked Data für Führungskräfte mit Michael Rauch, Zazuko
@@ -60,7 +51,19 @@ Der Linked Data Day wird in Deutsch und Französisch durchgeführt. Die Keynote 
 - Christian Trachsel, Open Data-Verantwortlicher, SBB
 
 - Barbara Wyss, Leiterin Sektion Preise und Tarife / Business Prozessverantwortliche im Projekt EDES, ElCom
- 
+
+## Akteuren (alphabetisch aufgeführt)
+- Bundesamt für Energie, BFE
+- Bundesamt für Landestopografie, swisstopo
+- Bundesamt für Lebensmittelsicherheit und Veterinärwesen, BLV
+- Bundesamt für Statistik, BFS
+- Bundesamt für Umwelt, BAFU
+- Bundesarchiv, BAR
+- Bundeskanzlei, BK
+- Eidgenössische Elektrizitätskommission, Elcom
+- Schweizerische Bundesbahnen, SBB
+- Statistik Stadt Zürich, SSZ
+
 **Die Anmeldung ist bereits geschlossen, aber wir führen eine [Warteliste](https://campaign.bfh.ch/linked_data_day_nachmeldungen/ "Warteliste Linked Data Day auf der BFH Webseite!"). Tragen Sie sich in dem Formular ein und wir kontaktieren Sie, sobald ein Platz frei wird**
 
 
