@@ -60,14 +60,8 @@ Der Linked Data Day wird in Deutsch und Französisch durchgeführt. Die Keynote 
 - Christian Trachsel, Open Data-Verantwortlicher, SBB
 
 - Barbara Wyss, Leiterin Sektion Preise und Tarife / Business Prozessverantwortliche im Projekt EDES, ElCom
-
-
-**Weitere Informationen zum Programm finden Sie bald hier auf unserer Veranstaltungswebseite**
-
  
-**Die Anmeldung ist bereits geschlossen aber wir führen eine Warteliste für frei werdende Plätze.**
-
-**[Tragen Sie sich hier auf der Warteliste für den Linked Data Day ein](https://campaign.bfh.ch/linked_data_day_nachmeldungen/ "Warteliste Linked Data Day auf der BFH Webseite!")**
+**Die Anmeldung ist bereits geschlossen, aber wir führen eine [Warteliste](https://campaign.bfh.ch/linked_data_day_nachmeldungen/ "Warteliste Linked Data Day auf der BFH Webseite!"). Tragen Sie sich in dem Formular ein und wir kontaktieren Sie, sobald ein Platz frei wird**
 
 
 Der Linked Data Day wird vom Bundesarchiv ausgerichtet und wird mit Unterstützung der Berner Fachhochschule (BFH) durchgeführt. 
