@@ -7,7 +7,7 @@ Cette manifestation est réservée aux collaboratrices et collaborateurs des adm
 La manifestation se déroulera en allemand et en français et la keynote sera donnée en anglais.
 
 ## Programme
-[Programm Linked Data Day 2023 (PDF)](https://cms.bfh.ch/dam/jcr:4e18ab84-3f0f-4a71-9e1e-141d4cb90048/Linked-Data-Day-2023-Programm.pdf))
+[Programm Linked Data Day 2023 (PDF)](https://cms.bfh.ch/dam/jcr:4e18ab84-3f0f-4a71-9e1e-141d4cb90048/Linked-Data-Day-2023-Programm.pdf)
 
 ## Intervenants
 
