@@ -6,22 +6,13 @@ Cette manifestation est réservée aux collaboratrices et collaborateurs des adm
 
 La manifestation se déroulera en allemand et en français et la keynote sera donnée en anglais.
 
-## Programme provisoire
+## Programme
+[Programm Linked Data Day 2023 (PDF)](https://cms.bfh.ch/dam/jcr:4e18ab84-3f0f-4a71-9e1e-141d4cb90048/Linked-Data-Day-2023-Programm.pdf))
+
+## Intervenants
 
 ### Keynote "The Knowledge Graph as Interoperability Foundation - The Case at the Dutch Land Registry"
 - Erwin Folmer de [Kadaster](https://www.kadaster.nl/about-us "dieser Link führt zu Kadaster!"), Pays-Bas 
-
-### Exposés, entre autres, par les acteurs suivants (par ordre alphabétique)
-- Archives fédérales, AFS
-- Chancellerie fédérale, ChF
-- Chemins de fer fédéraux suisses, CFF
-- Office fédéral de la statistique, OFS
-- Office fédéral de l'énergie, OFEN
-- Commission fédérale de l'électricité, Elcom 
-- Office fédéral de la topographie, swisstopo
-- Office fédéral de l'environnement, OFEV
-- Office fédéral de la sécurité alimentaire et des affaires vétérinaires (OSAV) 
-- Statistique de la ville de Zurich, SSZ
 
 ### Workshop 
 - Crash Course Linked Data avec Michael Rauch, Zazuko
@@ -59,6 +50,18 @@ La manifestation se déroulera en allemand et en français et la keynote sera do
 - Christian Trachsel, responsable Open Data, CFF
 
 - Barbara Wyss, cheffe de la section prix et tarifs / Responsable du projet EDES, ElCom
+
+## Les acteurs  (par ordre alphabétique)
+- Archives fédérales, AFS
+- Chancellerie fédérale, ChF
+- Chemins de fer fédéraux suisses, CFF
+- Office fédéral de la statistique, OFS
+- Office fédéral de l'énergie, OFEN
+- Commission fédérale de l'électricité, Elcom 
+- Office fédéral de la topographie, swisstopo
+- Office fédéral de l'environnement, OFEV
+- Office fédéral de la sécurité alimentaire et des affaires vétérinaires (OSAV) 
+- Statistique de la ville de Zurich, SSZ
 
 
 **Les inscriptions sont terminés et nous tenons [une liste d'attente](https://campaign.bfh.ch/linked_data_day_nachmeldungen/ "Inscription sur le site de la HESB!"). Inscrivez-vous dans ce formulaire et nous vous contacterons dès qu'une place se libère**
