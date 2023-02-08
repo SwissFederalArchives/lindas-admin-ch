@@ -40,13 +40,30 @@ All other non-page wide translations are done through the files in [/locales](/l
 
 ## Deployment
 
+There are three different environments:
+
+- test (TEST),
+- integration (INT),
+- production (PROD).
+
+CI is configured for two branches: `master` and `develop`.
+The idea is to always deploy on INT before PROD.
+Everything that is on `develop` is deployed on TEST.
+If something needs to be deployed quickly on PROD, there is no need to go through TEST first ; INT -> PROD is enough for such situations.
+
 ### Test
 
-Every commit to master creates a new `test_<date_time>` container image in the project [gitlab registry](https://gitlab.ldbar.ch/zazuko/lindas-admin-ch/container_registry/). The [gitops-prod](https://gitlab.ldbar.ch/vshn/gitops-prod) detects new images and deploys them automatically to https://test.lindas.admin.ch.
+Every commit to `develop` branch creates a new `test_<date_time>` container image in the project [gitlab registry](https://gitlab.ldbar.ch/zazuko/lindas-admin-ch/container_registry/).
+The [gitops-main](https://gitlab.ldbar.ch/vshn/gitops-main) detects new images and deploys them automatically to https://test.lindas.admin.ch.
+
+### Integration
+
+Every commit to `master` branch creates a new `int_<date_time>` container image in the project [gitlab registry](https://gitlab.ldbar.ch/zazuko/lindas-admin-ch/container_registry/).
+The [gitops-main](https://gitlab.ldbar.ch/vshn/gitops-main) detects new images and deploys them automatically to https://int.lindas.admin.ch.
 
 ### Production
 
-To push the current version to production and integration:
+To push the current version that is deployed on integration to production:
 
 - Go to [CI/CD -> Pipelines](https://gitlab.ldbar.ch/zazuko/lindas-admin-ch/-/pipelines).
 - Find your commit
