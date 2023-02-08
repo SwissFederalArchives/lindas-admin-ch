@@ -15,6 +15,7 @@
 
 stages:
   - test
+  - int
   - prod
 
 .docker-build:
@@ -28,16 +29,28 @@ stages:
   script:
     - docker build --pull -t "$CI_REGISTRY_IMAGE:${TARGET}_$CI_JOB_TIMESTAMP" .
     - docker push "$CI_REGISTRY_IMAGE:${TARGET}_$CI_JOB_TIMESTAMP"
-  only:
-    - master
 
+# create Docker image for TEST on each commit on `develop`
 deploy_test:
   extends: .docker-build
   stage: test
   environment: test
+  only:
+    - develop
 
+# create Docker image for INT on each commit on `master`
+deploy_int:
+  extends: .docker-build
+  stage: int
+  environment: int
+  only:
+    - master
+
+# create Docker image for PROD on each commit on `master` after manual trigger
 deploy_prod:
   extends: .docker-build
   stage: prod
   environment: prod
   when: manual
+  only:
+    - master
