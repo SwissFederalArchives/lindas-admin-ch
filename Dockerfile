@@ -1,7 +1,7 @@
 FROM docker.io/library/node:18-alpine
 
 # some default values
-ENV DATASET_BASE_URL=""
+ENV DATASET_BASE_URL="https://ld.admin.ch/"
 ENV SPARQL_ENDPOINT_URL="https://test.lindas.admin.ch/query"
 ENV SPARQL_USERNAME="public"
 ENV SPARQL_PASSWORD="public"
