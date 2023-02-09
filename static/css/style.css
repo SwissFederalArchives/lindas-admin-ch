@@ -1,0 +1,256 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 14px;
+  color: #454545;
+  background-color: #f5f5f5;
+  background-image: url(/swiss-assets/img/bg-striped.png);
+}
+
+@font-face {
+  font-family: "Admin Icons";
+  src: url("/swiss-assets/fonts/AdminCH_Symbols.eot");
+  src: url("/swiss-assets/fonts/AdminCH_Symbols.eot")
+      format("embedded-opentype"),
+    url("/swiss-assets/fonts/AdminCH_Symbols.woff2") format("woff2"),
+    url("/swiss-assets/fonts/AdminCH_Symbols.woff") format("woff"),
+    url("/swiss-assets/fonts/AdminCH_Symbols.ttf") format("truetype");
+}
+
+.page {
+  margin: 0 auto;
+  background: #fff;
+  box-shadow: 0 0 60px 0 rgb(0 0 0 / 60%);
+}
+
+@media screen and (min-width: 768px) {
+  .page {
+    width: 750px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .page {
+    width: 970px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page {
+    width: 1170px;
+  }
+}
+
+header {
+  padding: 15px 15px 30px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+header nav ul {
+  list-style-type: none;
+  display: inline-block;
+}
+
+header nav ul > li {
+  display: inline-block;
+}
+
+header a.logo-link {
+  display: flex;
+  text-decoration: none;
+  color: #454545;
+}
+
+.header-logo {
+  padding-right: 2em;
+  margin-right: 2em;
+  border-right: 1px solid #e5e5e5;
+  display: inline-block;
+}
+
+.app-name {
+  flex: 1;
+  font-weight: bold;
+  margin: 0;
+}
+
+.header-links {
+  display: flex;
+  align-self: flex-end;
+  margin: 0 0 8px 0;
+}
+
+.header-links a {
+  color: #454545;
+  text-decoration: none;
+  padding: 4px;
+  display: inline-block;
+  margin-bottom: 4px;
+}
+
+.header-links a:hover {
+  color: #dc0018;
+  text-decoration: underline;
+}
+
+.header-links-menu {
+  margin: 0;
+  padding: 0;
+  font-size: 0.85em;
+  line-height: 18px;
+}
+
+.header-links-languages {
+  margin: 0 0 0 8px;
+  padding: 0 0 0 8px;
+  border-left: 1px solid #e5e5e5;
+}
+
+.header-links-languages a:hover {
+  color: #069;
+  text-decoration: underline;
+}
+
+.header-links-languages a.active {
+  background-color: #e5e5e5;
+}
+
+.trifid-main-navigation {
+  border-top: 5px solid #dc0018;
+  background-color: #e4e4e4;
+  background: linear-gradient(
+    to bottom,
+    #e4e4e4 0,
+    #e2e2e2 39%,
+    #ddd 79%,
+    #d5d5d5 91%,
+    #cfcfcf 95%,
+    #bebebe 99%
+  );
+}
+
+.trifid-main-navigation ul {
+  display: flex;
+  list-style-type: none;
+  margin: 0 24px;
+  padding: 0;
+  border-left: 1px solid #b8b8b8;
+}
+
+.trifid-main-navigation li {
+  position: relative;
+  display: inline-block;
+  border-right: 1px solid #b8b8b8;
+  border-left: 1px solid #fff;
+}
+
+.trifid-main-navigation a {
+  display: inline-block;
+  height: 70px;
+  background: #e8e8e8;
+  background: linear-gradient(
+    to bottom,
+    #e8e8e8 0,
+    #f7f7f7 61%,
+    #f7f7f7 89%,
+    #f5f5f5 91%,
+    #ececec 95%,
+    #d7d7d7 100%
+  );
+  max-width: 110px;
+  color: #454545;
+  font-size: 0.9em;
+  line-height: 1.2;
+  padding: 10px 9px;
+  text-decoration: none;
+}
+
+.trifid-main-navigation a:hover {
+  color: #dc0018;
+  background: linear-gradient(
+    to bottom,
+    #f4f4f4 0,
+    #fff 10%,
+    #fff 79%,
+    #fff 91%,
+    #dbdbdb 100%
+  );
+}
+
+.trifid-main-navigation a::after {
+  content: "";
+  font-family: "Admin Icons";
+  position: absolute;
+  bottom: 4px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: #454545;
+  font-size: 0.9em;
+}
+
+.trifid-main-navigation a.active {
+  background: #fff;
+  border-top: 5px solid #f7001d;
+  margin-top: -5px;
+  height: 75px;
+  font-weight: bold;
+}
+
+header a.logo-link:focus,
+.header-links a:focus,
+.trifid-main-navigation a:focus {
+  outline: #454545 solid 3px;
+}
+
+main {
+  padding: 25px 15px;
+}
+
+.trifid-content a {
+  color: #069;
+}
+
+footer {
+  border-top: 1px solid #d5d5d5;
+  background-color: #f5f5f5;
+}
+
+.footer-bottom {
+  margin-top: 55px;
+  border-top: 1px solid #fff;
+  padding: 10px 15px;
+}
+
+/* specific for homepage */
+.welcome-container {
+  display: flex;
+}
+
+.welcome-content {
+  display: flex;
+  flex: 3;
+  gap: 24px;
+  margin-right: 24px;
+}
+
+.welcome-content-left,
+.welcome-content-right {
+  flex: 1;
+  text-align: justify;
+}
+
+.welcome-side {
+  display: flex;
+  flex: 1;
+}

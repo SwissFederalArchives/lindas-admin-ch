@@ -1,0 +1,23 @@
+#datasets-search {
+  padding: 8px;
+  margin-bottom: 24px;
+  min-width: 350px;
+}
+
+.trifid-datasets-search-item {
+  border-top: 1px solid #ddd;
+  padding: 8px;
+}
+
+.trifid-datasets-search-item:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+.trifid-datasets-search-name {
+  font-weight: bold;
+}
+
+.trifid-datasets-search-description {
+  text-align: justify;
+  line-height: 24px;
+}

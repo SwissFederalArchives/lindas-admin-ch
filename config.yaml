@@ -1,0 +1,158 @@
+template:
+  files:
+    main: file:template/main.hbs
+    header: file:template/header.hbs
+    footer: file:template/footer.hbs
+  partials:
+    infos: file:template/infos.hbs
+  title: LINDAS - Linked Data Service
+
+globals:
+  datasetBaseUrl: env:DATASET_BASE_URL
+  sparqlEndpoint:
+    url: env:SPARQL_ENDPOINT_URL
+    username: env:SPARQL_USERNAME
+    password: env:SPARQL_PASSWORD
+
+middlewares:
+  static-assets:
+    module: trifid-core/middlewares/static.js
+    order: 0
+    paths: /static-assets
+    config:
+      directory: file:static
+
+  rewrite:
+    module: trifid-core/middlewares/rewrite.js
+
+  welcome:
+    module: trifid-core/middlewares/view.js
+    paths: /
+    methods: GET
+    config:
+      path: views/welcome.hbs
+  publish:
+    module: trifid-core/middlewares/view.js
+    paths: /publish
+    methods: GET
+    config:
+      path: views/publish.hbs
+
+  ckan:
+    module: "@zazuko/trifid-plugin-ckan"
+    order: 30
+    paths: /ckan
+
+  entity-renderer:
+    module: "@zazuko/trifid-renderer-entity"
+    config:
+      path: views/entity.hbs
+      labelLoader:
+        #        labelNamespaces: # Labels will be fetched for URIs that start with this list (if omitted, fetches for all URIs)
+        #          - https://lindas.admin.ch
+        #          - https://ld.admin.ch
+        chunkSize: 30
+        concurrency: 2
+        timeout: 4000
+
+  yasgui:
+    module: trifid-plugin-yasgui
+    paths: /sparql
+    config:
+      urlShortener: https://s.zazuko.com/api/v1/shorten
+      template: file:views/yasgui.hbs
+
+  graph-explorer:
+    module: trifid-plugin-graph-explorer
+    paths: /graph-explorer
+
+  spex:
+    module: trifid-plugin-spex
+    paths: /spex
+
+  search:
+    module: file:plugins/search/index.js
+    paths:
+      - /datasets
+
+  sparql-proxy:
+    module: "@zazuko/trifid-plugin-sparql-proxy"
+    paths: /query
+    config:
+      queryOperation: postQueryUrlencoded
+      rewriteQueries: true
+      cache:
+        prefix: env:SPARQL_PROXY_CACHE_PREFIX
+        url: env:SPARQL_PROXY_CACHE_URL
+        clearAtStartup: env:SPARQL_PROXY_CACHE_CLEAR_AT_STARTUP
+
+  handle-redirects-demo:
+    module: "@zazuko/trifid-handle-redirects"
+
+  sparql-handler:
+    module: trifid-handler-sparql
+    config:
+      containerExistsQuery: 'ASK { ?s a ?o. FILTER REGEX(STR(?s), "^${iri}") }'
+      resourceGraphQuery: "#pragma describe.strategy cbd\nDESCRIBE <${iri}>"
+      containerGraphQuery: 'CONSTRUCT { ?s a ?o. ?s <http://www.w3.org/2000/01/rdf-schema#label> ?label. } WHERE { ?s a ?o. OPTIONAL {?s <http://www.w3.org/2000/01/rdf-schema#label> ?label.} FILTER REGEX(STR(?s), "^${iri}") }'
+
+  i18n:
+    module: trifid-plugin-i18n
+    order: 5
+    config:
+      directory: file:locales
+      locales:
+        - en
+        - fr
+        - de
+        - it
+
+  menu:
+    module: file:plugins/menu/index.js
+    order: 80
+    config:
+      namespace: header
+      entries:
+        - path: /
+          label: About
+        - path: /datasets/
+          label: Datacatalog
+        - path: /sparql/
+          label: Query Data
+        - path: /publish/
+          label: Publish Data
+
+  content:
+    module: file:plugins/content/index.js
+    order: 80
+    config:
+      namespace: lindas
+      directory: file:content/template-parts
+  content-root:
+    module: file:plugins/content/index.js
+    order: 80
+    config:
+      namespace: lindas-root
+      directory: file:content/root-pages
+      mountPath: /
+  content-documentation:
+    module: file:plugins/content/index.js
+    order: 80
+    config:
+      namespace: lindas-documentation
+      directory: file:content/documentation
+      mountPath: /documentation/
+  content-governance:
+    module: file:plugins/content/index.js
+    order: 80
+    config:
+      namespace: lindas-governance
+      directory: file:content/governance
+      mountPath: /governance/
+  content-technology:
+    module: file:plugins/content/index.js
+    order: 80
+    config:
+      namespace: lindas-technology
+      directory: file:content/technology
+      mountPath: /technology/
