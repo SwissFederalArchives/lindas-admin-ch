@@ -46,7 +46,7 @@ There are three different environments:
 - integration (INT),
 - production (PROD).
 
-CI is configured for two branches: `master` and `develop`.
+CI is configured for two branches: `main` and `develop`.
 The idea is to always deploy on INT before PROD.
 Everything that is on `develop` is deployed on TEST.
 If something needs to be deployed quickly on PROD, there is no need to go through TEST first ; INT -> PROD is enough for such situations.
@@ -58,7 +58,7 @@ The [gitops-main](https://gitlab.ldbar.ch/vshn/gitops-main) detects new images a
 
 ### Integration
 
-Every commit to `master` branch creates a new `int_<date_time>` container image in the project [gitlab registry](https://gitlab.ldbar.ch/zazuko/lindas-admin-ch/container_registry/).
+Every commit to `main` branch creates a new `int_<date_time>` container image in the project [gitlab registry](https://gitlab.ldbar.ch/zazuko/lindas-admin-ch/container_registry/).
 The [gitops-main](https://gitlab.ldbar.ch/vshn/gitops-main) detects new images and deploys them automatically to https://int.lindas.admin.ch.
 
 ### Production
