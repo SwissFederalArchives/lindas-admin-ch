@@ -15,7 +15,7 @@ USER 1000
 WORKDIR /app
 COPY package.json package-lock.json ./
 ENV NODE_ENV="production"
-RUN npm ci
+RUN npm ci && npm cache clean --force
 COPY . .
 
 # expose the HTTP service under the unprivileged (>1024) http-alt port
