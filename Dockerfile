@@ -7,7 +7,6 @@ ENV SPARQL_USERNAME="public"
 ENV SPARQL_PASSWORD="public"
 ENV SPARQL_PROXY_CACHE_PREFIX="default"
 ENV SPARQL_PROXY_CACHE_CLEAR_AT_STARTUP="true"
-ENV DEBUG=sparql-proxy
 
 RUN apk add --no-cache tini
 
@@ -21,9 +20,8 @@ ENV NODE_ENV="production"
 RUN npm ci && npm cache clean --force
 COPY . .
 
-RUN sed -i 's/await result\.text.*/"text"/' node_modules/@zazuko/sparql-proxy/index.js
-
 # expose the HTTP service under the unprivileged (>1024) http-alt port
 EXPOSE 8080
 
-CMD [ "tini", "--", "npm", "run", "start" ]
+ENTRYPOINT [ "tini", "--" ]
+CMD [ "node", "./node_modules/.bin/trifid" ]
