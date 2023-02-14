@@ -7,7 +7,6 @@ ENV SPARQL_USERNAME="public"
 ENV SPARQL_PASSWORD="public"
 ENV SPARQL_PROXY_CACHE_PREFIX="default"
 ENV SPARQL_PROXY_CACHE_CLEAR_AT_STARTUP="true"
-ENV DEBUG=sparql-proxy
 
 RUN apk add --no-cache tini
 
