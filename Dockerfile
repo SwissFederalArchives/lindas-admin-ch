@@ -1,4 +1,4 @@
-FROM docker.io/library/node:18
+FROM docker.io/library/node:18-alpine
 
 # some default values
 ENV DATASET_BASE_URL=""
@@ -8,7 +8,7 @@ ENV SPARQL_PASSWORD="public"
 ENV SPARQL_PROXY_CACHE_PREFIX="default"
 ENV SPARQL_PROXY_CACHE_CLEAR_AT_STARTUP="true"
 
-RUN apt-get update && apt-get install -y tini
+RUN apk add --no-cache tini
 
 # run as the "node" user
 USER 1000
