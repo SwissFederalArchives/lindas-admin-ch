@@ -1,4 +1,4 @@
-FROM docker.io/library/node:18-alpine
+FROM docker.io/library/node:18
 
 # some default values
 ENV DATASET_BASE_URL=""
