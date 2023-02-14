@@ -21,6 +21,8 @@ ENV NODE_ENV="production"
 RUN npm ci && npm cache clean --force
 COPY . .
 
+RUN sed -i 's/await result\.text.*/"text"/' node_modules/@zazuko/sparql-proxy/index.js
+
 # expose the HTTP service under the unprivileged (>1024) http-alt port
 EXPOSE 8080
 
