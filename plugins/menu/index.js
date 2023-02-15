@@ -3,22 +3,20 @@ const factory = async (trifid) => {
   const { namespace, entries } = config
 
   if (!entries || !Array.isArray(entries)) {
-    throw new Error(`'entries' should be a non-empty array`)
+    throw new Error('\'entries\' should be a non-empty array')
   }
 
-  const configuredNamespace = namespace ?? 'default';
+  const configuredNamespace = namespace ?? 'default'
   const store = []
-
-  let i = 0
 
   for (const entry of entries) {
     const { path, label } = entry
     if (!path || typeof path !== 'string') {
-      throw new Error(`'path' should be a non-empty string`)
+      throw new Error('\'path\' should be a non-empty string')
     }
 
     if (!label || typeof label !== 'string') {
-      throw new Error(`'label' should be a non-empty string`)
+      throw new Error('\'label\' should be a non-empty string')
     }
 
     store.push({

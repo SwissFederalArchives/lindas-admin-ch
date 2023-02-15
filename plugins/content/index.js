@@ -1,5 +1,5 @@
-import { promises as fs } from 'fs';
-import { dirname, join as pathJoin } from 'path';
+import { promises as fs } from 'fs'
+import { dirname, join as pathJoin } from 'path'
 import { fileURLToPath } from 'url'
 import { unified } from 'unified'
 import remarkParse from 'remark-parse'
@@ -7,6 +7,7 @@ import remarkFrontmatter from 'remark-frontmatter'
 import remarkGfm from 'remark-gfm'
 import remarkRehype from 'remark-rehype'
 import rehypeStringify from 'rehype-stringify'
+import addClasses from './addClasses.js'
 
 const currentDir = dirname(fileURLToPath(import.meta.url))
 
@@ -22,6 +23,11 @@ const convertToHtml = async (markdownString) => {
     .use(remarkFrontmatter)
     .use(remarkGfm)
     .use(remarkRehype)
+    .use(addClasses, {
+      h1: 'title-1',
+      h2: 'title-2',
+      h3: 'title-3'
+    })
     .use(rehypeStringify)
     .process(markdownString)
 
@@ -99,6 +105,7 @@ const entriesForLanguage = (store, language = 'en') => {
     let value = null
     let fallbackValue = null
 
+    // eslint-disable-next-line array-callback-return
     item.map((item) => {
       if (item.language === language) {
         value = item.html
@@ -143,9 +150,9 @@ const factory = async (trifid) => {
   const { namespace, directory, mountPath } = config
 
   // check config
-  const configuredNamespace = namespace ?? 'default';
+  const configuredNamespace = namespace ?? 'default'
   if (!directory || typeof directory !== 'string') {
-    throw new Error(`'directory' should be a non-empty string`)
+    throw new Error('\'directory\' should be a non-empty string')
   }
   const mountAtPath = mountPath || false
 
