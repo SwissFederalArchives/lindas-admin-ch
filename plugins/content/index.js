@@ -24,9 +24,9 @@ const convertToHtml = async (markdownString) => {
     .use(remarkGfm)
     .use(remarkRehype)
     .use(addClasses, {
-      h1: 'title-1',
-      h2: 'title-2',
-      h3: 'title-3'
+      h1: 'h1',
+      h2: 'h2',
+      h3: 'h3'
     })
     .use(rehypeStringify)
     .process(markdownString)
