@@ -11,7 +11,7 @@
     "remark-gfm": "^3.0.1",
     "remark-parse": "^10.0.1",
     "remark-rehype": "^10.1.0",
-    "trifid": "^3.0.0-rc.0",
+    "trifid": "^3.0.0-rc.1",
     "unified": "^10.1.2"
   },
   "license": "UNLICENSED",

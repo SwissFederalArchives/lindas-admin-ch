@@ -15,6 +15,10 @@ globals:
     password: env:SPARQL_PASSWORD
 
 middlewares:
+  morgan:
+    module: trifid/middlewares/morgan.js
+    order: 0
+
   static-assets:
     module: trifid-core/middlewares/static.js
     order: 0
