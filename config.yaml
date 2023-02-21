@@ -123,8 +123,6 @@ middlewares:
           label: Datacatalog
         - path: /sparql/
           label: Query Data
-        - path: /publish/
-          label: Publish Data
 
   content:
     module: file:plugins/content/index.js
