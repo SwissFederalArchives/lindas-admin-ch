@@ -123,6 +123,12 @@ middlewares:
           label: Datacatalog
         - path: /sparql/
           label: Query Data
+        - path: /documentation/
+          label: Documentation
+        - path: /governance/
+          label: Governance
+        - path: /technology/
+          label: Technology
 
   content:
     module: file:plugins/content/index.js

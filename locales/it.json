@@ -1,6 +1,9 @@
 {
-  "About": "Introduzione",
-  "Datacatalog": "Dataset",
-  "Query Data": "Consultare i dati",
-  "Linked Data Day": "Giornata dei dati collegati"
+	"About": "Introduzione",
+	"Datacatalog": "Dataset",
+	"Query Data": "Consultare i dati",
+	"Linked Data Day": "Giornata dei dati collegati",
+	"Documentation": "Documentation",
+	"Governance": "Governance",
+	"Technology": "Technology"
 }
