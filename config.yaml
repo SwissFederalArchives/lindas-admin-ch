@@ -117,8 +117,8 @@ middlewares:
     config:
       namespace: header
       entries:
-        - path: /
-          label: About
+        - path: /linked-data-day/
+          label: Linked Data Day
         - path: /datasets/
           label: Datacatalog
         - path: /sparql/
