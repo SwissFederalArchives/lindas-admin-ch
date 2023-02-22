@@ -1,9 +1,9 @@
 {
-	"About": "About",
-	"Datacatalog": "Datacatalog",
-	"Query Data": "Query Data",
-	"Linked Data Day": "Linked Data Day",
-	"Documentation": "Documentation",
-	"Governance": "Governance",
-	"Technology": "Technology"
+  "About": "About",
+  "Datacatalog": "Datacatalog",
+  "Query Data": "Query Data",
+  "Linked Data Day": "Linked Data Day",
+  "Documentation": "Documentation",
+  "Linked Data Governance": "Linked Data Governance",
+  "Linked Data Technology": "Linked Data Technology"
 }

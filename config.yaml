@@ -126,9 +126,9 @@ middlewares:
         - path: /documentation/
           label: Documentation
         - path: /governance/
-          label: Governance
+          label: Linked Data Governance
         - path: /technology/
-          label: Technology
+          label: Linked Data Technology
 
   content:
     module: file:plugins/content/index.js
