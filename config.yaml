@@ -35,12 +35,6 @@ middlewares:
     methods: GET
     config:
       path: views/welcome.hbs
-  publish:
-    module: trifid-core/middlewares/view.js
-    paths: /publish
-    methods: GET
-    config:
-      path: views/publish.hbs
 
   ckan:
     module: "@zazuko/trifid-plugin-ckan"

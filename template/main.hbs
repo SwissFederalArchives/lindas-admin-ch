@@ -3,21 +3,23 @@
   <meta charset="utf-8">
   <title>{{#if title}}{{#if entityLabel}}{{entityLabel}} - {{/if}}{{title}}{{else}}Trifid{{/if}}</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <style type="text/css">
-      @import url("/static-assets/css/main.css");
-  </style>
+  <link rel="stylesheet" href="/static-assets/css/main.css">
+  <link rel="stylesheet" href="/static-assets/css/style.css">
 </head>
 <body>
-{{#unless disableHeader}}
-{{{header}}}
-{{/unless}}
+
+  {{#unless disableHeader}}
+    {{{header}}}
+  {{/unless}}
+
   <main id="main-content" class="trifid-main">
-    <section class="hero hero--default "><div class="container container--grid gap--responsive"><div class="hero__content">
-        {{{body}}}
-    </div></div></section>
+    <section class="hero hero--default ">
+      {{{ body }}}
+    </section>
   </main>
-{{#unless disableFooter}}
-{{{footer}}}
-{{/unless}}
+
+  {{#unless disableFooter}}
+    {{{footer}}}
+  {{/unless}}
 </body>
 </html>
