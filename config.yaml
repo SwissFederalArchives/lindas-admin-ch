@@ -36,6 +36,25 @@ middlewares:
     config:
       path: views/welcome.hbs
 
+  documentation:
+    module: trifid-core/middlewares/view.js
+    paths: /documentation/
+    methods: GET
+    config:
+      path: views/documentation.hbs
+  governance:
+    module: trifid-core/middlewares/view.js
+    paths: /governance/
+    methods: GET
+    config:
+      path: views/governance.hbs
+  technology:
+    module: trifid-core/middlewares/view.js
+    paths: /technology/
+    methods: GET
+    config:
+      path: views/technology.hbs
+
   ckan:
     module: "@zazuko/trifid-plugin-ckan"
     order: 30
