@@ -1,7 +1,4 @@
 .idea
-node_modules
+node_modules/
 .DS_store
 *.swp
-/public/datasets/templates/
-/public/datasets/search.js
-/public/chunk-*.js

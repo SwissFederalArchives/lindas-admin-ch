@@ -1,0 +1,10 @@
+#yasgui {
+  margin-top: 48px;
+}
+
+#yasgui input:not([type='checkbox']),
+#yasgui select {
+  min-height: unset;
+  padding: unset;
+  width: inherit;
+}

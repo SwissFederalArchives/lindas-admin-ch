@@ -1,59 +1,27 @@
-FROM node:16-alpine as builder
+FROM docker.io/library/node:18-alpine
 
-WORKDIR /src
+# some default values
+ENV DATASET_BASE_URL=""
+ENV SPARQL_ENDPOINT_URL="https://test.lindas.admin.ch/query"
+ENV SPARQL_USERNAME="public"
+ENV SPARQL_PASSWORD="public"
+ENV SPARQL_PROXY_CACHE_PREFIX="default"
+ENV SPARQL_PROXY_CACHE_CLEAR_AT_STARTUP="true"
 
-RUN apk add --no-cache curl git
+RUN apk add --no-cache tini
 
-# Copy the package.json and install the dependencies
-COPY package*.json ./
-RUN npm ci
-COPY . .
-RUN node scripts/build.js
+# run as the "node" user
+USER 1000
 
-FROM node:16-alpine
-
+# build the app
 WORKDIR /app
+COPY package.json package-lock.json ./
+ENV NODE_ENV="production"
+RUN npm ci && npm cache clean --force
+COPY . .
 
-COPY package*.json ./
-RUN npm ci --only=production
-
-ADD content/ ./content
-ADD locales/ ./locales
-ADD views/ ./views
-ADD trifid/ ./trifid
-ADD config.json .
-COPY --from=builder /src/public ./public
-
-USER node:node
-
-# Ideally set those for published images. To do so, run something like
-#
-#   docker build . \
-#     --tag YOUR_TAG \
-#     --build-arg BUILD_DATE=$(date -u +'%Y-%m-%dT%H:%M:%SZ') \
-#     --build-arg COMMIT=$(git rev-parse HEAD) \
-#     --build-arg VERSION=$(git describe)
-#
-ARG BUILD_DATE
-ARG COMMIT
-ARG VERSION
-
-LABEL org.label-schema.build-date=$BUILD_DATE \
-      org.label-schema.name="Trifid" \
-      org.label-schema.description="Trifid for lindas.admin.ch" \
-      org.label-schema.url="http://lindas.admin.ch" \
-      org.label-schema.vcs-url="https://gitlab.ldbar.ch/zazuko/lindas-admin-ch" \
-      org.label-schema.vcs-ref=$COMMIT \
-      org.label-schema.vendor="Zazuko" \
-      org.label-schema.version=$VERSION \
-      org.label-schema.schema-version="0.9"
-
-ENTRYPOINT []
-
-# Using npm scripts for running the app allows two things:
-#  - Handle signals correctly (Node does not like to be PID1)
-#  - Let Skaffold detect it's a node app so it can attach the Node debugger
-CMD ["npm", "run", "start"]
-
+# expose the HTTP service under the unprivileged (>1024) http-alt port
 EXPOSE 8080
-HEALTHCHECK CMD wget -q -O- http://localhost:8080/health
+
+ENTRYPOINT [ "tini", "--" ]
+CMD [ "node", "./node_modules/.bin/trifid" ]

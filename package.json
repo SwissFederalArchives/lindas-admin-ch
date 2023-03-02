@@ -2,28 +2,29 @@
   "name": "lindas.admin.ch",
   "version": "0.14.0",
   "description": "Trifid deployment for lindas.admin.ch",
-  "main": "index.js",
+  "private": true,
+  "type": "module",
   "dependencies": {
-    "@rdf-esm/formats-common": "^0.5.6",
-    "@rdfjs/serializer-rdfjs": "^0.0.4",
-    "@tpluscode/rdf-ns-builders": "^1.1.0",
-    "@zazuko/trifid-plugin-ckan": "^1.0.0",
-    "clownface": "^1.5.1",
-    "express": "^4.17.3",
-    "lit": "^2",
-    "swiss-styleguide": "^3.0.0",
-    "trifid": "^2.3.10",
-    "trifid-plugin-graph-explorer": "^0.5.0",
-    "trifid-plugin-i18n": "^1.0.0",
-    "trifid-plugin-spex": "^0.1.2",
-    "zack-search": "^0.17.3"
+    "@zazuko/trifid-plugin-ckan": "^2.0.1",
+    "hast-util-select": "^5.0.5",
+    "rehype-stringify": "^9.0.3",
+    "remark-frontmatter": "^4.0.1",
+    "remark-gfm": "^3.0.1",
+    "remark-parse": "^10.0.1",
+    "remark-rehype": "^10.1.0",
+    "trifid": "^3.0.0-rc.1",
+    "unified": "^10.1.2"
+  },
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "trifid",
+    "start:test": "DATASET_BASE_URL=https://ld.admin.ch/ SPARQL_ENDPOINT_URL=https://test.lindas.admin.ch/query SPARQL_USERNAME=public SPARQL_PASSWORD=public SPARQL_PROXY_CACHE_PREFIX=default SPARQL_PROXY_CACHE_CLEAR_AT_STARTUP=true trifid -c config.local.yaml",
+    "start:int": "DATASET_BASE_URL=https://ld.admin.ch/ SPARQL_ENDPOINT_URL=https://int.lindas.admin.ch/query SPARQL_USERNAME=public SPARQL_PASSWORD=public SPARQL_PROXY_CACHE_PREFIX=default SPARQL_PROXY_CACHE_CLEAR_AT_STARTUP=true trifid -c config.local.yaml",
+    "start:prod": "DATASET_BASE_URL=https://ld.admin.ch/ SPARQL_ENDPOINT_URL=https://lindas.admin.ch/query SPARQL_USERNAME=public SPARQL_PASSWORD=public SPARQL_PROXY_CACHE_PREFIX=default SPARQL_PROXY_CACHE_CLEAR_AT_STARTUP=true trifid -c config.local.yaml",
+    "start:local": "npm run start:test",
+    "test": "standard"
   },
   "devDependencies": {
-    "esbuild": "^0.14.25"
-  },
-  "scripts": {
-    "start": "trifid --config config.json",
-    "start-local": "DEBUG=trifid:* trifid --config config.local.json",
-    "start-local-int": "DEBUG=trifid:* trifid --config config.int.local.json"
+    "standard": "^17.0.0"
   }
 }

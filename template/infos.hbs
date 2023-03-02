@@ -1,0 +1,106 @@
+<style>
+  #partial-infos {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #partial-infos #partials-infos-menu {
+    display: flex;
+    position: relative;
+    top: 1px;
+  }
+
+  #partial-infos #partials-infos-menu > button {
+    cursor: pointer;
+    color: #757575;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    padding: 10 15px;
+    margin-top: 2px;
+  }
+
+  #partial-infos #partials-infos-menu > button:hover {
+    color: #dc0018;
+    border-top: 3px solid #dc0018;
+    margin-top: 0px;
+  }
+
+  #partial-infos #partials-infos-menu > button.active {
+    color: #dc0018;
+    background-color: #fff;
+    border-top: 3px solid #dc0018;
+    border-bottom: 1px solid #fff;
+    margin-top: 0px;
+  }
+
+  #partial-infos #partials-infos-content > div:not(:first-child) {
+    display: none;
+  }
+
+  #partial-infos #partials-infos-content {
+    border: 1px solid #ccc;
+    padding: 8px;
+    display: flex;
+  }
+
+  #partial-infos #partials-infos-content img {
+    width: auto;
+    max-width: 100%;
+  }
+</style>
+
+<div id="partial-infos">
+  <div id="partials-infos-menu">
+    <button>LINDAS</button>
+    <button>Contact</button>
+  </div>
+
+  <div id="partials-infos-content">
+    <div>
+      <img src="/static-assets/img/lindaslogo.png" alt="LINDAS" />
+    </div>
+
+    <div>
+      <p><strong>Swiss Federal Archives SFA</strong></p>
+      <p>Archivstrasse 24<br>3003 Bern</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  const infosElement = document.getElementById("partials-infos");
+  const infosMenuElement = document.getElementById("partials-infos-menu");
+  const infosContentElement = document.getElementById("partials-infos-content");
+
+  const infosContentItems = Array
+    .from(infosContentElement.children)
+    .filter((elm) => elm.matches('div'));
+
+  const infosMenuItems = Array
+    .from(infosMenuElement.children)
+    .filter((elm) => elm.matches('button'))
+    .map((elem, i) => {
+      elem.addEventListener("click", (e) => {
+        e.stopPropagation();
+        e.preventDefault();
+
+        const tabs = Array.from(infosMenuElement.children);
+
+        infosContentItems.map((item) => {
+          item.style.display = "none";
+        });
+
+        tabs.map((item) => {
+          item.classList.remove("active");
+        });
+
+        infosContentItems[i].style.display = "block";
+        tabs[i].classList.add("active");
+      })
+    });
+
+  if (infosMenuElement.children.length > 0) {
+    Array.from(infosMenuElement.children)[0].classList.add("active");
+  }
+</script>

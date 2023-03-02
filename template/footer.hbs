@@ -1,0 +1,61 @@
+  <footer id="main-footer" class="footer">
+    <div class="bg--secondary-600">
+      <div class="container">
+        <div class="footer-information">
+          <div class="footer-information__entry">
+          <h3>About us</h3>
+          <p>The <a href="https://www.bar.admin.ch/bar/en/home.html">Swiss Federal Archives</a> provides the Linked Data Service LINDAS. This service includes a tool for data conversion and data integration as well as a data storage infrastructure (Triplestore). </p>
+          <p>
+          © Swiss Federal Archives SFA
+          </p>
+          </div>
+
+          {{#if entityUrl}}
+          <div class="footer-information__entry footer-information__entry">
+            <h3>Download as</h3>
+            <div class="footer-information__download">
+              <a href="{{entityUrl}}?format=jsonld" target="_blank" rel="nofollow noopener" class="footer__link" download="resource.json">JSON-LD</a><br />
+              <a href="{{entityUrl}}?format=ttl" target="_blank" rel="nofollow noopener" class="footer__link" download="resource.ttl">Turtle</a><br />
+              <a href="{{entityUrl}}?format=nt" target="_blank" rel="nofollow noopener" class="footer__link" download="resource.nt">N3</a><br />
+            </div>
+          </div>
+          <div class="footer-information__entry footer-information__entry">
+            <h3>Browse this resource in</h3>
+            <div class="footer-information__download">
+              <a href="/graph-explorer/" class="footer__link">Graph Explorer</a><br />
+              <a href="/sparql/#query=PREFIX%20rdf%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0A%0ASELECT%20%2A%20WHERE%20%7B%0A%20%20%3C{{entityUrl}}%3E%20%3Fpred%20%3Fobj%20.%0A%7D%20LIMIT%20100&requestMethod=POST&contentTypeConstruct=application%2Fn-triples%2C*%2F*%3Bq%3D0.9&contentTypeSelect=application%2Fsparql-results%2Bjson%2C*%2F*%3Bq%3D0.9&outputFormat=table" class="footer__link">SPARQL</a>
+            </div>
+          </div>
+          {{else}}
+          <div class="footer-information__entry footer-information__entry"></div>
+          <div class="footer-information__entry footer-information__entry">
+            <h3>Open</h3>
+            <div class="footer-information__download">
+              <a href="/graph-explorer/" class="footer__link">Graph Explorer</a><br />
+              <a href="/sparql/" class="footer__link">SPARQL</a>
+            </div>
+          </div>
+          {{/if}}
+
+          <div class="footer-information__entry">
+            <h3>Further Information</h3>
+            <div class="footer-information__links">
+              <div class="footer-information__links-column">
+                <a href="/" class="footer__link footer-information__link--icon-right"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="footer-information__icon icon icon--base icon--ArrowRight "><path xmlns="http://www.w3.org/2000/svg" d="m16.444 19.204 4.066-7.044-4.066-7.044-.65.375 3.633 6.294h-15.187v.75h15.187l-3.633 6.294z"></path></svg>
+                About Us
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bg--secondary-700">
+      <nav aria-label="Footer" class="container">
+        <ul class="footer-navigation">
+          <li><a href="https://www.admin.ch/gov/en/start/terms-and-conditions.html" class="footer__link">Legal Framework</a></li>
+          <li><a href="/contact" class="footer__link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>

@@ -1,0 +1,371 @@
+<div class="container container--grid gap--responsive">
+  <div class="hero__content">
+    <div class="trifid-content">
+      <div class="container">
+
+        {{{ locals.content-plugin.lindas.datasets }}}
+
+        <style type="text/css">
+          @import url("/static-assets/css/search.css");
+        </style>
+
+        <input id="datasets-search" type="text" placeholder="Filter datasets list…" />
+        <div id="datasets-results"></div>
+        <div id="datasets-results-count"></div>
+
+        <script>
+          const currentLanguage = "{{ currentLanguage }}";
+          const defaultLanguage = "{{ defaultLanguage }}";
+
+          // query to fetch the number of records
+          const numberOfResultsQuery = (baseUrl) => {
+            return `
+              PREFIX schema: <http://schema.org/>
+              PREFIX rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+              prefix void:   <http://rdfs.org/ns/void#>
+
+              SELECT (COUNT(DISTINCT ?sub) AS ?count) WHERE {
+                ?sub (schema:name|schema:decription) ?name;
+                  rdf:type ?resultType.
+                FILTER(?resultType IN(void:Dataset))
+                FILTER(NOT EXISTS { ?sub schema:expires ?x. })
+                FILTER(NOT EXISTS { ?sub schema:creativeWorkStatus <${baseUrl}/definedTerm/CreativeWorkStatus/Draft>. })
+              }
+            `;
+          }
+
+          // get the different records
+          const resultsQuery = (baseUrl) => {
+            return `
+              PREFIX schema: <http://schema.org/>
+              PREFIX rdf:    <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+              prefix void:   <http://rdfs.org/ns/void#>
+              PREFIX dcat:   <http://www.w3.org/ns/dcat#>
+
+              SELECT * WHERE {
+                ?sub schema:name ?name.
+                ?sub rdf:type ?resultType.
+
+                OPTIONAL {
+                  ?sub schema:description ?description.
+                }
+
+                OPTIONAL {
+                  ?sub void:sparqlEndpoint ?endpoint.
+                }
+
+                OPTIONAL {
+                  ?sub dcat:landingPage ?landingPage.
+                }
+
+                OPTIONAL {
+                  ?sub schema:contactPoint/schema:name ?contactName.
+                }
+
+                OPTIONAL {
+                  ?sub schema:dateCreated ?dateCreated.
+                }
+
+                OPTIONAL {
+                  ?sub schema:datePublished ?datePublished.
+                }
+
+                OPTIONAL {
+                  ?sub schema:dateModified ?dateModified.
+                }
+
+                FILTER(?resultType IN(void:Dataset))
+                FILTER(NOT EXISTS { ?sub schema:expires ?x. })
+                FILTER(NOT EXISTS { ?sub schema:creativeWorkStatus <${baseUrl}/definedTerm/CreativeWorkStatus/Draft>. })
+              }
+            `;
+          }
+
+          // run a SPARQL query
+          const queryHeaders = new Headers();
+          queryHeaders.set("Accept", "application/sparql-results+json");
+          queryHeaders.set("Content-Type", "application/x-www-form-urlencoded; charset=UTF-8");
+          const runQuery = async (endpoint, query) => {
+            const form = new FormData();
+            form.set("query", query);
+
+            const res = await fetch(endpoint, {
+              headers: queryHeaders,
+              method: 'POST',
+              body: new URLSearchParams(form),
+            });
+            const json = await res.json();
+
+            return json;
+          }
+
+          const currentUrl = new URL("/", window.location.href);
+          const queryEndpoint = new URL("/query", window.location.href);
+          const baseUrl = currentUrl.origin;
+
+          let numberOfRecords = 0;
+          let datasetsList = [];
+
+          const getNumberOfRecords = async () => {
+            const res = await runQuery(queryEndpoint, numberOfResultsQuery(baseUrl));
+            if (!res.results || !res.results.bindings || !Array.isArray(res.results.bindings)) {
+              return 0;
+            }
+
+            const firstRow = res.results.bindings[0];
+            if (!firstRow.count || !firstRow.count.value) {
+              return 0;
+            }
+
+            const count = parseInt(firstRow.count.value, 10);
+
+            return count;
+          }
+
+          const extractLanguage = (row) => {
+            if (!row || !row["xml:lang"]) {
+              return "default";
+            }
+
+            return row["xml:lang"];
+          }
+
+          const getLocalizedValue = (entry, language = "de") => {
+            if (!entry) {
+              return "";
+            }
+
+            if (entry[language]) {
+              return entry[language];
+            }
+
+            if (entry[defaultLanguage]) {
+              return entry[defaultLanguage];
+            }
+
+            if (entry["default"]) {
+              return entry["default"];
+            }
+
+            if (entry["de"]) {
+              return entry["de"];
+            }
+
+            if (entry["fr"]) {
+              return entry["fr"];
+            }
+
+            if (entry["it"]) {
+              return entry["it"];
+            }
+
+            if (entry["en"]) {
+              return entry["en"];
+            }
+          }
+
+          const fixUrl = (url) => {
+            if (!url) {
+              return url;
+            }
+
+            if (!url.startsWith('http')) {
+              return `http://${url}`;
+            }
+
+            return url;
+          }
+
+          const getResults = async () => {
+            const res = await runQuery(queryEndpoint, resultsQuery(baseUrl));
+            if (!res.results || !res.results.bindings || !Array.isArray(res.results.bindings)) {
+              return [];
+            }
+
+            const rows = res.results.bindings;
+            const subs = {};
+
+            rows.map((row) => {
+              if (!row.sub) {
+                return;
+              }
+
+              const sub = row.sub;
+              if (!sub.type || sub.type !== "uri" || !sub.value) {
+                return;
+              }
+              const subValue = sub.value;
+
+              if (!subs[subValue]) {
+                subs[subValue] = {
+                  name: {},
+                  description: {},
+                };
+              }
+
+              const { name, description, endpoint, landingPage, contactName, dateCreated, datePublished, dateModified, dataset } = row;
+              subs[subValue].uri = subValue;
+              subs[subValue].name[extractLanguage(name)] = name?.value || null;
+              subs[subValue].description[extractLanguage(description)] = description?.value || null;
+              subs[subValue].endpoint = endpoint?.value || null;
+              subs[subValue].landingPage = landingPage?.value || null;
+              subs[subValue].contactName = contactName?.value || null;
+              subs[subValue].dateCreated = dateCreated?.value || null;
+              subs[subValue].datePublished = datePublished?.value || null;
+              subs[subValue].dateModified = dateModified?.value || null;
+            });
+
+            return subs;
+          }
+
+          const updateDatasetsList = (results, language = "de") => {
+            // reset array
+            datasetsList = [];
+
+            Object.entries(results).map((result) => {
+              const entry = result[1];
+
+              const uri = fixUrl(entry.uri);
+              const name = getLocalizedValue(entry.name, language);
+              const description = getLocalizedValue(entry.description, language);
+              const endpoint = entry.endpoint || "";
+              const landingPage = fixUrl(entry.landingPage) || "";
+              const contactName = entry.contactName || "";
+              const dateCreated = entry.dateCreated || "";
+              const datePublished = entry.datePublished || "";
+              const dateModified = entry.dateModified || "";
+
+              datasetsList.push({
+                uri,
+                name,
+                description,
+                endpoint,
+                landingPage,
+                contactName,
+                dateCreated,
+                datePublished,
+                dateModified,
+              });
+            });
+          }
+
+          const createLinkElem = (url, value) => {
+            const linkElem = document.createElement("a");
+            linkElem.href = url;
+            linkElem.target = "_blank";
+            linkElem.rel = "noreferrer noopener";
+            linkElem.textContent = value;
+            return linkElem;
+          }
+
+          const datasetsResultsElem = document.getElementById("datasets-results");
+          const datasetsResultsCountElem = document.getElementById("datasets-results-count");
+          const datasetsSearchElem = document.getElementById("datasets-search");
+
+          const displayResults = () => {
+            datasetsResultsElem.textContent = "";
+
+            const searchValue = datasetsSearchElem.value.trim().toLocaleLowerCase();
+
+            datasetsList
+              .filter((dataset) => {
+                if (!searchValue) {
+                  return true;
+                }
+
+                return dataset.name?.toLocaleLowerCase().includes(searchValue)
+                  || dataset.description?.toLocaleLowerCase().includes(searchValue);
+              })
+              .map((dataset) => {
+                const datasetElem = document.createElement("div");
+                datasetElem.className = "trifid-datasets-search-item";
+
+                // Dataset name
+                const datasetNameElem = document.createElement("p");
+                datasetNameElem.className = "trifid-datasets-search-name";
+                const datasetNameLinkElem = createLinkElem(dataset.uri, dataset.name);
+                datasetNameElem.appendChild(datasetNameLinkElem);
+                datasetElem.appendChild(datasetNameElem);
+
+                // Dataset description
+                if (dataset.description) {
+                  const datasetDescriptionElem = document.createElement("p");
+                  datasetDescriptionElem.textContent = dataset.description;
+                  datasetDescriptionElem.className = "trifid-datasets-search-description";
+                  datasetElem.appendChild(datasetDescriptionElem);
+                }
+
+                // Dataset contact
+                if (dataset.contactName) {
+                  const datasetContactElem = document.createElement("p");
+                  datasetContactElem.textContent = `Contact: ${dataset.contactName}`;
+                  datasetContactElem.className = "trifid-datasets-search-contact";
+                  datasetElem.appendChild(datasetContactElem);
+                }
+
+                // Dataset dates
+                if (dataset.dateCreated || dataset.datePublished || dataset.dateModified) {
+                  const datasetDatesElem = document.createElement("p");
+                  const datasetDates = [];
+                  if (dataset.dateCreated) {
+                    datasetDates.push(`Created: ${dataset.dateCreated}`);
+                  }
+                  if (dataset.datePublished) {
+                    datasetDates.push(`Published: ${dataset.datePublished}`);
+                  }
+                  if (dataset.dateModified) {
+                    datasetDates.push(`Modified: ${dataset.dateModified}`);
+                  }
+                  datasetDatesElem.textContent = datasetDates.join(" - ");
+                  datasetDatesElem.className = "trifid-datasets-search-dates";
+                  datasetElem.appendChild(datasetDatesElem);
+                }
+
+                // Dataset SPARQL endpoint
+                if (dataset.endpoint) {
+                  const datasetEndpointElem = document.createElement("p");
+                  datasetEndpointElem.textContent = "SPARQL endpoint: ";
+                  datasetEndpointElem.className = "trifid-datasets-search-endpoint";
+                  const datasetEndpointLinkElem = createLinkElem(dataset.endpoint, dataset.endpoint);
+                  datasetEndpointElem.appendChild(datasetEndpointLinkElem);
+                  datasetElem.appendChild(datasetEndpointElem);
+                }
+
+                // Landing page for the dataset
+                if (dataset.landingPage) {
+                  const datasetLandingPageElem = document.createElement("p");
+                  datasetLandingPageElem.className = "trifid-datasets-search-landing-page";
+                  const datasetLandingPageLinkElem = createLinkElem(dataset.landingPage, "More info");
+                  datasetLandingPageElem.appendChild(datasetLandingPageLinkElem);
+                  datasetElem.appendChild(datasetLandingPageElem);
+                }
+
+                datasetsResultsElem.appendChild(datasetElem);
+              });
+          }
+
+          datasetsSearchElem.addEventListener("change", displayResults);
+          datasetsSearchElem.addEventListener("keydown", displayResults);
+          datasetsSearchElem.addEventListener("keyup", displayResults);
+
+          (async () => {
+            datasetsResultsElem.textContent = "Loading…";
+
+            try {
+              // get the number of results
+              numberOfRecords = await getNumberOfRecords();
+              datasetsResultsCountElem.textContent = `${numberOfRecords} results`;
+
+              // depending of the number, load the results
+              const results = await getResults();
+              updateDatasetsList(results, currentLanguage);
+              displayResults();
+            } catch (_e) {
+              datasetsResultsElem.textContent = "Something went wrong while fetching the list of datasets. Please retry later.";
+            }
+          })();
+        </script>
+      </div>
+    </div>
+  </div>
+</div>
