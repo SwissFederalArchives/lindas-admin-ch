@@ -28,6 +28,12 @@ COMMISSION IMPLEMENTING DECISION (EU) 2017/1358 20 July 2017 [on the identificat
         <td>Kommentar</td>
     </tr>
     <tr>
+        <td>[Linked Data Engineering (Semantic Web) OpenHPI by Prof. Dr. Harald Sack](https://www.youtube.com/playlist?list=PLoOmvuyo5UAfY6jb46jCpMoqb-dbVewxg)</td>
+        <td>Video Playlist (mehrere Stunden), Englisch</td>
+        <td>This course will introduce you to the basic principles and technologies of Linked Data to enable data sharing and reuse on a massive scale.</td>
+        <td>Vertiefter Einstieg über einen Semesterkurs, akademisches Niveau</td>
+    </tr>
+    <tr>
         <td>[Einführung zu Linked Data bei opendata.swiss](https://handbook.opendata.swiss/de/content/glossar/bibliothek/linked-open-data.html)</td>
         <td>Webpage, Englisch</td>
         <td><ul><li>The Four Rules</li><li>5 Star Data</li><li>Costs and Benefits for Consumers and Publishers</li><li>First Steps as Publisher</li><li>RDF</li><li>SPARQL</li><li>Additional Resources</li></ul></td>
@@ -71,21 +77,31 @@ COMMISSION IMPLEMENTING DECISION (EU) 2017/1358 20 July 2017 [on the identificat
     </tr>
 </table>
 
-## RDF
+## RDF/RDFS
 
 * [W3C RDF Primer](https://www.w3.org/TR/rdf11-primer/)
-
-## Weitere Link Sammlungen
-
-* Show a Walk (to discover the data) in a graph???
-* [Data Science Group Uni Paderborn: Semantic Web learning resources](https://dice-research.org/news/2022-07-26_Learn-RDF/)
+* [W3C RDF Schema](https://www.w3.org/TR/rdf-schema/)
 
 ## SPARQL
 
+* [W3C SPARQL Overview](https://www.w3.org/TR/sparql11-overview/)
 * [Wikidata SPARQL Tutorial](https://www.wikidata.org/wiki/Wikidata:SPARQL_tutorial)
+
+## OWL
+
+* [W3C OWL Primer](https://www.w3.org/TR/2012/REC-owl2-primer-20121211/)
+
+## Weitere Link Sammlungen
+
+* [Data Science Group Uni Paderborn: Semantic Web learning resources](https://dice-research.org/news/2022-07-26_Learn-RDF/)
+
 
 # Wo und wie kann ich Hilfe in Person erhalten
 
 ## Foren und Meetups
 
+Inhalt folgt
+
 ## Aus- und Weiterbildungen
+
+Inhalt folgt
