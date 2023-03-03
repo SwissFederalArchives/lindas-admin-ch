@@ -25,7 +25,10 @@ Linked Data sollten grundsätzlich auch durch Personen ohne grosses technisches 
 Mit Hilfe des [Graph Explorers](https://ld.admin.ch/graph-explorer/) können die Daten aus LINDAS und insbesondere ihre Links zu anderen Daten grafisch exploriert und visualisiert werden.
 
 ### SPARQL
-Die Daten aus LINDAS können auch mit Hilfe der Abfragesprache SPARQL über den [SPARQL Endpunkt](https://ld.admin.ch/sparql) abgefragt werden.
+Die Daten aus LINDAS können auch mit Hilfe der Abfragesprache SPARQL bezogen werden. Dies kann auf zwei Arten geschehen: 
+
+- über das [SPARQL Interface](https://ld.admin.ch/sparql), welches ausgeführte Queries speichern kann und über bestimmte Optionen zur Darstellung des Resultats verfügt
+- via GET oder POST Request über den SPARQL Endpoint, der unter https://ld.admin.ch/query zu erreichen ist
 
 ### Volltextsuche
 Der von LINDAS verwendete Stardog Triplestore erlaubt die Volltextsuche via SPARQL. Details dazu sind in der [Stardog Dokumentation](https://docs.stardog.com/query-stardog/full-text-search#integration-with-sparql) zu finden. Hier eine <a href="https://ld.admin.ch/sparql/#query=SELECT+DISTINCT+%3Fs+%3Fp+%3Fl%0AWHERE+%7B%0A++%3Fs+%3Fp+%3Fl.%0A++(%3Fl+%3Fscore)+%3Ctag%3Astardog%3Aapi%3Aproperty%3AtextMatch%3E+'Fraum%C3%BCnster'.%0A%7D%0A&contentTypeConstruct=text%2Fturtle&contentTypeSelect=application%2Fsparql-results%2Bjson&endpoint=https%3A%2F%2Fld.admin.ch%2Fquery&requestMethod=POST&tabTitle=Query+5&headers=%7B%7D&outputFormat=table" target="_blank">Beispiel-Volltextsuche</a>, die nach dem Vorkommen des Begriffs 'Fraumünster' in allen Literals sucht.
