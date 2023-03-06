@@ -26,7 +26,8 @@ const convertToHtml = async (markdownString) => {
     .use(addClasses, {
       h1: 'h1',
       h2: 'h2',
-      h3: 'h3'
+      h3: 'h3',
+      table: 'table'
     })
     .use(rehypeStringify)
     .process(markdownString)
