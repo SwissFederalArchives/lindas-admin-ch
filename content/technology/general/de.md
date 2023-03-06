@@ -17,6 +17,7 @@ Die Idee von Linked Date beinhaltet verschiedene Aspekte:
 * für die eindeutigen Identifier wird der **IRI** Mechanismus verwendet
 * für die Speicherung von Linked Data werden **Graphdatenbanken** (auch Triple Stores genannt) verwendet
 * mit Hilfe der Abfragesprache **SPARQL** können die Daten aus der Datenbank abgefragt und verarbeitet werden
+* Dank der Ontologie Sprache **OWL** können neue Erkenntnisse aus bestehenden Daten abgeleitet werden
 
 # Vorteile dank der Nutzung von Linked Data
 
@@ -24,19 +25,19 @@ Die Idee von Linked Date beinhaltet verschiedene Aspekte:
 
 * Linked Data verlangt vom Datenprovider eine klare Vorstellung der eigenen Daten. Nur wer genau weiss, was die Daten bedeuten, kann dies auch als Metadaten klar formulieren. Linked Data kann helfen, eine solche klare Vorstellung zu entwickeln
 * Linked Data kann behilflich sein, eine eindeutige und klare Strategie zur Identifikation von Datenpunkten mit Hilfe von IRI zu entwickeln
-* Linked Data zahlt sich langfristig aus, da Daten und Datenmodelle nicht für einzelne Anwendungen optimiert werden, sondern als klare, sich selbst beschreibende Rohdaten erstellt werden, die sich einfacher in verschiedene Strukturen transformieren lassen können
+* Linked Data zahlt sich langfristig aus, da Daten und Datenmodelle nicht für einzelne Anwendungen optimiert werden, sondern als klare, sich selbst beschreibende Rohdaten erstellt werden, die sich einfacher in verschiedene Strukturen transformieren lassen
 * Linked Data verlangt vom Datenprovider eine Sicht/Zusammenarbeit über die eigene Organisation hinaus, was ingesamt zu qualitativ besseren Daten führt
 
 ## Vorteile für Datennutzerinnen
 
 * Linked Data und SPARQL stellen ein sehr universaler Mechanismus dar, um mit Daten zu arbeiten
-* Erlangtes Wissen rund um Linked Data und SPARQL lässt sich sehr viel einfacher auf andere Domänen übertragen
+* Erlangtes Wissen rund um Linked Data und SPARQL für einen spezifischen Datensatz lässt sich sehr viel einfacher auf andere Datensätze in Linked Data übertragen
 
 # Linked Data im Vergleich zu
 
 ## CSV Daten
 
-CSV Daten sind tabellarische Daten. Linked Data sind Graphdaten, was ein universelleres Datenformat darstellt. Mit Hilfe von Linked Data können tabellarische Daten abgebildet werden (RDF Cube), aber es ist daneben noch viel mehr möglich.
+CSV Daten sind tabellarische Daten. Linked Data sind Graphdaten, welche ein universelleres Datenformat darstellen. Mit Hilfe von Linked Data können tabellarische Daten abgebildet werden (RDF Cube), aber es ist daneben auch möglich, komplizierte netzwerkartige Datenstrukturen sauber und effizient abzubilden.
 
 Zusätzlich ist es bei CSV Daten nicht möglich, innerhalb der Daten etwas über die Daten zu sagen. Es kann nicht innnerhalb des CSV angegeben werden, was die Tabelle beinhaltet, welche Spalten vorkommen und was diese genau beschreiben resp. von welchem Datentyp die Inhalte sind.
 
@@ -53,11 +54,11 @@ Während die Daten aus einer REST-API typischerweise einer gewissen Interpretati
 Datenprovider, die ihre Daten als Linked Data veröffentlichen wollen (im Gegensatz zu bspw. CSV) haben verschiedene Herausforderungen zu bewältigen:
 
 * Wissen rund um Linked Data ist in Entwicklerkreisen weniger stark verbreitet im Vergleich zu "klassischen" Technologien wie relationale Datenbanken und SQL
-* Linked Data verlangt nach einer klaren Beschreibung der Daten was voraussetzt, dass der Datenprovider eine klare Vorstellung der eigenen Daten hat was häufig mit grossen Vorinvestitionen verbunden ist, die sich aber typischerweise langfristig auszahlen
-* Linked Data im Sinne der Verlinkung verlangt nach einem Durchbrechen von Silo Mentalität, was häufig kulturell eine Herausforderung darstellen kann
+* Linked Data verlangt nach einem funktionierenden Data Management und einer etablierten Data Governance, was häufig mit grossen Vorinvestitionen verbunden ist, die sich aber typischerweise langfristig auszahlen
+* Linked Data im Sinne der Verlinkung bedingt das Durchbrechen einer "Silo-Mentalität", was kulturell und organisatorisch eine Herausforderung darstellen kann
 
 ## Hindernisse für Datennutzerinnen
 
 * der Zugang zu Linked Data via SPARQL Abfragen stellt eine Anfangshürde dar, die relativ hoch ist
-* werden Linked Data vie Dereferenzierung über HTML Seiten genutzt, liefern diese häufig unübersichtliche Informationen und laden auch nicht zu einem explorativen weiterklicken ein
-* es existieren kaum gute Suchfunktionen via Volltextsuche für Graphdatenbanken
+* werden Linked Data via Dereferenzierung über HTML Seiten genutzt, liefern diese häufig unübersichtliche Informationen und laden auch nicht zu einem explorativen Weiterklicken ein
+* es existieren nicht überall gute Suchfunktionen via Volltextsuche für Graphdatenbanken
