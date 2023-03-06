@@ -4,11 +4,14 @@ Für ein allgemeines Linked Data Glossar sei auf das [W3C Linked Data Glossary](
 
 ## A
 
+* [Anforderungen an die Datenpublikation](/documentation/technical#content-anforderungen-an-die-datenpublikation)
 * [Ansprechstellen](/documentation/admin#content-ansprechsstellen-und-involvierte-organisationen)
 * [Applikationen](/documentation/applications/#content-applikationen-die-lindas-daten-nutzen)
+* [Architektur](/documentation/technical#content-lindas-architektur)
 
 ## C
 
+* [Cache Server](/documentation/technical#content-cache-server)
 * [Closed Government Data](/documentation/admin#content-publikation-von-behördendaten)
 * [Core Entities (Zentrale Entitäten)](/governance/core-concepts#content-zentrale-entitäten)
 * [Cube Creator](/documentation/applications#content-cube-creator)
@@ -25,19 +28,31 @@ Für ein allgemeines Linked Data Glossar sei auf das [W3C Linked Data Glossary](
 
 ## G
 
+* [Gitlab](/documentation/technical#content-lindas-architektur)
 * [Graph Explorer](/documentation/applications#content-graph-explorer)
 
 ## H
 
 * [Hosting von Daten](/documentation/admin#content-publikation-von-behördendaten)
 
+## I
+
+* [INT](/documentation/technical#content-umgebungen-environments)
+* [Interne Triplestores](/documentation/technical#content-interne-triplestores)
+
 ## K
 
 * [Kosten](/documentation/admin#content-publikation-von-behördendaten)
 
+## N
+
+* [Namedgraph Konventionen](/documentation/technical#content-lindas-namedgraph-konventionen)
+* [Namespace Konventionen](/documentation/technical#content-lindas-namespace-konventionen)
+
 ## P
 
 * [Pipeline](/documentation/applications#content-integration-via-spezifischer-pipelines)
+* [PROD](/documentation/technical#content-umgebungen-environments)
 
 ## R
 
@@ -47,6 +62,19 @@ Für ein allgemeines Linked Data Glossar sei auf das [W3C Linked Data Glossary](
 ## S
 
 * [SPARQL](/documentation/applications#content-sparql)
+* [Status](/documentation/technical#content-status)
+* [Subdomains](/documentation/technical#content-themenbasierte-subdomains)
+* [Support allgemein/administrativ](/documentation/technical#content-allgemeiner-und-administrativer-support)
+
+## T
+
+* [Technischer Betrieb](/documentation/technical#content-technischer-betrieb-und-support)
+* [TEST](/documentation/technical#content-umgebungen-environments)
+
+## U
+
+* [Umgebungen](/documentation/technical#content-umgebungen-environments)
+* [Username Konventionen](/documentation/technical#content-lindas-username-konventionen)
 
 ## V
 
