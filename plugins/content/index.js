@@ -7,6 +7,8 @@ import remarkFrontmatter from 'remark-frontmatter'
 import remarkGfm from 'remark-gfm'
 import remarkRehype from 'remark-rehype'
 import rehypeStringify from 'rehype-stringify'
+import rehypeSlug from 'rehype-slug'
+import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import addClasses from './addClasses.js'
 
 const currentDir = dirname(fileURLToPath(import.meta.url))
@@ -23,6 +25,15 @@ const convertToHtml = async (markdownString) => {
     .use(remarkFrontmatter)
     .use(remarkGfm)
     .use(remarkRehype)
+    .use(rehypeSlug, {
+      prefix: 'content-'
+    })
+    .use(rehypeAutolinkHeadings, {
+      behavior: 'wrap',
+      properties: {
+        class: 'headers-autolink'
+      }
+    })
     .use(addClasses, {
       h1: 'h1',
       h2: 'h2',
