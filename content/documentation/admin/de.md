@@ -10,11 +10,11 @@ Weiter kann LINDAS auch für Closed Government Data benutzt werden, also Daten d
 
 ## Datenschutz und Rechtliches
 
-LINDAS dient zur Veröffentlichung von Open Government Data (OGD). Die zu veröffentlichenden Daten müssen dafür die entsprechenden Voraussetzungen zur Publikation erfüllen. Diese sind in den [OGD Richtlinien](https://handbook.opendata.swiss/de/content/glossar/bibliothek/ogd-richtlinien.html) definiert.
+Falls Daten als Open Government Data (OGD) veröffentlich werden sollen, müssen diese dafür die entsprechenden Voraussetzungen zur Publikation erfüllen. Diese sind in den [OGD Richtlinien](https://handbook.opendata.swiss/de/content/glossar/bibliothek/ogd-richtlinien.html) definiert.
 
 ## Ansprechsstellen und involvierte Organisationen
 
-LINDAS wurde zwischen 2017 und 2020 in einem Projekt des Bundesarchivs (BAR) mit der Unterstützung des Staatssekretariats für Wirtschaft (SECO) und in enger Zusammenarbeit mit dem Bundesamt für Umwelt (BAFU) aufgebaut. Für den Betrieb ist das BAR verantwortlich.
+LINDAS wurde zwischen 2017 und 2020 in einem Projekt des Bundesarchivs (BAR) mit der Unterstützung des Staatssekretariats für Wirtschaft (SECO) und in enger Zusammenarbeit mit dem Bundesamt für Umwelt (BAFU) aufgebaut. Für die weitere Entwicklung und den Betrieb ist das BAR verantwortlich.
 
 **Kontakt**:<br>
 Schweizerisches Bundesarchiv BAR<br>

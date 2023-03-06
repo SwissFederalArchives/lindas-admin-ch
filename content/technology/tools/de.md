@@ -8,7 +8,7 @@
 * [RAPPER](https://librdf.org/raptor/rapper.html)
 
 ## Cubes
-* Cube Creator
+* [Cube Creator](https://int.cube-creator.lindas.admin.ch/app/)
 * [Cubes validieren](https://cube.link/#validate-the-cube)
 
 ## Tranformationen von nicht Linked Data Quellen nach Linked Data
@@ -19,7 +19,6 @@
 
 #### Applikationen, Frameworks
 * [carml](https://github.com/carml/carml)
-* Pipelines
 
 ### Live basierend auf Relationalen Datenbanken
 * [ontop](https://ontop-vkg.org/)
