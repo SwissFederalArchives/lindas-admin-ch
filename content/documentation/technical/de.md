@@ -22,8 +22,8 @@ Alle drei Environments verfügen jeweils über einen offenen Leseendpunkt und ei
 
 | Umgebung | Leseendpunkt                   | Lese-/schreibendpunkt                        | Garantien                                                                           |
 |----------|--------------------------------|----------------------------------------------|-------------------------------------------------------------------------------------|
-| PROD     | https://ld.admin.ch/query      | https://stardog.cluster.ldbar.ch/lindas      | 24h Verfügbarkeit, Anpassungen nur nach Integrationstests mit Applikationen         |
-| INT      | https://int.ld.admin.ch/query  | https://stardog-int.cluster.ldbar.ch/lindas  | 24h Verfügbarkeit, Anpassungen um Integrationstests mit Applikationen durchzuführen |
+| PROD     | https://ld.admin.ch/query      | https://stardog.cluster.ldbar.ch/lindas      | 24h Verfügbarkeit, Anpassungen nur nach Integrationstests mit Applikationen.         |
+| INT      | https://int.ld.admin.ch/query  | https://stardog-int.cluster.ldbar.ch/lindas  | 24h Verfügbarkeit, Anpassungen um Integrationstests mit Applikationen durchzuführen. |
 | TEST     | https://test.ld.admin.ch/query | https://stardog-test.cluster.ldbar.ch/lindas | keine Garantie, Anpassungen um Datenbank zu testen.                                 |
 
 ### Empfohlene Benutzung der Umgebungen
@@ -56,16 +56,16 @@ Für Daten, welche in die Autorität des Bundesverwaltung fallen, muss gemäss [
 
 Damit die publizierten Daten eine stabile URI behalten, ist der Name der veröffentlichenden Verwaltungseinheit (oder deren Abkürzung) kein Teil des Namespaces. Der Basis-URI wird das Thema als Subdomain (`<subdomain>`) vorangestellt. Der Projektname (`<dataset>`) wird im Anschluss an die Domain agefügt. Es sollte auf darauf geachtet werden, keine allzu generische Namen zu wählen. Insbesondere muss geprüft werden, ob der Projektname nicht bereits existiert.
 
-Namespaces haben somit den Pfad `https://<domain>.ld.admin.ch/<dataset>/*`.
+Namespaces haben somit den Pfad `https://<subdomain>.ld.admin.ch/<dataset>/*`.
 
-* `<domain>` ist das Thema (auf Englisch), mit dem sich das Dataset befasst
+* `<subdomain>` ist das Thema (auf Englisch), mit dem sich das Dataset befasst
 * `<dataset>` ist der Name des Datasets wie vom jeweiligen Projekt gewählt
 
 Beispiel: Die Daten zum "International Standard Identifier for Libraries and Related Organizations" sind unter https://culture.ld.admin.ch/isil zu finden.
 
 #### Themenbasierte Subdomains
 
-Folgende Subdomains werden bereits verwendet. Falls für ein neues Datenset kein passendes Thema vorhanden ist, kann dieses über den LINDAS Support angefragt werden. Nach [I003](https://www.bk.admin.ch/bk/de/home/digitale-transformation-ikt-lenkung/ikt-vorgaben/standards/i003-domain_name_system_dns.html) liegt die abschliessende Entscheidung über den Gebrauch der Subdomains bei der Bundeskanzlei (BK).
+Folgende Tabelle listet die bereits verwendeten Subdomains auf. Falls für ein neues Datenset kein passendes Thema vorhanden ist, kann dieses über den [LINDAS Support](mailto:support-lindas@bar.admin.ch) angefragt werden. Nach [I003](https://www.bk.admin.ch/bk/de/home/digitale-transformation-ikt-lenkung/ikt-vorgaben/standards/i003-domain_name_system_dns.html) liegt die abschliessende Entscheidung über den Gebrauch der Subdomains bei der Bundeskanzlei (BK).
 
 | *.ld.admin.ch           | Themen                                 | Beispiele Ämter |
 |-------------------------|----------------------------------------|-----------------|
@@ -89,7 +89,7 @@ Namedgraphs haben den Aufbau `https://lindas.admin.ch/<orga>/<dataset>`. (Beispi
 
 ### LINDAS Username Konventionen
 
-Usernames sollen wo möglich nach folgendem Schema aufgebaut werden: lindas-<orga>-<dataset> oder lindas-<orga>-<application> (Beispiel. lindas-nl-isil)
+Usernames sollen wo möglich nach folgendem Schema aufgebaut werden: `lindas-<orga>-<dataset>` oder `lindas-<orga>-<application>` (Beispiel. lindas-nl-isil)
 
 * `<orga>` ist gemäss den Namedgraph Konventionen zu verwenden
 * `<dataset>` ist gemäss der Namedgraph Konvention zu verwenden, wenn es sich um ein Dataset handelt, welches manuell oder per Pipeline geschrieben wird
