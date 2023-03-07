@@ -7,7 +7,11 @@
   "Linked Data Governance": "Linked Data Governance",
   "Linked Data Technology": "Linked Data Technologie",
   "Read more": "Read more",
+  "homePageYouTubeVideoID": "c9miuepW03A",
   "Administrative Questions short": "Administrative Fragen",
   "Administrative Questions long": "Wer kann auf LINDAS publizieren, welche Anforderungen an den Datenschutz gelten und wer sind die Ansprechstellen.",
-  "homePageYouTubeVideoID": "c9miuepW03A"
+  "Applications short": "Applikationen",
+  "Applications long": "Welche Applikationen nutzen bereits LINDAS Daten, wie können LINDAS Daten abgefragt werden und und wie können neue Daten veröffentlicht werden.",
+  "Technical short": "Technisches",
+  "Technical long": "Wie sieht die technische Architektur von LINDAS aus, welche Umgebungen existieren, welche Konventionen gelten für Namespaces und Namedgraphs. Anforderungen an die Datenpublikation, Infos zu Betrieb, Status und Support."
 }
