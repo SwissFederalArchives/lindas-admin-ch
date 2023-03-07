@@ -1,9 +1,10 @@
 {
-  "About": "Einführung",
-  "Datacatalog": "Daten Katalog",
-  "Query Data": "Daten Abfragen",
-  "Linked Data Day": "Linked Data Day",
-  "Documentation": "Dokumentation",
-  "Linked Data Governance": "Linked Data Governance",
-  "Linked Data Technology": "Linked Data Technologie"
+	"About": "Einführung",
+	"Datacatalog": "Daten Katalog",
+	"Query Data": "Daten Abfragen",
+	"Linked Data Day": "Linked Data Day",
+	"Documentation": "Dokumentation",
+	"Linked Data Governance": "Linked Data Governance",
+	"Linked Data Technology": "Linked Data Technologie",
+	"Read more": "Read more"
 }
