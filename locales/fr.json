@@ -1,9 +1,11 @@
 {
-	"About": "Introduction",
-	"Datacatalog": "Jeux de données",
-	"Query Data": "Consulter des données",
-	"Linked Data Day": "Journée des données liées",
-	"Documentation": "Documentation",
-	"Linked Data Governance": "Linked Data Governance",
-	"Linked Data Technology": "Linked Data Technology"
+  "About": "Introduction",
+  "Datacatalog": "Jeux de données",
+  "Query Data": "Consulter des données",
+  "Linked Data Day": "Journée des données liées",
+  "Documentation": "Documentation",
+  "Linked Data Governance": "Linked Data Governance",
+  "Linked Data Technology": "Linked Data Technology",
+  "Read more": "Read more",
+  "homePageYouTubeVideoID": "VWVsCMnh4BA"
 }

@@ -13,3 +13,13 @@
   color: rgb(31 41 55);
   text-decoration: none;
 }
+
+.item-16-9-ratio {
+  aspect-ratio: 16 / 9;
+  width: 100%;
+}
+
+/* override CSS style */
+main a {
+  word-break: break-word;
+}

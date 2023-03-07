@@ -1,3 +1,3 @@
 ## Linked Data Governance bei der Bundesverwaltung
 
-Linked Data verlangt nach verschiedenen Design Entscheidungen, die vor der Publikation von Linked Data getroffen werden müssen. Auf diesen Seiten finden sie Grundlagen, um die nötigen Entscheidungen fundiert zu treffen, sei es in der Form von Vorgaben oder von bereits im Alltag bewährten Guidelines.
+In diesen Abschnitten werden Informationen aufgeführt, die die **Linked Data Governance** und weitere Themen rund um Linked Data innerhalb der Schweizerischen Eidgenossenschaft über LINDAS hinaus betreffen. Linked Data bietet viele Freiheiten - die hier aufgeführten Hinweise zur Linked Data Governance sollen dazu dienen, Designentscheidungen rund um die Datenbeschreibung zu vereinheitlichen.

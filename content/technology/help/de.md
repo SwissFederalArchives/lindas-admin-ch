@@ -1,20 +1,5 @@
 # Grundlagen, Einführungen und Tutorials
 
-## Kurzdefinitionen von Linked Data
-
-> Just as hyperlinks in the classic Web connect documents into a single global information space, Linked Data enables links to be set between items in different data sources and therefore connect these sources into a single global data space. The use of Web standards and a common data model make it possible to implement generic applications that operate over the complete data space. This is the essence of Linked Data.
-
-Tom Heath and Christian Bizer (2011) [Linked Data: Evolving the Web into a Global Data Space](http://linkeddatabook.com/editions/1.0/#htoc0).
-
-> Linked data provides real-world things (like a bus stop or an organisation) with an address on the web (URI), and data is published about the real-world things in machine-readable formats using the URI. Other datasets can then point to those things using their URI, which means that people using the data can find out more about something without that information being copied into the original dataset (like the bus times for that stop or the spend of the organisation).
-
-data.gov.uk What is Linked Data
-
-
-> ‘RDF 1.0’ developed by W3C is a standard model for data interchange on the Web with features that facilitate data merging even if the underlying schemas differ, and it specifically supports the evolution of schemas over time without requiring all the data consumers to be changed. ‘RDF 1.1’ is an evolution of ‘RDF 1.0’ with backward compatibility, using internationalized identifiers, fine-tuning of the use of datatypes and language tags on literals, and a number of new serialization formats.
-
-COMMISSION IMPLEMENTING DECISION (EU) 2017/1358 20 July 2017 [on the identification of ICT Technical Specifications for referencing in public procurement](http://eur-lex.europa.eu/legal-content/EN/TXT/PDF/?uri=CELEX:32017D1358&from=EN)
-
 ## Linked Data allgemein
 
 | Titel                                                                                                                                               | Typ/Sprache                                | Inhalt                                                                                                                                      | Kommentar                                                                                                                                                                                          |
@@ -37,6 +22,7 @@ COMMISSION IMPLEMENTING DECISION (EU) 2017/1358 20 July 2017 [on the identificat
 
 * [W3C SPARQL Overview](https://www.w3.org/TR/sparql11-overview/)
 * [Wikidata SPARQL Tutorial](https://www.wikidata.org/wiki/Wikidata:SPARQL_tutorial)
+* [Learning SPARQL](http://www.learningsparql.com/)
 
 ## OWL
 
@@ -45,14 +31,3 @@ COMMISSION IMPLEMENTING DECISION (EU) 2017/1358 20 July 2017 [on the identificat
 ## Weitere Link Sammlungen
 
 * [Data Science Group Uni Paderborn: Semantic Web learning resources](https://dice-research.org/news/2022-07-26_Learn-RDF/)
-
-
-# Wo und wie kann ich Hilfe in Person erhalten
-
-## Foren und Meetups
-
-Inhalt folgt
-
-## Aus- und Weiterbildungen
-
-Inhalt folgt
