@@ -1,4 +1,4 @@
-# Glossary
+# Glossar
 
 Für ein allgemeines Linked Data Glossar sei auf das [W3C Linked Data Glossary](https://www.w3.org/TR/ld-glossary/) (Englisch) verwiesen.
 
