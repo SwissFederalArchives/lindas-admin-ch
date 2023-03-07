@@ -13,3 +13,8 @@
   color: rgb(31 41 55);
   text-decoration: none;
 }
+
+/* override CSS style */
+main a {
+  word-break: break-word;
+}
