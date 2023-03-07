@@ -13,5 +13,13 @@
   "Applications short": "Applikationen",
   "Applications long": "Welche Applikationen nutzen bereits LINDAS Daten, wie können LINDAS Daten abgefragt werden und und wie können neue Daten veröffentlicht werden.",
   "Technical short": "Technisches",
-  "Technical long": "Wie sieht die technische Architektur von LINDAS aus, welche Umgebungen existieren, welche Konventionen gelten für Namespaces und Namedgraphs. Anforderungen an die Datenpublikation, Infos zu Betrieb, Status und Support."
+  "Technical long": "Wie sieht die technische Architektur von LINDAS aus, welche Umgebungen existieren, welche Konventionen gelten für Namespaces und Namedgraphs. Anforderungen an die Datenpublikation, Infos zu Betrieb, Status und Support.",
+  "Architecture short": "Architektur",
+  "Architecture long": "Infos zur Architektur der verschiedenen Triple Stores der Schweizerischen Eidgenossenschaft und zur Federation.",
+  "Core Entities short": "Zentrale Entitäten",
+  "Core Entities long": "Was sind zentrale Entitäten, Listen von zentralen Entitäten und ihre Funktion.",
+  "Guidelines short": "Guidelines",
+  "Guidelines long": "Guidelines zu Ontologien, Schemas, Controlled Vocabularies, zentralen Entitäten, Register, Shared Dimensions, tabellarischen- und versionierten Daten.",
+  "Namespaces short": "Namespaces",
+  "Namespaces long": "Namespaces des Bundes, Anatomie und Überblick über mögliche Namespaces, neue Subdomains beantragen."
 }
