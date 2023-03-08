@@ -109,10 +109,10 @@ middlewares:
   sparql-handler:
     module: trifid-handler-sparql
     config:
-      containerExistsQuery: 'ASK { ?s a ?o. FILTER REGEX(STR(?s), "^${iri}") }'
+      resourceExistsQuery: "ASK { GRAPH ?g { <${iri}> ?p ?o }}"
       resourceGraphQuery: "#pragma describe.strategy cbd\nDESCRIBE <${iri}>"
-      # containerGraphQuery: 'CONSTRUCT { ?s a ?o. ?s <http://www.w3.org/2000/01/rdf-schema#label> ?label. } WHERE { ?s a ?o. OPTIONAL {?s <http://www.w3.org/2000/01/rdf-schema#label> ?label.} FILTER REGEX(STR(?s), "^${iri}") }'
-      containerGraphQuery: 'ASK { ?s a ?o. FILTER REGEX(STR(?s), "^${iri}") }'
+      containerExistsQuery: "ASK { GRAPH ?g { <${iri}> ?p ?o }}"
+      containerGraphQuery: "#pragma describe.strategy cbd\nDESCRIBE <${iri}>"
 
   i18n:
     module: trifid-plugin-i18n
