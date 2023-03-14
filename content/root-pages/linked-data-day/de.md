@@ -74,7 +74,7 @@ Der Linked Data Day wurde in Deutsch und Französisch durchgeführt. Die Keynote
 ### Crash Course zu Linked Data für Führungskräfte [(PDF)](https://presentations.zazuko.com/linked-data-day-2023)
 - Michael Rauch, Software Engineer, Zazuko
 
-## Akteuren (alphabetisch aufgeführt)
+## Akteure (alphabetisch aufgeführt)
 
 - Bundesamt für Energie, BFE
 - Bundesamt für Landestopografie, swisstopo
