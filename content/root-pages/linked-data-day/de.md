@@ -50,7 +50,7 @@ Der Linked Data Dienst der Bundes Geodaten-Infrastruktur [(PDF)](https://www.bfh
 Linked Open Data auf dem Portal opendata.swiss [(PDF)](https://www.bfh.ch/dam/jcr:0e6beba2-b5f5-46a4-bec9-7ce688a2a02a/08_Linked-Data-Day-Spichtig-opendata.swiss.pdf)
 - Michèle Spichtig, Datenspezialistin bei der Geschäftsstelle Open Government Data, BFS
 
-Missing Link –Das Potential historischer Daten für die Gegenwart [(PDF)](https://www.bfh.ch/dam/jcr:354171f5-1318-4e4b-bfa9-126d9b9630c2/09_Linked-Data-Day-Nellen-Missing-Link.pdf)
+Missing Link – Das Potential historischer Daten für die Gegenwart [(PDF)](https://www.bfh.ch/dam/jcr:354171f5-1318-4e4b-bfa9-126d9b9630c2/09_Linked-Data-Day-Nellen-Missing-Link.pdf)
 - Stefan Nellen, Leiter Abteilung Informationszugang, BAR
 
 Tierseuchen in LINDAS – Von Prototypen und Pionierprojekten [(PDF)](https://www.bfh.ch/dam/jcr:cbcd4cd4-081a-4d48-ab75-6b8f6c42004a/10_Linked-Data-Day-Sch%C3%A4rrer-Tierseuchen.pdf)
