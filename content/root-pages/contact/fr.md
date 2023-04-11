@@ -1,6 +1,6 @@
 # Contact
 
-**Archives fédérales suisses AFS**
+**Archives fédérales suisses AFS**<bar>
 Archivstrasse 24
 3003 Berne
 
