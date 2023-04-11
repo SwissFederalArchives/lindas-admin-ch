@@ -1,7 +1,7 @@
 # Contact
 
 **Archives fédérales suisses AFS**  
-Archivstrasse 25   
+Archivstrasse 24   
 3003 Berne
 
 Tél. : +41 58 462 89 89<br>
