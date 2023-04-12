@@ -143,6 +143,8 @@ middlewares:
           label: Linked Data Governance
         - path: /technology/
           label: Linked Data Technology
+        - path: /events/
+          label: Events
 
   content:
     module: file:plugins/content/index.js
@@ -178,3 +180,11 @@ middlewares:
       namespace: lindas-technology
       directory: file:content/technology
       mountPath: /technology/
+  content-events:
+    module: file:plugin/content/index.js
+    order: 80
+    config:
+      namespace: lindas-events
+      directory: file:content/events
+      mountPath: /events/
+  
