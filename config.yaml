@@ -54,6 +54,12 @@ middlewares:
     methods: GET
     config:
       path: views/technology.hbs
+  events:
+    module:trifid-core/middlewares/view.js
+    paths: /events/
+    methods: GET
+    config:
+      path: views/events.hbs
 
   ckan:
     module: "@zazuko/trifid-plugin-ckan"
