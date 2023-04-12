@@ -55,7 +55,7 @@ middlewares:
     config:
       path: views/technology.hbs
   events:
-    module:trifid-core/middlewares/view.js
+    module: trifid-core/middlewares/view.js
     paths: /events/
     methods: GET
     config:
