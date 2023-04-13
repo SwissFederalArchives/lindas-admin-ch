@@ -187,10 +187,9 @@ middlewares:
       directory: file:content/technology
       mountPath: /technology/
   content-events:
-    module: file:plugin/content/index.js
+    module: file:plugins/content/index.js
     order: 80
     config:
       namespace: lindas-events
       directory: file:content/events
       mountPath: /events/
-  
