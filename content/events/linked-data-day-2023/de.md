@@ -14,7 +14,7 @@ Der Linked Data Day wurde in Deutsch und Französisch durchgeführt. Die Keynote
 
 ## Keynote 
 
-Keynote Präsentation: **The Knowledge Graph as Interoperability Foundation - The Case at the Dutch Land Registry** [(PDF)](https://www.bfh.ch/dam/jcr:b9c523df-9e07-4ea9-bf50-19df066d5b22/01_Linked-Data-Day-Keynote-Erwin-Folmer.pdf), [(Video)](https://youtu.be/VutWsIuEVyU)
+Keynote Präsentation: **The Knowledge Graph as Interoperability Foundation - The Case at the Dutch Land Registry** ([PDF](https://www.bfh.ch/dam/jcr:b9c523df-9e07-4ea9-bf50-19df066d5b22/01_Linked-Data-Day-Keynote-Erwin-Folmer.pdf)), ([Video](https://youtu.be/VutWsIuEVyU))
 * Erwin Folmer von [Kadaster](https://www.kadaster.nl/about-us "dieser Link führt zu Kadaster!"), Niederlande
 
 
@@ -38,45 +38,37 @@ Keynote Präsentation: **The Knowledge Graph as Interoperability Foundation - Th
 **Visualisieren Sie Schweizer Open Government Data – visualize.admin.ch** [(PDF)](https://www.bfh.ch/dam/jcr:3b4a1ba1-10be-4c4c-a8a9-0322ae4830f5/06_Linked-Data-Day-Zeller-visualize.admin.ch.pdf), [(Video)](https://youtu.be/8NvIiJy_UUw)
 * Sabine Zeller, Projektleiterin visualize.admin.ch, BAFU 
 
-Der Linked Data Dienst der Bundes Geodaten-Infrastruktur [(PDF)](https://www.bfh.ch/dam/jcr:9b596cd9-402a-4618-9435-be82fe91ae6b/07_Linked-Data-Day-DiDonato-Geodaten-Infrastruktur.pdf), [(Video)](https://youtu.be/hJkuIpSc0rM)
-
-- Pasquale Di Donato, Projektkoordinator Geoinformation und Geoservices, KOGIS - swisstopo
+**Der Linked Data Dienst der Bundes Geodaten-Infrastruktur** [(PDF)](https://www.bfh.ch/dam/jcr:9b596cd9-402a-4618-9435-be82fe91ae6b/07_Linked-Data-Day-DiDonato-Geodaten-Infrastruktur.pdf), [(Video)](https://youtu.be/hJkuIpSc0rM)
+* Pasquale Di Donato, Projektkoordinator Geoinformation und Geoservices, KOGIS - swisstopo
 
 ## Use Cases
 
-Linked Open Data auf dem Portal opendata.swiss [(PDF)](https://www.bfh.ch/dam/jcr:0e6beba2-b5f5-46a4-bec9-7ce688a2a02a/08_Linked-Data-Day-Spichtig-opendata.swiss.pdf), [(Video)](https://youtu.be/3Et2cRiHnPs)
+**Linked Open Data auf dem Portal opendata.swiss** [(PDF)](https://www.bfh.ch/dam/jcr:0e6beba2-b5f5-46a4-bec9-7ce688a2a02a/08_Linked-Data-Day-Spichtig-opendata.swiss.pdf), [(Video)](https://youtu.be/3Et2cRiHnPs)
+* Michèle Spichtig, Datenspezialistin bei der Geschäftsstelle Open Government Data, BFS
 
-- Michèle Spichtig, Datenspezialistin bei der Geschäftsstelle Open Government Data, BFS
+**Missing Link – Das Potential historischer Daten für die Gegenwart** [(PDF)](https://www.bfh.ch/dam/jcr:354171f5-1318-4e4b-bfa9-126d9b9630c2/09_Linked-Data-Day-Nellen-Missing-Link.pdf), [(Video)](https://youtu.be/cdiLAZlcCfw)
+* Stefan Nellen, Leiter Abteilung Informationszugang, BAR
 
-Missing Link – Das Potential historischer Daten für die Gegenwart [(PDF)](https://www.bfh.ch/dam/jcr:354171f5-1318-4e4b-bfa9-126d9b9630c2/09_Linked-Data-Day-Nellen-Missing-Link.pdf), [(Video)](https://youtu.be/cdiLAZlcCfw)
+**Tierseuchen in LINDAS – Von Prototypen und Pionierprojekten** [(PDF)](https://www.bfh.ch/dam/jcr:cbcd4cd4-081a-4d48-ab75-6b8f6c42004a/10_Linked-Data-Day-Sch%C3%A4rrer-Tierseuchen.pdf), [(Video)](https://youtu.be/XpE7U7f08ew)
+* Sara Schärrer, Wissenschaftliche Mitarbeiterin & Datenmanagerin, BLV
 
-- Stefan Nellen, Leiter Abteilung Informationszugang, BAR
+**EDES – Strompreiswebseite der ElCom: Datenpublikation in Zeiten hoher öffentlicher Aufmerksamkeit** [(PDF)](https://www.bfh.ch/dam/jcr:bbaa98b6-861c-4308-a4b7-b919b30604e7/11_Linked-Data-Day-Wyss-Strompreiswebseite.pdf), [(Video)](https://youtu.be/TUOdpLsHPYQ)
+* Barbara Wyss, Leiterin Sektion Preise und Tarife / Business Prozessverantwortliche im Projekt EDES, ElCom
 
-Tierseuchen in LINDAS – Von Prototypen und Pionierprojekten [(PDF)](https://www.bfh.ch/dam/jcr:cbcd4cd4-081a-4d48-ab75-6b8f6c42004a/10_Linked-Data-Day-Sch%C3%A4rrer-Tierseuchen.pdf), [(Video)](https://youtu.be/XpE7U7f08ew)
+**Linked Data als Drehscheibe für Publikationen** [(PDF)](https://www.bfh.ch/dam/jcr:a7d3d0e4-8430-4862-b867-b73638c8503f/12_Linked-Data-Day-Stalder-Schenker-Drehscheibe-f%C3%BCr-Publikationen.pdf), [(Video)](https://youtu.be/h5dqLgQ4pI4)
+* Rolf Schenker, Wissenschaftlicher Mitarbeiter, SSZ
+* Hansjörg Stalder, Projektleiter Fachanwendungen, SSZ
 
-- Sara Schärrer, Wissenschaftliche Mitarbeiterin & Datenmanagerin, BLV
+**Wie die Politik und die Branche die Verbundsbillete verzaubert haben** [(PDF)](https://www.bfh.ch/dam/jcr:da8d8faf-7ae7-4896-8e08-d03b0fb17a0e/13_Linked-Data-Day-Trachsel-Verbundsbillete.pdf), [(Video)](https://youtu.be/h4mO5iNl4r4)
+* Christian Trachsel, Open Data-Verantwortlicher, SBB
 
-EDES – Strompreiswebseite der ElCom: Datenpublikation in Zeiten hoher öffentlicher Aufmerksamkeit [(PDF)](https://www.bfh.ch/dam/jcr:bbaa98b6-861c-4308-a4b7-b919b30604e7/11_Linked-Data-Day-Wyss-Strompreiswebseite.pdf), [(Video)](https://youtu.be/TUOdpLsHPYQ)
-
-- Barbara Wyss, Leiterin Sektion Preise und Tarife / Business Prozessverantwortliche im Projekt EDES, ElCom
-
-Linked Data als Drehscheibe für Publikationen [(PDF)](https://www.bfh.ch/dam/jcr:a7d3d0e4-8430-4862-b867-b73638c8503f/12_Linked-Data-Day-Stalder-Schenker-Drehscheibe-f%C3%BCr-Publikationen.pdf), [(Video)](https://youtu.be/h5dqLgQ4pI4)
-
-- Rolf Schenker, Wissenschaftlicher Mitarbeiter, SSZ
-- Hansjörg Stalder, Projektleiter Fachanwendungen, SSZ
-
-Wie die Politik und die Branche die Verbundsbillete verzaubert haben [(PDF)](https://www.bfh.ch/dam/jcr:da8d8faf-7ae7-4896-8e08-d03b0fb17a0e/13_Linked-Data-Day-Trachsel-Verbundsbillete.pdf), [(Video)](https://youtu.be/h4mO5iNl4r4)
-
-- Christian Trachsel, Open Data-Verantwortlicher, SBB
-
-Linked Data à l’OFEN – Première expériences, lessons learned et vision [(PDF)](https://www.bfh.ch/dam/jcr:b18bbed7-b002-4d15-a024-ed8285adb918/14_Linked-Data-Day-Foletti-Lessons-Learned-Vision.pdf), [(Video)](https://youtu.be/G2Yy_BmcMmw)
-
-- Ambrogio Foletti, Open Government Data Spezialist, BFE
+**Linked Data à l’OFEN – Première expériences, lessons learned et vision** [(PDF)](https://www.bfh.ch/dam/jcr:b18bbed7-b002-4d15-a024-ed8285adb918/14_Linked-Data-Day-Foletti-Lessons-Learned-Vision.pdf), [(Video)](https://youtu.be/G2Yy_BmcMmw)
+* Ambrogio Foletti, Open Government Data Spezialist, BFE
 
 ## Workshop
 
-Crash Course zu Linked Data für Führungskräfte [(PDF)](https://presentations.zazuko.com/linked-data-day-2023)
-- Michael Rauch, Software Engineer, Zazuko
+**Crash Course zu Linked Data für Führungskräfte** [(PDF)](https://presentations.zazuko.com/linked-data-day-2023)
+* Michael Rauch, Software Engineer, Zazuko
 
 ## Akteure (alphabetisch aufgeführt)
 
