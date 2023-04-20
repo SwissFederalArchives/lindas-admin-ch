@@ -2,50 +2,52 @@
 
 Linked Data a plusieurs facettes. En résumé, il s'agit de la combinaison d'un **concept général** et d'un **ensemble de technologies concrètes**. Ces pages n'ont pas pour but de fournir une introduction complète au sujet, mais de mettre en évidence quelques aspects importants et de vous renvoyer vers les [bases, introductions et tutoriels](/technology/help/) correspondantes.
 
-## Idee von Linked Data
+## L'idée de base de Linked Data
 
-Die Idee von Linked Date beinhaltet verschiedene Aspekte:
+Linked Date comporte plusieurs aspects :
 
-* **Weltweit eindeutige Identifier** für Datenpunkte (Ressourcen)
-* Beschreibung von Information in Form von **Triples**
-* Metadaten sind genau gleich wichtig wie die Daten und erzeugen Damit **Semantische Daten**
-* Daten können über verschiedene Datenbanken hinweg **verlinkt** werden
+* **Identifiants globalement uniques** pour chaque élément de donnée (Ressource)
+* Description des informations sous forme de **triplets**
+* Les métadonnées sont aussi importantes que les données et constituent ainsi des **données sémantiques**
+* Les données peuvent être **reliées entre elles** à travers différentes bases de données
 
-## Technologie
+## La technologie
 
-* als Basistechnologie dient **RDF**, welches die Beschreibung von Daten in Form von Triples erlaubt
-* für die eindeutigen Identifier wird der **IRI** Mechanismus verwendet
-* für die Speicherung von Linked Data werden **Graphdatenbanken** (auch Triple Stores genannt) verwendet
-* mit Hilfe der Abfragesprache **SPARQL** können die Daten aus der Datenbank abgefragt und verarbeitet werden
-* Dank der Ontologie Sprache **OWL** können neue Erkenntnisse aus bestehenden Daten abgeleitet werden
+* la technologie de base est **RDF**, qui permet de décrire les données sous forme de triplets
+* la norme **IRI** est utilisée pour les identifiants uniques
+* pour le stockage des données liées, on utilise des **bases de données de graphes** (également appelées triple stores)
+* à l'aide du langage **SPARQL**, des requêtes peuvent être effectuées sur le contenu de la base de données
+* Grâce à l'utilisation de l'ontologie **OWL**, de nouvelles connaissances peuvent être déduites des données existantes
 
-# Vorteile dank der Nutzung von Linked Data
+# Les avantages de l'utilisation de Linked Data
 
-## Vorteile für Datenprovider
+## Pour le fournisseur de données
 
-* Linked Data verlangt vom Datenprovider eine klare Vorstellung der eigenen Daten. Nur wer genau weiss, was die Daten bedeuten, kann dies auch als Metadaten klar formulieren. Linked Data kann helfen, eine solche klare Vorstellung zu entwickeln
-* Linked Data kann behilflich sein, eine eindeutige und klare Strategie zur Identifikation von Datenpunkten mit Hilfe von IRI zu entwickeln
-* Linked Data zahlt sich langfristig aus, da Daten und Datenmodelle nicht für einzelne Anwendungen optimiert werden, sondern als klare, sich selbst beschreibende Rohdaten erstellt werden, die sich einfacher in verschiedene Strukturen transformieren lassen
-* Linked Data verlangt vom Datenprovider eine Sicht/Zusammenarbeit über die eigene Organisation hinaus, was ingesamt zu qualitativ besseren Daten führt
+* Linked Data exige du fournisseur de données une description claire de ses propres données. Seul celui qui sait exactement ce que les données signifient peut le formuler clairement sous forme de métadonnées. Linked Data est donc un moyen d'évoluer vers une meilleure documentation de ses données.
+* Linked Data va aider à développer une stratégie claire et précise d'identification des données à l'aide d'IRIs.
+* L'adoption de Linked Data est rentable à long terme, car les données et les modèles de données ne sont pas adaptés à des applications individuelles, mais sont construits comme des données de base claires et auto-décrites, qui peuvent être transformées si nécessaire très facilement en différentes structures.
+* Linked Data exige du fournisseur de données une vision/collaboration au-delà de sa propre organisation, ce qui conduit à des données de meilleure qualité.
 
-## Vorteile für Datennutzerinnen
+## Pour le consommateur de données
 
-* Linked Data und SPARQL stellen ein sehr universaler Mechanismus dar, um mit Daten zu arbeiten
-* Erlangtes Wissen rund um Linked Data und SPARQL für einen spezifischen Datensatz lässt sich sehr viel einfacher auf andere Datensätze in Linked Data übertragen
+* Linked Data et SPARQL constituent un ensemble très universel pour travailler avec les données.
+* Les connaissances acquises sur Linked Data et SPARQL pour un jeu de données spécifique peuvent être transférées à d'autres jeux de données et d'autres systèmes qui s'appuient sur Linked Data.
 
-# Linked Data im Vergleich zu
 
-## CSV Daten
+# Comparaison entre Linked Data et
 
-CSV Daten sind tabellarische Daten. Linked Data sind Graphdaten, welche ein universelleres Datenformat darstellen. Mit Hilfe von Linked Data können tabellarische Daten abgebildet werden (RDF Cube), aber es ist daneben auch möglich, komplizierte netzwerkartige Datenstrukturen sauber und effizient abzubilden.
+## Les données en CSV
 
-Zusätzlich ist es bei CSV Daten nicht möglich, innerhalb der Daten etwas über die Daten zu sagen. Es kann nicht innnerhalb des CSV angegeben werden, was die Tabelle beinhaltet, welche Spalten vorkommen und was diese genau beschreiben resp. von welchem Datentyp die Inhalte sind.
+Les données en CSV sont des données tabulaires. Linked Data structure des données sous forme de graphe, ce qui constitue un format de données plus universel. Même si Linked Data permet de représenter des données tabulaires (RDF cube ), il permet également de représenter de manière propre et cohérente des structures de données complexes de nature réticulaire.
 
-## REST-API
+De plus, avec des données en CSV, il n'est pas possible de fournir des informations sur les données à l'intérieur des données. Ainsi il n'est pas possible d'indiquer à l'intérieur d'un CSV ce que contient la table, quelles sont les colonnes et ce qu'elles décrivent exactement ou de quels types de données est constitué le contenu.
 
-Eine REST-API stellt Daten zur Verfügung, die nicht primär von Menschen direkt genutzt werden sollen, sondern durch Maschinen weiter verarbeitet und aufbereitet werden. In diesem Sinne stellt Linked Data mit Hilfe von SPARQL Endpunkten ähnliche Möglichkeiten zur Verfügung.
+## Les API REST
 
-Während die Daten aus einer REST-API typischerweise einer gewissen Interpretation resp. zusätzlicher Dokumentation über andere Kanäle benötigen, können die Metadaten zu Linked Data direkt mit den Daten bezogen werden. Weiter erlaubt SPARQL als Abfragesprache auch, die Daten noch vor deren Ausgabe weiter zu verarbeiten (insbesondere Gruppierung).
+Une API REST met à disposition des données qui ne sont pas destinées en premier lieu à une utilisation par des personnes, mais à être transformées et traitées par des machines. En ce sens, Linked Data offre des possibilités similaires grâce aux points d'accès SPARQL.
+
+Alors que les données provenant d'une API REST nécessitent généralement une certaine interprétation ou une documentation supplémentaire via d'autres canaux, les métadonnées des Linked Data peuvent être obtenues directement avec les données. De plus, en tant que langage d'interrogation, SPARQL permet de transformer le résultat avant sa transmission (en particulier le regroupement de résultats partiels).
+
 
 # Hindernisse im Umgang mit Linked Data
 
