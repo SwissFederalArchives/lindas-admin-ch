@@ -8,7 +8,7 @@ Die Idee von Linked Data beinhaltet verschiedene Aspekte:
 
 * **Weltweit eindeutige Identifier** für Datenpunkte (Ressourcen)
 * Beschreibung von Information in Form von **Triples**
-* Metadaten sind genau gleich wichtig wie die Daten und erzeugen Damit **Semantische Daten**
+* Metadaten sind genau gleich wichtig wie die Daten und erzeugen damit **Semantische Daten**
 * Daten können über verschiedene Datenbanken hinweg **verlinkt** werden
 
 ## Technologie
