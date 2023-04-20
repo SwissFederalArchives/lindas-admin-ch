@@ -4,7 +4,7 @@ Linked Data hat verschiedene Facetten. Kurz zusammengefasst ist es die Kombinati
 
 ## Idee von Linked Data
 
-Die Idee von Linked Date beinhaltet verschiedene Aspekte:
+Die Idee von Linked Data beinhaltet verschiedene Aspekte:
 
 * **Weltweit eindeutige Identifier** für Datenpunkte (Ressourcen)
 * Beschreibung von Information in Form von **Triples**
