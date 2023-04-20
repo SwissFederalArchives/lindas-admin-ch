@@ -51,26 +51,33 @@ Der Linked Data Dienst der Bundes Geodaten-Infrastruktur [(PDF)](https://www.bfh
 
 ## Use Cases
 
-Linked Open Data auf dem Portal opendata.swiss [(PDF)](https://www.bfh.ch/dam/jcr:0e6beba2-b5f5-46a4-bec9-7ce688a2a02a/08_Linked-Data-Day-Spichtig-opendata.swiss.pdf)
+Linked Open Data auf dem Portal opendata.swiss [(PDF)](https://www.bfh.ch/dam/jcr:0e6beba2-b5f5-46a4-bec9-7ce688a2a02a/08_Linked-Data-Day-Spichtig-opendata.swiss.pdf), [(Video)](https://youtu.be/3Et2cRiHnPs)
+
 - Michèle Spichtig, Datenspezialistin bei der Geschäftsstelle Open Government Data, BFS
 
-Missing Link – Das Potential historischer Daten für die Gegenwart [(PDF)](https://www.bfh.ch/dam/jcr:354171f5-1318-4e4b-bfa9-126d9b9630c2/09_Linked-Data-Day-Nellen-Missing-Link.pdf)
+Missing Link – Das Potential historischer Daten für die Gegenwart [(PDF)](https://www.bfh.ch/dam/jcr:354171f5-1318-4e4b-bfa9-126d9b9630c2/09_Linked-Data-Day-Nellen-Missing-Link.pdf), [(Video)](https://youtu.be/cdiLAZlcCfw)
+
 - Stefan Nellen, Leiter Abteilung Informationszugang, BAR
 
-Tierseuchen in LINDAS – Von Prototypen und Pionierprojekten [(PDF)](https://www.bfh.ch/dam/jcr:cbcd4cd4-081a-4d48-ab75-6b8f6c42004a/10_Linked-Data-Day-Sch%C3%A4rrer-Tierseuchen.pdf)
+Tierseuchen in LINDAS – Von Prototypen und Pionierprojekten [(PDF)](https://www.bfh.ch/dam/jcr:cbcd4cd4-081a-4d48-ab75-6b8f6c42004a/10_Linked-Data-Day-Sch%C3%A4rrer-Tierseuchen.pdf), [(Video)](https://youtu.be/XpE7U7f08ew)
+
 - Sara Schärrer, Wissenschaftliche Mitarbeiterin & Datenmanagerin, BLV
 
-EDES – Strompreiswebseite der ElCom: Datenpublikation in Zeiten hoher öffentlicher Aufmerksamkeit [(PDF)](https://www.bfh.ch/dam/jcr:bbaa98b6-861c-4308-a4b7-b919b30604e7/11_Linked-Data-Day-Wyss-Strompreiswebseite.pdf)
+EDES – Strompreiswebseite der ElCom: Datenpublikation in Zeiten hoher öffentlicher Aufmerksamkeit [(PDF)](https://www.bfh.ch/dam/jcr:bbaa98b6-861c-4308-a4b7-b919b30604e7/11_Linked-Data-Day-Wyss-Strompreiswebseite.pdf), [(Video)](https://youtu.be/TUOdpLsHPYQ)
+
 - Barbara Wyss, Leiterin Sektion Preise und Tarife / Business Prozessverantwortliche im Projekt EDES, ElCom
 
-Linked Data als Drehscheibe für Publikationen [(PDF)](https://www.bfh.ch/dam/jcr:a7d3d0e4-8430-4862-b867-b73638c8503f/12_Linked-Data-Day-Stalder-Schenker-Drehscheibe-f%C3%BCr-Publikationen.pdf)
+Linked Data als Drehscheibe für Publikationen [(PDF)](https://www.bfh.ch/dam/jcr:a7d3d0e4-8430-4862-b867-b73638c8503f/12_Linked-Data-Day-Stalder-Schenker-Drehscheibe-f%C3%BCr-Publikationen.pdf), [(Video)](https://youtu.be/h5dqLgQ4pI4)
+
 - Rolf Schenker, Wissenschaftlicher Mitarbeiter, SSZ
 - Hansjörg Stalder, Projektleiter Fachanwendungen, SSZ
 
-Wie die Politik und die Branche die Verbundsbillete verzaubert haben [(PDF)](https://www.bfh.ch/dam/jcr:da8d8faf-7ae7-4896-8e08-d03b0fb17a0e/13_Linked-Data-Day-Trachsel-Verbundsbillete.pdf)
+Wie die Politik und die Branche die Verbundsbillete verzaubert haben [(PDF)](https://www.bfh.ch/dam/jcr:da8d8faf-7ae7-4896-8e08-d03b0fb17a0e/13_Linked-Data-Day-Trachsel-Verbundsbillete.pdf), [(Video)](https://youtu.be/h4mO5iNl4r4)
+
 - Christian Trachsel, Open Data-Verantwortlicher, SBB
 
-Linked Data à l’OFEN – Première expériences, lessons learned et vision [(PDF)](https://www.bfh.ch/dam/jcr:b18bbed7-b002-4d15-a024-ed8285adb918/14_Linked-Data-Day-Foletti-Lessons-Learned-Vision.pdf)
+Linked Data à l’OFEN – Première expériences, lessons learned et vision [(PDF)](https://www.bfh.ch/dam/jcr:b18bbed7-b002-4d15-a024-ed8285adb918/14_Linked-Data-Day-Foletti-Lessons-Learned-Vision.pdf), [(Video)](https://youtu.be/G2Yy_BmcMmw)
+
 - Ambrogio Foletti, Open Government Data Spezialist, BFE
 
 ## Workshop
