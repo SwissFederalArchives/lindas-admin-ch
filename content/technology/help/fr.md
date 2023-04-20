@@ -1,6 +1,8 @@
-# Grundlagen, Einführungen und Tutorials
+# Notions de base, introductions et tutoriels
 
-## Linked Data allgemein
+## Généralités sur Linked Data 
+
+* [Linked Data Engineering (Semantic Web) OpenHPI by Prof. Dr. Harald Sack](https://www.youtube.com/playlist?list=PLoOmvuyo5UAfY6jb46jCpMoqb-dbVewxg) - série de vidéos en anglais : Ce cours vous présente les principes de base et les technologies associées à Linked Data pour permettre le partage et la réutilisation des données à grande échelle. _Introduction approfondie via un cours semestriel, niveau académique_.
 
 | Titel                                                                                                                                               | Typ/Sprache                                | Inhalt                                                                                                                                      | Kommentar                                                                                                                                                                                          |
 |-----------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
