@@ -19,7 +19,7 @@ Linked Date comporte plusieurs aspects :
 * à l'aide du langage **SPARQL**, des requêtes peuvent être effectuées sur le contenu de la base de données
 * Grâce à l'utilisation de l'ontologie **OWL**, de nouvelles connaissances peuvent être déduites des données existantes
 
-# Les avantages de l'utilisation de Linked Data
+# Avantages de l'utilisation de Linked Data
 
 ## Pour le fournisseur de données
 
@@ -49,19 +49,20 @@ Une API REST met à disposition des données qui ne sont pas destinées en premi
 Alors que les données provenant d'une API REST nécessitent généralement une certaine interprétation ou une documentation supplémentaire via d'autres canaux, les métadonnées des Linked Data peuvent être obtenues directement avec les données. De plus, en tant que langage d'interrogation, SPARQL permet de transformer le résultat avant sa transmission (en particulier le regroupement de résultats partiels).
 
 
-# Hindernisse im Umgang mit Linked Data
+# Obstacles à l'utilisation de Linked Data
 
-## Hindernisse für Datenprovider
+## Pour le fournisseur de données
 
-Datenprovider, die ihre Daten als Linked Data veröffentlichen wollen (im Gegensatz zu bspw. CSV) haben verschiedene Herausforderungen zu bewältigen:
+La publication de données en tant que Linked Data (par opposition à CSV, par exemple) doit relever les défis suivants :
 
-* Wissen rund um Linked Data ist in Entwicklerkreisen weniger stark verbreitet im Vergleich zu "klassischen" Technologien wie relationale Datenbanken und SQL
-* Linked Data verlangt nach einem funktionierenden Data Management und einer etablierten Data Governance, was häufig mit grossen Vorinvestitionen verbunden ist, die sich aber typischerweise langfristig auszahlen
-* Linked Data im Sinne der Verlinkung bedingt das Durchbrechen einer "Silo-Mentalität", was kulturell und organisatorisch eine Herausforderung darstellen kann
+* Les connaissances sur Linked Data sont moins répandues parmi les développeurs qu'en ce qui concerne les technologies "classiques" telles que les bases de données relationnelles et SQL.
+* Linked Data requiert une gestion des données et une gouvernance des données bien établies, ce qui implique souvent des investissements préalables importants, mais qui sont généralement rentables à long terme.
+* Linked Data, dans son potentiel à construire des liens entre divers jeux de données, nécessitent de briser une "mentalité de silo", ce qui peut représenter un défi culturel et organisationnel.
 
-## Hindernisse für Datennutzerinnen
+## Pour le consommateur de données
 
-* der Zugang zu Linked Data via SPARQL Abfragen stellt eine Anfangshürde dar, die relativ hoch ist
-* werden Linked Data via Dereferenzierung über HTML Seiten genutzt, liefern diese häufig unübersichtliche Informationen und laden auch nicht zu einem explorativen Weiterklicken ein
-* es existieren nicht überall gute Suchfunktionen via Volltextsuche für Graphdatenbanken
+* L'accès à des données en Linked Data via des requêtes SPARQL représente un obstacle initial relativement élevé.
+* Si le déréférencement de Linked Data sur des pages HTML est mis en oeuvre, celles-ci fournissent souvent des informations peu claires et n'invitent pas à poursuivre l'exploration.
+* Il n'existe pas partout de bonnes fonctions de recherche en plein texte pour les bases de données de graphes.
+
 
