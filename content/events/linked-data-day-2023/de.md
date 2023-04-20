@@ -22,27 +22,31 @@ Keynote Präsentation: The Knowledge Graph as Interoperability Foundation - The 
 
 ## Wo wollen wir hin mit Linked Data?
 
-Linked Data à la Confédération – Vision à 5 ans [(PDF)](https://www.bfh.ch/dam/jcr:0163b853-5633-4e8b-9f38-2e9d1d71cc6f/02_Linked-Data-Day-Cochard-Kwasnitza-Vision-5-ans.pdf)
-- Jean-Luc Cochard Product Manager LINDAS, BAR
-- Stefan Kwasnitza Stellvertretender Direktor, BAR
+Linked Data à la Confédération – Vision à 5 ans [(PDF)](https://www.bfh.ch/dam/jcr:0163b853-5633-4e8b-9f38-2e9d1d71cc6f/02_Linked-Data-Day-Cochard-Kwasnitza-Vision-5-ans.pdf), [(Video)](https://youtu.be/-XFS6gEvZuU)
 
-Unabhängig gemeinsam – Wie Föderalismus in Daten funktioniert [(PDF)](https://www.bfh.ch/dam/jcr:95d1421f-7d66-433a-b9ea-3caddfd5813d/03_Linked-Data-Day-Luggen-Unabh%C3%A4nig-gemeinsam.pdf)
+- Jean-Luc Cochard, Product Manager LINDAS, BAR
+- Stefan Kwasnitza, Stellvertretender Direktor, BAR
+
+Unabhängig gemeinsam – Wie Föderalismus in Daten funktioniert [(PDF)](https://www.bfh.ch/dam/jcr:95d1421f-7d66-433a-b9ea-3caddfd5813d/03_Linked-Data-Day-Luggen-Unabh%C3%A4nig-gemeinsam.pdf), [(Video)](https://youtu.be/hONzH4QDOxM) 
+
 - Michael Luggen, Datenarchitekt, BK
 
 ## Wo stehen wir heute mit Linked Data?
 
-Linked Data Governance [(PDF)](https://www.bfh.ch/dam/jcr:db5966ca-ee12-437b-a50e-7116b1ae1931/04-Linked-Data-Day-Dubach-Linked-Data-Governance.pdf)
+Linked Data Governance [(PDF)](https://www.bfh.ch/dam/jcr:db5966ca-ee12-437b-a50e-7116b1ae1931/04-Linked-Data-Day-Dubach-Linked-Data-Governance.pdf), [(Video)](https://youtu.be/eq2TySyMeLs)
 
 - Erica Dubach, Leiterin Transformation und Interoperabilität, BK
 
-LINDAS Status – Wo stehen wir heute mit Linked Data? [(PDF)](https://www.bfh.ch/dam/jcr:1aafc900-d3f5-4476-b6f6-d21f5063ec4b/05_Linked-Data-Day-Cochard-LINDAS-Status.pdf)
+LINDAS Status – Wo stehen wir heute mit Linked Data? [(PDF)](https://www.bfh.ch/dam/jcr:1aafc900-d3f5-4476-b6f6-d21f5063ec4b/05_Linked-Data-Day-Cochard-LINDAS-Status.pdf), [(Video)](https://youtu.be/eq2TySyMeLs)
+
 - Jean-Luc Cochard Product Manager LINDAS, BAR
 
-Visualisieren Sie Schweizer Open Government Data – visualize.admin.ch [(PDF)](https://www.bfh.ch/dam/jcr:3b4a1ba1-10be-4c4c-a8a9-0322ae4830f5/06_Linked-Data-Day-Zeller-visualize.admin.ch.pdf)
+Visualisieren Sie Schweizer Open Government Data – visualize.admin.ch [(PDF)](https://www.bfh.ch/dam/jcr:3b4a1ba1-10be-4c4c-a8a9-0322ae4830f5/06_Linked-Data-Day-Zeller-visualize.admin.ch.pdf), [(Video)](https://youtu.be/8NvIiJy_UUw)
 
 - Sabine Zeller, Projektleiterin visualize.admin.ch, BAFU 
 
-Der Linked Data Dienst der Bundes Geodaten-Infrastruktur [(PDF)](https://www.bfh.ch/dam/jcr:9b596cd9-402a-4618-9435-be82fe91ae6b/07_Linked-Data-Day-DiDonato-Geodaten-Infrastruktur.pdf)
+Der Linked Data Dienst der Bundes Geodaten-Infrastruktur [(PDF)](https://www.bfh.ch/dam/jcr:9b596cd9-402a-4618-9435-be82fe91ae6b/07_Linked-Data-Day-DiDonato-Geodaten-Infrastruktur.pdf), [(Video)](https://youtu.be/hJkuIpSc0rM)
+
 - Pasquale Di Donato, Projektkoordinator Geoinformation und Geoservices, KOGIS - swisstopo
 
 ## Use Cases
