@@ -29,6 +29,8 @@
   "Namespaces long": "",
   "Linked Data General short": "Généralités",
   "Linked Data General long": "L'idée derrière Linked Data, la technologie, les avantages pour les utilisateurs et les fournisseurs de données; Linked Data par rapport à REST API et aux données CSV; les obstacles potentiels à l'utilisation de Linked Data.",
+  "Linked Data Meetup short": "Meetup Linked Data",
+  "Linked Data Meetup long" : "Rencontres régulières pour permettre aux utilisateurs d'échanger des informations sur les projets Linked Data en cours.",
   "Glossary short": "Glossaire",
   "Glossary long": "Glossaire sur Linked Data et LINDAS.",
   "Links short": "Collection de liens",
