@@ -8,18 +8,18 @@ Diese Veranstaltung war reserviert für Mitarbeiterinnen und Mitarbeiter der sch
 
 Der Linked Data Day wurde in Deutsch und Französisch durchgeführt. Die Keynote wurde in Englisch gehalten.
 
-## Programm und soziale Medien
+### Programm und soziale Medien
 
 [Programmübersicht (PDF)](https://www.bfh.ch/dam/jcr:4e18ab84-3f0f-4a71-9e1e-141d4cb90048/Linked-Data-Day-2023-Programm.pdf)   
 [#LDDCH23](https://www.linkedin.com/feed/hashtag/?keywords=ldd23ch)
 
-## Keynote 
+### Keynote 
 
 Keynote Präsentation: **The Knowledge Graph as Interoperability Foundation - The Case at the Dutch Land Registry** ([PDF](https://www.bfh.ch/dam/jcr:b9c523df-9e07-4ea9-bf50-19df066d5b22/01_Linked-Data-Day-Keynote-Erwin-Folmer.pdf)), ([Video](https://youtu.be/VutWsIuEVyU))
 * Erwin Folmer von [Kadaster](https://www.kadaster.nl/about-us "dieser Link führt zu Kadaster!"), Niederlande
 
 
-## Wo wollen wir hin mit Linked Data?
+### Wo wollen wir hin mit Linked Data?
 
 **Linked Data à la Confédération – Vision à 5 ans** ([PDF](https://www.bfh.ch/dam/jcr:0163b853-5633-4e8b-9f38-2e9d1d71cc6f/02_Linked-Data-Day-Cochard-Kwasnitza-Vision-5-ans.pdf)), ([Video](https://youtu.be/-XFS6gEvZuU))
 * Jean-Luc Cochard, Product Manager LINDAS, BAR
@@ -28,7 +28,7 @@ Keynote Präsentation: **The Knowledge Graph as Interoperability Foundation - Th
 **Unabhängig gemeinsam – Wie Föderalismus in Daten funktioniert** ([PDF](https://www.bfh.ch/dam/jcr:95d1421f-7d66-433a-b9ea-3caddfd5813d/03_Linked-Data-Day-Luggen-Unabh%C3%A4nig-gemeinsam.pdf)), ([Video](https://youtu.be/hONzH4QDOxM)) 
 * Michael Luggen, Datenarchitekt, BK
 
-## Wo stehen wir heute mit Linked Data?
+### Wo stehen wir heute mit Linked Data?
 
 **Linked Data Governance** ([PDF](https://www.bfh.ch/dam/jcr:db5966ca-ee12-437b-a50e-7116b1ae1931/04-Linked-Data-Day-Dubach-Linked-Data-Governance.pdf)), ([Video](https://youtu.be/eq2TySyMeLs))
 * Erica Dubach, Leiterin Transformation und Interoperabilität, BK
@@ -42,7 +42,7 @@ Keynote Präsentation: **The Knowledge Graph as Interoperability Foundation - Th
 **Der Linked Data Dienst der Bundes Geodaten-Infrastruktur** ([PDF](https://www.bfh.ch/dam/jcr:9b596cd9-402a-4618-9435-be82fe91ae6b/07_Linked-Data-Day-DiDonato-Geodaten-Infrastruktur.pdf)), ([Video](https://youtu.be/hJkuIpSc0rM))
 * Pasquale Di Donato, Projektkoordinator Geoinformation und Geoservices, KOGIS - swisstopo
 
-## Use Cases
+### Use Cases
 
 **Linked Open Data auf dem Portal opendata.swiss** ([PDF](https://www.bfh.ch/dam/jcr:0e6beba2-b5f5-46a4-bec9-7ce688a2a02a/08_Linked-Data-Day-Spichtig-opendata.swiss.pdf)), ([Video](https://youtu.be/3Et2cRiHnPs))
 * Michèle Spichtig, Datenspezialistin bei der Geschäftsstelle Open Government Data, BFS
@@ -66,12 +66,12 @@ Keynote Präsentation: **The Knowledge Graph as Interoperability Foundation - Th
 **Linked Data à l’OFEN – Première expériences, lessons learned et vision** ([PDF](https://www.bfh.ch/dam/jcr:b18bbed7-b002-4d15-a024-ed8285adb918/14_Linked-Data-Day-Foletti-Lessons-Learned-Vision.pdf)), ([Video](https://youtu.be/G2Yy_BmcMmw))
 * Ambrogio Foletti, Open Government Data Spezialist, BFE
 
-## Workshop
+### Workshop
 
 **Crash Course zu Linked Data für Führungskräfte** ([PDF](https://presentations.zazuko.com/linked-data-day-2023))
 * Michael Rauch, Software Engineer, Zazuko
 
-## Akteure (alphabetisch aufgeführt)
+### Akteure (alphabetisch aufgeführt)
 
 - Bundesamt für Energie, BFE
 - Bundesamt für Landestopografie, swisstopo
