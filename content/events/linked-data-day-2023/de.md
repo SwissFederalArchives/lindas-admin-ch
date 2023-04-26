@@ -8,7 +8,7 @@ Diese Veranstaltung war reserviert für Mitarbeiterinnen und Mitarbeiter der sch
 
 Der Linked Data Day wurde in Deutsch und Französisch durchgeführt. Die Keynote wurde in Englisch gehalten.
 
-## Programm vom Linked Data Day 2023
+## Programm und soziale Medien
 
 [Programmübersicht (PDF)](https://www.bfh.ch/dam/jcr:4e18ab84-3f0f-4a71-9e1e-141d4cb90048/Linked-Data-Day-2023-Programm.pdf)   
 [#LDDCH23](https://www.linkedin.com/feed/hashtag/?keywords=ldd23ch)
