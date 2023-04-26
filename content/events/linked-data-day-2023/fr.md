@@ -8,14 +8,14 @@ Cette manifestation était réservée aux collaboratrices et collaborateurs des 
 
 La manifestation s'était déroulée en allemand et en français et la keynote était donnée en anglais.
 
-## Programme et réseaux sociaux
+### Programme et réseaux sociaux
 
 Programme ([PDF](https://www.bfh.ch/dam/jcr:4e18ab84-3f0f-4a71-9e1e-141d4cb90048/Linked-Data-Day-2023-Programm.pdf))      
 [#LDDCH23](https://www.linkedin.com/feed/hashtag/?keywords=ldd23ch)
 
-## Keynote 
+### Exposé d'ouverture
 
-Exposé d'ouverture: **The Knowledge Graph as Interoperability Foundation - The Case at the Dutch Land Registry** ([PDF](https://www.bfh.ch/dam/jcr:b9c523df-9e07-4ea9-bf50-19df066d5b22/01_Linked-Data-Day-Keynote-Erwin-Folmer.pdf)), ([Video](https://youtu.be/VutWsIuEVyU))
+**The Knowledge Graph as Interoperability Foundation - The Case at the Dutch Land Registry** ([PDF](https://www.bfh.ch/dam/jcr:b9c523df-9e07-4ea9-bf50-19df066d5b22/01_Linked-Data-Day-Keynote-Erwin-Folmer.pdf)), ([Video](https://youtu.be/VutWsIuEVyU))
 * Erwin Folmer de [Kadaster](https://www.kadaster.nl/about-us "dieser Link führt zu Kadaster!"), Pays-Bas
 
 ### Où voulons-nous aller avec Linked Data ?
@@ -65,9 +65,10 @@ Exposé d'ouverture: **The Knowledge Graph as Interoperability Foundation - The 
 **Linked Data à l’OFEN – Première expériences, lessons learned et vision** ([PDF](https://www.bfh.ch/dam/jcr:b18bbed7-b002-4d15-a024-ed8285adb918/14_Linked-Data-Day-Foletti-Lessons-Learned-Vision.pdf)), ([Video](https://youtu.be/G2Yy_BmcMmw))
 * Ambrogio Foletti, Spécialiste d'Open Government Data, OFEN
 
+### Workshop
 
-Workshop: Crash Course Linked Data ([PDF](https://presentations.zazuko.com/linked-data-day-2023))
-- Michael Rauch, Software Engineer, Zazuko
+**Crash Course Linked Data** ([PDF](https://presentations.zazuko.com/linked-data-day-2023))
+- Michael Rauch, Ingénieur logiciel, Zazuko
 
 ### Les acteurs (par ordre alphabétique)
 
