@@ -34,7 +34,7 @@ Keynote Präsentation: **The Knowledge Graph as Interoperability Foundation - Th
 * Erica Dubach, Leiterin Transformation und Interoperabilität, BK
 
 **LINDAS Status – Wo stehen wir heute mit Linked Data?** ([PDF](https://www.bfh.ch/dam/jcr:1aafc900-d3f5-4476-b6f6-d21f5063ec4b/05_Linked-Data-Day-Cochard-LINDAS-Status.pdf)), ([Video](https://youtu.be/eq2TySyMeLs))
-* Jean-Luc Cochard Product Manager LINDAS, BAR
+* Jean-Luc Cochard, Product Manager LINDAS, BAR
 
 **Visualisieren Sie Schweizer Open Government Data – visualize.admin.ch** ([PDF](https://www.bfh.ch/dam/jcr:3b4a1ba1-10be-4c4c-a8a9-0322ae4830f5/06_Linked-Data-Day-Zeller-visualize.admin.ch.pdf)), ([Video](https://youtu.be/8NvIiJy_UUw))
 * Sabine Zeller, Projektleiterin visualize.admin.ch, BAFU 
