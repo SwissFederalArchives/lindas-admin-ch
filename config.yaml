@@ -143,8 +143,8 @@ middlewares:
           label: Datacatalog
         - path: /sparql/
           label: Query Data
- #       - path: /documentation/
- #         label: Documentation
+        - path: /documentation/
+          label: Documentation
         - path: /governance/
           label: Linked Data Governance
         - path: /technology/
@@ -165,13 +165,13 @@ middlewares:
       namespace: lindas-root
       directory: file:content/root-pages
       mountPath: /
-  content-documentation:
-    module: file:plugins/content/index.js
-    order: 80
-    config:
-      namespace: lindas-documentation
-      directory: file:content/documentation
-      mountPath: /documentation/
+ # content-documentation:
+ #   module: file:plugins/content/index.js
+ #   order: 80
+ #   config:
+ #     namespace: lindas-documentation
+ #     directory: file:content/documentation
+ #     mountPath: /documentation/
   content-governance:
     module: file:plugins/content/index.js
     order: 80
