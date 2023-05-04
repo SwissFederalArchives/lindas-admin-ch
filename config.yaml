@@ -36,12 +36,12 @@ middlewares:
     config:
       path: views/welcome.hbs
 
-  documentation:
-    module: trifid-core/middlewares/view.js
-    paths: /documentation/
-    methods: GET
-    config:
-      path: views/documentation.hbs
+  # documentation:
+  #  module: trifid-core/middlewares/view.js
+  #  paths: /documentation/
+  #  methods: GET
+  #  config:
+  #    path: views/documentation.hbs
   governance:
     module: trifid-core/middlewares/view.js
     paths: /governance/
