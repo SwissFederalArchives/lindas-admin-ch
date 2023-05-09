@@ -1,3 +1,3 @@
-## Linked Data Veranstaltungen
+## Veranstaltungen zu Linked Data
 
-In diesen Abschnitten informieren wir über Veranstaltungen zu Linked Data, die für die Schweizer Behörden organisiert werden.
+In diesen Sessions informieren wir Sie über Veranstaltungen im Zusammenhang mit Linked Data für schweizerische Verwaltungen.
