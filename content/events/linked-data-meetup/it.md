@@ -1,10 +1,10 @@
-## Linked Data Meetup
+## Meetup Linked Data
 
-Dopo il primo Linked Data Day, gli utenti si incontreranno il 6 giugno 2023 nel primo "Linked Data Meetup" per discutere dei progetti Linked Data in corso. Brevi presentazioni ibride e un aperitivo informale saranno utilizzati per discutere le questioni attuali relative ai Linked Data. Il Linked Data Meetup è una collaborazione tra gli AFS e la BFH.
+Dopo il primo Linked Data Day, gli utenti si incontreranno il 6 giugno 2023 al primo «Meetup Linked Data Meetup» per discutere dei progetti Linked Data in corso. Brevi presentazioni ibride e un aperitivo informale serviranno da cornice per discutere di aspetti di attualità riguardanti i Linked Data. Il Linked Data Meetup è organizzato dall’AFS e dalla Scuola universitaria professionale di Berna.
 
-### Date et luoghi
+### Data et luogo
 
-**6 giugno 2023, 17.00 - 19.00** - Greenfield, Brückenstrasse 73, Berna et online (ibride)   
-**14 novembre 2023, 17.00 - 18.30** - Greenfield, Brückenstrasse 73, Berna et online (ibride) 
+**6 giugno 2023, dalle 17.00 alle 19.00** - Greenfield, Brückenstrasse 73, Berna e online (ibride)   
+**14 novembre 2023, dalle 17.00 alle 18.30** - Greenfield, Brückenstrasse 73, Berna e online (ibride) 
 
-**[Informazioni e registrazione per il Linked Data Meetup (in tedesco)](https://www.bfh.ch/wirtschaft/de/aktuell/fachveranstaltungen/linked-data-meetup-1-23/)**
+**[Maggiori informazioni sul Meetup Linked Data e modulo d’iscrizione (in tedesco) ](https://www.bfh.ch/wirtschaft/de/aktuell/fachveranstaltungen/linked-data-meetup-1-23/)**
