@@ -1,3 +1,3 @@
-## Manifestazioni relative ai Linked Data
+## Eventi dedicati ai Linked Data
 
-In queste sezioni vi informiamo sugli eventi relativi ai Linked Data organizzati per le amministrazioni svizzere.
+In queste sezioni vi informiamo sugli eventi relativi ai Linked Data organizzati per le amministrazioni pubbliche svizzere.
