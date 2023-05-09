@@ -1,3 +1,3 @@
-## Linked Data Events
+## Events related to Linked Data
 
-In these sections we provide information about Linked Data events organised for the Swiss authorities.
+In these sections, we notify you of events related to Linked Data organised by the Swiss administrative authorities.
