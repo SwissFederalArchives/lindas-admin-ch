@@ -141,12 +141,12 @@ middlewares:
           label: Datacatalog
         - path: /sparql/
           label: Query Data
-#        - path: /documentation/
-#          label: Documentation
-#        - path: /governance/
-#          label: Linked Data Governance
-#        - path: /technology/
-#          label: Linked Data Technology
+        #        - path: /documentation/
+        #          label: Documentation
+        #        - path: /governance/
+        #          label: Linked Data Governance
+        #        - path: /technology/
+        #          label: Linked Data Technology
         - path: /events/
           label: Events
 
