@@ -171,7 +171,7 @@ middlewares:
     config:
       namespace: about-lindas
       directory: file:content/about
-      mountPath: /about-lindas/
+      mountPath: /about/
   content-documentation:
     module: file:plugins/content/index.js
     order: 80
