@@ -1,6 +1,6 @@
 ## Meetup Linked Data
 
-Dopo il primo Linked Data Day, gli utenti si incontreranno il 6 giugno 2023 al primo «Meetup Linked Data Meetup» per discutere dei progetti Linked Data in corso. Brevi presentazioni ibride e un aperitivo informale serviranno da cornice per discutere di aspetti di attualità riguardanti i Linked Data. Il Linked Data Meetup è organizzato dall’AFS e dalla Scuola universitaria professionale di Berna.
+Dopo il primo Linked Data Day, gli utenti si incontreranno il 6 giugno 2023 al primo «Meetup Linked Data» per discutere dei progetti Linked Data in corso. Brevi presentazioni ibride e un aperitivo informale serviranno da cornice per discutere di aspetti di attualità riguardanti i Linked Data. Il Linked Data Meetup è organizzato dall’AFS e dalla Scuola universitaria professionale di Berna.
 
 ### Data et luogo
 
