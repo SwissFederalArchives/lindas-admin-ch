@@ -1,4 +1,5 @@
 stages:
+  - tests
   - test
   - int
   - prod
@@ -14,6 +15,14 @@ stages:
   script:
     - docker build --pull -t "$CI_REGISTRY_IMAGE:${TARGET}_$CI_JOB_TIMESTAMP" .
     - docker push "$CI_REGISTRY_IMAGE:${TARGET}_$CI_JOB_TIMESTAMP"
+
+tests:
+  stage: tests
+  image: node:18-alpine
+  allow_failure: false
+  script:
+    - npm ci
+    - npm run test
 
 # create Docker image for TEST on each commit on `develop`
 deploy_test:
