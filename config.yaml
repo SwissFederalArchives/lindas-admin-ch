@@ -54,6 +54,12 @@ middlewares:
     methods: GET
     config:
       path: views/technology.hbs
+  events:
+    module: trifid-core/middlewares/view.js
+    paths: /events/
+    methods: GET
+    config:
+      path: views/events.hbs
 
   ckan:
     module: "@zazuko/trifid-plugin-ckan"
@@ -131,12 +137,18 @@ middlewares:
     config:
       namespace: header
       entries:
-        - path: /linked-data-day/
-          label: Linked Data Day
         - path: /datasets/
           label: Datacatalog
         - path: /sparql/
           label: Query Data
+        #        - path: /documentation/
+        #          label: Documentation
+        #        - path: /governance/
+        #          label: Linked Data Governance
+        #        - path: /technology/
+        #          label: Linked Data Technology
+        - path: /events/
+          label: Events
 
   content:
     module: file:plugins/content/index.js
@@ -172,3 +184,10 @@ middlewares:
       namespace: lindas-technology
       directory: file:content/technology
       mountPath: /technology/
+  content-events:
+    module: file:plugins/content/index.js
+    order: 80
+    config:
+      namespace: lindas-events
+      directory: file:content/events
+      mountPath: /events/
