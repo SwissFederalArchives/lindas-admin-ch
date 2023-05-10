@@ -36,7 +36,7 @@ middlewares:
     config:
       path: views/welcome.hbs
 
-   documentation:
+  documentation:
     module: trifid-core/middlewares/view.js
     paths: /documentation/
     methods: GET
@@ -137,8 +137,6 @@ middlewares:
     config:
       namespace: header
       entries:
- #       - path: /linked-data-day/
- #         label: Linked Data Day
         - path: /datasets/
           label: Datacatalog
         - path: /sparql/
