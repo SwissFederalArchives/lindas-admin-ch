@@ -1,1 +1,0 @@
-Sehe [Englisch](?lang=en)
