@@ -1,6 +1,6 @@
 ## Meetup Linked Data
 
-Nach dem ersten Linked Data Day treffen sich die Nutzerinnen und Nutzer am 6. Juni 2023 zum ersten «Meetup Linked Data», um sich über die aktuellen Linked Data-Projekte auszutauschen. Hybride Kurzpräsentationen und ein informeller Apéro bieten die Gelegenheit, über aktuelle Fragen zu Linked Data zu diskutieren. Das Linked Data Meetup ist eine Zusammenarbeit des BAR mit der BFH.
+Nach dem ersten Linked Data Day treffen sich die Nutzerinnen und Nutzer am 6. Juni 2023 zum ersten «Meetup Linked Data», um sich über die aktuellen Linked Data-Projekte auszutauschen. Hybride Kurzpräsentationen und ein informeller Apéro bieten die Gelegenheit, über aktuelle Fragen zu Linked Data zu diskutieren. Das Meetup Linked Data ist eine Zusammenarbeit des BAR mit der BFH.
 
 
 ### Daten und Veranstaltungsorte
