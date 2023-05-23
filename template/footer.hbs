@@ -22,7 +22,7 @@
           <div class="footer-information__entry footer-information__entry">
             <h3>Browse this resource in</h3>
             <div class="footer-information__download">
-              <a href="/graph-explorer/" class="footer__link">Graph Explorer</a><br />
+              <a href="/graph-explorer/?resources={{entityUrl}}" class="footer__link">Graph Explorer</a><br />
               <a href="/sparql/#query=PREFIX%20rdf%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0A%0ASELECT%20%2A%20WHERE%20%7B%0A%20%20%3C{{entityUrl}}%3E%20%3Fpred%20%3Fobj%20.%0A%7D%20LIMIT%20100&requestMethod=POST&contentTypeConstruct=application%2Fn-triples%2C*%2F*%3Bq%3D0.9&contentTypeSelect=application%2Fsparql-results%2Bjson%2C*%2F*%3Bq%3D0.9&outputFormat=table" class="footer__link">SPARQL</a>
             </div>
           </div>

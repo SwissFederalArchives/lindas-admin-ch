@@ -54,6 +54,12 @@ middlewares:
     methods: GET
     config:
       path: views/technology.hbs
+  about:
+    module: trifid-core/middlewares/view.js
+    paths: /about/
+    methods: GET
+    config:
+      path: views/about.hbs
   events:
     module: trifid-core/middlewares/view.js
     paths: /events/
@@ -141,6 +147,8 @@ middlewares:
           label: Datacatalog
         - path: /sparql/
           label: Query Data
+        - path: /about/
+          label: About Lindas
         #        - path: /documentation/
         #          label: Documentation
         #        - path: /governance/
@@ -163,6 +171,13 @@ middlewares:
       namespace: lindas-root
       directory: file:content/root-pages
       mountPath: /
+  content-about:
+    module: file:plugins/content/index.js
+    order: 80
+    config:
+      namespace: about-lindas
+      directory: file:content/about
+      mountPath: /about/
   content-documentation:
     module: file:plugins/content/index.js
     order: 80

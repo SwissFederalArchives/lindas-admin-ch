@@ -24,9 +24,11 @@
     "start:int": "DATASET_BASE_URL=https://ld.admin.ch/ SPARQL_ENDPOINT_URL=https://int.lindas.admin.ch/query SPARQL_USERNAME=public SPARQL_PASSWORD=public SPARQL_PROXY_CACHE_PREFIX=default SPARQL_PROXY_CACHE_CLEAR_AT_STARTUP=true trifid -c config.local.yaml",
     "start:prod": "DATASET_BASE_URL=https://ld.admin.ch/ SPARQL_ENDPOINT_URL=https://lindas.admin.ch/query SPARQL_USERNAME=public SPARQL_PASSWORD=public SPARQL_PROXY_CACHE_PREFIX=default SPARQL_PROXY_CACHE_CLEAR_AT_STARTUP=true trifid -c config.local.yaml",
     "start:local": "npm run start:test",
-    "test": "standard"
+    "test": "standard && mocha"
   },
   "devDependencies": {
-    "standard": "^17.0.0"
+    "mocha": "^10.2.0",
+    "standard": "^17.0.0",
+    "supertest": "^6.3.3"
   }
 }
