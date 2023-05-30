@@ -7,7 +7,7 @@ Das [Bundesarchiv](https://www.bar.admin.ch/bar/de/home.html) stellt den Linked 
 ## Ansprechstellen und beteiligte Personen
 
 **Allgemeiner Kontakt**:<br>
-[Email LINDAS Support](mailto:support.lindas@bar.admin.ch)
+[LINDAS Support](mailto:support.lindas@bar.admin.ch)
 
 **Projektmanager**:
 [Jean-Luc Cochard](mailto:Jean-luc.cochard@bar.admin.ch)
