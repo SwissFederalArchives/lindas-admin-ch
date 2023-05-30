@@ -16,3 +16,5 @@ Mit Hilfe des [Graph Explorers](https://lindas.admin.ch/graph-explorer/) können
 
 Die Visualisierungssoftware [visualize.admin.ch](https://visualize.admin.ch) ermöglicht es, mit Hilfe des Cube Creators transformierte Daten in wenigen Schritten anschaulich zu visualisieren. Dieses Werkzeug ist auch für interessierte Nutzende ohne vertiefte Kenntnisse benutzbar.
 
+![Visualize](/static-assets/img/visualize.jpg)
+

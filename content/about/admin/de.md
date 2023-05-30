@@ -9,13 +9,13 @@ Das [Bundesarchiv](https://www.bar.admin.ch/bar/de/home.html) stellt den Linked 
 **Allgemeiner Kontakt**:<br>
 [Email LINDAS Support](mailto:support.lindas@bar.admin.ch)
 
-**Projektmanager**
+**Projektmanager**:
 [Jean-Luc Cochard](mailto:Jean-luc.cochard@bar.admin.ch)
 
-**Technischer Support**
+**Technischer Support**:
 [Pierre Dumas](mailto:pierre.dumas@bar.admin.ch)
 
-**Hochschulpraktikant**
+**Hochschulpraktikant**:
 [Claudio Di Gallo](mailto:claudio.digallo@bar.admin.ch)
 
 ## Geschichte von LINDAS

@@ -1,8 +1,6 @@
 # Auf LINDAS basierende Applikationen
 
-## Applikationen, die LINDAS Daten nutzen
-
-Folgende öffentlichen Applikationen nutzen (teilweise im Hintergrund) Daten von LINDAS:
+Folgende öffentlichen Applikationen nutzen (teilweise im Hintergrund) bereits Daten von LINDAS:
 
 * [visualize.admin.ch](https://visualize.admin.ch/) Visualisierung von Datensätzen (aufgewertet mit Annotationen)
 * [infosm.ld.admin.ch](https://www.infosm.blv.admin.ch/) Applikation zu Tierseuchen und deren Ausbreitung

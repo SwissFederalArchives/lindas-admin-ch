@@ -148,7 +148,7 @@ middlewares:
         - path: /sparql/
           label: Query Data
         - path: /about/
-          label: About Lindas
+          label: About LINDAS
         #        - path: /documentation/
         #          label: Documentation
         #        - path: /governance/
