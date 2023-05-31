@@ -14,7 +14,7 @@ Dieser Service umfasst eine Reihe von Tools zur Datenumwandlung und -integration
 **Allgemeiner Kontakt**:<br>
 [LINDAS Support](mailto:support.lindas@bar.admin.ch)
 
-**Projektmanager**:
+**Produkt Manager**:
 [Jean-Luc Cochard](mailto:Jean-luc.cochard@bar.admin.ch)
 
 **Technischer Support**:
