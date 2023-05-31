@@ -25,4 +25,4 @@ Dieser Service umfasst eine Reihe von Tools zur Datenumwandlung und -integration
 
 ## Geschichte von LINDAS
 
-LINDAS wurde zwischen 2017 und 2020 in einem Projekt des Bundesarchivs (BAR) mit der Unterstützung des Staatssekretariats für Wirtschaft (SECO) und in enger Zusammenarbeit mit dem Bundesamt für Umwelt (BAFU) aufgebaut. Für die weitere Entwicklung und den Betrieb ist das BAR verantwortlich.
+LINDAS wurde zwischen 2017 und 2020 in dem Projekt Linked Data Plattform des Bundesarchivs (BAR) mit der Unterstützung des Staatssekretariats für Wirtschaft (SECO) und in enger Zusammenarbeit mit dem Bundesamt für Umwelt (BAFU) aufgebaut. Für die weitere Entwicklung und den Betrieb ist das BAR verantwortlich.
