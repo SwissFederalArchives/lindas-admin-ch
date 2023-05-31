@@ -11,7 +11,8 @@ Als Graphdatenbank Produkt wird [Stardog](https://www.stardog.com/platform/) ein
 
 Eine [GitLab-Instanz] (https://gitlab.ldbar.ch/) dient dazu, die Daten für LINDAS mit Hilfe von CI/CD-Pipelines vorzubereiten, bevor sie als RDF im Triplestore gespeichert werden.
 
-## Konfiguration der Datenkonvertierungen
+## Datenkonvertierungen
+
 
 
 
