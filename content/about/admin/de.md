@@ -20,10 +20,8 @@ Dieser Service umfasst eine Reihe von Tools zur Datenumwandlung und -integration
 [Jean-Luc Cochard](mailto:Jean-luc.cochard@bar.admin.ch)
 
 **Technischer Support**:
-[Pierre Dumas](mailto:pierre.dumas@bar.admin.ch)
-
-**Hochschulpraktikant**:
-[Claudio Di Gallo](mailto:claudio.digallo@bar.admin.ch)
+[Pierre Dumas](mailto:pierre.dumas@bar.admin.ch) - Anwendungsverantwortlicher   
+[Claudio Di Gallo](mailto:claudio.digallo@bar.admin.ch) - Hochschulpraktikant
 
 ## Geschichte von LINDAS
 
