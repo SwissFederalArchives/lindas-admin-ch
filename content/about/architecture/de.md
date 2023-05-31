@@ -13,7 +13,7 @@ Eine [GitLab-Instanz] (https://gitlab.ldbar.ch/) dient dazu, die Daten für LIND
 
 ## Datenkonvertierungen
 
-Der [Cube Creator](/content/about/tools/de.md#cube-creator) erleichtert die Konvertierung von Daten in RDF, wenn diese als multidimensionale Würfel betrachtet werden können.
+Der [Cube Creator](/content/about/tools/#cube-creator) erleichtert die Konvertierung von Daten in RDF, wenn diese als multidimensionale Würfel betrachtet werden können.
 
 ## Dokumentation von Datenstrukturen
 
