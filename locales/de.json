@@ -1,15 +1,10 @@
 {
-  
   "_menu_top": "Alle Menupunkte der obersten Ebene",
-  
   "Datacatalog": "Datensätze",
   "Query Data": "Daten Abfragen",
   "About LINDAS": "Über LINDAS",
   "Events": "Veranstaltungen",
-
-
   "_menu_about_lindas": "",
-
   "About LINDAS short": "Über LINDAS",
   "About LINDAS long": "Was ist LINDAS, wer sind die Ansprechstellen und was ist die Geschichte von LINDAS.",
   "Architecture short": "Architektur",
@@ -20,18 +15,12 @@
   "Applications long": "Welche Applikationen existieren bereits, die LINDAS Daten nutzen.",
   "Ecosystem short": "LINDAS Ökosystem",
   "Ecosystem long": "Welche Werkzeuge beinhaltet das LINDAS Ökosystem, um einen durchgehenden Datenfluss zu ermöglichen.",
- 
-  
   "_menu_events": "",
-
   "Linked Data Day 2023 short": "Linked Data Day 2023",
   "Linked Data Day 2023 long": "Ziel dieser Veranstaltung war es, die LINDAS-Nutzergemeinschaft zu stärken und über die aktuellen Entwicklungen zu informieren.",
   "Linked Data Meetup short": "Linked Data Meetup",
-  "Linked Data Meetup long" : "Regelmässige Treffen bieten den Nutzerinnen und Nutzern von Linked Data eine Plattform, um Informationen über die laufenden Linked Data Projekte auszutauschen.",
-
-  
+  "Linked Data Meetup long": "Regelmässige Treffen bieten den Nutzerinnen und Nutzern von Linked Data eine Plattform, um Informationen über die laufenden Linked Data Projekte auszutauschen.",
   "_other": "",
-  
   "Documentation": "Dokumentation",
   "Linked Data Governance": "Linked Data Governance",
   "Linked Data Technology": "Linked Data Technologie",

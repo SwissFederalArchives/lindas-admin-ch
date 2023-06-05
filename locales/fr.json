@@ -10,7 +10,7 @@
   "Linked Data Day 2023 short": "Linked Data Day 2023",
   "Linked Data Day 2023 long": "L'objectif de cette conférence était de renforcer les liens au sein de la communauté des utilisateurs et utilisatrices de LINDAS.",
   "Linked Data Meetup short": "Meetup Linked Data",
-  "Linked Data Meetup long" : "Rencontres régulières pour permettre aux utilisateurs d'échanger des informations sur les projets Linked Data en cours.",
+  "Linked Data Meetup long": "Rencontres régulières pour permettre aux utilisateurs d'échanger des informations sur les projets Linked Data en cours.",
   "Read more": "Read more",
   "homePageYouTubeVideoID": "VWVsCMnh4BA",
   "Administrative Questions short": "Questions administratives",
@@ -36,5 +36,6 @@
   "Links short": "Collection de liens",
   "Links long": "Compilation et commentaires de différentes sources externes (vidéo, pages web, livres) traitant de Linked Data pour les débutants et les experts.",
   "Tools short": "Outils",
-  "Tools long": "Collection de différents outils pour travailler avec Linked Data."
+  "Tools long": "Collection de différents outils pour travailler avec Linked Data.",
+  "About LINDAS": "About LINDAS"
 }
