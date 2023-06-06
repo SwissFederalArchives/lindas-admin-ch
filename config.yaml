@@ -151,8 +151,8 @@ middlewares:
           label: About LINDAS
         #        - path: /documentation/
         #          label: Documentation
-        #        - path: /governance/
-        #          label: Linked Data Governance
+        - path: /governance/
+          label: LD Governance
         #        - path: /technology/
         #          label: Linked Data Technology
         - path: /events/

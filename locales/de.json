@@ -3,7 +3,9 @@
   "Datacatalog": "Datensätze",
   "Query Data": "Daten Abfragen",
   "About LINDAS": "Über LINDAS",
+  "Governance": "LD Governance",
   "Events": "Veranstaltungen",
+  
   "_menu_about_lindas": "",
   "About LINDAS short": "Über LINDAS",
   "About LINDAS long": "Was ist LINDAS, wer sind die Ansprechstellen und was ist die Geschichte von LINDAS.",
@@ -15,11 +17,17 @@
   "Applications long": "Welche Applikationen existieren bereits, die LINDAS Daten nutzen.",
   "Ecosystem short": "LINDAS Ökosystem",
   "Ecosystem long": "Welche Werkzeuge beinhaltet das LINDAS Ökosystem, um einen durchgehenden Datenfluss zu ermöglichen.",
+  
+  "_menu_governance": "",
+  "Core Entities short": "Zentrale Entitäten",
+  "Core Entities long": "Was sind zentrale Entitäten, Listen von zentralen Entitäten und ihre Funktion.",
+
   "_menu_events": "",
   "Linked Data Day 2023 short": "Linked Data Day 2023",
   "Linked Data Day 2023 long": "Ziel dieser Veranstaltung war es, die LINDAS-Nutzergemeinschaft zu stärken und über die aktuellen Entwicklungen zu informieren.",
   "Linked Data Meetup short": "Linked Data Meetup",
   "Linked Data Meetup long": "Regelmässige Treffen bieten den Nutzerinnen und Nutzern von Linked Data eine Plattform, um Informationen über die laufenden Linked Data Projekte auszutauschen.",
+
   "_other": "",
   "Documentation": "Dokumentation",
   "Linked Data Governance": "Linked Data Governance",
@@ -30,8 +38,6 @@
   "Technical long": "Wie sieht die technische Architektur von LINDAS aus, welche Umgebungen existieren, welche Konventionen gelten für Namespaces und Namedgraphs. Anforderungen an die Datenpublikation, Infos zu Betrieb, Status und Support.",
   "API short": "",
   "API long": "",
-  "Core Entities short": "Zentrale Entitäten",
-  "Core Entities long": "Was sind zentrale Entitäten, Listen von zentralen Entitäten und ihre Funktion.",
   "Guidelines short": "Guidelines",
   "Guidelines long": "Guidelines zu Ontologien, Schemas, Controlled Vocabularies, zentralen Entitäten, Register, Shared Dimensions, tabellarischen- und versionierten Daten.",
   "Namespaces short": "Namespaces",
