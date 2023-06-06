@@ -2,7 +2,8 @@
   "About": "Introduction",
   "Datacatalog": "Jeux de données",
   "Query Data": "Consulter des données",
-  "About Lindas": "About LINDAS FR",
+  "About LINDAS": "A propos de LINDAS",
+  "LD Governance": "Gouvernance LD"
   "Documentation": "Documentation",
   "Linked Data Governance": "Gouvernance de Linked Data",
   "Linked Data Technology": "Technologie Linked Data",
@@ -36,6 +37,5 @@
   "Links short": "Collection de liens",
   "Links long": "Compilation et commentaires de différentes sources externes (vidéo, pages web, livres) traitant de Linked Data pour les débutants et les experts.",
   "Tools short": "Outils",
-  "Tools long": "Collection de différents outils pour travailler avec Linked Data.",
-  "About LINDAS": "About LINDAS"
+  "Tools long": "Collection de différents outils pour travailler avec Linked Data."
 }
