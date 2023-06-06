@@ -6,7 +6,6 @@ Dieser Service umfasst eine Reihe von Tools zur Datenumwandlung und -integration
 
 Über LINDAS können Schweizer Behörden ihre Daten in Form von Knowledge Graphs zur Verfügung stellen.
 
-![Gesamtsystem LINDAS](/static-assets/img/architecture-DE.jpg)
 ## Ansprechstellen und beteiligte Personen
 
 **Allgemeiner Kontakt**:
