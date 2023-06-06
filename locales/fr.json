@@ -20,7 +20,7 @@
   
 "_menu_governance": "",
   "Core Entities short": "Entités centrales",
-  "Core Entities long": "Qu'entend-on par *entités centrales*, *listes* d'entités centrales et quelle est leur fonction?.",
+  "Core Entities long": "Que sont les entités centrales? Quelles listes sont maintenues et quelle en est leur fonction?",
 
   "_menu_events": "",
   "Linked Data Day 2023 short": "Linked Data Day 2023",
@@ -37,10 +37,6 @@
   "Technical long": "Quelle est l'architecture technique de LINDAS, quels sont les environnements existants, quelles sont les conventions applicables aux namesspaces  et aux noms de graphes? Exigences en matière de publication de données, informations sur le fonctionnement, le statut et le support.",
   "API short": "Accès à l'API",
   "API long": "La manière d'accéder aux données de LINDAS via SPARQL est décrite pour différents langages de programmation",
-  "Architecture short": "Architecture",
-  "Architecture long": "Informations sur l'architecture des différents Triple Stores de l'administration fédérale et sur les requêtes fédérées.",
-  "Core Entities short": "Entités centrales",
-  "Core Entities long": "Que sont les entités centrales? Quelles listes sont maintenues et quelle en est leur fonction?",
   "Guidelines short": "Directives",
   "Guidelines long": "Directives sur les ontologies, les schémas, les vocabulaires contrôlés, les entités centrales, les registres, les dimensions partagées, les données tabulaires et les données versionnées.",
   "Namespaces short": "Domaines web",
