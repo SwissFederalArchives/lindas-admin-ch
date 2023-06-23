@@ -36,36 +36,36 @@ middlewares:
     config:
       path: views/welcome.hbs
 
-  documentation:
+  ecosystem:
     module: trifid-core/middlewares/view.js
-    paths: /documentation/
+    paths: /ecosystem/
     methods: GET
     config:
-      path: views/documentation.hbs
+      path: views/ecosystem.hbs
+  data-usage:
+    module: trifid-core/middlewares/view.js
+    paths: /data-usage/
+    methods: GET
+    config:
+      path: views/data-usage.hbs
   governance:
     module: trifid-core/middlewares/view.js
     paths: /governance/
     methods: GET
     config:
       path: views/governance.hbs
-  technology:
+  know-how:
     module: trifid-core/middlewares/view.js
-    paths: /technology/
+    paths: /know-how/
     methods: GET
     config:
-      path: views/technology.hbs
-  about:
+      path: views/know-how.hbs
+  community:
     module: trifid-core/middlewares/view.js
-    paths: /about/
+    paths: /community/
     methods: GET
     config:
-      path: views/about.hbs
-  events:
-    module: trifid-core/middlewares/view.js
-    paths: /events/
-    methods: GET
-    config:
-      path: views/events.hbs
+      path: views/community.hbs
 
   ckan:
     module: "@zazuko/trifid-plugin-ckan"
@@ -144,19 +144,19 @@ middlewares:
       namespace: header
       entries:
         - path: /datasets/
-          label: Datacatalog
+          label: Data Catalog
         - path: /sparql/
           label: Query Data
-        - path: /about/
-          label: About LINDAS
-        #        - path: /documentation/
-        #          label: Documentation
+        - path: /ecosystem/
+          label: Ecosystem
+        - path: /data-usage/
+          label: Data Usage
         - path: /governance/
-          label: LD Governance
-        #        - path: /technology/
-        #          label: Linked Data Technology
-        - path: /events/
-          label: Events
+          label: Governance
+        - path: /know-how/
+          label: Know How
+        - path: /community/
+          label: Community
 
   content:
     module: file:plugins/content/index.js
@@ -171,20 +171,20 @@ middlewares:
       namespace: lindas-root
       directory: file:content/root-pages
       mountPath: /
-  content-about:
+  content-ecosystem:
     module: file:plugins/content/index.js
     order: 80
     config:
-      namespace: about-lindas
-      directory: file:content/about
-      mountPath: /about/
-  content-documentation:
+      namespace: lindas-ecosystem
+      directory: file:content/ecosystem
+      mountPath: /ecosystem/
+  content-data-usage:
     module: file:plugins/content/index.js
     order: 80
     config:
-      namespace: lindas-documentation
-      directory: file:content/documentation
-      mountPath: /documentation/
+      namespace: lindas-data-usage
+      directory: file:content/data-usage
+      mountPath: /data-usage/
   content-governance:
     module: file:plugins/content/index.js
     order: 80
@@ -192,17 +192,17 @@ middlewares:
       namespace: lindas-governance
       directory: file:content/governance
       mountPath: /governance/
-  content-technology:
+  content-know-how:
     module: file:plugins/content/index.js
     order: 80
     config:
-      namespace: lindas-technology
-      directory: file:content/technology
-      mountPath: /technology/
-  content-events:
+      namespace: lindas-know-how
+      directory: file:content/know-how
+      mountPath: /know-how/
+  content-community:
     module: file:plugins/content/index.js
     order: 80
     config:
-      namespace: lindas-events
-      directory: file:content/events
-      mountPath: /events/
+      namespace: lindas-community
+      directory: file:content/community
+      mountPath: /community/
