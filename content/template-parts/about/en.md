@@ -1,5 +1,3 @@
-## Das Linked Data Ökosystem LINDAS
+## The Linked Data Ecosystem LINDAS
 
-In diesen Abschnitten werden Informationen aufgeführt, die die Spezifika des Linked Data Ökosystems LINDAS der schweizerischen Eigenossenschaft betreffen.
-
-to be translated in english
+These sections list information that pertains to the **specifics of the federal government's Linked Data Ecosystem LINDAS**.

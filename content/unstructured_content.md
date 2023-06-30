@@ -10,6 +10,10 @@ Die Daten in LINDAS werden mit Hilfe von verschiedenen Namespaces organisiert un
 
 Ein wichtiges Prinzip im Arbeiten mit Linked Data ist die Möglichkeit, innerhalb einer einzigen SPARQL Query mehrere Triplestores gleichzeitig abzufragen. In diesem Fall spricht man von einer [Federated Query](https://www.w3.org/TR/sparql11-federated-query/).
 
+## Verweis auf eine bestimmte Sprache einer bestimmten Seite
+
+[Content only available in German](/governance/?lang=de)
+
 
 ## API (von Claudio)
 
