@@ -16,7 +16,7 @@ Auf Stufe Bundesverwaltung werden Ontologien unter https://schema.ld.admin.ch en
 
 ### schema.org
 
-Die Initiative unter https://schema.org ist ebenfall kollaborativ und stellt eine sehr allgemeine, domainübergreifende Ontologie zur Verfügung, um Dinge des Alltags zu beschreiben. schema.org ist weit verbreitet und eine gute erste Anlaufstelle, um passende Klassen und passendes Vokabular zu finden.
+Die Initiative unter https://schema.org ist ebenfalls kollaborativ und stellt eine sehr allgemeine, domainübergreifende Ontologie zur Verfügung, um Dinge des Alltags zu beschreiben. schema.org ist weit verbreitet und eine gute erste Anlaufstelle, um passende Klassen und passendes Vokabular zu finden.
 
 ### SKOS
 
@@ -34,7 +34,7 @@ Die Idee der Controlled Voacabularies entspricht eigentlich nicht den Grundprinz
 
 ## Zentrale Entitäten
 
-Zentrale Entitäten (Core Entities) sind ein Spezialfall von Controlled Vocabularies. Das spezifische an den zentralen Entitäten ist die (mutmasslich) sehr häufige Wiederverwendung von solchen Entitäten und die Möglichkeit, ganz verschiedene Daten via eine zentrale Entität zu verlinken (alle Daten zu einem Kanton oder alle Events, die während eines bestimmten Quartals passiert sind oder alle Aufgaben für die ein bestimmtes Bundesamt verantwortlich ist). Mehr dazu siehe [hier](/governance/core-concepts/).
+Zentrale Entitäten (Core Entities) sind ein Spezialfall von Controlled Vocabularies. Das spezifische an den zentralen Entitäten ist die (mutmasslich) sehr häufige Wiederverwendung von solchen Entitäten und die Möglichkeit, ganz verschiedene Daten via eine zentrale Entität zu verlinken (alle Daten zu einem Kanton oder alle Events, die während eines bestimmten Quartals passiert sind oder alle Aufgaben für die ein bestimmtes Bundesamt verantwortlich ist). Mehr dazu siehe [hier](/governance/core-entities/).
 
 ## Register
 
@@ -45,14 +45,6 @@ Beispiel mit einem Kanton: Die zentrale Entität für den Kanton Fribourg ist un
 ## Shared Dimensions
 
 Shared Dimensions sind ein Begriff aus dem Cube Creator und bezeichnet letztlich Controlled Vocabularies resp. Core Entities, die benötigt werden, um CSV Daten in Linked Data zu transformieren. Also beispielsweise die Kantone oder bestimmte Kategorien in der Holzwirtschaft etc.
-
-## Tabellarische Daten: cube.link
-
-Tabellarische Daten können mit Hilfe der [cube.link](https://cube.link) Ontologie in Linked Data transformiert werden. Eine Hilfe dazu ist der Cube Creator, der speziell für die Datenintegration in LINDAS erstellt wurde.
-
-## Versionierte Daten: version.link
-
-Falls sich Resourcen über die Zeit ändern und der zeitliche Verlauf wichtig ist, kann mit Hilfe der [version.link](https://version.link) Ontologie diese zeitliche Entwicklung abgebildet werden.
 
 ## Evolution der einzelnen Konzepte
 
