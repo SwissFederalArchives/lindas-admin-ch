@@ -30,13 +30,13 @@
   
   "_Menu Governance": "",
     "Namespaces short" : "Espaces de noms",
-    "Namespaces long" : "Espaces de nommage de la Confédération, anatomie et aperçu des espaces de nommage possibles, demander de nouveaux sous-domaines.<br>--> anglais uniquement",
+    "Namespaces long" : "Espaces de nommage de la Confédération, anatomie et aperçu des espaces de nommage possibles, demander de nouveaux sous-domaines.&#10;&#13;--> anglais uniquement",
     "URI Templates short" : "Modèles URI",
-    "URI Templates long" : "Quels modèles sont utilisés pour construire des URI pour LINDAS.<br>--> anglais uniquement",
+    "URI Templates long" : "Quels modèles sont utilisés pour construire des URI pour LINDAS.&#10;&#13;--> anglais uniquement",
     "Core Entities short" : "Entités centrales",
-    "Core Entities long" : "Que sont les entités centrales, les listes d'entités centrales et leur fonction.<br>--> anglais uniquement",
+    "Core Entities long" : "Que sont les entités centrales, les listes d'entités centrales et leur fonction.&#10;&#13;--> anglais uniquement",
     "Concepts short" : "Concepts",
-    "Concepts long" : "Informations sur : les ontologies, les schémas, les vocabulaires contrôlés, les registres, les dimensions partagées.<br>--> anglais uniquement",
+    "Concepts long" : "Informations sur : les ontologies, les schémas, les vocabulaires contrôlés, les registres, les dimensions partagées.&#10;&#13;--> anglais uniquement",
   
   "_Menu Know How": "",
     "About Linked Data short" : "A propos de Linked Data",
