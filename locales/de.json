@@ -1,5 +1,5 @@
 {
-    "_Menu Top": "All Top Level Menu Points",
+  "_Menu Top": "All Top Level Menu Points",
     "Data Catalog": "Datensätze",
     "Query Data": "Daten abfragen",
     "Ecosystem": "Ökosystem",
@@ -7,8 +7,8 @@
     "Governance": "Governance",
     "Know How": "Know How",
     "Community": "Community",
-  
-    "_Menu Ecosystem": "",
+
+  "_Menu Ecosystem": "",
     "About LINDAS short": "Über LINDAS",
     "About LINDAS long": "Was ist LINDAS, wer sind die Ansprechstellen und was ist die Geschichte von LINDAS.",
     "LINDAS Ecosystem short": "Das LINDAS Ökosystem",
@@ -17,8 +17,8 @@
     "Publish Data long": "Wer kann auf LINDAS Daten publizieren, wie ist das Vorgehen und welche Anforderungen an den Datenschutz gelten.",
     "Applications short": "Anwendungen",
     "Applications long": "Welche Applikationen existieren bereits, die LINDAS Daten nutzen.",
-  
-    "_Menu Data Usage": "",
+
+  "_Menu Data Usage": "",
     "Data Overview short": "Überblick über die Daten",
     "Data Overview long": "Welche Datensätze aus welchen Domänen sind auf LINDAS vorhanden.",
     "Search Datasets short": "Datensätze suchen",
@@ -27,8 +27,8 @@
     "Data Usage Types long": "Welche technischen Möglichkeiten zur Nutzung von LINDAS Daten existieren.",
     "Fedlex short": "Fedlex",
     "Fedlex long": "Alle Informationen über Linked Data der Bundesrechtsplattform Fedlex der Bundeskanzlei.",
-  
-    "_Menu Governance": "",
+
+  "_Menu Governance": "",
     "Namespaces short": "Namespaces",
     "Namespaces long": "Namespaces des Bundes, Anatomie und Überblick über mögliche Namespaces, neue Subdomains beantragen.",
     "URI Templates short": "URI Templates",
@@ -37,8 +37,8 @@
     "Core Entities long": "Was sind zentrale Entitäten, Listen von zentralen Entitäten und ihre Funktion.",
     "Concepts short": "Konzepte",
     "Concepts long": "Informationen zu: Ontologien, Schemas, Controlled Vocabularies, Register, Shared Dimensions.",
-  
-    "_Menu Know How": "",
+
+  "_Menu Know How": "",
     "About Linked Data short": "Über Linked Data",
     "About Linked Data long": "Was ist Linked Data und welche Vorteile ergeben sich aus der Nutzung von Linked Data.",
     "Tutorials short": "Tutorials",
@@ -47,8 +47,8 @@
     "Data Models long": "Beschreibung verschiedener Datenmodelle, die in LINDAS zur Anwendung kommen.",
     "Resources short": "Ressourcen",
     "Resources long": "Links auf hilfreiche Ressourcen, um die Grundlagen von Linked Data zu lernen.",
-  
-    "_Menu Community": "",
+
+  "_Menu Community": "",
     "News short": "Neuigkeiten",
     "News long": "Neuigkeiten rund um das Linked Data Ökosystem LINDAS.",
     "Linked Data Day short": "Linked Data Day",
@@ -57,8 +57,8 @@
     "Linked Data Meetup long": "Rück- und Ausblick zu den regelmässig stattfindenden PraktikerInnen-Treffen für Linked Data NutzerInnen.",
     "Communication Channels short": "Kommunikationskanäle",
     "Communication Channels long": "Welche Kommunikationskanäle rund um LINDAS existieren.",
-  
-    "_Div": "",
+
+  "_Div": "",
     "homePageYouTubeVideoID": "c9miuepW03A"
-  }
+}
   
