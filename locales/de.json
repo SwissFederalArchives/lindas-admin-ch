@@ -46,7 +46,7 @@
     "Data Models short": "Datenmodelle",
     "Data Models long": "Beschreibung verschiedener Datenmodelle, die in LINDAS zur Anwendung kommen.",
     "FA Queries short": "Frequently Asked Queries",
-    "FA Queries long": "Sammlung von häufig nachgefragten SPARQL Queries inklusive Erklärungen zu den Abfragen.",
+    "FA Queries long": "Sammlung von häufig nachgefragten SPARQL Queries inklusive Erklärungen zu den Abfragen.\n\n--> nur in Englisch",
     "Resources short": "Ressourcen",
     "Resources long": "Links auf hilfreiche Ressourcen, um die Grundlagen von Linked Data zu lernen.",
 
