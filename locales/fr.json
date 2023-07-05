@@ -30,7 +30,7 @@
   
   "_Menu Governance": "",
     "Namespaces short" : "Espaces de noms",
-    "Namespaces long" : "Espaces de nommage de la Confédération, anatomie et aperçu des espaces de nommage possibles, demander de nouveaux sous-domaines.\n--> anglais uniquement",
+    "Namespaces long" : "Espaces de nommage de la Confédération, anatomie et aperçu des espaces de nommage possibles, demander de nouveaux sous-domaines.\n\n--> anglais uniquement",
     "URI Templates short" : "Modèles URI",
     "URI Templates long" : "Quels modèles sont utilisés pour construire des URI pour LINDAS.\n--> anglais uniquement",
     "Core Entities short" : "Entités centrales",

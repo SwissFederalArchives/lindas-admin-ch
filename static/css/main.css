@@ -3844,12 +3844,14 @@ video::cue {
   padding-right: 1.5rem;
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
-  white-space: break-spaces;
 }
 .card__body > :not([hidden]) ~ :not([hidden]){
   --tw-space-y-reverse: 0;
   margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+}
+.card__newline{
+  white-space: break-spaces;
 }
 .card__title{
   font-size: 1.125rem;
