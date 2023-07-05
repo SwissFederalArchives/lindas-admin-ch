@@ -45,6 +45,8 @@
     "Tutorials long": "Step-by-step instructions on how to work with LINDAS data in the form of interactive notebooks.",
     "Data Models short": "Data Models",
     "Data Models long": "Description of different data models used in LINDAS.",
+    "FA Queries short": "Frequently Asked Queries",
+    "FA Queries long": "Collection of frequently asked SPARQL queries including explanations of the queries.",
     "Resources short": "Resources",
     "Resources long": "Links to helpful resources to learn the basics of Linked Data.",
 
