@@ -3844,6 +3844,7 @@ video::cue {
   padding-right: 1.5rem;
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
+  white-space: break-spaces;
 }
 .card__body > :not([hidden]) ~ :not([hidden]){
   --tw-space-y-reverse: 0;
