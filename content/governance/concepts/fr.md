@@ -1,0 +1,1 @@
+Cette partie de la documentation technique est uniquement disponible en [anglais](/governance/concepts/?lang=en).
