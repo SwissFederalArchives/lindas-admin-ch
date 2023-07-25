@@ -10,6 +10,32 @@ Die Daten in LINDAS werden mit Hilfe von verschiedenen Namespaces organisiert un
 
 Ein wichtiges Prinzip im Arbeiten mit Linked Data ist die Möglichkeit, innerhalb einer einzigen SPARQL Query mehrere Triplestores gleichzeitig abzufragen. In diesem Fall spricht man von einer [Federated Query](https://www.w3.org/TR/sparql11-federated-query/).
 
+## Interne Triplestores
+
+Oben genannte technischen Details beziehen sich alle auf den öffentlich zugänglichen und offenen Teil von LINDAS, welcher technisch in der Datenbank mit dem Namen 'lindas' umgesetzt ist. Für interne Applikationen ist es möglich, vom offenen Teil unabhängige Datenbanken mit anderen Regelwerken zu benützen. Für Details hierzu kann der LINDAS Support kontaktiert werden.
+
+## Anforderungen an die Datenpublikation
+
+Jede Publikation welche auf PROD zugelassen werden soll, muss ein definiertes Minimum an Metadaten aufweisen. Die dazu nötigen Attribute der [Dataset](https://www.w3.org/TR/void/) Klasse, sind unter https://schema.ld.admin.ch/LindasDataset definiert und müssen unter `<domain>/.well-known/dataset/<dataset>` verfügbar sein. Zusätzlich müssen alle Datasets unter der jeweiligen `<domain>/.well-known/void` Adresse zur Bekanntmachung aufgeführt sein.
+
+Als Beispiel können https://culture.ld.admin.ch/.well-known/dataset/isil und https://culture.ld.admin.ch/.well-known/void konsultiert werden.
+
+## Betrieb, Status und Support
+
+### Allgemeiner und Administrativer Support
+
+Für allgemeinen Fragen, auch für neue Interessierte, welche LINDAS nutzen möchten, steht der Lindas Support [support-lindas@bar.admin.ch](mailto:support-lindas@bar.admin.ch) zur Verfügung.
+
+### Technischer Betrieb und Support
+
+Der Betrieb von LINDAS wird durch [VSHN](https://www.vshn.ch/) sichergestellt. Datenlieferanten bekommen einen Zugang zum [Ticket System](https://control.vshn.net/), welches für sämtliche Anfragen zu neuen Namedgraphs, Benutzern und weiteren Fragen zum Betrieb benutzt werden kann.
+
+### Status
+
+Der allgemeine Status der technischen Systeme, sowie geplante Wartungsarbeiten können unter https://status.ldbar.ch/ abgerufen werden. Es ist auch möglich, dort eine eMail Adresse zu hinterlegen um aktiv informiert zu werden.
+
+
+
 ## Verweis auf eine bestimmte Sprache einer bestimmten Seite
 
 [Content only available in German](/governance/?lang=de)
