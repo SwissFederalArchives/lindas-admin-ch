@@ -51,14 +51,14 @@
     "Resources long" : "Liens vers des ressources utiles pour maîtriser les bases en matière de données liées.\n\n(Contenu en anglais uniquement)",
   
   "_Menu Community": "",
-    "News short" : "Nouvelles",
-    "News long" : "Nouveautés concernant l'écosystème Linked Data LINDAS.",
-    "Linked Data Day short" : "Journée des données liées",
-    "Linked Data Day long" : "Retour et perspectives sur les Linked Data Days annuels des Archives fédérales.",
-    "Linked Data Meetup short" : "Réunion sur les données liées",
-    "Linked Data Meetup long" : "Rétrospective et perspectives sur les rencontres régulières de praticiens pour les utilisateurs de Linked Data.",
+    "News short" : "Actualités",
+    "News long" : "Nouveautés concernant l'écosystème de données liées LINDAS.",
+    "Linked Data Day short" : "Linked Data Day",
+    "Linked Data Day long" : "Rétrospectives et perspectives à propos de cette manifestation organisée chaque année par les Archives fédérales.",
+    "Linked Data Meetup short" : "Meetup Linked Data",
+    "Linked Data Meetup long" : "Rétrospective et perspectives à propos de cette rencontre pour praticiens qui se tient régulièrement.",
     "Communication Channels short" : "Canaux de communication",
-    "Communication Channels long" : "Quels sont les canaux de communication existants autour de LINDAS.",
+    "Communication Channels long" : "Quels sont les canaux de communication qui existent autour de LINDAS.",
   
   "_Div": "",
     "homePageYouTubeVideoID": "VWVsCMnh4BA"
