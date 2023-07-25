@@ -36,7 +36,7 @@
     "Core Entities short" : "Entités centrales",
     "Core Entities long" : "Que sont les entités centrales, quelles en sont les listes et leur fonction?\n\n(Contenu en anglais uniquement)",
     "Concepts short" : "Guides divers",
-    "Concepts long" : "Informations sur les ontologies, les schémas, les vocabulaires contrôlés, les registres, les dimensions partagées *(shared dimensions)*.\n\n(Contenu en anglais uniquement)",
+    "Concepts long" : "Informations sur les ontologies, les schémas, les vocabulaires contrôlés, les registres, les dimensions partagées (<em>shared dimensions</em>).\n\n(Contenu en anglais uniquement)",
   
   "_Menu Know How": "",
     "About Linked Data short" : "A propos de Linked Data",
