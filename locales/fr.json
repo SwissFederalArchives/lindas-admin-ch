@@ -30,7 +30,7 @@
   
   "_Menu Governance": "",
     "Namespaces short" : "Nommer les données liées",
-    "Namespaces long" : "Espaces de noms des données liées de la Confédération, anatomie et aperçu des sous-domaines disponibles. Comment requérir un nouveau sous-domaine?\n\n(Contenu en anglais uniquement)",
+    "Namespaces long" : "Espaces de noms des données liées de la Confédération, anatomie et aperçu des sous-domaines disponibles, nouveau sous-domaine.\n\n(Contenu en anglais uniquement)",
     "URI Templates short" : "Modèles d'URI",
     "URI Templates long" : "Quelle structure doit être respectée pour construire des URI dans LINDAS?\n\n(Contenu en anglais uniquement)",
     "Core Entities short" : "Entités centrales",
