@@ -1,3 +1,3 @@
-## Linked Data Know How
+## Enrichir votre savoir-faire
 
-Ces sections présentent **des informations utiles sur le thème des Linked Data**. En outre, des liens vers des tutoriels et d'autres ressources sont proposés pour faciliter le travail avec les Linked Data et les modèles de données utilisés.
+Développez **vos connaissances en matière de données liées** et explorez les divers tutoriels et ressources, qui vous faciliteront le travail avec les données liées et les modèles de données dans LINDAS. 
