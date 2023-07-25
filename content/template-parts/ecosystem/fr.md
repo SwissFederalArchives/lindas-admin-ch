@@ -1,3 +1,3 @@
-# L'écosystème Linked Data LINDAS
+# LINDAS : un écosystème de données liées
 
-Dans ces sections, vous trouverez des informations sur l'ensemble de l'écosystème **Linked Data LINDAS** de la Confédération suisse.
+Découvrez en quelques clics en quoi consiste l’**écosystème de données liées LINDAS**, un service de la Confédération suisse. 
