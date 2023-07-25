@@ -37,6 +37,8 @@
     "Core Entities long": "What are central entities, lists of central entities and their function.",
     "Concepts short": "Concepts",
     "Concepts long": "Information on: ontologies, schemas, controlled vocabularies, registers, shared dimensions.",
+    "Authorization short": "Access Control",
+    "Authorization long": "Conventions for named graphs as an element of access control and for user names.",
 
   "_Menu Know How": "",
     "About Linked Data short": "About Linked Data",
