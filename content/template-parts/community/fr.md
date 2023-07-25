@@ -1,3 +1,3 @@
 ## La communauté LINDAS
 
-Autour de l'écosystème LINDAS existe une **communauté de personnes engagées dans l'administration, la recherche et l'industrie**. Les nouvelles et les événements de cette communauté sont partagés dans ces sections.
+Autour de l'écosystème LINDAS, il existe une **communauté de personnes engagées issues de l'administration, de la recherche et de l'industrie**. Découvrez les actualités et les manifestations de cette communauté.
