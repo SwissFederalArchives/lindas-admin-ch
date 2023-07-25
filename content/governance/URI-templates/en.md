@@ -10,3 +10,16 @@ Namespaces thus have the path `https://<subdomain>.ld.admin.ch/<dataset>/*`.
 * `<dataset>` is the name of the dataset as chosen by the respective project.
 
 Example: the data on the "International Standard Identifier for Libraries and Related Organizations" can be found at https://culture.ld.admin.ch/isil
+
+## Capitalization in Namespaces
+
+The namespaces except the URI slug are generally defined with lower case letters exclusively (e.g. https://culture.ld.admin.ch/isil).
+
+## Guidelines for the URI slug
+
+The last part (after the last '/') of the URI is called *slug* and has some special guidelines concerning capitalization and numerus that stem from well established principles:
+
+* name **resources** in **lower-case or UpperCamelCase** (e.g. https://register.ld.admin.ch/opendataswiss/category/national-economy)
+* name **classes** in **UpperCamelCase** (e.g. https://schema.ld.admin.ch/ChemicalCompound)
+* name **classes** with **singular nouns** (e.g. https://schema.ld.admin.ch/PoliticalMunicipality)
+* name **properties** with **lowerCamelCase** (e.g. https://schema.ld.admin.ch/atomicNumber)

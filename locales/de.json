@@ -32,7 +32,7 @@
     "Namespaces short": "Namespaces",
     "Namespaces long": "Namespaces des Bundes, Anatomie und Überblick über mögliche Namespaces, neue Subdomains beantragen.",
     "URI Templates short": "URI Templates",
-    "URI Templates long": "Welche Templates werden genutzt, um URI für LINDAS zu konstruieren.",
+    "URI Templates long": "Welche Templates werden genutzt, um URI für LINDAS zu konstruieren. \n\n--> nur in Englisch",
     "Core Entities short": "Zentrale Entitäten",
     "Core Entities long": "Was sind zentrale Entitäten, Listen von zentralen Entitäten und ihre Funktion.",
     "Concepts short": "Konzepte",
