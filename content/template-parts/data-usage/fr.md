@@ -1,3 +1,3 @@
-## Utilisation des données LINDAS
+## Utiliser les données de LINDAS
 
-Dans ces paragraphes, nous montrons quels **ensembles de données existent sur LINDAS** et comment les trouver. En outre, il est expliqué comment travailler avec les **données liées de LINDAS**.
+Quels sont les **jeux de données disponibles sur LINDAS** et comment y accéder? Découvrez-le sur cette page et apprenez comment travailler avec les **données liées de LINDAS**. 
