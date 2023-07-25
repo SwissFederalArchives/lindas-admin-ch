@@ -1,3 +1,3 @@
-## Gouvernance des Linked Data au sein de l'administration fédérale
+## Gouvernance des données liées de l'administration fédérale
 
-Ces sections présentent des informations qui concernent la **Gouvernance des Linked Data**. On y décrit les décisions de conception supérieures prises autour de la transformation et de l'utilisation de Linked Data et dont il faut tenir compte.
+Découvrez différents aspects relatifs à la gouvernance des données liées. Quelles sont les règles fondamentales concernant le design des données à appliquer dans la transformation et l’utilisation des données liées? 
