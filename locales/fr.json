@@ -10,13 +10,13 @@
 
   "_Menu Ecosystem": "",
     "About LINDAS short": "À propos de LINDAS",
-    "About LINDAS long": "Qu'est LINDAS, qui sont les personnes de contact et quel est l'historique de cette solution?",
+    "About LINDAS long": "Qu'est-ce que LINDAS, comment ce service a-t-il vu le jour et qui sont les personnes de contact?",
     "LINDAS Ecosystem short": "L'écosystème LINDAS",
-    "LINDAS Ecosystem long": "Quels sont les outils inclus dans l'écosystème LINDAS pour permettre un flux de données continu pour les Linked Data.",
+    "LINDAS Ecosystem long": "De quels outils est doté LINDAS afin de permettre un flux continu de production et consultation de données liées.",
     "Publish Data short": "Publier des données",
-    "Publish Data long": "Qui peut publier des données dans LINDAS, quelle est la procédure à suivre et quelles sont les exigences en matière de protection des données?",
+    "Publish Data long": "Qui peut publier des données sur LINDAS, quelle est la procédure à suivre et quelles sont les exigences en matière de protection des données?",
     "Applications short": "Applications",
-    "Applications long": "Quelles applications existent actuellement, qui utilisent LINDAS?",
+    "Applications long": "Quelles sont les applications qui utilisent déjà les données de LINDAS?",
 
   "_Menu Data Usage": "",
     "Data Overview short": "Aperçu des données",
