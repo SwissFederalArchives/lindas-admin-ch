@@ -20,13 +20,13 @@
 
   "_Menu Data Usage": "",
     "Data Overview short": "Aperçu des données",
-    "Data Overview long": "Quels enregistrements de quels domaines sont disponibles sur LINDAS.\n\n--> anglais uniquement",
-    "Search Datasets short" : "Rechercher des enregistrements",
-    "Search Datasets long" : "Comment trouver des jeux de données sur LINDAS.\n\n--> anglais uniquement",
+    "Data Overview long": "Quelles sont les données disponibles sur LINDAS ainsi que les domaines couverts?\n\n(Contenu en anglais uniquement)",
+    "Search Datasets short" : "Rechercher des jeux de données",
+    "Search Datasets long" : "Comment trouver des jeux de données sur LINDAS.\n\n(Contenu en anglais uniquement)",
     "Data Usage Types short" : "Possibilités d'utilisation des données",
-    "Data Usage Types long" : "Quelles sont les possibilités techniques d'utilisation des données LINDAS.\n\n--> anglais uniquement",
+    "Data Usage Types long" : "Quelles sont les différentes possibilités techniques pour utiliser des données de LINDAS.\n\n(Contenu en anglais uniquement)",
     "Fedlex short" : "Fedlex",
-    "Fedlex long" : "Toutes les informations sur les Linked Data de la plate-forme juridique fédérale Fedlex de la Chancellerie fédérale.\n\n--> anglais uniquement",
+    "Fedlex long" : "Retrouvez toutes les informations sur les données liées de Fedlex, la plate-forme du droit fédéral de la Chancellerie fédérale.\n\n(Contenu en anglais uniquement)",
   
   "_Menu Governance": "",
     "Namespaces short" : "Espaces de noms",
