@@ -1,3 +1,3 @@
 ## The LINDAS Community
 
-Around the LINDAS ecosystem exists a **community of dedicated individuals from government, research, and industry**. News and events from this community are shared in these sections.
+The LINDAS ecosystem is supported by a **community of dedicated individuals from government, research and industry**. These sections share news and events from this community.
