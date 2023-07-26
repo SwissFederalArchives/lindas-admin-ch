@@ -1,3 +1,3 @@
-## Linked Data Know How
+## Linked data know-how
 
-In these sections **know how around the topic Linked Data** is presented. In addition, tutorials and other resources are linked to support working with Linked Data and the data models used.
+These sections present **useful knowledge about linked data**. There are also links to tutorials and other resources to support working with linked data and the data models used.
