@@ -1,3 +1,3 @@
-## Linked Data Governance at the Federal Administration.
+## Linked data governance in the Federal Administration
 
-These sections list information that pertains to **Linked Data Governance**. Here we describe the overarching design decisions around the transformation and use of Linked Data that need to be considered.
+These sections contain information about **linked data governance**. They describe the overarching design decisions concerning the transformation and use of linked data that need to be considered.
