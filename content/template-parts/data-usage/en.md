@@ -1,3 +1,3 @@
-## Use of LINDAS data
+## Using LINDAS data
 
-In these sections it is shown which **data sets exist on LINDAS** and how they can be found. Furthermore, it is explained how to **work with the Linked Data from LINDAS**.
+These sections detail the **datasets available on LINDAS** and how they can be found. They also explain how to **work with the linked data from LINDAS**.
