@@ -13,7 +13,7 @@
 
   "_Footer": "All footer elements",
     "About_us": "About us",
-    "About_us-long": "Swiss Federal Archives provides the Linked Data Service LINDAS. This service includes a tool for data conversion and data integration as well as a data storage infrastructure (Triplestore)."
+    "About_us-long": "The Swiss Federal Archives preserve the documentation of government actions and make it accessible. Some of this information exist only available in digital form in databases. LINDAS is the solution that makes the content of these databases publicly available as knowledge graphs, directly searchable, and offering the best reuse potential.",
 
   "_Menu Ecosystem": "",
     "About LINDAS short": "About LINDAS",
