@@ -1,3 +1,4 @@
-# LINDAS : un écosystème de données liées
+# L’ecosistema dei dati collegati LINDAS
 
-Découvrez en quelques clics en quoi consiste l’**écosystème de données liées LINDAS**, un service de la Confédération suisse. 
+In queste sezioni sono riportate informazioni sull’**intero ecosistema dei dati collegati (linked data) LINDAS** della Confederazione Svizzera.
+
