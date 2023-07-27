@@ -1,10 +1,8 @@
-## Linked Data Meetup
+## Canaux de communication
 
-Suite au premier Linked Data Day, les utilisateurs et utilisatrices se rencontreront le 6 juin 2023 au premier "Linked Data Meetup" afin d'échanger sur les projets Linked Data actuels. De courtes présentations hybrides et un apéritif informel permettront de discuter de questions d'actualité concernant Linked Data. Le Linked Data Meetup est une collaboration entre les AFS et la HESB.
+Plusieurs canaux de communication existent sur lesquels l'équipe de LINDAS informe ses usagers.
 
-### Dates et lieux
+Pour les collaboratrices et collaborateurs de l'administration fédérale, il y a la communauté "Linked Data in der Bundesverwaltung" sur Viva Engage (https://web.yammer.com/main/groups/eyJfdHlwZSI6Ikdyb3VwIiwiaWQiOiI2ODU3NTU1OTY5In0) qui informe sur des événements intéressants ou des articles sur le sujet Linked Data.
 
-**6 juin 2023, 17:00 - 19:00** - Greenfield, Brückenstrasse 73, Berne et online (hybride)   
-**14 novembre 2023, 17:00 - 18:30** - Greenfield, Brückenstrasse 73, Berne et online (hybride) 
+Pour le public, c'est le compte Twitter des AFS qui est utilisé en priorité : https://twitter.com/CH_Bundesarchiv
 
-**[Plus d'informations et inscription pour le Linked Data Meetup (en allemand)](https://www.bfh.ch/wirtschaft/de/aktuell/fachveranstaltungen/linked-data-meetup-1-23/)**
