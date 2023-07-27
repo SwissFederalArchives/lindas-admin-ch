@@ -1,6 +1,6 @@
 ## Linked Data Meetup
 
-Suite au premier Linked Data Day, les utilisateurs et utilisatrices peuvent se rencontrer régulièrement lors de "Linked Data Meetup" afin d'échanger sur les projets Linked Data actuels. De courtes présentations hybrides et un apéritif informel permettent de discuter de questions d'actualité concernant Linked Data. Le Linked Data Meetup est une collaboration entre les AFS et la HESB.
+Pour donner suite au premier Linked Data Day, les personnes intéressées peuvent se rencontrer régulièrement lors de "Linked Data Meetup" afin d'échanger sur des projets de mise en oeuvre de Linked Data. De courtes présentations hybrides et un apéritif informel permettent de discuter de questions d'actualité concernant Linked Data. Le Linked Data Meetup est une collaboration entre les AFS et la HESB.
 
 ### Dates et lieux
 
