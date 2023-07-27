@@ -7,4 +7,4 @@ Dopo il primo Linked Data Day, gli utenti si incontreranno il 6 giugno 2023 al p
 **6 giugno 2023, dalle 17.00 alle 19.00** - Greenfield, Brückenstrasse 73, Berna e online (ibride)   
 **14 novembre 2023, dalle 17.00 alle 18.30** - Greenfield, Brückenstrasse 73, Berna e online (ibride) 
 
-**[Maggiori informazioni sul Meetup Linked Data e modulo d’iscrizione (in tedesco) ](https://www.bfh.ch/wirtschaft/de/aktuell/fachveranstaltungen/linked-data-meetup-1-23/)**
+**[Maggiori informazioni sul Meetup Linked Data e modulo d’iscrizione (in tedesco) ](https://www.bfh.ch/wirtschaft/de/aktuell/fachveranstaltungen/linked-data-meetup-2-23/)**
