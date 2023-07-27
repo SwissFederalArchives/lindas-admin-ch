@@ -10,11 +10,12 @@
     
   "_Header": "All header elements",
     "All federal authorities": "Toutes les autorités fédérales",
+    "All federal authorities Ref": "https://www.admin.ch/gov/fr/accueil.html",
 
   "_Footer": "All footer elements",
     "About_us": "Portrait",
-    "About_us-long": "Les Archives fédérales suisses garantissent la conservation et l'accès des documents en lien avec les activités de l'État.",
-    "About_extra-not-published": "Certaines de ces informations n'existent que sous forme numérique dans des bases de données. LINDAS est la solution qui rend le contenu de ces bases de données accessible au public sous forme de graphes de connaissances, directement consultables, et offrant le meilleur potentiel de réutilisation.",
+    "About_us-long": "Les Archives fédérales (AFS) mettent à disposition le service Linked Data LINDAS.",
+    "About_extra-not-published": "Les Archives fédérales suisses garantissent la conservation et l'accès des documents en lien avec les activités de l'État. Certaines de ces informations n'existent que sous forme numérique dans des bases de données. LINDAS est la solution qui rend le contenu de ces bases de données accessible au public sous forme de graphes de connaissances, directement consultables, et offrant le meilleur potentiel de réutilisation.",
 
 
 
