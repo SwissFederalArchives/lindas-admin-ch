@@ -73,7 +73,7 @@ middlewares:
     paths: /ckan
 
   entity-renderer:
-    module: "@zazuko/trifid-renderer-entity"
+    module: "@zazuko/trifid-entity-renderer"
     config:
       path: views/entity.hbs
       labelLoader:
