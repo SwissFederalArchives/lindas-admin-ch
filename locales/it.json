@@ -16,6 +16,8 @@
     "About_us": "Chi siamo",
     "About_us-long": "L'Archivio federale svizzero fornisce il Linked Data Service LINDAS.",
     "About_us-extra-not-published": "L’Archivio federale svizzero assicura la conservazione e l’accessibilità della documentazione dell’operato dello Stato. Alcune di queste informazioni esistono solo in forma digitale nei database. LINDAS è la soluzione che rende accessibile al pubblico il contenuto di questi database sotto forma di Knowledge Graphs direttamente ricercabili, offrendo il massimo potenziale di riutilizzo.",
+    "Legal Framework": "Basi legali",
+    "Legal Framework Ref": "https://www.admin.ch/gov/it/pagina-iniziale/basi-legali.html",
 
   "_Menu Ecosystem": "",
     "About LINDAS short": "Che cosa è LINDAS?",
@@ -46,6 +48,8 @@
     "Core Entities long" : "Che cosa sono le entità centrali? Elenchi di entità centrali e loro funzione.\n\n(Contenuto solo in inglese)",
     "Concepts short" : "Concetti",
     "Concepts long" : "Informazioni su ontologie, schemi, vocabolari controllati, registri, dimensioni condivise.\n\n(Contenuto solo in inglese)",
+    "Authorization short": "Controllo degli accessi",
+    "Authorization long": "Convenzioni per i grafi denominati come elemento di controllo degli accessi e per i nomi degli utenti.",
   
   "_Menu Know How": "",
     "About Linked Data short" : "Che cosa sono i dati collegati?",
@@ -72,4 +76,3 @@
   "_Div": "",
     "homePageYouTubeVideoID": "7QjSO8cj2TY"
 }
-
