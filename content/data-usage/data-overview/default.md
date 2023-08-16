@@ -1,17 +1,11 @@
 # Overview of the Data
 
-The following list showcases some datasets that are available on LINDAS. The list is grouped by keywords and not exhaustive.
+There are different possibilities to get an overview of the Data avaible in LINDAS.
 
-## Energy/Electricity
+## opendata.swiss Platform
 
-* [Switzerland energy balance](https://energy.ld.admin.ch/sfoe/bfe_ogd115_gest_bilanz/6): Switzerland's energy balance provides information on domestic production, import / export, storage, conversion, own consumption, transport and grid losses and consumption of the various energy carriers in Switzerland on an annual basis.
-* [Electricity tariff per provider](https://energy.ld.admin.ch/elcom/electricityprice): Electricity tariff per provider and municipality in Switzerland
-* [Median electricity tariff per canton](https://energy.ld.admin.ch/elcom/electricityprice-canton): Median electricity tariff per region & consumption profiles.
-* [Median electricity tariff for Switzerland](https://energy.ld.admin.ch/elcom/electricityprice-swiss): Median electricity tariff for Switzerland by consumption profiles.
+The opendata.swiss platform is the Swiss public administration’s central portal for Open Government Data (OGD). It allows to search for LINDAS datasets as well. [This link](https://opendata.swiss/en/dataset/?linked_data=SPARQL) opens opendata.swiss search window with *SPARQL* as format preselected.
 
-## Budgeting/Accounting
+## Datasets per Keyword
 
-* [State accounts - Office](https://culture.ld.admin.ch/sfa/StateAccounts_Office/5)
-* [State accounts - Domain](https://culture.ld.admin.ch/sfa/StateAccounts_Domain/9)
-* [State accounts - Function](https://culture.ld.admin.ch/sfa/StateAccounts_Function/4)
-* [State accounts - Category](https://culture.ld.admin.ch/sfa/StateAccounts_Category/6)
+The following [SPARQL query](https://lindas.admin.ch/sparql/#query=SELECT%20DISTINCT%20%3Fdataset%20%3Fkeyword%20WHERE%20%7B%0A%20%20%3Fdataset%20%3FkeywordPredicate%20%3Fkeyword.%0A%20%20FILTER(%3FkeywordPredicate%20IN%20(%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2Fkeyword%3E%2C%20%3Chttp%3A%2F%2Fwww.w3.org%2Fns%2Fdcat%23keyword%3E%2C%20%3Chttps%3A%2F%2Fschema.org%2Fkeywords%3E))%0A%20%20FILTER(LANG(%3Fkeyword)%20%3D%20%22de%22)%0A%7D%20ORDER%20BY%20%3Fkeyword&endpoint=https%3A%2F%2Flindas.admin.ch%2Fquery&requestMethod=POST&tabTitle=Query&headers=%7B%7D&contentTypeConstruct=application%2Fn-triples%2C*%2F*%3Bq%3D0.9&contentTypeSelect=application%2Fsparql-results%2Bjson%2C*%2F*%3Bq%3D0.9&outputFormat=table) shows all the keywords of the different datasets.
