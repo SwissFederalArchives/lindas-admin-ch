@@ -6,7 +6,9 @@ Questo servizio comprende una serie di strumenti per la pubblicazione e l'utiliz
 
 Tramite LINDAS, le autorità svizzere possono rendere disponibili i loro dati sotto forma di Knowledge Graph. Questo può essere fatto sia per i dati aperti del governo (Linked Open Data) rivolti al pubblico in generale, sia per i dati interni all'amministrazione.
 
-<iframe class="item-16-9-ratio" frameborder="0" src="https://www.youtube-nocookie.com/embed/{{ i18n "homePageYouTubeVideoID" }}" allow="clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+Il seguente video offre una buona panoramica delle possibilità di base di LINDAS: 
+
+[![Video](http://img.youtube.com/vi/7QjSO8cj2TY/0.jpg)](http://www.youtube.com/watch?v=7QjSO8cj2TY "Video")
 
 ## Punti di contatto e persone coinvolte
 
