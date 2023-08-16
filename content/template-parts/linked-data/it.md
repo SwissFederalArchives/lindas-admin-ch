@@ -1,3 +1,3 @@
-### Che cosa sono i linked data?
+## Che cosa sono i Linked Data?
 
-Con l’espressione linked data si fa riferimento ad una tecnologia del web semantico che consente di collegare facilmente dati. I dati possono provenire dalle fonti più disparate. La Semantic University offre un [tutorial](http://www.cambridgesemantics.com/semantic-university/getting-started-semantics) per capire i principi fondamentali dei linked data e dei linguaggi RDF e SPARQL.
+I Linked Data sono una tecnologia grazie alla quale i dati possono essere facilmente messi in relazione tra loro in una forma universale - da qui il nome "Linked Data". Possono essere dati provenienti dalle aree tematiche e dalle origini più diverse.
