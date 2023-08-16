@@ -1,5 +1,7 @@
 # Data Access Management
 
+The data in LINDAS is organized and structured using various [namespaces](/governance/namespaces). Access control to the data is based on named graphs in combination with usernames.
+
 ## LINDAS Named Graph Conventions
 
 Named graphs in LINDAS are used exclusively for data management and authorization concepts. Named graphs may not be used for version management or at the application level. 
