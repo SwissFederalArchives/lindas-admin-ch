@@ -30,10 +30,6 @@ Der Betrieb von LINDAS wird durch [VSHN](https://www.vshn.ch/) sichergestellt. D
 
 Der allgemeine Status der technischen Systeme, sowie geplante Wartungsarbeiten können unter https://status.ldbar.ch/ abgerufen werden. Es ist auch möglich, dort eine eMail Adresse zu hinterlegen um aktiv informiert zu werden.
 
-### Volltextsuche
-
-Der von LINDAS verwendete Stardog Triplestore erlaubt die Volltextsuche via SPARQL. Details dazu sind in der [Stardog Dokumentation](https://docs.stardog.com/query-stardog/full-text-search#integration-with-sparql) zu finden. Hier eine [Beispiel-Volltextsuche](https://ld.admin.ch/sparql/#query=SELECT+DISTINCT+%3Fs+%3Fp+%3Fl%0AWHERE+%7B%0A++%3Fs+%3Fp+%3Fl.%0A++(%3Fl+%3Fscore)+%3Ctag%3Astardog%3Aapi%3Aproperty%3AtextMatch%3E+'Fraum%C3%BCnster'.%0A%7D%0A&contentTypeConstruct=text%2Fturtle&contentTypeSelect=application%2Fsparql-results%2Bjson&endpoint=https%3A%2F%2Fld.admin.ch%2Fquery&requestMethod=POST&tabTitle=Query+5&headers=%7B%7D&outputFormat=table), die nach dem Vorkommen des Begriffs 'Fraumünster' in allen Literals sucht.
-
 ### Integration via spezifischer Pipelines
 
 Sollen Daten automatisiert regelmässig in LINDAS publiziert werden oder handelt es sich um nicht tabellarische Daten mit hoher Komplexität, dann sind individualisierte Pipelines die richtige Lösung, um Daten in LINDAS zu integrieren. Diese Pipelines verarbeiten regelmässig automatisiert Daten aus elektronischen Quellen, reichern sie mit den entsprechendenen Meta Daten an und transformieren diese in Linked Data.
@@ -75,31 +71,6 @@ Datenschreibende Anwendungen benutzen die LINDAS INT Umgebung für die Entwicklu
 #### Lesende Applikation
 
 Rein lesende Applikationen benutzten auschliesslich LINDAS PROD. Als Ausnahme kann LINDAS INT benutzt werden, wenn die zu lesenden Daten noch in Entwicklung sind.
-
-# Linked Data Tools
-
-## Überblick über die Daten gewinnen
-* Mit Hilfe des [LINDAS Graph Explorers](https://ld.admin.ch/graph-explorer/) können die Daten aus LINDAS und insbesondere ihre Links zu anderen Daten grafisch exploriert und dargestellt werden.
-
-## Transformation zwischen LD Formaten
-* [RIOT](https://jena.apache.org/documentation/io/)
-* [RAPPER](https://librdf.org/raptor/rapper.html)
-
-## Cubes
-* [Cube Creator](https://int.cube-creator.lindas.admin.ch/app/)
-* [Cubes validieren](https://cube.link/#validate-the-cube)
-
-## Tranformationen von nicht Linked Data Quellen nach Linked Data
-### ETL
-#### Standards
-* [rml.io](https://rml.io/)
-* [r2rml](https://www.w3.org/TR/r2rml)
-
-#### Applikationen, Frameworks
-* [carml](https://github.com/carml/carml)
-
-### Live basierend auf Relationalen Datenbanken
-* [ontop](https://ontop-vkg.org/)
 
 ## Verweis auf eine bestimmte Sprache einer bestimmten Seite
 

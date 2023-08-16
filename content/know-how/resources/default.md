@@ -15,6 +15,8 @@
 * [W3C RDF Primer](https://www.w3.org/TR/rdf11-primer/)
 * [W3C SPARQL Overview](https://www.w3.org/TR/sparql11-overview/)
 * [W3C OWL Primer](https://www.w3.org/TR/2012/REC-owl2-primer-20121211/)
+* [R2RML](https://www.w3.org/TR/r2rml): R2RML - RDB to RDF Mapping Language
+
 
 ## More Resources
 
@@ -22,3 +24,13 @@
 * [Linked Data Patterns](https://patterns.dataincubator.org/book/index.html). A pattern catalogue for modelling, publishing, and consuming Linked Data.
 * [Data Science Group Uni Paderborn: Semantic Web learning resources](https://dice-research.org/news/2022-07-26_Learn-RDF/).
 * [Zazuko Get Started Pages](https://zazuko.com/get-started/). Entry point into the Linked Data universe for JavaScript and Python developers as well as an introduction to SPARQL.
+
+## Linked Data Tools
+
+This section lists a variety of software tools to work with Linked Data.
+
+### Data Transformation (Extract Transform Load - ETL)
+
+* [RML.io](https://rml.io/): Generate knowledge graphs - Applications for Linux, Windows, and macOS machines for generating knowledge graphs. They rely on declarative rules that define how the knowledge graphs are generated.
+* [CARML](https://github.com/carml/carml): CARML is a java library that transforms structured sources to RDF as declared in an RML mapping, in accordance with the RML spec.
+* [Ontop](https://ontop-vkg.org/): Ontop is a Virtual Knowledge Graph system. It exposes the content of arbitrary relational databases as knowledge graphs. These graphs are virtual, which means that data remains in the data sources instead of being moved to another database.

@@ -12,6 +12,10 @@ This approach works better, if the data structure of the triples in question is 
 
 The [SPARQL Interface of LINDAS](/sparql) allows to write SPARQL queries directly in the webbrowser in a slightly assisted way. These queries can be directly sent to the SPARQL endpoint of LINDAS and the result will be shown in the web browser as well. These results can be downloaded as a CSV file. The technical product used for this SPARQL interface is [YASGUI](https://triply.cc/docs/yasgui-api/).
 
+## Full Text Search
+
+The Stardog Triplestore used by LINDAS allows full text search via SPARQL. Details can be found in the [Stardog documentation](https://docs.stardog.com/query-stardog/full-text-search#integration-with-sparql). Here is a [sample full text search](https://ld.admin.ch/sparql/#query=SELECT+DISTINCT+%3Fs+%3Fp+%3Fl%0AWHERE+%7B%0A++%3Fs+%3Fp+%3Fl.%0A++(%3Fl+%3Fscore)+%3Ctag%3Astardog%3Aapi%3Aproperty%3AtextMatch%3E+'Fraum%C3%BCnster'. %0A%7D%0A&contentTypeConstruct=text%2Fturtle&contentTypeSelect=application%2Fsparql-results%2Bjson&endpoint=https%3A%2F%2Fld.admin.ch%2Fquery&requestMethod=POST&tabTitle=Query+5&headers=%7B%7D&outputFormat=table), which searches for occurrences of the term 'Fraumünster' in all literals.
+
 ## SPARQL API
 
 If there is a need to further process LINDAS data programmatically, the best way to do so, is to call the data via the SPARQL API (also called SPARQL endpoint). For this, a standard HTML POST request can be sent to the SPARQL API that contains the SPARQL query and some header information. The resulting answer can then be processed further.
