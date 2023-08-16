@@ -7,4 +7,3 @@ Pour les collaboratrices et collaborateurs de l'administration fédérale, il y 
 Pour le public, nous sommes présents sur les réseaux sociaux suivants :
 - [Twitter](https://twitter.com/CH_Bundesarchiv)
 - [Linkedin](https://www.linkedin.com/company/bar-afs)
-
