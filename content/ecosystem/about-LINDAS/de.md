@@ -6,6 +6,8 @@ Dieser Service umfasst eine Reihe von Werkzeugen zum Publizieren und Nutzen von 
 
 Über LINDAS können Schweizer Behörden ihre Daten in Form von Knowledge Graphs zur Verfügung stellen. Dies kann sowohl für offene Behördendaten (Linked Open Data), die sich an die Allgemeinheit richten, als auch für verwaltungsinterne Daten geschehen.
 
+<iframe class="item-16-9-ratio" frameborder="0" src="https://www.youtube-nocookie.com/embed/{{ i18n "homePageYouTubeVideoID" }}" allow="clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe>
+
 ## Ansprechstellen und beteiligte Personen
 
 **Allgemeiner Kontakt**:
