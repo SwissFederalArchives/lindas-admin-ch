@@ -1,3 +1,3 @@
-### Qu’entend-t-on par données liées (Linked Data)?
+## Qu'est-ce que Linked Data?
 
-Le concept de données liées (en anglais Linked Data) désigne la mise en réseau de données sur une plateforme en ligne dédiée et repose sur une technologie faisant partie intégrante du web sémantique. Ces données peuvent provenir de sources diverses et variées et traiter de thèmes différents. Sur son site Internet, la société [Cambridge Semantics](http://www.cambridgesemantics.com/semantic-university/getting-started-semantics) propose (rubrique „Semantic University“) des tutoriels permettant de se familiariser avec les principes de base des données liées, du format RDF (Resource Description Framework) et du protocole SPARQL.
+Linked Data (données liées) est une technologie qui permet de mettre facilement en relation des données sous une forme universelle - d'où le nom "Linked Data". Il peut s'agir de données de thèmes et d'origines très divers.
