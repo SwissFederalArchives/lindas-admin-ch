@@ -8,7 +8,7 @@ Named graphs in LINDAS are used exclusively for data management and authorizatio
 
 All named graphs are located at `https://lindas.admin.ch/*`, regardless of namespace or organization.
 
-Named graphs have the structure `https://lindas.admin.ch/<orga>/<dataset>`. (e.g. https://lindas.admin.ch/nl/isil)
+Named graphs have the structure `https://lindas.admin.ch/<orga>/<dataset>`. (e.g. https://lindas.admin.ch/sfa/ais)
 
 * `<orga>` is the English [termdat](https://www.termdat.bk.admin.ch/) abbreviation of the organization.
 * `<dataset>` is the name of the dataset as chosen by the respective project
