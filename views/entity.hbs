@@ -19,24 +19,30 @@
       </div>
     </div>
 
-        {{#if metadata.namedGraphs}}
-          <div class="metadata">
-            <div class="metadata-title">Named graphs</div>
-            <div class="metadata-table">
-              {{#each metadata.namedGraphs}}
-                <div class="metadata-row">
-                  {{#if this.namedGraph}}
-                    <div><a href="{{this.namedGraph}}">{{this.namedGraphLabel}}</a></div>
-                  {{/if}}
-                  {{#unless this.namedGraph}}
-                    <div>{{this.namedGraphLabel}}</div>
-                  {{/unless}}
-                  <div>{{this.quadsCount}}</div>
-                </div>
-              {{/each}}
-            </div>
-          </div>
-        {{/if}}
+    {{#if metadata.namedGraphs}}
+        <table>
+          <caption>Number of results per named graph</caption>
+          <thead>
+            <tr>
+              <th>Graph name</th>
+              <th>Number of results</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each metadata.namedGraphs}}
+              <tr>
+                {{#if this.namedGraph}}
+                  <td><a href="{{this.namedGraph}}">{{this.namedGraphLabel}}</a></td>
+                {{/if}}
+                {{#unless this.namedGraph}}
+                  <td>{{this.namedGraphLabel}}</td>
+                {{/unless}}
+                <td>{{this.quadsCount}}</td>
+              </tr>
+            {{/each}}
+          </tbody>
+        </table>
+    {{/if}}
 
   </div>
 </div>
