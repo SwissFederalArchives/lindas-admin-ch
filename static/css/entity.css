@@ -2,7 +2,7 @@
 /* Entity header CSS */
 
 .entity-header {
-    margin-bottom: 15px;
+    bottom: 15px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -12,12 +12,10 @@
 .entity-header h2 {
     margin-top: 15px;
     margin-bottom: 15px;
-    font-size: 32px;
     text-align: center;
 }
 
 .entity-header a {
-    font-size: 36px;
     text-align: left;
     font-weight: 700;
 }
@@ -29,7 +27,7 @@
     --color-text-on-secondary: #000000;
     --color-black: #000000;
     --color-grey: #4f4f4f;
-    --border: #ddd;
+    --border: #eee;
 }
 
 .entity-body a,
@@ -82,13 +80,9 @@
 }
 
 .entity-body .row > .value {
-    wrap-option: wrap;
     width: 65%;
     word-break: break-all;
-    margin-left: 1rem;
-    margin-right: auto;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin: 1rem;
 }
 
 .entity-body ul {
@@ -109,8 +103,7 @@
 }
 
 .entity-body div .bring-down {
-    color: var(--color-grey);
-    font-size: 0.7rem;
+    color: #ababab;
 }
 
 .entity-body .vocab {
@@ -141,33 +134,4 @@
 
 .entity-body .img-container img {
     max-width: 200px;
-}
-
-/*Metadata CSS*/
-
-.metadata {
-    display: table;
-    border: #cac9c9 solid 1px;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.metadata-title {
-    display: table-row;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.metadata-table {
-    display: table-row-group;
-}
-
-.metadata-row {
-    display: table-row;
-}
-
-.metadata-row > div {
-    display: table-cell;
-    padding: 5px;
 }
