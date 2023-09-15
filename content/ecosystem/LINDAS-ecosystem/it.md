@@ -8,7 +8,7 @@ LINDAS è un sistema completo per lavorare con i Linked Data durante l'intero ci
 
 Un elemento centrale per lavorare con i Linked Data è un triplestore (database a grafo), che memorizza i Linked Data e li rende accessibili per ulteriori usi con l'aiuto di query SPARQL. Attualmente esistono tre diversi triplestore di questo tipo all'interno dell'Amministrazione federale. Quello centrale è LINDAS, un archivio generico e indipendente dagli argomenti per l'intera amministrazione federale. Storicamente, esistono anche altri due triplestore di Swisstopo e della Cancelleria federale.
 
-Nome | URL | Query Endpoint | SPARQL Endpoint | Prodotto tecnico |
+Nome | URL | SPARQL Endpoint | SPARQL Interface | Prodotto tecnico |
 |---------------|------------------------------|---------------------------------------------|-------------------------------------------|----------------------------------------------------------|
 | LINDAS        | https://ld.admin.ch          | https://ld.admin.ch/query                   | https://ld.admin.ch/sparql                | [Stardog](https://www.stardog.com/platform/)             |
 | Swisstopo     | https://geo.ld.admin.ch      | https://geo.ld.admin.ch/query               | https://geo.ld.admin.ch/sparql            | [Fuseki](https://jena.apache.org/documentation/fuseki2/) |
