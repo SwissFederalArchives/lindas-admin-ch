@@ -94,6 +94,9 @@ middlewares:
   graph-explorer:
     module: trifid-plugin-graph-explorer
     paths: /graph-explorer
+    config:
+      dataLabelProperty: <http://schema.org/name> | rdfs:label
+      schemaLabelProperty: <http://schema.org/name> | rdfs:label
 
   spex:
     module: trifid-plugin-spex
