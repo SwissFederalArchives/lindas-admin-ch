@@ -5,7 +5,7 @@
 * Official Federal Gazette
 * Official Compilation of Federal Legislation
 * Classified Compilation of Federal Legislation, i.e. the consolidated version of federal legislation and international law texts
-* Consolidation procedures
+* Consultation procedures
 * Register of sectoral agreements with the European Union
 * Interstate treaties
 
