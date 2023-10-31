@@ -19,7 +19,7 @@ The namespaces except the URI slug are generally defined with lower case letters
 
 The last part (after the last '/') of the URI is called *slug* and has some special guidelines concerning capitalization and numerus that stem from well established principles:
 
-* name **resources** in **lower-case or UpperCamelCase** (e.g. https://register.ld.admin.ch/opendataswiss/category/national-economy)
+* name **resources** in **lower-case** (e.g. https://register.ld.admin.ch/opendataswiss/category/national-economy)
 * name **classes** in **UpperCamelCase** (e.g. https://schema.ld.admin.ch/ChemicalCompound)
 * name **classes** with **singular nouns** (e.g. https://schema.ld.admin.ch/PoliticalMunicipality)
 * name **properties** with **lowerCamelCase** (e.g. https://schema.ld.admin.ch/atomicNumber)
