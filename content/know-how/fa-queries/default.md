@@ -79,15 +79,15 @@ Cube Creator generated Cubes in LINDAS have versions. To find the latest version
 
 ```sparql
 PREFIX schema: <http://schema.org/>
-PREFIX purl: <http://purl.org/dc/terms/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
 
 SELECT ?dataset WHERE {
   BIND("ubd0104" as ?id)
   ?dataset a schema:Dataset;
-          purl:identifier ?id.
+          dcterms:identifier ?id.
   
   FILTER NOT EXISTS {?dataset schema:expires ?expDate}
 }
 ```
 
-[Run this query in the YASGUI Interface of LINDAS](https://ld.admin.ch/sparql/#query=PREFIX%20schema%3A%20%3Chttp%3A%2F%2Fschema.org%2F%3E%0APREFIX%20purl%3A%20%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0A%0ASELECT%20%3Fdataset%20WHERE%20%7B%0A%20%20BIND(%22ubd0104%22%20as%20%3Fid)%0A%20%20%3Fdataset%20a%20schema%3ADataset%3B%0A%20%20%20%20%20%20%20%20%20%20purl%3Aidentifier%20%3Fid.%0A%20%20%0A%20%20FILTER%20NOT%20EXISTS%20%7B%3Fdataset%20schema%3Aexpires%20%3FexpDate%7D%0A%7D&endpoint=https%3A%2F%2Fld.admin.ch%2Fquery&requestMethod=POST&tabTitle=Query%206&headers=%7B%7D&contentTypeConstruct=application%2Fn-triples%2C*%2F*%3Bq%3D0.9&contentTypeSelect=application%2Fsparql-results%2Bjson%2C*%2F*%3Bq%3D0.9&outputFormat=table)
+[Run this query in the YASGUI Interface of LINDAS](https://ld.admin.ch/sparql/#query=PREFIX%20schema%3A%20%3Chttp%3A%2F%2Fschema.org%2F%3E%0APREFIX%20dcterms%3A%20%3Chttp%3A%2F%2Fpurl.org%2Fdc%2Fterms%2F%3E%0A%0ASELECT%20%3Fdataset%20WHERE%20%7B%0A%20%20BIND(%22ubd0104%22%20as%20%3Fid)%0A%20%20%3Fdataset%20a%20schema%3ADataset%3B%0A%20%20%20%20%20%20%20%20%20%20dcterms%3Aidentifier%20%3Fid.%0A%20%20%0A%20%20FILTER%20NOT%20EXISTS%20%7B%3Fdataset%20schema%3Aexpires%20%3FexpDate%7D%0A%7D&endpoint=https%3A%2F%2Fld.admin.ch%2Fquery&requestMethod=POST&tabTitle=Query%206&headers=%7B%7D&contentTypeConstruct=application%2Fn-triples%2C*%2F*%3Bq%3D0.9&contentTypeSelect=application%2Fsparql-results%2Bjson%2C*%2F*%3Bq%3D0.9&outputFormat=table)
