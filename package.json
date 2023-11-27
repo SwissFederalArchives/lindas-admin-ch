@@ -5,7 +5,7 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "@zazuko/trifid-plugin-ckan": "^2.4.0",
+    "@zazuko/trifid-plugin-ckan": "^2.4.1",
     "hast-util-select": "^6.0.2",
     "rehype-autolink-headings": "^7.1.0",
     "rehype-slug": "^6.0.0",
