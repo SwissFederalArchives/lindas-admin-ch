@@ -15,3 +15,8 @@ Dockerfile @ludovicm67
 # Dependencies
 package.json @ludovicm67
 package-lock.json @ludovicm67
+
+# Other files
+.editorconfig @ludovicm67
+.eslintrc.js @ludovicm67
+.gitignore @ludovicm67
