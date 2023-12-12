@@ -1,0 +1,17 @@
+# Configuration of GitHub Actions
+.github/ @ludovicm67
+
+# Trifid plugins
+plugins/ @ludovicm67
+
+# Configuration files for Trifid
+config.yaml @ludovicm67
+config.local.yaml @ludovicm67
+
+# Docker configuration
+.dockerignore @ludovicm67
+Dockerfile @ludovicm67
+
+# Dependencies
+package.json @ludovicm67
+package-lock.json @ludovicm67
