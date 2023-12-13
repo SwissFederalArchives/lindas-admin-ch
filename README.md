@@ -64,6 +64,6 @@ The [gitops-main](https://gitlab.ldbar.ch/vshn/gitops-main) detects new images a
 
 To push the current version that is deployed on integration to production:
 
-- Go to [CI/CD -> Pipelines](https://gitlab.ldbar.ch/zazuko/lindas-admin-ch/-/pipelines).
-- Find your commit
-- Trigger the `deploy_prod` job
+- Go to the [Actions](https://github.com/SwissFederalArchives/lindas-admin-ch/actions) tab.
+- On the left, select the [`CI Workflow`](https://github.com/SwissFederalArchives/lindas-admin-ch/actions/workflows/ci.yaml) workflow.
+- You will see a table of all past runs of that workflow. On the first line, there is a select called `Run workflow`. Click on it, make sure `main` is the selected branch, and click the `Run workflow` button.
