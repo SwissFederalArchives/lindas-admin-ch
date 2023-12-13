@@ -5,7 +5,7 @@ This provides a server for the domain [lindas.admin.ch](https://lindas.admin.ch)
 ## Purpose
 
 - Website of lindas.admin.ch
-- Dereferencing of https://lindas.admin.ch/* and https://ld.admin.ch/*
+- Dereferencing of `https://lindas.admin.ch/*` and `https://ld.admin.ch/*`
 
 ## Local deployment
 
@@ -27,7 +27,6 @@ Simple changes can be done through clicking on the (c) symbol on the bottom of t
 The web pages are in [./views](/views) defined with and need to be referenced themselfs in the Routing below. Best is to copy a basic site (e.g. [publish.html](/views/publish.html)) to start a new web page.
 
 The web pages themself do refer in the code for the content to the multilingual versions of Markdown formated files in [./content](/content). (It is important to use the same name for the _.html and _.md similar that the link from (c) works.)
-)
 
 The paths and the menu is specified in [./config.json](config.json):
 
@@ -53,12 +52,12 @@ If something needs to be deployed quickly on PROD, there is no need to go throug
 
 ### Test
 
-Every commit to `develop` branch creates a new `test_<date_time>` container image in the project [gitlab registry](https://gitlab.ldbar.ch/zazuko/lindas-admin-ch/container_registry/).
+Every commit to `develop` branch creates a new `test_<date_time>` container image.
 The [gitops-main](https://gitlab.ldbar.ch/vshn/gitops-main) detects new images and deploys them automatically to https://test.lindas.admin.ch.
 
 ### Integration
 
-Every commit to `main` branch creates a new `int_<date_time>` container image in the project [gitlab registry](https://gitlab.ldbar.ch/zazuko/lindas-admin-ch/container_registry/).
+Every commit to `main` branch creates a new `int_<date_time>` container image.
 The [gitops-main](https://gitlab.ldbar.ch/vshn/gitops-main) detects new images and deploys them automatically to https://int.lindas.admin.ch.
 
 ### Production
