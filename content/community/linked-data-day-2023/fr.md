@@ -1,4 +1,4 @@
-![Linked Data Day, 09.03.2023, Welle 7, Berne](/static-assets/img/linked-data-day-2023.jpg)
+![Linked Data Day, 09.03.2023, Welle 7, Berne](/static/img/linked-data-day-2023.jpg)
 
 L'objectif de cette conférence était de renforcer les liens au sein de la communauté des utilisateurs et utilisatrices de LINDAS. Les fournisseurs de données qui publient déjà des Linked Data sur LINDAS et ceux qui souhaitent le faire à l'avenir ont ainsi eu l’occasion d’échanger et d’établir des contacts.
 
