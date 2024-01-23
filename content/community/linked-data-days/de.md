@@ -2,7 +2,7 @@
   
 ![   ](/static-assets/img/white-space-2.jpg)
 
-## Frühere Ausgaben des Linked Data Day
+## Bisherige Ausgaben des Linked Data Day
 
 * [2023](/community/linked-data-day-2023/)
 
