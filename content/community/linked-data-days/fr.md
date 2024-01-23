@@ -1,5 +1,5 @@
 
-![Linked Data Days](/static-assets/img/linked-data-days.jpg)
+![Linked Data Days](/static-assets/img/linked-data-days.png)
   
 ![   ](/static-assets/img/white-space-2.jpg)
 
