@@ -1,6 +1,6 @@
 ![Linked Data Day, 09.03.2023, Welle 7, Bern](/static-assets/img/linked-data-day-2023.jpg)
   
-![   ](static-assets/img/white-space-2.jpg)
+![   ](/static-assets/img/white-space-2.jpg)
   
 Das Ziel des ersten Linked Data Days der Bundesverwaltung war die Verbindungen innerhalb der LINDAS-Nutzergemeinschaft zu stärken. Datenanbieter und solchen, die es werden möchten, erhielten die Gelegenheit geben, sich zu aktuellen Entwicklungen untereinander auszutauschen und zu vernetzen.
 
