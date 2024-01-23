@@ -12,7 +12,7 @@ Fin de la conférence : **16h30**, suivi d'un apéritif
 
 ![   ](/static-assets/img/white-space-2.jpg)
 
-###Nouveautés 2024
+### Nouveautés 2024
 
 * La participation est aussi ouverte aux entreprises avec un nombre restreint de places
 * La participation sera payante afin de participer aux coûts d'organisation : par inscription, 50.- pour les administrations publiques et 250.- pour les entreprises privées
