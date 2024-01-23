@@ -7,6 +7,8 @@
 
 * [2023](/community/linked-data-day-2023/)
 
+  
+![   ](/static-assets/img/white-space-2.jpg)
 ## Prochaine édition
 Le programme est accessible [ici](/linked-data-day/)
 
