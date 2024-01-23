@@ -2,7 +2,7 @@
 
 ![   ](/static-assets/img/white-space-2.jpg)
 
-# Save the date
+# *"Save the date"*
 
 La prochaine édition du Linked Data Day aura lieu le **15 mai 2024**, à la Welle 7 à Berne à côté de la gare CFF. Le programme est encore en cours d'élaboration mais l'horaire de la journée est déjà défini.
 
