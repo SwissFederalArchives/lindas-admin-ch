@@ -2,5 +2,5 @@
   
 ![   ](/static-assets/img/white-space-2.jpg)                                                     
   
-Details zur vorherigen Ausgabe finden Sie hier [Community/Linked Data Day 2023](/community/linked-data-day-2023/?lang=de).
+
 
