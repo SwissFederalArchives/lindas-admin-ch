@@ -10,7 +10,7 @@ Beginn der Konferenz : **9.00 Uhr**, Aufzeichnung ab 8.30 Uhr.
 
 Ende der Konferenz: **16:30**, anschließend Aperitif
 
-Weitere Informationen finden Sie auf der folgende Website der BFH, [Linked Data Day 2024](https://www.bfh.ch/de/aktuell/fachveranstaltungen/linked-data-day-2024/) die an der Organisation dieser Veranstaltung mitwirkt.
+Weitere Informationen finden Sie auf der folgende Website der BFH: [Linked Data Day 2024](https://www.bfh.ch/de/aktuell/fachveranstaltungen/linked-data-day-2024/), die an der Organisation dieser Veranstaltung mitwirkt.
 
 ![   ](/static-assets/img/white-space-2.jpg)
 
