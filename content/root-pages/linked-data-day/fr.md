@@ -10,6 +10,8 @@ Début de la conférence : **9h00**, enregistrement à partir de 8h30
 
 Fin de la conférence : **16h30**, suivi d'un apéritif
 
+D'autres informations sont disponibles sur la page suivante du site de la BFH : [Linked Data Day 2024](https://www.bfh.ch/de/aktuell/fachveranstaltungen/linked-data-day-2024/) (en allemand uniquement), qui collabore à l'organisation de cette manifestation.
+
 ![   ](/static-assets/img/white-space-2.jpg)
 
 ### Nouveautés 2024
