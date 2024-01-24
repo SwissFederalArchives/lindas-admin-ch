@@ -4,6 +4,9 @@
 
 ## Bisherige Ausgaben des Linked Data Day
 
+aléskfj aésldfjasd élsakjf asdféljsadf saldfjasl dfalséjf asfdléjsad fasldf sadlfjas dfséldajfsa dfjsladfj sadfésldfj saédlfjsa dfélsjdf aséldfj asféljs f élasjdf as
+aslfj asélfs
+
 * [2023](/community/linked-data-day-2023/)
 
   
