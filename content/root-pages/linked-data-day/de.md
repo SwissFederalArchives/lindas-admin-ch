@@ -18,4 +18,5 @@ Ende der Konferenz: **16:30**, anschließend Aperitif
 * Es wird ein Beitrag an die Organisationskosten erhoben: pro Anmeldung 50.- für öffentliche Verwaltungen und 250.- für private Unternehmen.
 
 ![   ](/static-assets/img/white-space-2.jpg)
+
 Weitere Informationen finden Sie auf der folgende Website der BFH: [Linked Data Day 2024](https://www.bfh.ch/de/aktuell/fachveranstaltungen/linked-data-day-2024/), die an der Organisation dieser Veranstaltung mitwirkt.
