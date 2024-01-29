@@ -162,50 +162,45 @@ middlewares:
           label: Community
 
   content:
-    module: file:plugins/content/index.js
+    module: "@zazuko/trifid-markdown-content"
     order: 80
     config:
-      namespace: lindas
-      directory: file:content/template-parts
-  content-root:
-    module: file:plugins/content/index.js
-    order: 80
-    config:
-      namespace: lindas-root
-      directory: file:content/root-pages
-      mountPath: /
-  content-ecosystem:
-    module: file:plugins/content/index.js
-    order: 80
-    config:
-      namespace: lindas-ecosystem
-      directory: file:content/ecosystem
-      mountPath: /ecosystem/
-  content-data-usage:
-    module: file:plugins/content/index.js
-    order: 80
-    config:
-      namespace: lindas-data-usage
-      directory: file:content/data-usage
-      mountPath: /data-usage/
-  content-governance:
-    module: file:plugins/content/index.js
-    order: 80
-    config:
-      namespace: lindas-governance
-      directory: file:content/governance
-      mountPath: /governance/
-  content-know-how:
-    module: file:plugins/content/index.js
-    order: 80
-    config:
-      namespace: lindas-know-how
-      directory: file:content/know-how
-      mountPath: /know-how/
-  content-community:
-    module: file:plugins/content/index.js
-    order: 80
-    config:
-      namespace: lindas-community
-      directory: file:content/community
-      mountPath: /community/
+      defaults:
+        autoLink: true # create links from headings
+        idPrefix: "content-" # prefix for generated ids for headings
+        classes: # custom CSS classes for generated HTML elements
+          h1: h1
+          h2: h2
+          h3: h3
+          h4: h4
+          h5: h5
+          table: table
+
+      entries:
+        lindas:
+          directory: file:content/template-parts
+          # entries used in templates using `{{{ locals.markdown-content-plugin.lindas.XXXXXXXX }}}`
+
+        lindas-root:
+          directory: file:content/root-pages
+          mountPath: /
+
+        lindas-ecosystem:
+          directory: file:content/ecosystem
+          mountPath: /ecosystem/
+
+        lindas-data-usage:
+          directory: file:content/data-usage
+          mountPath: /data-usage/
+
+        lindas-governance:
+          directory: file:content/governance
+          mountPath: /governance/
+
+        lindas-know-how:
+          directory: file:content/know-how
+          mountPath: /know-how/
+
+        lindas-community:
+          directory: file:content/community
+          mountPath: /community/
