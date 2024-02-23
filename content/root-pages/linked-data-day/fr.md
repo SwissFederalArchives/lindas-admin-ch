@@ -5,13 +5,14 @@
 # Programme de la journée Linked Data 2024
 
 Le Linked Data Day 2024 #LDD2024 aura lieu le mercredi 15 mai 2024 à la Welle 7 à Berne, près de la gare CFF. 
-
+![   ](/static-assets/img/white-space-2.jpg)
 Katrin Crameri et Sabine Oesterle du Swiss Personalized Health Network (SPHN) ont été engagées comme Keynotespeakers pour le programme.
 Des exposés issus de l'économie privée et de l'administration fédérale seront également présentés.
 La conférence sera suivie d'un apéro et de la possibilité d'échange.
-
+![   ](/static-assets/img/white-space-2.jpg)
 Début de la conférence : 9h00 (inscription à partir de 8h30)
 Fin de la conférence : 16h30, suivie d'un apéro
+![   ](/static-assets/img/white-space-2.jpg)
 
 ## Inscription au Linked Data Day
 https://www.ticketpark.ch/bfh/fr/show/6FE3E469-C3DA-43CE-9D27-731F651AA496
