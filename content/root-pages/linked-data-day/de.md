@@ -14,6 +14,9 @@ Beginn der Konferenz: 9.00 Uhr (Anmeldung ab 8.30 Uhr)
 Ende der Konferenz: 16:30, anschließend Apéro
 ![   ](/static-assets/img/white-space-2.jpg)
 
+## Anmeldung Linked Data Day
+![](https://www.ticketpark.ch/bfh/de/show/6FE3E469-C3DA-43CE-9D27-731F651AA496)
+
 ### Neuheiten 2024
 
 Die Teilnahme ist auch für Unternehmen mit einer begrenzten Anzahl an Plätzen möglich.
