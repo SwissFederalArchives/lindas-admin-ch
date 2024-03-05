@@ -20,7 +20,7 @@
     "test": "standard && mocha"
   },
   "devDependencies": {
-    "mocha": "^10.2.0",
+    "mocha": "^10.3.0",
     "standard": "^17.1.0",
     "supertest": "^6.3.4"
   }
