@@ -2,21 +2,26 @@
 
 ![   ](/static-assets/img/white-space-2.jpg)
 
-# *"Save the date"*
+# Programm Linked Data Day 2024
 
-Der nächste Linked Data Day wird am **15. Mai 2024** in der Welle 7 in Bern neben dem Bahnhof SBB stattfinden. Das Programm wird noch ausgearbeitet, aber der Zeitplan für den Tag steht bereits fest.
-
-Beginn der Konferenz : **9.00 Uhr**, Anmeldung ab 8.30 Uhr.
-
-Ende der Konferenz: **16:30**, anschließend Aperitif
-
+Der Linked Data Day 2024 #LDD2024 findet am Mittwoch, 15. Mai 2024, in der Welle 7 in Bern, beim Bahnhof SBB statt.
+![   ](/static-assets/img/white-space-2.jpg)
+Für das Programm konnten als Keynote-Speakerinnen Katrin Crameri und Sabine Oesterle vom [Swiss Personalized Health Network (SPHN)](https://sphn.ch/de/home/) gewonnen werden.
+Daneben wird es Use Cases aus der Privatwirtschaft sowie der Bundesverwaltung geben.
+Im Anschluss gibt es ein Apéro und die Möglichkeit zum Austausch.
+![   ](/static-assets/img/white-space-2.jpg)
+Beginn der Konferenz: 9.00 Uhr (Anmeldung ab 8.30 Uhr)
+Ende der Konferenz: 16:30, anschließend Apéro
 ![   ](/static-assets/img/white-space-2.jpg)
 
+## Anmeldung Linked Data Day
+https://www.ticketpark.ch/bfh/fr/show/6FE3E469-C3DA-43CE-9D27-731F651AA496
+![   ](/static-assets/img/white-space-2.jpg)
 ### Neuheiten 2024
 
-* Die Teilnahme ist auch für Unternehmen mit einer begrenzten Anzahl an Plätzen möglich.
-* Es wird ein Beitrag an die Organisationskosten erhoben: pro Anmeldung 50.- für öffentliche Verwaltungen und 250.- für private Unternehmen.
+Die Teilnahme ist auch für Unternehmen mit einer begrenzten Anzahl an Plätzen möglich.
+Es wird ein Beitrag an die Organisationskosten erhoben: CHF 50.- für öffentliche Verwaltung und CHF 250.- für private Unternehmen.
 
 ![   ](/static-assets/img/white-space-2.jpg)
 
-Weitere Informationen finden Sie auf der folgende Website der BFH: [Linked Data Day 2024](https://www.bfh.ch/de/aktuell/fachveranstaltungen/linked-data-day-2024/), die an der Organisation dieser Veranstaltung mitwirkt.
+Die Veranstaltung wird in Zusammenarbeit mit der Berner Fachhochschule BFH durchgeführt: [Linked Data Day 2024](https://www.bfh.ch/de/aktuell/fachveranstaltungen/linked-data-day-2024/)
