@@ -80,6 +80,7 @@ plugins:
     config:
       dataLabelProperty: <http://schema.org/name> | rdfs:label
       schemaLabelProperty: <http://schema.org/name> | rdfs:label
+      template: file:views/graph-explorer.hbs
 
   spex:
     module: trifid-plugin-spex
