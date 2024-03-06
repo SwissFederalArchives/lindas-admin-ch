@@ -14,6 +14,10 @@ globals:
       url: /query
 
 plugins:
+  health-old:
+    module: trifid-core/plugins/health.js
+    paths: /health
+
   i18n:
     module: trifid-plugin-i18n
     config:
