@@ -5,7 +5,7 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "@zazuko/trifid-markdown-content": "^2.0.0",
+    "@zazuko/trifid-markdown-content": "^2.0.1",
     "@zazuko/trifid-plugin-ckan": "^4.0.0",
     "trifid": "^5.0.0"
   },
