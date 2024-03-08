@@ -28,6 +28,7 @@ Ende der Konferenz: 16:30, anschließend Apéro
 | 14:45    | Thematische Sessions                                                                                                      |
 | 16:20    | Abschluss                                                                                                                 |
 | 16:30    | _Apéro_                                                                                                                   |
+
 ![   ](/static-assets/img/white-space-2.jpg)
 
 ## Anmeldung Linked Data Day
