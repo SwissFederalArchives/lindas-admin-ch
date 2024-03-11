@@ -24,6 +24,17 @@ plugins:
     config:
       directory: file:static
 
+  i18n:
+    module: trifid-plugin-i18n
+    config:
+      directory: file:locales
+      updateFiles: false
+      locales:
+        - en
+        - fr
+        - de
+        - it
+
   welcome:
     module: trifid-core/plugins/view.js
     paths: /
@@ -90,8 +101,8 @@ plugins:
       rewriteQuery: true
       rewriteResults: true
       endpointUrl: env:SPARQL_ENDPOINT_URL
-      username: env:SPARQL_ENDPOINT_USERNAME
-      password: env:SPARQL_ENDPOINT_PASSWORD
+      username: env:SPARQL_USERNAME
+      password: env:SPARQL_PASSWORD
 
   menu:
     module: file:plugins/menu/index.js
@@ -175,15 +186,3 @@ plugins:
       resourceGraphQuery: "#pragma describe.strategy cbd\nDESCRIBE <{{iri}}>"
       containerExistsQuery: "ASK { GRAPH ?g { <{{iri}}> ?p ?o }}"
       containerGraphQuery: "#pragma describe.strategy cbd\nDESCRIBE <{{iri}}>"
-
-  i18n:
-    module: trifid-plugin-i18n
-    order: 50
-    config:
-      directory: file:locales
-      updateFiles: false
-      locales:
-        - en
-        - fr
-        - de
-        - it
