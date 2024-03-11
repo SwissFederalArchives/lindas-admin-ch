@@ -13,6 +13,23 @@ Im Anschluss gibt es ein Apéro und die Möglichkeit zum Austausch.
 Beginn der Konferenz: 9.00 Uhr (Anmeldung ab 8.30 Uhr)
 Ende der Konferenz: 16:30, anschließend Apéro
 ![   ](/static-assets/img/white-space-2.jpg)
+| **Zeit** | **Programmpunkt**                                                                                                         |
+|----------|---------------------------------------------------------------------------------------------------------------------------|
+| 08:30    | _Einschreibung, Kaffee & Gipfeli_                                                                                         |
+| 09:00    | Philippe Künzler, Direktor BAR: Begrüssung                                                                                |
+| 09:10    | Katrin Crameri, Direktorin & Sabine Oesterle, Leiterin Semantic Interoperability Strategy & FAIR Data Team, SPHN: Keynote |
+| 10:10    | Kaffeepause                                                                                                               |
+| 10:30    | Stefan Kwasnitza, Stv. Direktor BAR: «Vision Bundesverwaltung (Zielbild LINDAS)»                                          |
+| 11:00    | Karen Dijkstra, Unternehmensarchitektin BK-DTI: « Permettre de relier les données des autorités entre elles »             |
+| 11:30    | Use Case Privatwirtschaft                                                                                                 |
+| 12:00    | _Mittagessen_                                                                                                             |
+| 13:15    | 3 Erfolgstories (à 15min), Präsentation und Fragen                                                                        |
+| 14:15    | _Kaffeepause_                                                                                                             |
+| 14:45    | Thematische Sessions                                                                                                      |
+| 16:20    | Abschluss                                                                                                                 |
+| 16:30    | _Apéro_                                                                                                                   |
+
+![   ](/static-assets/img/white-space-2.jpg)
 
 ## Anmeldung Linked Data Day
 https://www.ticketpark.ch/bfh/fr/show/6FE3E469-C3DA-43CE-9D27-731F651AA496
