@@ -4,8 +4,7 @@ import { fileURLToPath } from 'url'
 const currentDir = dirname(fileURLToPath(import.meta.url))
 
 const factory = async (trifid) => {
-  const { render, server } = trifid
-  const locals = server.locals
+  const { render } = trifid
 
   return {
     defaultConfiguration: async () => {
@@ -25,9 +24,9 @@ const factory = async (trifid) => {
           return reply.redirect(`${fullUrlPathname}/`)
         }
 
-        return reply.type('text/html').send(await render(`${currentDir}/view.hbs`, {
-          currentLanguage: locals.get('currentLanguage'),
-          defaultLanguage: locals.get('defaultLanguage')
+        return reply.type('text/html').send(await render(request, `${currentDir}/view.hbs`, {
+          currentLanguage: request.session.get('currentLanguage'),
+          defaultLanguage: request.session.get('defaultLanguage')
         }, {
           title: 'Datasets'
         }))

@@ -13,10 +13,10 @@
             <div class="select select--bare">
               <form>
                 <select id="lang-switcher" name="lang" class="input--negative" onchange="this.form.submit()">
-                  <option value="de" {{#ifEquals locals.currentLanguage "de"}}selected{{/ifEquals}}>DE</option>
-                  <option value="fr" {{#ifEquals locals.currentLanguage "fr"}}selected{{/ifEquals}}>FR</option>
-                  <option value="it" {{#ifEquals locals.currentLanguage "it"}}selected{{/ifEquals}}>IT</option>
-                  <option value="en" {{#ifEquals locals.currentLanguage "en"}}selected{{/ifEquals}}>EN</option>
+                  <option value="de" {{#ifEquals session.currentLanguage "de"}}selected{{/ifEquals}}>DE</option>
+                  <option value="fr" {{#ifEquals session.currentLanguage "fr"}}selected{{/ifEquals}}>FR</option>
+                  <option value="it" {{#ifEquals session.currentLanguage "it"}}selected{{/ifEquals}}>IT</option>
+                  <option value="en" {{#ifEquals session.currentLanguage "en"}}selected{{/ifEquals}}>EN</option>
                 </select>
               </form>
               <div class="select__icon">
