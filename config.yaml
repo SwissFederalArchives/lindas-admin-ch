@@ -9,6 +9,10 @@ template:
     infos: file:template/infos.hbs
   title: LINDAS - Linked Data Service
 
+server:
+  options:
+    logger: true
+
 globals:
   datasetBaseUrl: env:DATASET_BASE_URL
   endpoints:
