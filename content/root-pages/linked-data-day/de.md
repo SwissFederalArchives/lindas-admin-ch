@@ -31,12 +31,11 @@ Ende der Konferenz: 16:30, anschließend Apéro
 
 ## Anmeldung Linked Data Day
 https://www.ticketpark.ch/bfh/de/show/6FE3E469-C3DA-43CE-9D27-731F651AA496
-![   ](/static-assets/img/white-space-2.jpg)
+
 ### Neuheiten 2024
 
 Die Teilnahme ist auch für Unternehmen mit einer begrenzten Anzahl an Plätzen möglich.
 Es wird ein Beitrag an die Organisationskosten erhoben: CHF 50.- für öffentliche Verwaltung und CHF 250.- für private Unternehmen.
 
-![   ](/static-assets/img/white-space-2.jpg)
 
 Die Veranstaltung wird in Zusammenarbeit mit der Berner Fachhochschule BFH durchgeführt: [Linked Data Day 2024](https://www.bfh.ch/de/aktuell/fachveranstaltungen/linked-data-day-2024/)
