@@ -1,3 +1,5 @@
+# yaml-language-server: $schema=https://unpkg.com/trifid-core@latest/lib/config/schema.json
+
 template:
   files:
     main: file:template/main.hbs
@@ -7,142 +9,114 @@ template:
     infos: file:template/infos.hbs
   title: LINDAS - Linked Data Service
 
+server:
+  options:
+    logger: true
+
 globals:
   datasetBaseUrl: env:DATASET_BASE_URL
-  sparqlEndpoint:
-    url: env:SPARQL_ENDPOINT_URL
-    username: env:SPARQL_USERNAME
-    password: env:SPARQL_PASSWORD
+  endpoints:
+    default:
+      url: /query
 
-middlewares:
-  morgan:
-    module: trifid/middlewares/morgan.js
-    order: 0
+plugins:
+  health-old:
+    module: trifid-core/plugins/health.js
+    paths: /health
 
   static-assets:
-    module: trifid-core/middlewares/static.js
-    order: 0
+    module: trifid-core/plugins/static.js
     paths: /static-assets
     config:
       directory: file:static
 
-  rewrite:
-    module: trifid-core/middlewares/rewrite.js
-
-  welcome:
-    module: trifid-core/middlewares/view.js
-    paths: /
-    methods: GET
-    config:
-      path: views/welcome.hbs
-
-  ecosystem:
-    module: trifid-core/middlewares/view.js
-    paths: /ecosystem/
-    methods: GET
-    config:
-      path: views/ecosystem.hbs
-  data-usage:
-    module: trifid-core/middlewares/view.js
-    paths: /data-usage/
-    methods: GET
-    config:
-      path: views/data-usage.hbs
-  governance:
-    module: trifid-core/middlewares/view.js
-    paths: /governance/
-    methods: GET
-    config:
-      path: views/governance.hbs
-  know-how:
-    module: trifid-core/middlewares/view.js
-    paths: /know-how/
-    methods: GET
-    config:
-      path: views/know-how.hbs
-  community:
-    module: trifid-core/middlewares/view.js
-    paths: /community/
-    methods: GET
-    config:
-      path: views/community.hbs
-
-  ckan:
-    module: "@zazuko/trifid-plugin-ckan"
-    order: 30
-    paths: /ckan
-
-  entity-renderer:
-    module: "@zazuko/trifid-entity-renderer"
-    config:
-      path: views/entity.hbs
-      labelLoader:
-        #        labelNamespaces: # Labels will be fetched for URIs that start with this list (if omitted, fetches for all URIs)
-        #          - https://lindas.admin.ch
-        #          - https://ld.admin.ch
-        chunkSize: 30
-        concurrency: 2
-        timeout: 4000
-
-  yasgui:
-    module: trifid-plugin-yasgui
-    paths: /sparql
-    config:
-      urlShortener: https://s.zazuko.com/api/v1/shorten
-      template: file:views/yasgui.hbs
-
-  graph-explorer:
-    module: trifid-plugin-graph-explorer
-    paths: /graph-explorer
-    config:
-      dataLabelProperty: <http://schema.org/name> | rdfs:label
-      schemaLabelProperty: <http://schema.org/name> | rdfs:label
-
-  spex:
-    module: trifid-plugin-spex
-    paths: /spex
-
-  search:
-    module: file:plugins/search/index.js
-    paths:
-      - /datasets
-
-  sparql-proxy:
-    module: "@zazuko/trifid-plugin-sparql-proxy"
-    paths: /query
-    config:
-      queryOperation: postQueryUrlencoded
-      rewriteQueries: true
-      cache:
-        prefix: env:SPARQL_PROXY_CACHE_PREFIX
-        url: env:SPARQL_PROXY_CACHE_URL
-        clearAtStartup: env:SPARQL_PROXY_CACHE_CLEAR_AT_STARTUP
-
-  handle-redirects-demo:
-    module: "@zazuko/trifid-handle-redirects"
-
-  sparql-handler:
-    module: trifid-handler-sparql
-    config:
-      resourceExistsQuery: "ASK { GRAPH ?g { <${iri}> ?p ?o }}"
-      resourceGraphQuery: "#pragma describe.strategy cbd\nDESCRIBE <${iri}>"
-      containerExistsQuery: "ASK { GRAPH ?g { <${iri}> ?p ?o }}"
-      containerGraphQuery: "#pragma describe.strategy cbd\nDESCRIBE <${iri}>"
-
   i18n:
     module: trifid-plugin-i18n
-    order: 5
     config:
       directory: file:locales
+      updateFiles: false
       locales:
         - en
         - fr
         - de
         - it
 
+  welcome:
+    module: trifid-core/plugins/view.js
+    paths: /
+    config:
+      path: views/welcome.hbs
+
+  ecosystem:
+    module: trifid-core/plugins/view.js
+    paths: /ecosystem/
+    config:
+      path: views/ecosystem.hbs
+  data-usage:
+    module: trifid-core/plugins/view.js
+    paths: /data-usage/
+    config:
+      path: views/data-usage.hbs
+  governance:
+    module: trifid-core/plugins/view.js
+    paths: /governance/
+    config:
+      path: views/governance.hbs
+  know-how:
+    module: trifid-core/plugins/view.js
+    paths: /know-how/
+    config:
+      path: views/know-how.hbs
+  community:
+    module: trifid-core/plugins/view.js
+    paths: /community/
+    config:
+      path: views/community.hbs
+  visualize:
+    module: trifid-core/plugins/view.js
+    paths: /visualize/
+    config:
+      path: views/visualize.hbs
+
+  ckan:
+    module: "@zazuko/trifid-plugin-ckan"
+    paths:
+      - /ckan
+      - /ckan/
+
+  yasgui:
+    module: trifid-plugin-yasgui
+    config:
+      urlShortener: https://s.zazuko.com/api/v1/shorten
+      template: file:views/yasgui.hbs
+
+  graph-explorer:
+    module: trifid-plugin-graph-explorer
+    config:
+      dataLabelProperty: <http://schema.org/name> | rdfs:label
+      schemaLabelProperty: <http://schema.org/name> | rdfs:label
+      template: file:views/graph-explorer.hbs
+
+  spex:
+    module: trifid-plugin-spex
+
+  search:
+    module: file:plugins/search/index.js
+
+  sparql-proxy:
+    module: "@zazuko/trifid-plugin-sparql-proxy"
+    paths: /query
+    config:
+      allowRewriteToggle: true
+      rewrite: false
+      rewriteQuery: true
+      rewriteResults: true
+      endpointUrl: env:SPARQL_ENDPOINT_URL
+      username: env:SPARQL_USERNAME
+      password: env:SPARQL_PASSWORD
+
   menu:
     module: file:plugins/menu/index.js
-    order: 80
     config:
       namespace: header
       entries:
@@ -163,7 +137,6 @@ middlewares:
 
   content:
     module: "@zazuko/trifid-markdown-content"
-    order: 80
     config:
       defaults:
         autoLink: true # create links from headings
@@ -175,11 +148,12 @@ middlewares:
           h4: h4
           h5: h5
           table: table
+        template: file:views/content.hbs
 
       entries:
         lindas:
           directory: file:content/template-parts
-          # entries used in templates using `{{{ locals.markdown-content-plugin.lindas.XXXXXXXX }}}`
+          # entries used in templates using `{{{ session.markdown-content-plugin.lindas.XXXXXXXX }}}`
 
         lindas-root:
           directory: file:content/root-pages
@@ -204,3 +178,26 @@ middlewares:
         lindas-community:
           directory: file:content/community
           mountPath: /community/
+
+        # lindas-visualize:
+        #   directory: file:content/visualize
+        #   mountPath: /visualize/
+
+  entity-renderer:
+    module: "@zazuko/trifid-entity-renderer"
+    config:
+      path: views/entity.hbs
+      labelLoader:
+        #        labelNamespaces: # Labels will be fetched for URIs that start with this list (if omitted, fetches for all URIs)
+        #          - https://lindas.admin.ch
+        #          - https://ld.admin.ch
+        chunkSize: 30
+        concurrency: 2
+        timeout: 4000
+      rewrite: true
+
+      # Custom queries to get information about a resource or container
+      resourceExistsQuery: "ASK { GRAPH ?g { <{{iri}}> ?p ?o }}"
+      resourceGraphQuery: "#pragma describe.strategy cbd\nDESCRIBE <{{iri}}>"
+      containerExistsQuery: "ASK { GRAPH ?g { <{{iri}}> ?p ?o }}"
+      containerGraphQuery: "#pragma describe.strategy cbd\nDESCRIBE <{{iri}}>"

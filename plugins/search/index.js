@@ -6,14 +6,33 @@ const currentDir = dirname(fileURLToPath(import.meta.url))
 const factory = async (trifid) => {
   const { render } = trifid
 
-  return async (_req, res, _next) => {
-    res.send(await render(`${currentDir}/view.hbs`, {
-      currentLanguage: res.locals.currentLanguage,
-      defaultLanguage: res.locals.defaultLanguage,
-      locals: res.locals
-    }, {
-      title: 'Datasets'
-    }))
+  return {
+    defaultConfiguration: async () => {
+      return {
+        methods: ['GET'],
+        paths: ['/datasets', '/datasets/']
+      }
+    },
+    routeHandler: async () => {
+      const handler = async (request, reply) => {
+        const fullUrl = `${request.protocol}://${request.hostname}${request.raw.url}`
+        const fullUrlObject = new URL(fullUrl)
+        const fullUrlPathname = fullUrlObject.pathname
+
+        // Enforce trailing slash
+        if (fullUrlPathname.slice(-1) !== '/') {
+          return reply.redirect(`${fullUrlPathname}/`)
+        }
+
+        return reply.type('text/html').send(await render(request, `${currentDir}/view.hbs`, {
+          currentLanguage: request.session.get('currentLanguage'),
+          defaultLanguage: request.session.get('defaultLanguage')
+        }, {
+          title: 'Datasets'
+        }))
+      }
+      return handler
+    }
   }
 }
 

@@ -19,6 +19,11 @@
   width: 100%;
 }
 
+/* Used in views, for <section> used as submenu */
+.remove-space-after-submenu-section {
+  margin-bottom: -80px;
+}
+
 /* override CSS style */
 main a {
   word-break: break-word;
