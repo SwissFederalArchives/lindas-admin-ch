@@ -32,7 +32,7 @@ Ende der Konferenz: 16:30, anschließend Apéro
 ![   ](/static-assets/img/white-space-2.jpg)
 
 ## Anmeldung Linked Data Day
-https://www.ticketpark.ch/bfh/fr/show/6FE3E469-C3DA-43CE-9D27-731F651AA496
+https://www.ticketpark.ch/bfh/de/show/6FE3E469-C3DA-43CE-9D27-731F651AA496
 ![   ](/static-assets/img/white-space-2.jpg)
 ### Neuheiten 2024
 
