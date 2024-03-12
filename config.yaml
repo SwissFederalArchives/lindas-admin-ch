@@ -66,11 +66,11 @@ plugins:
     paths: /community/
     config:
       path: views/community.hbs
-   visualize:
-    module: trifid-core/plugins/view.js
-    paths: /visualize/
-    config:
-      path: views/visualize.hbs
+  # visualize:
+  #   module: trifid-core/plugins/view.js
+  #   paths: /visualize/
+  #   config:
+  #     path: views/visualize.hbs
 
   ckan:
     module: "@zazuko/trifid-plugin-ckan"
@@ -176,7 +176,7 @@ plugins:
         lindas-visualize:
           directory: file:content/visualize
           mountPath: /visualize/
-          
+
   entity-renderer:
     module: "@zazuko/trifid-entity-renderer"
     config:
