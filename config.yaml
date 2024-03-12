@@ -173,9 +173,9 @@ plugins:
           directory: file:content/community
           mountPath: /community/
 
-        lindas-visualize:
-          directory: file:content/visualize
-          mountPath: /visualize/
+        # lindas-visualize:
+        #   directory: file:content/visualize
+        #   mountPath: /visualize/
 
   entity-renderer:
     module: "@zazuko/trifid-entity-renderer"
