@@ -29,6 +29,7 @@ plugins:
         chunkSize: 30
         concurrency: 2
         timeout: 4000
+      followRedirects: true
 
       # BEGIN: disable rewrites
       rewrite: false
