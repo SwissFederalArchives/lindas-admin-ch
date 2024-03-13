@@ -11,19 +11,19 @@ Début de la conférence : 9h00 (inscription à partir de 8h30), fin de la conf�
 
 | **Heure** |                                                                                                                            |
 |-----------|----------------------------------------------------------------------------------------------------------------------------|
-| 08 h 30   | _Accueil, café et croissants_                                                                                              |
-| 09 h      | Mot de bienvenue de Philippe Künzler, directeur des AFS                                                                    |
-| 09 h 10   | Keynote de Katrin Crameri, directrice & Sabine Oesterle, responsable de la stratégie d'interopérabilité du SPHNe           |
-| 10 h 10   | _Pause café_                                                                                                               |
-| 10 h 30   | Exposé de Stefan Kwasnitza, directeur suppléant des AFS : « Vision Bundesverwaltung (Zielbild LINDAS) »                    |
-| 11 h      | Exposé de Karen Dijkstra, architecte d’entreprise TNI/ChF : « Permettre de relier les données des autorités entre elles »  |
-| 11 h 30   | Exemple pratique du secteur privé                                                                                          |
-| 12 h      | _Repas de midi_                                                                                                            |
-| 13 h 15   | Récits de succès de 15 min chacun, présentation et questions                                                               |
-| 14 h 15   | _Pause café_                                                                                                               |
-| 14 h 45   | Sessions thématiques                                                                                                       |
-| 16 h 20   | Conclusion                                                                                                                 |
-| 16 h 30   | _Apéritif_                                                                                                                 |
+| 08 h 30   | _Accueil, café et croissants_                                                                                              |
+| 09 h      | Mot de bienvenue de Philippe Künzler, directeur des AFS                                                                    |
+| 09 h 10   | Keynote de Katrin Crameri, directrice & Sabine Oesterle, responsable de la stratégie d'interopérabilité du SPHNe           |
+| 10 h 10   | _Pause café_                                                                                                               |
+| 10 h 30   | Exposé de Stefan Kwasnitza, directeur suppléant des AFS : « Vision Bundesverwaltung (Zielbild LINDAS) »                    |
+| 11 h      | Exposé de Karen Dijkstra, architecte d’entreprise TNI/ChF : « Permettre de relier les données des autorités entre elles »  |
+| 11 h 30   | Exemple pratique du secteur privé                                                                                          |
+| 12 h      | _Repas de midi_                                                                                                            |
+| 13 h 15   | Récits de succès de 15 min chacun, présentation et questions                                                               |
+| 14 h 15   | _Pause café_                                                                                                               |
+| 14 h 45   | Sessions thématiques                                                                                                       |
+| 16 h 20   | Conclusion                                                                                                                 |
+| 16 h 30   | _Apéritif_                                                                                                                 |
 
 
 ## Inscription Linked Data Day
