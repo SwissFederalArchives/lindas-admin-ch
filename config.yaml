@@ -78,6 +78,16 @@ plugins:
     config:
       path: views/visualize.hbs
 
+  redirect-to-trailing-slash:
+    module: file:plugins/redirect/index.js
+    paths:
+      - /ecosystem
+      - /data-usage
+      - /governance
+      - /know-how
+      - /community
+      - /visualize
+
   ckan:
     module: "@zazuko/trifid-plugin-ckan"
     paths:
