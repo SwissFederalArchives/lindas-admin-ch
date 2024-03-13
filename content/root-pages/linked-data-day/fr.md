@@ -9,7 +9,7 @@ Les oratrices principales seront Dr Katrin Crameri, directrice du centre de coor
 
 Début de la conférence : 9h00 (inscription à partir de 8h30), fin de la conférence : 16h30, suivie d'un apéro.
 
-| **Heure** | **            **                                                                                                           |
+| **Heure** |                                                                                                                            |
 |-----------|----------------------------------------------------------------------------------------------------------------------------|
 | 08 h 30   | _Accueil, café et croissants_                                                                                              |
 | 09 h      | Mot de bienvenue de Philippe Künzler, directeur des AFS                                                                    |
