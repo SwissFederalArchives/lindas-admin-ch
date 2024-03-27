@@ -1,4 +1,4 @@
-![Linked Data Day, 15.05.2024, Welle 7, Bern](/static-assets/img/linked-data-day-2024-fr.png)
+![Linked Data Day, 15.05.2024, Welle 7, Bern](/static-assets/img/linked-data-day-2024-de.png)
 
 
 # Programm Linked Data Day 2024
