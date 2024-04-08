@@ -28,7 +28,6 @@ Ende der Konferenz: 16:30, anschließend Apéro
 | 16:20    | Abschluss                                                                                                                  |
 | 16:30    | _Apéro_                                                                                                                    |
 
-
 ## Anmeldung Linked Data Day
 https://www.ticketpark.ch/bfh/de/show/6FE3E469-C3DA-43CE-9D27-731F651AA496
 
@@ -39,3 +38,7 @@ Es wird ein Beitrag an die Organisationskosten erhoben: CHF 50.- für öffentlic
 
 
 Die Veranstaltung wird in Zusammenarbeit mit der Berner Fachhochschule BFH durchgeführt: [Linked Data Day 2024](https://www.bfh.ch/de/aktuell/fachveranstaltungen/linked-data-day-2024/)
+
+## Die Speaker
+![Linked Data Day, 15.05.2024, Welle 7, Bern](/static/img/Katrin_250x250.jpg)
+![Linked Data Day, 15.05.2024, Welle 7, Bern](/static/img/Sabine_Oe_250x250.jpg)
