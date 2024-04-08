@@ -40,5 +40,5 @@ Es wird ein Beitrag an die Organisationskosten erhoben: CHF 50.- für öffentlic
 Die Veranstaltung wird in Zusammenarbeit mit der Berner Fachhochschule BFH durchgeführt: [Linked Data Day 2024](https://www.bfh.ch/de/aktuell/fachveranstaltungen/linked-data-day-2024/)
 
 ### Die Keynote-Speakerinnen
-![Katrin Crameri](/static/img/Katrin_250x250.jpg)
-![Sabine Oesterle](/static/img/Sabine_Oe_250x250.jpg)
+![Katrin Crameri](/static-assets/img/Katrin_250x250.jpg)
+![Sabine Oesterle](/static-assets/img/Sabine_Oe_250x250.jpg)
