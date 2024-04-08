@@ -39,6 +39,6 @@ Es wird ein Beitrag an die Organisationskosten erhoben: CHF 50.- für öffentlic
 
 Die Veranstaltung wird in Zusammenarbeit mit der Berner Fachhochschule BFH durchgeführt: [Linked Data Day 2024](https://www.bfh.ch/de/aktuell/fachveranstaltungen/linked-data-day-2024/)
 
-## Die Speaker
+## Die Keynote Speakerinnen
 ![Linked Data Day, 15.05.2024, Welle 7, Bern](/static/img/Katrin_250x250.jpg)
 ![Linked Data Day, 15.05.2024, Welle 7, Bern](/static/img/Sabine_Oe_250x250.jpg)
