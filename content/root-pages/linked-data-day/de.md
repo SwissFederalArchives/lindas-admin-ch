@@ -9,7 +9,7 @@ Für das Programm konnten als Keynote-Speakerinnen Katrin Crameri und Sabine Oes
 Spannende Praxisbeispiele und Erfolgstories aus verschiedenen Branchen füllen den Anlass zudem mit vielfältigen, alltagsnahen und motivierenden Inputs. Dabei stehen der gemeinsame Austausch von Erfahrungen, das Meistern von Herausforderungen und nicht zuletzt die Potenziale von Linked Data im Vordergrund.
 Im Anschluss gibt es ein Apéro und die Möglichkeit zum Dialog.
 
-Hier finden Sie das Programm:
+Hier finden Sie das Programm:\
 [Linked Data Day Programm](/static-assets/img/Linked-Data-Day-2024-Programm.pdf)
 
 ## Anmeldung Linked Data Day
