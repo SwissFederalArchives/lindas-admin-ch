@@ -15,6 +15,19 @@ Hier finden Sie das Programm:\
 ## Anmeldung Linked Data Day
 [Anmeldelink](https://www.ticketpark.ch/bfh/de/show/6FE3E469-C3DA-43CE-9D27-731F651AA496)
 
+### Die Keynote-Speakerinnen
+![Katrin Crameri](/static-assets/img/Katrin_250x250.jpg)
+Dr. Katrin Crameri\
+MPH, Leiterin Gesundheitsinformatik Schweizerisches Institut für Bioinformatik (SIB) und\
+Direktorin Datenkoordinationszentrum Swiss Personalized Health Network (SPHN)
+\
+![Sabine Oesterle](/static-assets/img/Sabine_Oe_250x250.jpg)
+Dr. sc. ETH Sabine Österle\
+FAIR Data Team Lead, Gesundheitsinformatik, SIB und Leiterin SPHN-Interoperabilitätsstrategie\
+
+#### Abstract
+Das Swiss Personalized Health Network (SPHN) hat einen Interoperabilitätsrahmen sowie diverse Softwarelösungen etabliert, um Gesundheitsdaten aus verschiedenen Quellen zusammenführen zu können. Die Standardisierung der unterschiedlichen Datentypen und damit auch die Integration von zusätzlichen Informationen aus Ontologien und Klassifikationen bilden das Grundgerüst des SPHN-Interoperabilitätsrahmens. Durch Anwendung der W3C-Standards werden zum einen die Beziehungen zwischen den einzelnen Informationseinheiten präzise definiert, und zum anderen die Daten in einen knowledge graph integriert, der Maschinenlesbarkeit gewährleistet. Durch diesen Ansatz können Daten aus sämtlichen relevanten Gesundheitsbereichen – von Routinedaten der Versorgung über Bilddaten bis hin zu (gen)omischen Informationen - so repräsentiert werden, dass eine umfassende Betrachtung des Individuums sowie computergestützte Analysen über alle Bereiche hinweg möglich sind. Die Implementierung des SPHN-Interoperabilitätsrahmens in allen Schweizer Universitätsspitälern bietet die grosse Chance, die medizinische Forschung in der Schweiz gemäss den FAIR-Prinzipien voranzutreiben.
+
 ### Neuheiten 2024
 
 Die Teilnahme ist auch für Unternehmen mit einer begrenzten Anzahl an Plätzen möglich.\
@@ -23,17 +36,3 @@ Es wird ein Beitrag an die Organisationskosten erhoben: CHF 50.- für öffentlic
 
 Die Veranstaltung wird in Zusammenarbeit mit der Berner Fachhochschule BFH durchgeführt:\
 [BFH-Webseite](https://www.bfh.ch/de/aktuell/fachveranstaltungen/linked-data-day-2024/)
-
-### Die Keynote-Speakerinnen
-Dr. Katrin Crameri,\
-MPH, Leiterin Gesundheitsinformatik Schweizerisches Institut für Bioinformatik (SIB)\
-Direktorin Datenkoordinationszentrum Swiss Personalized Health Network (SPHN)\
-![Katrin Crameri](/static-assets/img/Katrin_250x250.jpg)
-\
-Dr. sc. ETH Sabine Österle,\
-FAIR Data Team Lead, Gesundheitsinformatik,\
-SIB und Leiterin SPHN-Interoperabilitätsstrategie\
-![Sabine Oesterle](/static-assets/img/Sabine_Oe_250x250.jpg)
-
-#### Abstract
-Das Swiss Personalized Health Network (SPHN) hat einen Interoperabilitätsrahmen sowie diverse Softwarelösungen etabliert, um Gesundheitsdaten aus verschiedenen Quellen zusammenführen zu können. Die Standardisierung der unterschiedlichen Datentypen und damit auch die Integration von zusätzlichen Informationen aus Ontologien und Klassifikationen bilden das Grundgerüst des SPHN-Interoperabilitätsrahmens. Durch Anwendung der W3C-Standards werden zum einen die Beziehungen zwischen den einzelnen Informationseinheiten präzise definiert, und zum anderen die Daten in einen knowledge graph integriert, der Maschinenlesbarkeit gewährleistet. Durch diesen Ansatz können Daten aus sämtlichen relevanten Gesundheitsbereichen – von Routinedaten der Versorgung über Bilddaten bis hin zu (gen)omischen Informationen - so repräsentiert werden, dass eine umfassende Betrachtung des Individuums sowie computergestützte Analysen über alle Bereiche hinweg möglich sind. Die Implementierung des SPHN-Interoperabilitätsrahmens in allen Schweizer Universitätsspitälern bietet die grosse Chance, die medizinische Forschung in der Schweiz gemäss den FAIR-Prinzipien voranzutreiben.
