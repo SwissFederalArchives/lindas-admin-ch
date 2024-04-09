@@ -17,17 +17,22 @@ Hier finden Sie das Programm:\
 
 ### Neuheiten 2024
 
-Die Teilnahme ist auch für Unternehmen mit einer begrenzten Anzahl an Plätzen möglich.
+Die Teilnahme ist auch für Unternehmen mit einer begrenzten Anzahl an Plätzen möglich.\
 Es wird ein Beitrag an die Organisationskosten erhoben: CHF 50.- für öffentliche Verwaltung und CHF 250.- für private Unternehmen.
 
 
-Die Veranstaltung wird in Zusammenarbeit mit der Berner Fachhochschule BFH durchgeführt: [BFH-Webseite](https://www.bfh.ch/de/aktuell/fachveranstaltungen/linked-data-day-2024/)
+Die Veranstaltung wird in Zusammenarbeit mit der Berner Fachhochschule BFH durchgeführt:\
+[BFH-Webseite](https://www.bfh.ch/de/aktuell/fachveranstaltungen/linked-data-day-2024/)
 
 ### Die Keynote-Speakerinnen
-Dr. Katrin Crameri, MPH, Leiterin Gesundheitsinformatik Schweizerisches Institut für Bioinformatik (SIB) und Direktorin Datenkoordinationszentrum Swiss Personalized Health Network (SPHN)
+Dr. Katrin Crameri,\
+MPH, Leiterin Gesundheitsinformatik Schweizerisches Institut für Bioinformatik (SIB)\
+Direktorin Datenkoordinationszentrum Swiss Personalized Health Network (SPHN)\
 ![Katrin Crameri](/static-assets/img/Katrin_250x250.jpg)
-
-Dr. sc. ETH Sabine Österle, FAIR Data Team Lead, Gesundheitsinformatik, SIB und Leiterin SPHN-Interoperabilitätsstrategie
+\
+Dr. sc. ETH Sabine Österle,\
+FAIR Data Team Lead, Gesundheitsinformatik,\
+SIB und Leiterin SPHN-Interoperabilitätsstrategie\
 ![Sabine Oesterle](/static-assets/img/Sabine_Oe_250x250.jpg)
 
 #### Abstract
