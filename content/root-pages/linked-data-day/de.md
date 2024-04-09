@@ -9,10 +9,11 @@ Für das Programm konnten als Keynote-Speakerinnen Katrin Crameri und Sabine Oes
 Spannende Praxisbeispiele und Erfolgstories aus verschiedenen Branchen füllen den Anlass zudem mit vielfältigen, alltagsnahen und motivierenden Inputs. Dabei stehen der gemeinsame Austausch von Erfahrungen, das Meistern von Herausforderungen und nicht zuletzt die Potenziale von Linked Data im Vordergrund.
 Im Anschluss gibt es ein Apéro und die Möglichkeit zum Dialog.
 
-Hier finden Sie das Programm: [Linked Data Day Programm](/static-assets/img/Linked-Data-Day-2024-Programm.pdf)
+Hier finden Sie das Programm:
+[Linked Data Day Programm](/static-assets/img/Linked-Data-Day-2024-Programm.pdf)
 
 ## Anmeldung Linked Data Day
-https://www.ticketpark.ch/bfh/de/show/6FE3E469-C3DA-43CE-9D27-731F651AA496
+[Anmeldelink](https://www.ticketpark.ch/bfh/de/show/6FE3E469-C3DA-43CE-9D27-731F651AA496)
 
 ### Neuheiten 2024
 
