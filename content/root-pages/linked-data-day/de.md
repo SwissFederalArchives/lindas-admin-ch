@@ -9,24 +9,7 @@ Für das Programm konnten als Keynote-Speakerinnen Katrin Crameri und Sabine Oes
 Spannende Praxisbeispiele und Erfolgstories aus verschiedenen Branchen füllen den Anlass zudem mit vielfältigen, alltagsnahen und motivierenden Inputs. Dabei stehen der gemeinsame Austausch von Erfahrungen, das Meistern von Herausforderungen und nicht zuletzt die Potenziale von Linked Data im Vordergrund.
 Im Anschluss gibt es ein Apéro und die Möglichkeit zum Dialog.
 
-Beginn der Konferenz: 9.00 Uhr (Anmeldung ab 8.30 Uhr)
-Ende der Konferenz: 16:30, anschließend Apéro
-
-| **Zeit** | **Programmpunkt**                                                                                                          |
-|----------|----------------------------------------------------------------------------------------------------------------------------|
-| 08:30    | _Einschreibung, Kaffee & Gipfeli_                                                                                          |
-| 09:00    | Philippe Künzler, Direktor BAR: Begrüssung                                                                                 |
-| 09:10    | Katrin Crameri, Direktorin Datenkoordinationszentrum & Sabine Oesterle, Leiterin Interoperabilitätsstrategie SPHN: Keynote |
-| 10:10    | Kaffeepause                                                                                                                |
-| 10:30    | Stefan Kwasnitza, Stv. Direktor BAR: «Vision Bundesverwaltung (Zielbild LINDAS)»                                           |
-| 11:00    | Karen Dijkstra, Unternehmensarchitektin BK-DTI: « Permettre de relier les données des autorités entre elles »              |
-| 11:30    | Use Case Privatwirtschaft                                                                                                  |
-| 12:00    | _Mittagessen_                                                                                                              |
-| 13:15    | 3 Erfolgstories (à 15min), Präsentation und Fragen                                                                         |
-| 14:15    | _Kaffeepause_                                                                                                              |
-| 14:45    | Thematische Sessions                                                                                                       |
-| 16:20    | Abschluss                                                                                                                  |
-| 16:30    | _Apéro_                                                                                                                    |
+Hier finden Sie das Programm: ![Linked Data Day 2024 Programm](/static-assets/img/Linked-Data-Day-2024-Programm.pdf)
 
 ## Anmeldung Linked Data Day
 https://www.ticketpark.ch/bfh/de/show/6FE3E469-C3DA-43CE-9D27-731F651AA496
