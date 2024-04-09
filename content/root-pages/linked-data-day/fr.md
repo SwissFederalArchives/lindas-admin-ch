@@ -11,7 +11,7 @@ Voici le programme :\
 [Programme Linked Data Day ](/static-assets/img/Linked-Data-Day-2024-Programm.pdf)
 
 ## Inscription Linked Data Day
-[Lien d'inscription](https://www.ticketpark.ch/bfh/de/show/6FE3E469-C3DA-43CE-9D27-731F651AA496)
+[Lien d'inscription](https://www.ticketpark.ch/bfh/fr/show/6FE3E469-C3DA-43CE-9D27-731F651AA496)
 
 ### Les oratrices principales
 ![Katrin Crameri](/static-assets/img/Katrin_250x250.jpg)
