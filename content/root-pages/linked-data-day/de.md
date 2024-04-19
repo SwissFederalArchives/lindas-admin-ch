@@ -30,10 +30,14 @@ FAIR Data Team Lead, Gesundheitsinformatik, SIB und Leiterin SPHN-Interoperabili
 
 ### Die Keynote-Speakerinnen
 
-| ![Katrin Crameri](/static-assets/img/Katrin_250x250.jpg) | ![Sabine Oesterle](/static-assets/img/Sabine_Oe_250x250.jpg) |
-| ---- | ---- |
-| Dr. Katrin Crameri | Dr. sc. ETH Sabine Österle |
-| MPH, Leiterin Gesundheitsinformatik Schweizerisches Institut für Bioinformatik (SIB) und Direktorin Datenkoordinationszentrum Swiss Personalized Health Network (SPHN) | FAIR Data Team Lead, Gesundheitsinformatik, SIB und Leiterin SPHN-Interoperabilitätsstrategie | 
++------------------------------------------------------------------+--------------------------------------------------------------+
+| ![Katrin Crameri](/static-assets/img/Katrin_250x250.jpg)         | ![Sabine Oesterle](/static-assets/img/Sabine_Oe_250x250.jpg) |
+| ***Dr. Katrin Crameri***                                         | ***Dr. sc. ETH Sabine Österle***                             |
++------------------------------------------------------------------+--------------------------------------------------------------+
+| MPH, Leiterin Gesundheitsinformatik Schweizerisches Institut     | FAIR Data Team Lead, Gesundheitsinformatik, SIB und          |
+| für Bioinformatik (SIB) und Direktorin Datenkoordinationszentrum | Leiterin SPHN-Interoperabilitätsstrategie                    |
+| Swiss Personalized Health Network (SPHN)                         |                                                              |
++------------------------------------------------------------------+--------------------------------------------------------------+
 
 
 #### Abstract Keynote
