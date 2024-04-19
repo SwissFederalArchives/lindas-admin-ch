@@ -32,9 +32,7 @@ FAIR Data Team Lead, Gesundheitsinformatik, SIB und Leiterin SPHN-Interoperabili
 
 | ![Katrin Crameri](/static-assets/img/Katrin_250x250.jpg)   | ![Sabine Oesterle](/static-assets/img/Sabine_Oe_250x250.jpg) 
 |:---|:---|
-| ***Dr. Katrin Crameri*** <br> <br> 
-MPH, Leiterin Gesundheitsinformatik Schweizerisches Institut für Bioinformatik (SIB) und Direktorin Datenkoordinationszentrum Swiss Personalized Health Network (SPHN)   | ***Dr. sc. ETH Sabine Österle*** 
-<br><br> FAIR Data Team Lead, Gesundheitsinformatik, SIB und Leiterin SPHN-Interoperabilitätsstrategie |
+| ***Dr. Katrin Crameri*** <br> <br> MPH, Leiterin Gesundheitsinformatik Schweizerisches Institut für Bioinformatik (SIB) und Direktorin Datenkoordinationszentrum Swiss Personalized Health Network (SPHN)   | ***Dr. sc. ETH Sabine Österle*** <br> <br> FAIR Data Team Lead, Gesundheitsinformatik, SIB und Leiterin SPHN-Interoperabilitätsstrategie |
 
 : {.borderless}
 
