@@ -11,10 +11,7 @@ Im Anschluss gibt es ein Apéro und die Möglichkeit zum Dialog.
 
 **Das detaillierte Programm**: [Linked Data Day 2024](/static-assets/img/Linked-Data-Day-2024-Programm.pdf)  
 
-**Die Anmeldung**:
-### Anmeldung Linked Data Day
-[Anmeldelink](https://www.ticketpark.ch/bfh/de/show/6FE3E469-C3DA-43CE-9D27-731F651AA496)
-
+**Die Anmeldung**: [Anmeldelink](https://www.ticketpark.ch/bfh/de/show/6FE3E469-C3DA-43CE-9D27-731F651AA496)
 
 ---
 
