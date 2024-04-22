@@ -28,14 +28,40 @@ Direktorin Datenkoordinationszentrum Swiss Personalized Health Network (SPHN)
 Dr. sc. ETH Sabine Österle\
 FAIR Data Team Lead, Gesundheitsinformatik, SIB und Leiterin SPHN-Interoperabilitätsstrategie
 
-### Die Keynote-Speakerinnen
+### Keynote
 
 | ![Katrin Crameri](/static-assets/img/Katrin_250x250.jpg)   | ![Sabine Oesterle](/static-assets/img/Sabine_Oe_250x250.jpg) |
 |:---|:---|
 | ***Dr. Katrin Crameri*** \--- MPH, Leiterin Gesundheitsinformatik Schweizerisches Institut für Bioinformatik (SIB) und Direktorin Datenkoordinationszentrum Swiss Personalized Health Network (SPHN) | ***Dr. sc. ETH Sabine Österle*** \--- FAIR Data Team Lead, Gesundheitsinformatik, SIB und Leiterin SPHN-Interoperabilitätsstrategie |
 
-#### Abstract Keynote
+**Abstract Keynote**  
+
 Das Swiss Personalized Health Network (SPHN) hat einen Interoperabilitätsrahmen sowie diverse Softwarelösungen etabliert, um Gesundheitsdaten aus verschiedenen Quellen zusammenführen zu können. Die Standardisierung der unterschiedlichen Datentypen und damit auch die Integration von zusätzlichen Informationen aus Ontologien und Klassifikationen bilden das Grundgerüst des SPHN-Interoperabilitätsrahmens. Durch Anwendung der W3C-Standards werden zum einen die Beziehungen zwischen den einzelnen Informationseinheiten präzise definiert, und zum anderen die Daten in einen knowledge graph integriert, der Maschinenlesbarkeit gewährleistet. Durch diesen Ansatz können Daten aus sämtlichen relevanten Gesundheitsbereichen – von Routinedaten der Versorgung über Bilddaten bis hin zu (gen)omischen Informationen - so repräsentiert werden, dass eine umfassende Betrachtung des Individuums sowie computergestützte Analysen über alle Bereiche hinweg möglich sind. Die Implementierung des SPHN-Interoperabilitätsrahmens in allen Schweizer Universitätsspitälern bietet die grosse Chance, die medizinische Forschung in der Schweiz gemäss den FAIR-Prinzipien voranzutreiben.
+
+### ???
+
+**Vision Bundesverwaltung -- Zielbild LINDAS**
+* Stefan Kwasnitza, Stellvertretender Direktor Schweizerisches Bundesarchiv
+* Maik Roth ????
+
+**Exploiter le potentiel des données liées pour des services publics interconnectés**
+* Karen Dijkstra, Entreprise Architect à la Chancellerie fédérale
+
+**Die Evolution der Unternehmensarchitekturdaten: Integration, Nutzung und Herausforderungen**
+* Bruno Russiniello, Fachführung Datenarchitektur bei der Mobiliar
+* Peter Hutzli, Datenarchitekt bei der Mobiliar
+
+### Linked Data Erfolgstories
+
+**Linked Data publizieren und nutzen -- Erfahrungen aus einer Fachabteilung**
+* Thomas Bettler, Wissenschaftlicher Mitarbeiter Bundesamt für Umwelt
+
+**TERMDAT -- Die Terminologie Datenbank des Bundes als Linked Data verfügbar**
+* Dr. Michael Luggen, Datenarchitekt Bundeskanzlei
+
+**Agrarmarktdaten (titre à valider)**
+* Désirée Baeder, ...
+
 
 ### Neuheiten 2024
 
