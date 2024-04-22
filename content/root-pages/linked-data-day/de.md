@@ -1,8 +1,5 @@
 ![Linked Data Day, 15.05.2024, Welle 7, Bern](/static-assets/img/linked-data-day-2024-de.png)
 
-
-## Programm Linked Data Day 2024
-
 Der Linked Data Day 2024 #LDD2024 findet am Mittwoch, 15. Mai 2024, in der Welle 7 in Bern, beim Bahnhof SBB statt.
 
 Für das Programm konnten als Keynote-Speakerinnen Katrin Crameri und Sabine Oesterle vom [Swiss Personalized Health Network (SPHN)](https://sphn.ch/de/home/) gewonnen werden.
@@ -13,6 +10,7 @@ Im Anschluss gibt es ein Apéro und die Möglichkeit zum Dialog.
 
 **Die Anmeldung**: [Anmeldelink](https://www.ticketpark.ch/bfh/de/show/6FE3E469-C3DA-43CE-9D27-731F651AA496)
 
+## Programm Linked Data Day 2024
 ---
 
 ### Keynote
@@ -64,7 +62,7 @@ Moderator: Dr. Michael Luggen, Datenarchitekt Bundeskanzlei
 **Linked Closed Data: Zugriff auf Linked Data schützen**   
 Moderator: Pascal Mainini, Dozent Departement Technik und Informatik BFH  
 
-***Session 5***
+***Session 5***   
 **Politische und konzeptionelle Argumente für Linked Data**   
 Moderator: Prof. Dr. Matthias Stürmer, Leiter Institut Public Sector Transformation BFH   
 
