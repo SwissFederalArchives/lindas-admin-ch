@@ -55,6 +55,18 @@ Moderator: Dr. Benedikt Hitz-Gamper, Wissenschaftlicher Mitarbeiter, Institut Pu
 **Datenstrategien: Welche Aspekte müssen berücksichtigt werden, um eine erfolgreiche Datenkultur aufzubauen?**  
 Moderator: Marc Battaglia, Leiter Fach- und Koordinationsstelle OGD, Kanton Basel-Landschaft
 
+***Session 3***   
+**Gemeinsame Spielregeln für gemeinsame Daten: Erwartungen an die Linked Data-Governance**   
+Moderator: Dr. Michael Luggen, Datenarchitekt Bundeskanzlei  
+
+***Session 4***   
+**Linked Closed Data: Zugriff auf Linked Data schützen**   
+Moderator: Pascal Mainini, Dozent Departement Technik und Informatik BFH  
+
+***Session 5***
+**Politische und konzeptionelle Argumente für Linked Data**   
+Moderator: Prof. Dr. Matthias Stürmer, Leiter Institut Public Sector Transformation BFH   
+
 
 ### Neuheiten 2024
 
