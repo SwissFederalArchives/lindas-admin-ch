@@ -15,6 +15,9 @@ Hier finden Sie das Programm:\
 ### Anmeldung Linked Data Day
 [Anmeldelink](https://www.ticketpark.ch/bfh/de/show/6FE3E469-C3DA-43CE-9D27-731F651AA496)
 
+
+---
+
 ### Keynote
 
 | ![Katrin Crameri](/static-assets/img/Katrin_250x250.jpg)   | ![Sabine Oesterle](/static-assets/img/Sabine_Oe_250x250.jpg) |
