@@ -35,8 +35,12 @@ FAIR Data Team Lead, Gesundheitsinformatik, SIB und Leiterin SPHN-Interoperabili
 | ***Dr. Katrin Crameri*** \--- MPH, Leiterin Gesundheitsinformatik Schweizerisches Institut für Bioinformatik (SIB) und Direktorin Datenkoordinationszentrum Swiss Personalized Health Network (SPHN) | ***Dr. sc. ETH Sabine Österle*** \--- FAIR Data Team Lead, Gesundheitsinformatik, SIB und Leiterin SPHN-Interoperabilitätsstrategie |
 
 **Abstract Keynote**  
-
-Das Swiss Personalized Health Network (SPHN) hat einen Interoperabilitätsrahmen sowie diverse Softwarelösungen etabliert, um Gesundheitsdaten aus verschiedenen Quellen zusammenführen zu können. Die Standardisierung der unterschiedlichen Datentypen und damit auch die Integration von zusätzlichen Informationen aus Ontologien und Klassifikationen bilden das Grundgerüst des SPHN-Interoperabilitätsrahmens. Durch Anwendung der W3C-Standards werden zum einen die Beziehungen zwischen den einzelnen Informationseinheiten präzise definiert, und zum anderen die Daten in einen knowledge graph integriert, der Maschinenlesbarkeit gewährleistet. Durch diesen Ansatz können Daten aus sämtlichen relevanten Gesundheitsbereichen – von Routinedaten der Versorgung über Bilddaten bis hin zu (gen)omischen Informationen - so repräsentiert werden, dass eine umfassende Betrachtung des Individuums sowie computergestützte Analysen über alle Bereiche hinweg möglich sind. Die Implementierung des SPHN-Interoperabilitätsrahmens in allen Schweizer Universitätsspitälern bietet die grosse Chance, die medizinische Forschung in der Schweiz gemäss den FAIR-Prinzipien voranzutreiben.
+> Das Swiss Personalized Health Network (SPHN) hat einen Interoperabilitätsrahmen sowie diverse Softwarelösungen etabliert, um Gesundheitsdaten aus verschiedenen Quellen zusammenführen zu können. Die
+>  Standardisierung der unterschiedlichen Datentypen und damit auch die Integration von zusätzlichen Informationen aus Ontologien und Klassifikationen bilden das Grundgerüst des SPHN-
+> Interoperabilitätsrahmens. Durch Anwendung der W3C-Standards werden zum einen die Beziehungen zwischen den einzelnen Informationseinheiten präzise definiert, und zum anderen die Daten in einen knowledge
+>  graph integriert, der Maschinenlesbarkeit gewährleistet. Durch diesen Ansatz können Daten aus sämtlichen relevanten Gesundheitsbereichen – von Routinedaten der Versorgung über Bilddaten bis hin zu
+> (gen)omischen Informationen - so repräsentiert werden, dass eine umfassende Betrachtung des Individuums sowie computergestützte Analysen über alle Bereiche hinweg möglich sind. Die Implementierung des SPHN-
+> Interoperabilitätsrahmens in allen Schweizer Universitätsspitälern bietet die grosse Chance, die medizinische Forschung in der Schweiz gemäss den FAIR-Prinzipien voranzutreiben.
 
 ### ???
 
