@@ -47,6 +47,14 @@ Das Swiss Personalized Health Network (SPHN) hat einen Interoperabilitätsrahmen
 **Agrarmarktdaten (titre à valider)**
 * Désirée Baeder, ...
 
+#### Breakout-Sessions
+
+***Session 1*** - **LINDAS als Stammdatenplattform des Bundes: Welche grundlegenden Daten braucht unser Amt in LINDAS, damit wir mit Linked Data erfolgreich sein können?**  
+Moderator: Dr. Benedikt Hitz-Gamper, Wissenschaftlicher Mitarbeiter, Institut Public Sector Transformation BFH
+
+***Session 2*** - **Datenstrategien: Welche Aspekte müssen berücksichtigt werden, um eine erfolgreiche Datenkultur aufzubauen?**  
+Moderator: Marc Battaglia, Leiter Fach- und Koordinationsstelle OGD, Kanton Basel-Landschaft
+
 
 ### Neuheiten 2024
 
