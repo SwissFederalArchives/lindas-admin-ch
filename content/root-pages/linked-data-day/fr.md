@@ -71,4 +71,4 @@ Une contribution aux coûts d'organisation sera facturée : CHF 50.- pour les ad
 
 
 La journée est organisée en collaboration avec la Haute école spécialisée bernoise BFH :\
-Linked Data Day 2024](https://www.bfh.ch/de/aktuell/fachveranstaltungen/linked-data-day-2024/) (n'existe qu'en allemand).
+[Linked Data Day 2024](https://www.bfh.ch/de/aktuell/fachveranstaltungen/linked-data-day-2024/) (n'existe qu'en allemand).
