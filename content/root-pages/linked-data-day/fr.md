@@ -2,7 +2,7 @@
 
 Le Linked Data Day 2024 **#LDD2024** aura lieu le mercredi 15 mai 2024 à la Welle 7 à Berne.
 
-Les oratrices principales seront Dr Katrin Crameri, directrice du centre de coordination des données du [Swiss Personalized Health Network (SPHN)](https://sphn.ch/de/home/) ) et Dr Sabine Oesterle, responsable de la stratégie d'interopérabilité du SPHN. Des exemples pratiques passionnants et des récits de succès issus de différentes branches apporteront à la manifestation des contributions variées, proches du quotidien et motivantes. L'accent sera mis sur l'échange d'expériences, la maîtrise des défis et le potentiel de Linked Data. L'apéro qui clôturera la journée permettra de poursuivre les échanges.
+Les oratrices principales seront Dr Katrin Crameri, directrice du centre de coordination des données du [Swiss Personalized Health Network (SPHN)](https://sphn.ch/de/home/) ) et Dr Sabine Oesterle, responsable de la stratégie d'interopérabilité du SPHN. Des exemples pratiques passionnants et des récits de succès issus de différentes branches apporteront à la manifestation des contributions variées, proches du quotidien et motivantes. L'accent sera mis sur l'échange d'expériences, la maîtrise des défis et le potentiel de Linked Data. L'apéritif qui clôturera la journée permettra de poursuivre les échanges.
 
 **Le programme détaillé** : [Linked Data Day 2024](/static-assets/img/Linked-Data-Day-2024-Programm.pdf)
 
