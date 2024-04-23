@@ -19,7 +19,7 @@ Les oratrices principales seront Dr Katrin Crameri, directrice du centre de coor
 **Résumé de l'exposé**   
 Le Swiss Personalized Health Network (SPHN) a mis en place un cadre d’interopérabilité ainsi que différentes solutions logicielles afin de pouvoir combiner les données de santé provenant de différentes sources. La standardisation des différents modèles de données et, par là-même, l'intégration d'informations supplémentaires issues d'ontologies et de classifications constituent la structure de base du cadre d'interopérabilité du SPHN. En appliquant les standards W3C, d'une part, les relations entre les différentes unités d'information sont définies avec précision et, d'autre part, les données sont intégrées dans un graphe de connaissances qui garantit la lisibilité par les ordinateurs. Cette approche permet de représenter les données de tous les domaines pertinents de la santé – des données de routine des soins aux informations biologiques en passant par les données d'imagerie – de manière à permettre une approche globale de l'individu ainsi que des analyses assistées par ordinateur dans tous les domaines. La mise en oeuvre du cadre d'interopérabilité SPHN dans tous les hôpitaux universitaires suisses offre une grande opportunité de faire progresser la recherche médicale en Suisse conformément aux principes FAIR.
 
-### Linked Data -- Chances et défis 
+### Linked Data – Chances et défis 
 **Vision Bundesverwaltung – Zielbild LINDAS**
 * Stefan Kwasnitza, Directeur adjoint, Archives fédérales suisses
 
