@@ -5,8 +5,7 @@ Der Linked Data Day 2024 **#LDD2024** findet am Mittwoch, 15. Mai 2024, in der W
 Für das Programm konnten als Keynote-Speakerinnen Katrin Crameri und Sabine Oesterle vom [Swiss Personalized Health Network (SPHN)](https://sphn.ch/de/home/) gewonnen werden.
 Spannende Praxisbeispiele und Erfolgsstories aus verschiedenen Branchen füllen den Anlass zudem mit vielfältigen, alltagsnahen und motivierenden Inputs. Dabei stehen der gemeinsame Austausch von Erfahrungen, das Meistern von Herausforderungen und nicht zuletzt die Potenziale von Linked Data im Vordergrund. Der abschliessende Apéro bietet die Möglichkeit zum Dialog.
 
-**Das detaillierte Programm**: [Linked Data Day 2024](/static-assets/img/Linked-Data-Day-2024-Programm.pdf)  
-
+**Das detaillierte Programm**: [Linked Data Day 2024](/static-assets/img/Linked-Data-Day-2024-Programm.pdf)\
 **Die Anmeldung**: [Anmeldelink](https://www.ticketpark.ch/bfh/de/show/6FE3E469-C3DA-43CE-9D27-731F651AA496)
 
 ## Programm Linked Data Day 2024
