@@ -38,8 +38,8 @@ Le Swiss Personalized Health Network (SPHN) a mis en place un cadre d’interop�
 **TERMDAT – Die Terminologie Datenbank des Bundes als Linked Data verfügbar**
 * Dr. Michael Luggen, Datenarchitekt Bundeskanzlei
 
-Titre suit
-* Désirée Baeder, Bundesamt für Landwirtschaft
+(Titre suit)
+* Désirée Baeder, Wissenschaftliche Mitarbeiterin Bundesamt für Landwirtschaft
 
 ### Discussions en groupes
 
