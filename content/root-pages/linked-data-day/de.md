@@ -39,8 +39,8 @@ Das Swiss Personalized Health Network (SPHN) hat einen Interoperabilitätsrahmen
 **TERMDAT – Die Terminologie Datenbank des Bundes als Linked Data verfügbar**
 * Dr. Michael Luggen, Datenarchitekt Bundeskanzlei
 
-Titel folgt
-* Désirée Bäder, Bundesamt für Landwirtschaft
+(Titel folgt)
+* Désirée Bäder, Wissenschaftliche Mitarbeiterin Bundesamt für Landwirtschaft
 
 ### Breakout-Sessions
 
