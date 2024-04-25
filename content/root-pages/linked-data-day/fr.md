@@ -17,7 +17,7 @@ Les oratrices principales seront Dr Katrin Crameri, directrice du centre de coor
 | ***Dr Katrin Crameri*** – MPH, directrice de l'informatique de la santé à l'Institut suisse de bioinformatique (SIB) et directrice du centre de coordination des données du Swiss Personalized Health Network (SPHN) | ***Dr sc ETH Sabine Österle*** – Responsable FAIR Data Team, Informatique de santé, SIB et responsable de la stratégie d'interopérabilité, SPHN|
 
 **Résumé de l'exposé**   
-Le Swiss Personalized Health Network (SPHN) a mis en place un cadre d’interopérabilité ainsi que différentes solutions logicielles afin de pouvoir combiner les données de santé provenant de différentes sources. La standardisation des différents modèles de données et, par là-même, l'intégration d'informations supplémentaires issues d'ontologies et de classifications constituent la structure de base du cadre d'interopérabilité du SPHN. En appliquant les standards W3C, d'une part, les relations entre les différentes unités d'information sont définies avec précision et, d'autre part, les données sont intégrées dans un graphe de connaissances qui garantit la lisibilité par les ordinateurs. Cette approche permet de représenter les données de tous les domaines pertinents de la santé – des données de routine des soins aux informations biologiques en passant par les données d'imagerie – de manière à permettre une approche globale de l'individu ainsi que des analyses assistées par ordinateur dans tous les domaines. La mise en oeuvre du cadre d'interopérabilité SPHN dans tous les hôpitaux universitaires suisses offre une grande opportunité de faire progresser la recherche médicale en Suisse conformément aux principes FAIR.
+Le Swiss Personalized Health Network (SPHN) a mis en place un cadre d’interopérabilité ainsi que différentes solutions logicielles afin de pouvoir combiner les données de santé provenant de différentes sources. La standardisation des différents modèles de données et, par là-même, l'intégration d'informations supplémentaires issues d'ontologies et de classifications constituent la structure de base du cadre d'interopérabilité du SPHN. En appliquant les standards W3C, d'une part, les relations entre les différentes unités d'information sont définies avec précision et, d'autre part, les données sont intégrées dans un graphe de connaissances qui garantit la lisibilité par les ordinateurs. Cette approche permet de représenter les données de tous les domaines pertinents de la santé – des données de routine des soins aux informations biologiques en passant par les données d'imagerie – de manière à permettre une approche globale de l'individu ainsi que des analyses assistées par ordinateur dans tous les domaines. La mise en oeuvre du cadre d'interopérabilité SPHN dans tous les hôpitaux universitaires suisses offre une grande opportunité de faire progresser la recherche médicale en Suisse conformément aux principes FAIR - les données sont donc trouvables (Findable), accessibles (Accessible), interopérables (Interoperable) et réutilisables (Reusable).
 
 ### Linked Data – Chances et défis 
 **Vision Bundesverwaltung – Zielbild LINDAS**
@@ -38,8 +38,8 @@ Le Swiss Personalized Health Network (SPHN) a mis en place un cadre d’interop�
 **TERMDAT – Die Terminologie Datenbank des Bundes als Linked Data verfügbar**
 * Dr. Michael Luggen, Datenarchitekt Bundeskanzlei
 
-(Titre suit)
-* Désirée Baeder, Wissenschaftliche Mitarbeiterin Bundesamt für Landwirtschaft
+**Reaching for the stars – unsere Reise zu 5-Sterne Linked Open Data**
+* Désirée Bäder, Wissenschaftliche Mitarbeiterin Bundesamt für Landwirtschaft
 
 ### Discussions en groupes
 
