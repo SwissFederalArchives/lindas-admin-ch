@@ -18,7 +18,7 @@ Spannende Praxisbeispiele und Erfolgsstories aus verschiedenen Branchen füllen 
 | ***Dr. Katrin Crameri*** – MPH, Leiterin Gesundheitsinformatik Schweizerisches Institut für Bioinformatik (SIB) und Direktorin Datenkoordinationszentrum Swiss Personalized Health Network (SPHN) | ***Dr. sc. ETH Sabine Österle*** – FAIR Data Team Lead, Gesundheitsinformatik, SIB und Leiterin SPHN-Interoperabilitätsstrategie |
    
 **Abstract Keynote**  
-Das Swiss Personalized Health Network (SPHN) hat einen Interoperabilitätsrahmen sowie diverse Softwarelösungen etabliert, um Gesundheitsdaten aus verschiedenen Quellen zusammenführen zu können. Die Standardisierung der unterschiedlichen Datentypen und damit auch die Integration von zusätzlichen Informationen aus Ontologien und Klassifikationen bilden das Grundgerüst des SPHN-Interoperabilitätsrahmens. Durch Anwendung der W3C-Standards werden zum einen die Beziehungen zwischen den einzelnen Informationseinheiten präzise definiert, und zum anderen die Daten in einen Knowledgegraph integriert, der Maschinenlesbarkeit gewährleistet. Durch diesen Ansatz können Daten aus sämtlichen relevanten Gesundheitsbereichen – von Routinedaten der Versorgung über Bilddaten bis hin zu biologischen Informationen – so repräsentiert werden, dass eine umfassende Betrachtung des Individuums sowie computergestützte Analysen über alle Bereiche hinweg möglich sind. Die Implementierung des SPHN-Interoperabilitätsrahmens in allen Schweizer Universitätsspitälern bietet die grosse Chance, die medizinische Forschung in der Schweiz gemäss den FAIR-Prinzipien voranzutreiben.
+Das Swiss Personalized Health Network (SPHN) hat einen Interoperabilitätsrahmen sowie diverse Softwarelösungen etabliert, um Gesundheitsdaten aus verschiedenen Quellen zusammenführen zu können. Die Standardisierung der unterschiedlichen Datentypen und damit auch die Integration von zusätzlichen Informationen aus Ontologien und Klassifikationen bilden das Grundgerüst des SPHN-Interoperabilitätsrahmens. Durch Anwendung der W3C-Standards werden zum einen die Beziehungen zwischen den einzelnen Informationseinheiten präzise definiert, und zum anderen die Daten in einen Knowledgegraph integriert, der Maschinenlesbarkeit gewährleistet. Durch diesen Ansatz können Daten aus sämtlichen relevanten Gesundheitsbereichen – von Routinedaten der Versorgung über Bilddaten bis hin zu biologischen Informationen – so repräsentiert werden, dass eine umfassende Betrachtung des Individuums sowie computergestützte Analysen über alle Bereiche hinweg möglich sind. Die Implementierung des SPHN-Interoperabilitätsrahmens in allen Schweizer Universitätsspitälern bietet die grosse Chance, die medizinische Forschung in der Schweiz gemäss den FAIR-Prinzipien voranzutreiben – Daten sind demnach Findable (auffindbar), Accessible (zugänglich), Interoperable (vereinbar) und Reusable (wiederverwendbar).
 
 ### Linked Data – Chancen und Herausforderungen 
 **Vision Bundesverwaltung – Zielbild LINDAS**
@@ -39,7 +39,7 @@ Das Swiss Personalized Health Network (SPHN) hat einen Interoperabilitätsrahmen
 **TERMDAT – Die Terminologie Datenbank des Bundes als Linked Data verfügbar**
 * Dr. Michael Luggen, Datenarchitekt Bundeskanzlei
 
-(Titel folgt)
+**Reaching for the stars – unsere Reise zu 5-Sterne Linked Open Data**
 * Désirée Bäder, Wissenschaftliche Mitarbeiterin Bundesamt für Landwirtschaft
 
 ### Breakout-Sessions
