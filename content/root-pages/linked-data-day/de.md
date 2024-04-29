@@ -40,7 +40,7 @@ Das Swiss Personalized Health Network (SPHN) hat einen Interoperabilitätsrahmen
 * Dr. Michael Luggen, Datenarchitekt Bundeskanzlei
 
 **Reaching for the stars – unsere Reise zu 5-Sterne Linked Open Data**
-* Désirée Bäder, Wissenschaftliche Mitarbeiterin Bundesamt für Landwirtschaft
+* Dr. sc. ETH Désirée Bäder, Projektmanagerin und Datenexpertin, Bundesamt für Landwirtschaft
 
 ### Breakout-Sessions
 
