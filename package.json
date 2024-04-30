@@ -6,8 +6,8 @@
   "type": "module",
   "dependencies": {
     "@zazuko/trifid-markdown-content": "^2.0.2",
-    "@zazuko/trifid-plugin-ckan": "^4.0.0",
-    "trifid": "^5.0.2"
+    "@zazuko/trifid-plugin-ckan": "^4.0.1",
+    "trifid": "^5.0.3"
   },
   "license": "UNLICENSED",
   "scripts": {
@@ -20,7 +20,7 @@
     "test": "standard && DATASET_BASE_URL=https://ld.admin.ch/ SPARQL_ENDPOINT_URL=https://example.com/query SPARQL_USERNAME=public SPARQL_PASSWORD=public mocha"
   },
   "devDependencies": {
-    "mocha": "^10.3.0",
+    "mocha": "^10.4.0",
     "standard": "^17.1.0"
   }
 }
