@@ -16,39 +16,39 @@ Les oratrices principales seront Dr Katrin Crameri, directrice du centre de coor
 |:---|:---|
 | ***Dr Katrin Crameri*** – MPH, directrice de l'informatique de la santé à l'Institut suisse de bioinformatique (SIB) et directrice du centre de coordination des données du Swiss Personalized Health Network (SPHN) | ***Dr sc ETH Sabine Österle*** – Responsable FAIR Data Team, Informatique de santé, SIB et responsable de la stratégie d'interopérabilité, SPHN|
 
-**Résumé de l'exposé**   
+**Résumé de l'exposé** ([PDF](static/img/2024_02_Linked-Data-Day-0910h-Crameri-Oesterle.pdf))
 Le Swiss Personalized Health Network (SPHN) a mis en place un cadre d’interopérabilité ainsi que différentes solutions logicielles afin de pouvoir combiner les données de santé provenant de différentes sources. La standardisation des différents modèles de données et, par là-même, l'intégration d'informations supplémentaires issues d'ontologies et de classifications constituent la structure de base du cadre d'interopérabilité du SPHN. En appliquant les standards W3C, d'une part, les relations entre les différentes unités d'information sont définies avec précision et, d'autre part, les données sont intégrées dans un graphe de connaissances qui garantit la lisibilité par les ordinateurs. Cette approche permet de représenter les données de tous les domaines pertinents de la santé – des données de routine des soins aux informations biologiques en passant par les données d'imagerie – de manière à permettre une approche globale de l'individu ainsi que des analyses assistées par ordinateur dans tous les domaines. La mise en oeuvre du cadre d'interopérabilité SPHN dans tous les hôpitaux universitaires suisses offre une grande opportunité de faire progresser la recherche médicale en Suisse conformément aux principes FAIR - les données sont donc trouvables (Findable), accessibles (Accessible), interopérables (Interoperable) et réutilisables (Reusable).
 
 ### Linked Data – Chances et défis 
-**Vision Bundesverwaltung – Zielbild LINDAS**
+**Vision Bundesverwaltung – Zielbild LINDAS** ([PDF](static/img/2024_03_Linked-Data-Day-1030h-Kwasnitza.pdf))
 * Stefan Kwasnitza, Directeur adjoint, Archives fédérales suisses
 
-**Exploiter le potentiel des données liées pour des services publics interconnectés**
+**Exploiter le potentiel des données liées pour des services publics interconnectés** ([PDF](static/img/2024_04_Linked-Data-Day-1100h-Dijkstra.pdf))
 * Karen Dijkstra, Entreprise Architect à la Chancellerie fédérale
 
-**Die Evolution der Unternehmensarchitekturdaten: Integration, Nutzung und Herausforderungen**
+**Die Evolution der Unternehmensarchitekturdaten: Integration, Nutzung und Herausforderungen** ([PDF](static/img/2024_05_Linked-Data-Day-1130h-Russiniello-Hutzli.pdf))
 * Bruno Russiniello, Fachführung Datenarchitektur bei der Mobiliar
 * Peter Hutzli, Datenarchitekt bei der Mobiliar
 
 ### Linked Data Erfolgstories
 
-**Linked Data publizieren und nutzen – Erfahrungen aus einer Fachabteilung**
+**Linked Data publizieren und nutzen – Erfahrungen aus einer Fachabteilung** ([PDF](static/img/2024_06_Linked-Data-Day-1315h-Bettler.pdf))
 * Thomas Bettler, Wissenschaftlicher Mitarbeiter Bundesamt für Umwelt
 
-**TERMDAT – Die Terminologie Datenbank des Bundes als Linked Data verfügbar**
+**TERMDAT – Die Terminologie Datenbank des Bundes als Linked Data verfügbar** ([PDF](static/img/2024_07_Linked-Data-Day-1315h-Luggen.pdf))
 * Dr. Michael Luggen, Datenarchitekt Bundeskanzlei
 
-**Reaching for the stars – unsere Reise zu 5-Sterne Linked Open Data**
+**Reaching for the stars – unsere Reise zu 5-Sterne Linked Open Data** ([PDF](static/img/2024_08_Linked-Data-Day-1315h-Baeder.pdf))
 * Dr. sc. ETH Désirée Bäder, Projektmanagerin und Datenexpertin, Bundesamt für Landwirtschaft
 
 ### Discussions en groupes
 
 ***Thème 1***   
-**LINDAS als Stammdatenplattform des Bundes: Welche grundlegenden Daten braucht unser Amt in LINDAS, damit wir mit Linked Data erfolgreich sein können?**  
+**LINDAS als Stammdatenplattform des Bundes: Welche grundlegenden Daten braucht unser Amt in LINDAS, damit wir mit Linked Data erfolgreich sein können?** ([PDF](static/img/2024_09_Session01_LinkedDataDay_Stammdaten.pdf)) 
 Modérateur : Dr. Benedikt Hitz-Gamper, Wissenschaftlicher Mitarbeiter, Institut Public Sector Transformation BFH
 
 ***Thème 2***   
-**Datenstrategien: Welche Aspekte müssen berücksichtigt werden, um eine erfolgreiche Datenkultur aufzubauen?**  
+**Datenstrategien: Welche Aspekte müssen berücksichtigt werden, um eine erfolgreiche Datenkultur aufzubauen?** ([PDF](static/img/2024_Session02_LinkedDataDay_Datenstrategien.pdf)) 
 Modérateur : Marc Battaglia, Leiter Fach- und Koordinationsstelle OGD, Kanton Basel-Landschaft
 
 ***Thème 3***   
@@ -56,7 +56,7 @@ Modérateur : Marc Battaglia, Leiter Fach- und Koordinationsstelle OGD, Kanton B
 Modérateur : Dr. Michael Luggen, Datenarchitekt Bundeskanzlei  
 
 ***Thème 4***   
-**Linked Closed Data: Zugriff auf Linked Data schützen**   
+**Linked Closed Data: Zugriff auf Linked Data schützen** ([PDF](static/img/2024_12_Session04_LinkedDataDay_Linked_Closed_Data.pdf))   
 Modérateur : Pascal Mainini, Dozent Departement Technik und Informatik BFH  
 
 ***Thème 5***   
