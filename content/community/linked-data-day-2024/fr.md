@@ -22,7 +22,7 @@ Le Swiss Personalized Health Network (SPHN) a mis en place un cadre d’interop�
 
 ### Linked Data – Chances et défis
 
-**Vision Bundesverwaltung – Zielbild LINDAS** ([PDF](static-assets/img/2024_03_Linked-Data-Day-1030h-Kwasnitza.pdf))  
+**Vision Bundesverwaltung – Zielbild LINDAS** ([PDF](/static-assets/img/2024_03_Linked-Data-Day-1030h-Kwasnitza.pdf))  
 * Stefan Kwasnitza, Directeur adjoint, Archives fédérales suisses
 
 **Exploiter le potentiel des données liées pour des services publics interconnectés** ([PDF](/static-assets/img/2024_04_Linked-Data-Day-1100h-Dijkstra.pdf))  
