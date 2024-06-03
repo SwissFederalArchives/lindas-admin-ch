@@ -23,11 +23,15 @@ const factory = async (_trifid) => {
           return header[0].toLowerCase() !== 'content-length'
         })))
         const body = typeof request.body === 'string' ? request.body : new URLSearchParams(request.body)
-        const req = await fetch(instanceQueryUrl, {
-          method: request.method,
-          headers,
-          body
-        })
+        const method = request.method
+        const requestOptions = {
+          method,
+          headers
+        }
+        if (method === 'POST') {
+          requestOptions.body = body
+        }
+        const req = await fetch(instanceQueryUrl, requestOptions)
         const path = request.raw.url.split('?')[0].split('/').slice(2).join('/')
         const xkeyValue = path || 'default'
         if (req.status === 200) {
