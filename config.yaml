@@ -115,7 +115,7 @@ plugins:
 
   sparql-proxy:
     module: "@zazuko/trifid-plugin-sparql-proxy"
-    paths: /query
+    paths: /x-query
     config:
       allowRewriteToggle: true
       rewrite: false
@@ -130,6 +130,10 @@ plugins:
         xml: "application/rdf+xml"
         jsonld: "application/ld+json"
         csv: "text/csv"
+
+  # SPARQL endpoint that returns specific xkey header
+  xquery:
+    module: file:plugins/xquery/index.js
 
   menu:
     module: file:plugins/menu/index.js
