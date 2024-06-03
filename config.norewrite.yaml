@@ -9,7 +9,7 @@ globals:
 plugins:
   sparql-proxy:
     module: "@zazuko/trifid-plugin-sparql-proxy"
-    paths: /query
+    paths: /x-query
     config:
       # BEGIN: disable rewrites
       allowRewriteToggle: false
