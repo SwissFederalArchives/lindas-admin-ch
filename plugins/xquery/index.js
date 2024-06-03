@@ -32,9 +32,9 @@ const factory = async (_trifid) => {
           requestOptions.body = body
         }
         const req = await fetch(instanceQueryUrl, requestOptions)
-        const path = request.raw.url.split('?')[0].split('/').slice(2).join('/')
-        const xkeyValue = path || 'default'
         if (req.status === 200) {
+          const path = request.raw.url.split('?')[0].split('/').slice(2).join('/')
+          const xkeyValue = cleanupHeaderValue(path, 'default')
           reply.header('xkey', xkeyValue)
         }
         return reply.code(req.status).send(req.body)
@@ -42,6 +42,30 @@ const factory = async (_trifid) => {
       return handler
     }
   }
+}
+
+/**
+ * Cleanup header value.
+ * Returns default value if the header value is not a string or is empty or too long (more than 256 characters long).
+ *
+ * @param {string} headerValue Value of the header
+ * @param {string} defaultValue Default value of the header
+ * @returns {string} Cleaned up header value
+ */
+const cleanupHeaderValue = (headerValue, defaultValue) => {
+  if (typeof headerValue !== 'string') {
+    return defaultValue
+  }
+
+  // Split, remove all lines except the first one (can be CRLF, LF or CR), trim, and return
+  const newValue = headerValue.split(/\r\n|\r|\n/)[0].trim()
+  if (newValue.length === 0) {
+    return defaultValue
+  }
+  if (newValue.length > 256) {
+    return defaultValue
+  }
+  return newValue
 }
 
 export default factory
