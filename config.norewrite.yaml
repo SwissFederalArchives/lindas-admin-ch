@@ -9,7 +9,7 @@ globals:
 plugins:
   sparql-proxy:
     module: "@zazuko/trifid-plugin-sparql-proxy"
-    paths: /query
+    paths: /x-query
     config:
       # BEGIN: disable rewrites
       allowRewriteToggle: false
@@ -20,11 +20,6 @@ plugins:
       endpointUrl: env:SPARQL_ENDPOINT_URL
       username: env:SPARQL_USERNAME
       password: env:SPARQL_PASSWORD
-
-  # SPARQL endpoint that returns specific xkey header
-  xquery:
-    module: file:plugins/xquery/index.js
-    paths: /x-query
 
   entity-renderer:
     module: "@zazuko/trifid-entity-renderer"

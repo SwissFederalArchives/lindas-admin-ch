@@ -32,6 +32,9 @@ const factory = async (_trifid) => {
           requestOptions.body = body
         }
         const req = await fetch(instanceQueryUrl, requestOptions)
+        Array.from(req.headers.entries()).forEach(([key, value]) => {
+          reply.header(key, value)
+        })
         if (req.status === 200) {
           const path = request.raw.url.split('?')[0].split('/').slice(2).join('/')
           const xkeyValue = cleanupHeaderValue(path, 'default')
