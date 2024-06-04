@@ -67,3 +67,34 @@ To push the current version that is deployed on integration to production:
 - Go to the [Actions](https://github.com/SwissFederalArchives/lindas-admin-ch/actions) tab.
 - On the left, select the [`CI Workflow`](https://github.com/SwissFederalArchives/lindas-admin-ch/actions/workflows/ci.yaml) workflow.
 - You will see a table of all past runs of that workflow. On the first line, there is a select called `Run workflow`. Click on it, make sure `main` is the selected branch, and click the `Run workflow` button.
+
+## Quality Checks
+
+It is important to make sure that the deployed instances are working as expected.
+For this, some tests are in place, in order to prevent most of the issues already.
+
+### Mandatory checks
+
+Right now, some basic tests are run to check that the Trifid instance is able to start.
+If the tests are failing, nothing will be deployed, as this will make the pipeline fail.
+
+You can also try those checks locally:
+
+```sh
+npm run test
+```
+
+### Manual checks
+
+It is also possible to trigger a manual action to test the current deployed instances on all environments.
+
+For this, follow those steps:
+
+- Go to the [Actions](https://github.com/SwissFederalArchives/lindas-admin-ch/actions) tab.
+- On the left, select the [`Manual Test`](https://github.com/SwissFederalArchives/lindas-admin-ch/actions/workflows/test.yaml) workflow.
+- You will see a table of all past runs of that workflow. On the first line, there is a select called `Run workflow`. Click on it, make sure `main` is the selected branch, select the environment you want to check, and click the `Run workflow` button.
+
+This allows you to check the current deployed version on the selected environment and notice any error.
+If the error is coming from a new change, the best thing to do is to revert the change and fix it before deploying again.
+
+Those checks are not run on any commit in the default pipeline, as if the store is not reachable, it will make the pipeline fail and will block any deployment.
