@@ -37,4 +37,4 @@ jobs:
       - name: Run E2E Tests
         run: |
           ENV_NAME=$(echo $ENVIRONMENT | tr '[:upper:]' '[:lower:]')
-          hurl --test --parallel "test/e2e/${ENV_NAME}/*.hurl"
+          hurl --test --parallel test/e2e/${ENV_NAME}/*.hurl
