@@ -1,0 +1,40 @@
+name: Manual Test
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Environment"
+        required: true
+        default: "PROD"
+        type: choice
+        options:
+          - TEST
+          - INT
+          - PROD
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    env:
+      ENVIRONMENT: ${{ inputs.environment }}
+
+    steps:
+      - name: Log the selected environment
+        run: |
+          echo "Environment: $ENVIRONMENT"
+
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Hurl
+        uses: gacts/install-hurl@v1
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Run E2E Tests
+        run: |
+          ENV_NAME=$(echo $ENVIRONMENT | tr '[:upper:]' '[:lower:]')
+          hurl --test --parallel "test/e2e/${ENV_NAME}/*.hurl"

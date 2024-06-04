@@ -17,20 +17,11 @@ jobs:
         with:
           node-version: 20
 
-      - name: Set up Hurl
-        uses: gacts/install-hurl@v1
-
       - name: Install Dependencies
         run: npm ci
 
       - name: Run Tests
         run: npm run test
-
-      - name: Run E2E Tests
-        run: |
-          npm run start:local &
-          npx wait-on -t 30000 http://localhost:8080/healthz && hurl --test --parallel test/e2e/local/*.hurl
-          kill %1
 
   # Build TEST environment (push on develop branch)
   build-test:
