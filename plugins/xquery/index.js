@@ -68,7 +68,9 @@ const cleanupHeaderValue = (headerValue, defaultValue) => {
   if (newValue.length > 256) {
     return defaultValue
   }
-  return newValue
+
+  // Support URL encoded values
+  return decodeURIComponent(newValue)
 }
 
 export default factory
