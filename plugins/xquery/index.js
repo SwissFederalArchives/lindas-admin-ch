@@ -1,9 +1,13 @@
+import { getListenerURL } from 'trifid-core'
+
 /**
  * This plugin is for adding xkey headers to the response.
  * This is useful for caching.
  */
 
-const factory = async (_trifid) => {
+const factory = async (trifid) => {
+  const { server } = trifid
+
   return {
     defaultConfiguration: async () => {
       return {
@@ -13,9 +17,10 @@ const factory = async (_trifid) => {
     },
     routeHandler: async () => {
       const handler = async (request, reply) => {
+        const listenerUrl = getListenerURL(server)
         const searchParams = new URLSearchParams(request.query)
         const serializedParams = searchParams.toString()
-        const instanceQueryUrl = `${request.protocol}://${request.hostname}/x-query${serializedParams ? `?${serializedParams}` : ''}`
+        const instanceQueryUrl = `${listenerUrl}/x-query${serializedParams ? `?${serializedParams}` : ''}`
         const headers = new Headers(Object.fromEntries(Object.entries(request.headers).filter((header) => {
           if (!Array.isArray(header) || header.length !== 2) {
             return false
