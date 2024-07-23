@@ -30,6 +30,12 @@ plugins:
     config:
       directory: file:static
 
+  redirect-security-well-known:
+    module: trifid-core/plugins/redirect.js
+    paths: /.well-known/security.txt
+    config:
+      target: https://www.ncsc.admin.ch/.well-known/security.txt
+
   i18n:
     module: trifid-plugin-i18n
     config:
