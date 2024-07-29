@@ -26,6 +26,7 @@ plugins:
         xml: "application/rdf+xml"
         jsonld: "application/ld+json"
         csv: "text/csv"
+      queryLogLevel: info
 
   entity-renderer:
     module: "@zazuko/trifid-entity-renderer"

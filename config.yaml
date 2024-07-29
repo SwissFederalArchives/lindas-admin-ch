@@ -136,6 +136,7 @@ plugins:
         xml: "application/rdf+xml"
         jsonld: "application/ld+json"
         csv: "text/csv"
+      queryLogLevel: info
 
   # SPARQL endpoint that returns specific xkey header
   xquery:
