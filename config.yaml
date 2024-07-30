@@ -10,6 +10,7 @@ template:
   title: LINDAS - Linked Data Service
 
 server:
+  logFormat: json
   options:
     logger: true
 
