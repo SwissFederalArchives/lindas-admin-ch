@@ -10,6 +10,7 @@ template:
   title: LINDAS - Linked Data Service
 
 server:
+  logFormat: json
   options:
     logger: true
 
@@ -29,6 +30,12 @@ plugins:
     paths: /static-assets
     config:
       directory: file:static
+
+  redirect-security-well-known:
+    module: trifid-core/plugins/redirect.js
+    paths: /.well-known/security.txt
+    config:
+      target: https://www.ncsc.admin.ch/.well-known/security.txt
 
   i18n:
     module: trifid-plugin-i18n
@@ -130,6 +137,7 @@ plugins:
         xml: "application/rdf+xml"
         jsonld: "application/ld+json"
         csv: "text/csv"
+      queryLogLevel: info
 
   # SPARQL endpoint that returns specific xkey header
   xquery:
