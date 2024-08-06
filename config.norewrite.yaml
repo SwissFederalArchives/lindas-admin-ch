@@ -37,6 +37,7 @@ plugins:
         concurrency: 2
         timeout: 4000
       followRedirects: true
+      enableSchemaUrlRedirect: true
 
       # BEGIN: disable rewrites
       rewrite: false
