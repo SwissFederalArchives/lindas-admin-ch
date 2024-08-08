@@ -16,11 +16,11 @@ Nachfolgendes Video gibt einen guten Einblick in die grundsätzlichen Möglichke
 [LINDAS Support](mailto:support.lindas@bar.admin.ch)
 
 **Produkt Manager**:
-[Jean-Luc Cochard](mailto:Jean-luc.cochard@bar.admin.ch)
+[Claudio Di Gallo](mailto:claudio.digallo@bar.admin.ch)
 
 **Technischer Support**:
-- [Pierre Dumas](mailto:pierre.dumas@bar.admin.ch) - Anwendungsverantwortlicher   
-- [Claudio Di Gallo](mailto:claudio.digallo@bar.admin.ch) - Hochschulpraktikant
+- [Claudio Di Gallo](mailto:claudio.digallo@bar.admin.ch) - Anwendungsverantwortlicher   
+- [Silvan Auf der Maur](mailto:silvan.aufdermaur@bar.admin.ch) - Digital Archiving Specialist
 
 ## Geschichte von LINDAS
 
