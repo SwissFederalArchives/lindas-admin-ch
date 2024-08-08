@@ -16,11 +16,11 @@ La vidéo suivante donne un bon aperçu des possibilités fondamentales de LINDA
 [Support LINDAS](mailto:support.lindas@bar.admin.ch)
 
 **Chef de produit** :
-[Jean-Luc Cochard](mailto:Jean-luc.cochard@bar.admin.ch)
+[Claudio Di Gallo](mailto:claudio.digallo@bar.admin.ch)
 
 **Support technique** :
-- [Pierre Dumas](mailto:pierre.dumas@bar.admin.ch) - Responsable d'application   
-- [Claudio Di Gallo](mailto:claudio.digallo@bar.admin.ch) - Stagiaire universitaire
+- [Claudio Di Gallo](mailto:claudio.digallo@bar.admin.ch) - Responsable d'application      
+- [Silvan Auf der Maur](mailto:silvan.aufdermaur@bar.admin.ch) - Digital Archiving Specialist
 
 ## Histoire de LINDAS
 
