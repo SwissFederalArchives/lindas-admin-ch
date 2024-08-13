@@ -112,3 +112,43 @@ The following code snippet sends a SPARQL query to the LINDAS SPARQL API with th
 </body>
 </html>
 ```
+
+
+
+
+### Curl to csv (and other formats)
+
+# Database Query Documentation
+
+Our database allows users to perform queries and receive results in a CSV format. This feature is particularly useful for automating queries and integrating data retrieval into various applications.
+
+## How to Use URL Encoding for Queries
+
+To obtain a CSV file of your query results, you need to urlencode your query and include specific parameters in your request URL. The format parameter should be set to `csv` to specify that the output should be in CSV format.
+
+## What other file parameters can be used?
+
+Supported values for the format query parameter:
+
+Format	MIME type
+ttl	"text/turtle"
+nt	"application/n-triples"
+xml	"application/rdf+xml"
+jsonld	"application/ld+json"
+csv	"text/csv"
+
+
+## Example Usage
+
+Below is an example of how to use the `curl` command to perform a query and receive the results as a CSV file. This example demonstrates how to use URL encoding to include the query in the request:
+
+```bash
+curl -vvv "https://test.ld.admin.ch/query?format=csv&query=PREFIX%20rdf%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0ASELECT%20%2A%20WHERE%20%7B%0A%20%20%3Fsub%20%3Fpred%20%3Fobj%20.%0A%7D%20LIMIT%2010"
+```
+
+## Explanation of the Example
+
+- **URL**: The base URL for the query is `https://test.ld.admin.ch/query`.
+- **Parameters**:
+  - `format=csv`: This parameter specifies that the query results should be returned in CSV format.
+  - `query`: This parameter contains the URL-encoded SPARQL query. In this example, the query selects all triples (`?sub ?pred ?obj`) in the dataset, limiting the results to 10 entries.
