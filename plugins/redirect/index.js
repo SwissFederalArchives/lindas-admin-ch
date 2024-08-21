@@ -17,7 +17,8 @@ const factory = async (_trifid) => {
         const fullUrlPathname = fullUrlObject.pathname
 
         // Enforce trailing slash
-        return reply.code(301).redirect(`${fullUrlPathname}/`)
+        reply.code(301).redirect(`${fullUrlPathname}/`)
+        return reply
       }
       return handler
     }

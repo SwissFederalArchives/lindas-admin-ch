@@ -21,15 +21,17 @@ const factory = async (trifid) => {
 
         // Enforce trailing slash
         if (fullUrlPathname.slice(-1) !== '/') {
-          return reply.redirect(`${fullUrlPathname}/`)
+          reply.redirect(`${fullUrlPathname}/`)
+          return reply
         }
 
-        return reply.type('text/html').send(await render(request, `${currentDir}/view.hbs`, {
+        reply.type('text/html').send(await render(request, `${currentDir}/view.hbs`, {
           currentLanguage: request.session.get('currentLanguage'),
           defaultLanguage: request.session.get('defaultLanguage')
         }, {
           title: 'Datasets'
         }))
+        return reply
       }
       return handler
     }

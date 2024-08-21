@@ -38,6 +38,11 @@ const factory = async (trifid) => {
         }
         const req = await fetch(instanceQueryUrl, requestOptions)
         Array.from(req.headers.entries()).forEach(([key, value]) => {
+          const lowerCaseKey = key.toLowerCase()
+          if (lowerCaseKey === 'content-encoding') {
+            return
+          }
+
           reply.header(key, value)
         })
         if (req.status === 200) {
@@ -45,7 +50,9 @@ const factory = async (trifid) => {
           const xkeyValue = cleanupHeaderValue(path, 'default')
           reply.header('xkey', xkeyValue)
         }
-        return reply.code(req.status).send(req.body)
+        const bodyText = await req.text()
+        reply.code(req.status).send(bodyText)
+        return reply
       }
       return handler
     }
