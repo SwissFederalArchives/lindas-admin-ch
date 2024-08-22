@@ -30,9 +30,9 @@ The following code snippet sends a SPARQL query to the LINDAS SPARQL API with th
 import requests
 import pandas as pd
 import io
- 
+
 def query(sparql_string):
-   
+
     resp = requests.post("https://ld.admin.ch/query",
         data = "query=" + sparql_string,
         headers = {
@@ -40,20 +40,20 @@ def query(sparql_string):
             "Accept": "text/csv"
         }
     )
- 
+
     resp.encoding = "utf-8"
- 
+
     return pd.read_csv(io.StringIO(resp.text))
- 
- 
+
+
 sparql_string = """
- 
+
 SELECT * WHERE {
   ?canton a <https://schema.ld.admin.ch/Canton>.
 }
- 
+
 """
- 
+
 df = query(sparql_string)
 ```
 
@@ -74,8 +74,8 @@ SELECT * WHERE {
 
 "
 
-query <- POST("https://ld.admin.ch/query", 
-              add_headers("Accept" = "text/csv"), 
+query <- POST("https://ld.admin.ch/query",
+              add_headers("Accept" = "text/csv"),
               content_type("application/x-www-form-urlencoded; charset=UTF-8"),
               body = paste("query=", sparql_string, sep = ""))
 
@@ -84,65 +84,73 @@ df <- content(query, encoding = "UTF-8")
 
 ### JavaScript
 
-The following code snippet sends a SPARQL query to the LINDAS SPARQL API with the help of JavaScript after pressing the button "Go!". The resulting answer will be printed (unformatted) into the browser window:
+The following code snippet sends a SPARQL query to the LINDAS SPARQL API with the help of JavaScript after pressing the button "Go!".
+The resulting answer will be printed (unformatted) into the browser window:
 
-```javascript
+```html
 <!DOCTYPE html>
-<html>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Example</title>
+  </head>
+  <body>
     <script>
-        async function getData(queryString) {
-
-            const response = await fetch("https://ld.admin.ch/query", {
-                method: 'POST',
-                headers: {
-                    'Accept': 'text/csv',
-                    'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
-                },
-                body: new URLSearchParams({
-                    query: queryString
-                })
-            });
-                const data = await response.text();
-                    document.write(data);
-        }
-
+      const getData = async (queryString) => {
+        const response = await fetch("https://ld.admin.ch/query", {
+          method: "POST",
+          headers: {
+            Accept: "text/csv",
+            "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+          },
+          body: new URLSearchParams({
+            query: queryString,
+          }),
+        });
+        const data = await response.text();
+        document.write(data);
+      };
     </script>
-    <button onclick="getData('SELECT * WHERE {?canton a <https://schema.ld.admin.ch/Canton>}')">Go!</button>
-</body>
+    <button
+      onclick="getData('SELECT * WHERE {?canton a <https://schema.ld.admin.ch/Canton>}')"
+    >
+      Go!
+    </button>
+  </body>
 </html>
 ```
 
+### Curl to CSV (and other formats)
 
+# Database Query Documentation
 
+Our database allows users to perform queries and receive results in a CSV format.
+This feature is particularly useful for automating queries and integrating data retrieval into various applications.
 
-### Curl to csv (and other formats)
+## How to Use URL Encoding for Queries
 
-Database Query Documentation
+To obtain a CSV file of your query results, you need to urlencode your query and include specific parameters in your request URL.
+The format parameter should be set to `csv` to specify that the output should be in CSV format.
 
-Our database allows users to perform queries and receive results in a CSV format. This feature is particularly useful for automating queries and integrating data retrieval into various applications.
-
-How to Use URL Encoding for Queries
-
-To obtain a CSV file of your query results, you need to urlencode your query and include specific parameters in your request URL. The format parameter should be set to `csv` to specify that the output should be in CSV format.
-
-What other file parameters can be used?
+## What other file parameters can be used?
 
 Supported values for the format query parameter:
 
-Format	MIME type
-ttl	"text/turtle"
-nt	"application/n-triples"
-xml	"application/rdf+xml"
-jsonld	"application/ld+json"
-csv	"text/csv"
+| Format | MIME type             |
+| ------ | --------------------- |
+| ttl    | text/turtle           |
+| nt     | application/n-triples |
+| xml    | application/rdf+xml   |
+| jsonld | application/ld+json   |
+| csv    | text/csv              |
 
+## Example Usage
 
-# Example Usage
+Below is an example of how to use the `curl` command to perform a query and receive the results as a CSV file.
+This example demonstrates how to use URL encoding to include the query in the request:
 
-Below is an example of how to use the `curl` command to perform a query and receive the results as a CSV file. This example demonstrates how to use URL encoding to include the query in the request:
-
-```bash
+```sh
 curl -vvv https://ld.admin.ch/query?format=csv&query=PREFIX%20rdf%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F1999%2F02%2F22-rdf-syntax-ns%23%3E%0APREFIX%20rdfs%3A%20%3Chttp%3A%2F%2Fwww.w3.org%2F2000%2F01%2Frdf-schema%23%3E%0ASELECT%20%2A%20WHERE%20%7B%0A%20%20%3Fsub%20%3Fpred%20%3Fobj%20.%0A%7D%20LIMIT%2010
 ```
 
