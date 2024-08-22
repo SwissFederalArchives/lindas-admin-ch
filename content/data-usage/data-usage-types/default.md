@@ -14,7 +14,7 @@ The [SPARQL Interface of LINDAS](/sparql) allows to write SPARQL queries directl
 
 ## Full Text Search
 
-The Stardog Triplestore used by LINDAS allows full text search via SPARQL. Details can be found in the [Stardog documentation](https://docs.stardog.com/query-stardog/full-text-search#integration-with-sparql). Here is a [sample full text search](https://ld.admin.ch/sparql/#query=SELECT+DISTINCT+%3Fs+%3Fp+%3Fl%0AWHERE+%7B%0A++%3Fs+%3Fp+%3Fl.%0A++(%3Fl+%3Fscore)+%3Ctag%3Astardog%3Aapi%3Aproperty%3AtextMatch%3E+'Fraum%C3%BCnster'. %0A%7D%0A&contentTypeConstruct=text%2Fturtle&contentTypeSelect=application%2Fsparql-results%2Bjson&endpoint=https%3A%2F%2Fld.admin.ch%2Fquery&requestMethod=POST&tabTitle=Query+5&headers=%7B%7D&outputFormat=table), which searches for occurrences of the term 'Fraumünster' in all literals.
+The Stardog Triplestore used by LINDAS allows full text search via SPARQL. Details can be found in the [Stardog documentation](https://docs.stardog.com/query-stardog/full-text-search#integration-with-sparql). Here is a [sample full text search](<https://ld.admin.ch/sparql/#query=SELECT%20DISTINCT%20%3Fs%20%3Fp%20%3Fl%0AWHERE%20%7B%0A%20%20%3Fs%20%3Fp%20%3Fl.%0A%20%20(%3Fl%20%3Fscore)%20%3Ctag%3Astardog%3Aapi%3Aproperty%3AtextMatch%3E%20'Fraum%C3%BCnster'.%20%0A%7D%0A&endpoint=https%3A%2F%2Fld.admin.ch%2Fquery&requestMethod=POST&tabTitle=Query%205&headers=%7B%7D&contentTypeConstruct=text%2Fturtle&contentTypeSelect=application%2Fsparql-results%2Bjson&outputFormat=table>), which searches for occurrences of the term 'Fraumünster' in all literals.
 
 ## SPARQL API
 
