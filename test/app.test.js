@@ -23,7 +23,7 @@ const createTrifidInstance = async (configPath) => await trifid({
   server: {
     logLevel: 'warn',
     listener: {
-      port: 4242
+      port: 0
     }
   },
   extends: [
