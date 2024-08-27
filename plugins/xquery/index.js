@@ -1,4 +1,5 @@
 import { Readable } from 'node:stream'
+import { ReadableStream } from 'node:stream/web'
 import { getListenerURL } from 'trifid-core'
 
 /**
@@ -51,7 +52,10 @@ const factory = async (trifid) => {
           const xkeyValue = cleanupHeaderValue(path, 'default')
           reply.header('xkey', xkeyValue)
         }
-        const readableBody = Readable.fromWeb(req.body)
+        let readableBody = req.body
+        if (readableBody instanceof ReadableStream) {
+          readableBody = Readable.fromWeb(readableBody)
+        }
         reply.code(req.status).send(readableBody)
         return reply
       }
