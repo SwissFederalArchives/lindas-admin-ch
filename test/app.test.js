@@ -3,8 +3,8 @@
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { strictEqual } from 'node:assert'
+import { describe, it } from 'node:test'
 
-import { describe, it } from 'mocha'
 import trifid from 'trifid-core'
 
 const configPathLocal = join(dirname(fileURLToPath(import.meta.url)), '..', 'config.local.yaml')

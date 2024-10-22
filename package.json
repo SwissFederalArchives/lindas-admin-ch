@@ -5,9 +5,9 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "@zazuko/trifid-markdown-content": "^2.0.3",
-    "@zazuko/trifid-plugin-ckan": "^4.1.0",
-    "trifid": "^5.0.7"
+    "@zazuko/trifid-markdown-content": "^2.0.4",
+    "@zazuko/trifid-plugin-ckan": "^4.2.0",
+    "trifid": "^5.0.8"
   },
   "license": "UNLICENSED",
   "scripts": {
@@ -17,10 +17,9 @@
     "start:prod": "DATASET_BASE_URL=https://ld.admin.ch/ SPARQL_ENDPOINT_URL=https://lindas.admin.ch/query SPARQL_USERNAME=public SPARQL_PASSWORD=public SPARQL_PROXY_CACHE_PREFIX=default SPARQL_PROXY_CACHE_CLEAR_AT_STARTUP=true trifid -c config.local.yaml",
     "start:energy": "DATASET_BASE_URL=https://energy.ld.admin.ch/ SPARQL_ENDPOINT_URL=https://test.lindas.admin.ch/query SPARQL_USERNAME=public SPARQL_PASSWORD=public SPARQL_PROXY_CACHE_PREFIX=default SPARQL_PROXY_CACHE_CLEAR_AT_STARTUP=true trifid -c config.local.yaml",
     "start:local": "npm run start:test",
-    "test": "standard && mocha --timeout 8000"
+    "test": "standard && node --test **/*.test.js"
   },
   "devDependencies": {
-    "mocha": "^10.7.3",
     "standard": "^17.1.2"
   }
 }
