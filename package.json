@@ -5,8 +5,8 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "@zazuko/trifid-markdown-content": "^2.0.4",
-    "@zazuko/trifid-plugin-ckan": "^4.2.1",
+    "@zazuko/trifid-markdown-content": "^2.0.5",
+    "@zazuko/trifid-plugin-ckan": "^4.2.2",
     "trifid": "^5.0.8"
   },
   "license": "UNLICENSED",
