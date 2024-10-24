@@ -3,8 +3,8 @@
 import { dirname, join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { strictEqual } from 'node:assert'
+import { describe, it } from 'node:test'
 
-import { describe, it, beforeEach, afterEach } from 'mocha'
 import trifid from 'trifid-core'
 
 const configPathLocal = join(dirname(fileURLToPath(import.meta.url)), '..', 'config.local.yaml')
@@ -57,6 +57,7 @@ describe('Trifid', () => {
     it('should start without crashing', async () => {
       const trifidInstance = await createTrifidInstance(configPathLocal)
       const trifidListener = await trifidInstance.start()
+      await new Promise((resolve) => { setTimeout(resolve, 200) })
       const res = await fetch(`${getListenerURL(trifidListener)}/`)
       strictEqual(res.status, 200)
       await trifidListener.close()
@@ -65,6 +66,7 @@ describe('Trifid', () => {
     it('should have /sparql (redirected)', async () => {
       const trifidInstance = await createTrifidInstance(configPathLocal)
       const trifidListener = await trifidInstance.start()
+      await new Promise((resolve) => { setTimeout(resolve, 200) })
       const res = await fetch(`${getListenerURL(trifidListener)}/sparql`)
       strictEqual(res.status, 200)
       strictEqual(res.redirected, true)
@@ -73,6 +75,7 @@ describe('Trifid', () => {
     it('should have /sparql/', async () => {
       const trifidInstance = await createTrifidInstance(configPathLocal)
       const trifidListener = await trifidInstance.start()
+      await new Promise((resolve) => { setTimeout(resolve, 200) })
       const res = await fetch(`${getListenerURL(trifidListener)}/sparql/`)
       strictEqual(res.status, 200)
       strictEqual(res.redirected, false)
@@ -82,6 +85,7 @@ describe('Trifid', () => {
     it('should have /graph-explorer (redirected)', async () => {
       const trifidInstance = await createTrifidInstance(configPathLocal)
       const trifidListener = await trifidInstance.start()
+      await new Promise((resolve) => { setTimeout(resolve, 200) })
       const res = await fetch(`${getListenerURL(trifidListener)}/graph-explorer`)
       strictEqual(res.status, 200)
       strictEqual(res.redirected, true)
@@ -90,6 +94,7 @@ describe('Trifid', () => {
     it('should have /graph-explorer/', async () => {
       const trifidInstance = await createTrifidInstance(configPathLocal)
       const trifidListener = await trifidInstance.start()
+      await new Promise((resolve) => { setTimeout(resolve, 200) })
       const res = await fetch(`${getListenerURL(trifidListener)}/graph-explorer/`)
       strictEqual(res.status, 200)
       strictEqual(res.redirected, false)
@@ -99,6 +104,7 @@ describe('Trifid', () => {
     it('should have /spex (redirected)', async () => {
       const trifidInstance = await createTrifidInstance(configPathLocal)
       const trifidListener = await trifidInstance.start()
+      await new Promise((resolve) => { setTimeout(resolve, 200) })
       const res = await fetch(`${getListenerURL(trifidListener)}/spex`)
       strictEqual(res.status, 200)
       strictEqual(res.redirected, true)
@@ -107,6 +113,7 @@ describe('Trifid', () => {
     it('should have /spex/', async () => {
       const trifidInstance = await createTrifidInstance(configPathLocal)
       const trifidListener = await trifidInstance.start()
+      await new Promise((resolve) => { setTimeout(resolve, 200) })
       const res = await fetch(`${getListenerURL(trifidListener)}/spex/`)
       strictEqual(res.status, 200)
       strictEqual(res.redirected, false)
@@ -116,6 +123,7 @@ describe('Trifid', () => {
     it('should have /datasets (redirected)', async () => {
       const trifidInstance = await createTrifidInstance(configPathLocal)
       const trifidListener = await trifidInstance.start()
+      await new Promise((resolve) => { setTimeout(resolve, 200) })
       const res = await fetch(`${getListenerURL(trifidListener)}/datasets`)
       strictEqual(res.status, 200)
       strictEqual(res.redirected, true)
@@ -124,6 +132,7 @@ describe('Trifid', () => {
     it('should have /datasets/', async () => {
       const trifidInstance = await createTrifidInstance(configPathLocal)
       const trifidListener = await trifidInstance.start()
+      await new Promise((resolve) => { setTimeout(resolve, 200) })
       const res = await fetch(`${getListenerURL(trifidListener)}/datasets/`)
       strictEqual(res.status, 200)
       strictEqual(res.redirected, false)
@@ -135,6 +144,7 @@ describe('Trifid', () => {
     it('should start without crashing', async () => {
       const trifidInstance = await createTrifidInstance(configPathNoRewrite)
       const trifidListener = await trifidInstance.start()
+      await new Promise((resolve) => { setTimeout(resolve, 200) })
       const res = await fetch(`${getListenerURL(trifidListener)}/`)
       strictEqual(res.status, 200)
       await trifidListener.close()
@@ -143,6 +153,7 @@ describe('Trifid', () => {
     it('should have /sparql (redirected)', async () => {
       const trifidInstance = await createTrifidInstance(configPathNoRewrite)
       const trifidListener = await trifidInstance.start()
+      await new Promise((resolve) => { setTimeout(resolve, 200) })
       const res = await fetch(`${getListenerURL(trifidListener)}/sparql`)
       strictEqual(res.status, 200)
       strictEqual(res.redirected, true)
@@ -151,6 +162,7 @@ describe('Trifid', () => {
     it('should have /sparql/', async () => {
       const trifidInstance = await createTrifidInstance(configPathNoRewrite)
       const trifidListener = await trifidInstance.start()
+      await new Promise((resolve) => { setTimeout(resolve, 200) })
       const res = await fetch(`${getListenerURL(trifidListener)}/sparql/`)
       strictEqual(res.status, 200)
       strictEqual(res.redirected, false)
@@ -160,6 +172,7 @@ describe('Trifid', () => {
     it('should have /graph-explorer (redirected)', async () => {
       const trifidInstance = await createTrifidInstance(configPathNoRewrite)
       const trifidListener = await trifidInstance.start()
+      await new Promise((resolve) => { setTimeout(resolve, 200) })
       const res = await fetch(`${getListenerURL(trifidListener)}/graph-explorer`)
       strictEqual(res.status, 200)
       strictEqual(res.redirected, true)
@@ -168,6 +181,7 @@ describe('Trifid', () => {
     it('should have /graph-explorer/', async () => {
       const trifidInstance = await createTrifidInstance(configPathNoRewrite)
       const trifidListener = await trifidInstance.start()
+      await new Promise((resolve) => { setTimeout(resolve, 200) })
       const res = await fetch(`${getListenerURL(trifidListener)}/graph-explorer/`)
       strictEqual(res.status, 200)
       strictEqual(res.redirected, false)
@@ -177,6 +191,7 @@ describe('Trifid', () => {
     it('should have /spex (redirected)', async () => {
       const trifidInstance = await createTrifidInstance(configPathNoRewrite)
       const trifidListener = await trifidInstance.start()
+      await new Promise((resolve) => { setTimeout(resolve, 200) })
       const res = await fetch(`${getListenerURL(trifidListener)}/spex`)
       strictEqual(res.status, 200)
       strictEqual(res.redirected, true)
@@ -185,6 +200,7 @@ describe('Trifid', () => {
     it('should have /spex/', async () => {
       const trifidInstance = await createTrifidInstance(configPathNoRewrite)
       const trifidListener = await trifidInstance.start()
+      await new Promise((resolve) => { setTimeout(resolve, 200) })
       const res = await fetch(`${getListenerURL(trifidListener)}/spex/`)
       strictEqual(res.status, 200)
       strictEqual(res.redirected, false)
@@ -194,6 +210,7 @@ describe('Trifid', () => {
     it('should have /datasets (redirected)', async () => {
       const trifidInstance = await createTrifidInstance(configPathNoRewrite)
       const trifidListener = await trifidInstance.start()
+      await new Promise((resolve) => { setTimeout(resolve, 200) })
       const res = await fetch(`${getListenerURL(trifidListener)}/datasets`)
       strictEqual(res.status, 200)
       strictEqual(res.redirected, true)
@@ -202,6 +219,7 @@ describe('Trifid', () => {
     it('should have /datasets/', async () => {
       const trifidInstance = await createTrifidInstance(configPathNoRewrite)
       const trifidListener = await trifidInstance.start()
+      await new Promise((resolve) => { setTimeout(resolve, 200) })
       const res = await fetch(`${getListenerURL(trifidListener)}/datasets/`)
       strictEqual(res.status, 200)
       strictEqual(res.redirected, false)
