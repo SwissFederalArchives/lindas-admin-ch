@@ -66,6 +66,8 @@
     "FA Queries long" : "Raccolta di interrogazioni SPARQL frequenti, incluse le relative spiegazioni.\n\n(Contenuto solo in inglese)",
     "Resources short" : "Risorse",
     "Resources long" : "Link a risorse utili per acquisire le conoscenze di base sui dati collegati.\n\n(Contenuto solo in inglese)",
+    "dereferencing short": "Dereferencing",
+    "dereferencing long": "Spiegazioni sulla dereferenziazione dei dati in LINDAS. (solo in inglese)",
   
   "_Menu Community": "",
     "News short" : "Novità",
