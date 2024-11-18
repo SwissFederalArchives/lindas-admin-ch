@@ -66,6 +66,8 @@
     "FA Queries long": "Collection of frequently asked SPARQL queries including explanations.",
     "Resources short": "Resources",
     "Resources long": "Links to useful resources for learning the basics of linked data.",
+    "dereferencing short": "Dereferencing",
+    "dereferencing long": "Explanations of the dereferencing of data on LINDAS. (only in English)",
 
   "_Menu Community": "",
     "News short": "News",
