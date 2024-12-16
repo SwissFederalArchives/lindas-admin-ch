@@ -17,9 +17,18 @@ plugins:
       rewriteQuery: false
       rewriteResults: false
       # END: disable rewrites
-      endpointUrl: env:SPARQL_ENDPOINT_URL
-      username: env:SPARQL_USERNAME
-      password: env:SPARQL_PASSWORD
+      endpoints:
+        default:
+          url: https://lindas.admin.ch/query
+          username: env:SPARQL_ENDPOINT_USERNAME
+          password: env:SPARQL_ENDPOINT_PASSWORD
+        int:
+          url: https://int.lindas.admin.ch/query
+        test:
+          url: https://test.lindas.admin.ch/query
+      endpointUrl: https://ld.admin.ch/query
+      username: env:SPARQL_ENDPOINT_USERNAME
+      password: env:SPARQL_ENDPOINT_PASSWORD
       formats:
         ttl: "text/turtle"
         nt: "application/n-triples"
@@ -38,6 +47,7 @@ plugins:
         timeout: 4000
       followRedirects: true
       enableSchemaUrlRedirect: true
+      allowEndpointSwitch: true
 
       # BEGIN: disable rewrites
       rewrite: false
