@@ -36,4 +36,5 @@ The visualization software [visualize.admin.ch](https://visualize.admin.ch) allo
 
 Here is an example visualization of Visualize. It shows the Forest Fire Danger in Switzerland and Liechtenstein.
 
-[View Embedded Iframe](visualizeExample.html) 
+[View Embedded Iframe]([visualizeExample.html](https://github.com/SwissFederalArchives/lindas-admin-ch/blob/develop/content/ecosystem/LINDAS-ecosystem/visualizeExample.html)) 
+
