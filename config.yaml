@@ -128,9 +128,22 @@ plugins:
       rewrite: false
       rewriteQuery: true
       rewriteResults: true
+
+      endpoints:
+        default:
+          url: env:SPARQL_ENDPOINT_URL
+          username: env:SPARQL_USERNAME
+          password: env:SPARQL_PASSWORD
+        prod:
+          url: https://lindas.admin.ch/query
+        int:
+          url: https://int.lindas.admin.ch/query
+        test:
+          url: https://test.lindas.admin.ch/query
       endpointUrl: env:SPARQL_ENDPOINT_URL
       username: env:SPARQL_USERNAME
       password: env:SPARQL_PASSWORD
+
       formats:
         ttl: "text/turtle"
         nt: "application/n-triples"
@@ -221,6 +234,7 @@ plugins:
         timeout: 4000
       followRedirects: true
       enableSchemaUrlRedirect: true
+      allowEndpointSwitch: true
 
       rewrite: true
 
@@ -229,3 +243,20 @@ plugins:
       resourceGraphQuery: "#pragma describe.strategy cbd\nDESCRIBE <{{iri}}>"
       containerExistsQuery: "ASK { GRAPH ?g { <{{iri}}> ?p ?o }}"
       containerGraphQuery: "#pragma describe.strategy cbd\nDESCRIBE <{{iri}}>"
+
+      datasetBaseUrl:
+        - https://ld.admin.ch/
+        - https://schema.ld.admin.ch/
+        - https://culture.ld.admin.ch/
+        - https://energy.ld.admin.ch/
+        - https://education.ld.admin.ch/
+        - https://agriculture.ld.admin.ch/
+        - https://environment.ld.admin.ch/
+        - https://finance.ld.admin.ch/
+        - https://register.ld.admin.ch/
+        - https://politics.ld.admin.ch/
+        - https://health.ld.admin.ch/
+        - https://communication.ld.admin.ch/
+        - https://transport.ld.admin.ch/
+        - https://population.ld.admin.ch/
+        - https://ld.zh.ch/
