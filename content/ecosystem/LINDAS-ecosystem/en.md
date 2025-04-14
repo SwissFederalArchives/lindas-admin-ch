@@ -33,3 +33,7 @@ With the help of the [Graph Explorer](https://lindas.admin.ch/graph-explorer/) t
 The visualization software [visualize.admin.ch](https://visualize.admin.ch) allows to visualize transformed data in a few steps with the help of the Cube Creator. This tool can also be used by interested users without in-depth knowledge.
 
 ![Visualize](/static-assets/img/visualize.jpg)
+
+Here is an example visualization of Visualize. It shows the Forest Fire Danger in Switzerland and Liechtenstein.
+
+<iframe src="https://visualize.admin.ch/de/embed/yzkjYzt0Zg01" width="100%" style="border: 0px #ffffff none;"  name="visualize.admin.ch"></iframe><script type="text/javascript">!function(){window.addEventListener("message", function (e) { if (e.data.type === "VISUALIZE-CHART-RESIZE") { document.querySelectorAll("iframe").forEach((iframe) => { if (iframe.contentWindow === e.source) { iframe.style.height = e.data.height + "px"; } }); } })}();</script>
