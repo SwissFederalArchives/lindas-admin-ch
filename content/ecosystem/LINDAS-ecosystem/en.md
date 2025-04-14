@@ -38,3 +38,8 @@ Here is an example visualization of Visualize. It shows the Forest Fire Danger i
 
 [View Embedded Iframe](https://github.com/SwissFederalArchives/lindas-admin-ch/blob/develop/content/ecosystem/LINDAS-ecosystem/visualizeExample.html) ()() 
 
+[thisIsSecondTry](<iframe src="https://visualize.admin.ch/de/embed/yzkjYzt0Zg01?disableBorder=true" width="100%" style="height: 893px; border: 0px #ffffff none;"  name="visualize.admin.ch"></iframe>)
+
+or like this?
+
+[visualize-direct](https://visualize.admin.ch/de/embed/yzkjYzt0Zg01?disableBorder=true)
