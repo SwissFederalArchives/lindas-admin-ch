@@ -6,4 +6,3 @@ Les applications publiques suivantes utilisent déjà (en partie en arrière-pla
 * [infosm.ld.admin.ch](https://www.infosm.blv.admin.ch/) Application sur les épizooties et leur propagation
 * [Prix de l'électricité.elcom.admin.ch](https://www.prix-electricite.elcom.admin.ch/) Application sur les prix de l'électricité au niveau de la commune
 * [ld.admin.ch/datasets](https://ld.admin.ch/datasets/) Liste de tous les jeux de données disponibles dans LINDAS
-* [bewilligungen.easygov.swiss](https://bewilligungen.easygov.swiss/) Recherche de professions soumises à autorisation et de professions réglementées en Suisse
