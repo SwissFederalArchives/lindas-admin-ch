@@ -34,12 +34,6 @@ The visualization software [visualize.admin.ch](https://visualize.admin.ch) allo
 
 ![Visualize](/static-assets/img/visualize.jpg)
 
-Here is an example visualization of Visualize. It shows the Forest Fire Danger in Switzerland and Liechtenstein.
+Here is an [example](https://visualize.admin.ch/de/embed/yzkjYzt0Zg01?disableBorder=true)
+ visualization of Visualize. It shows the Forest Fire Danger in Switzerland and Liechtenstein.
 
-[View Embedded Iframe](https://github.com/SwissFederalArchives/lindas-admin-ch/blob/develop/content/ecosystem/LINDAS-ecosystem/visualizeExample.html) ()() 
-
-[thisIsSecondTry](<iframe src="https://visualize.admin.ch/de/embed/yzkjYzt0Zg01?disableBorder=true" width="100%" style="height: 893px; border: 0px #ffffff none;"  name="visualize.admin.ch"></iframe>)
-
-or like this?
-
-[visualize-direct](https://visualize.admin.ch/de/embed/yzkjYzt0Zg01?disableBorder=true)
