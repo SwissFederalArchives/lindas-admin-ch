@@ -12,4 +12,4 @@ As follow-up to the first Linked Data Day, interested parties can meet regularly
 - **6 June 2023, 5 p.m. - 7 p.m.** - Greenfield, Brückenstrasse 73, Bern and online (hybrid) - ([Link to program and presentations (in German)](https://www.bfh.ch/wirtschaft/de/aktuell/fachveranstaltungen/linked-data-meetup-1-23/))  
 
 
-[Find out more about these events here (in German)](https://www.bfh.ch/wirtschaft/de/themen/linked-data-meetup/) with the option of subscribing to an information distribution list.
+[Find out more about these events here (in German)](https://www.bfh.ch/de/themen/linked-data/) with the option of subscribing to an information distribution list.
