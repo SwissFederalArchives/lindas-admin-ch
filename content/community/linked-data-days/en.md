@@ -2,6 +2,8 @@
   
 ![   ](/static-assets/img/white-space-2.jpg)
 
+* Save the date: 10.11.2025
+
 ## Past Linked Data Days
 
 * [2024](/community/linked-data-day-2024/)
