@@ -37,3 +37,4 @@ The visualization software [visualize.admin.ch](https://visualize.admin.ch) allo
 Here is an [example](https://visualize.admin.ch/de/embed/yzkjYzt0Zg01?disableBorder=true)
  visualization of Visualize. It shows the Forest Fire Danger in Switzerland and Liechtenstein.
 
+
