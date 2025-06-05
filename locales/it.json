@@ -67,7 +67,10 @@
     "Resources short" : "Risorse",
     "Resources long" : "Link a risorse utili per acquisire le conoscenze di base sui dati collegati.\n\n(Contenuto solo in inglese)",
     "dereferencing short": "Dereferencing",
-    "dereferencing long": "Spiegazioni sulla dereferenziazione dei dati in LINDAS. (solo in inglese)",
+    "dereferencing long": "Spiegazioni sulla dereferenziazione dei dati in LINDAS.\n\n(Contenuto solo in inglese)",
+    "Contribute short": "Assistenza",
+    "Contribute long": "Come contribuire a questa documentazione.\n\n(Contenuto solo in inglese)",
+    
   
   "_Menu Community": "",
     "News short" : "Novità",

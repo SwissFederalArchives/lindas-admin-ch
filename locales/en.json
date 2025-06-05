@@ -67,7 +67,9 @@
     "Resources short": "Resources",
     "Resources long": "Links to useful resources for learning the basics of linked data.",
     "dereferencing short": "Dereferencing",
-    "dereferencing long": "Explanations of the dereferencing of data on LINDAS. (only in English)",
+    "dereferencing long": "Explanations of the dereferencing of data on LINDAS.",
+    "Contribute short": "Contributions",
+    "Contribute long": "How to contribute to the LINDAS documentation.",
 
   "_Menu Community": "",
     "News short": "News",
