@@ -2,9 +2,11 @@
   
 ![   ](/static-assets/img/white-space-2.jpg)
 
-* Save the date: 10.11.2025
+## Prossimi numeri del Linked Data Days
 
-## Edizioni precedenti del Linked Data Day
+* Save the date: **10.11.2025**
+
+## Edizioni precedenti del Linked Data Days
 
 * [2024](/community/linked-data-day-2024/)
 * [2023](/community/linked-data-day-2023/)
