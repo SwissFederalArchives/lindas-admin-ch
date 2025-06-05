@@ -1,28 +1,25 @@
-# Redirects in Trifid
+# Dereferencing
+
+When an URI of a LINDAS element is entered into the browser's address field, the server responds with a dynamic website where all the triples are shown, that exist within the LINDAS triple store that have the corresponding URI as a subject. Some additional information like the named graphs of the triples is also shown. It is possible to change this default behaviour of the server by using an URL parameter or a special header.
+
+## Redirect
+
+This default dereferencing is overriden, if:
+
+- header in the request has accept: text/html and
+- there is a triple that has on the predicate position schema:URL with an object of type xsd:anyURI
+
+In this case, there is a forward to the object (URL) of the predicate schema:URL.
+
+Example: https://register.ld.admin.ch/termdat/56905
 
 
-When a URI is used in the browser it links to TRIFID where the Triples of the URI and additional information such as the Graph are displayed.
+## Disable the Redirection
 
-It is possible to change the behaviour of Ttifid via Tripels and via URL or header.
+The above described redirection can be disabled either
 
-For example:
-
-
-
-### Redirect to the URI if:
-
-Accept is text/html
-
-contains a schema:URL with value of type xsd:anyURI
-
-
-
-
-### To disable the schema URL redirection:
-
-via header: X-Disable-Schema-URL-Redirect: true
-
-via query parameter: disableSchemaUrlRedirect=true
+- via header: X-Disable-Schema-URL-Redirect: true or
+- via query parameter: disableSchemaUrlRedirect=true
 
 
 Example: https://register.ld.admin.ch/termdat/56905?disableSchemaUrlRedirect=true

@@ -2,7 +2,9 @@
   
 ![   ](/static-assets/img/white-space-2.jpg)
 
-* Save the date: 10.11.2025
+## Upcoming Linked Data Days
+
+* Save the date: **10.11.2025**
 
 ## Past Linked Data Days
 

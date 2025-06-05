@@ -2,9 +2,11 @@
   
 ![   ](/static-assets/img/white-space-2.jpg)
 
-* Save the date: 10.11.2025
+## Kommende Linked Data Days
 
-## Bisherige Ausgaben des Linked Data Day
+* Der Linked Data Day 2025 wird am **10. November 2025** stattfinden. Weitere Infos folgen.
+
+## Bisherige Linked Data Days
 
 * [2024](/community/linked-data-day-2024/)
 * [2023](/community/linked-data-day-2023/)
