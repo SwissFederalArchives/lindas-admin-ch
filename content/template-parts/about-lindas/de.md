@@ -2,7 +2,7 @@
 
 ![Linked data day](/static-assets/img/Linked-data-day-2025.png)
 
-Weitere Informationen und Anmeldung [hier](https://www.bfh.ch/wirtschaft/de/aktuell/fachveranstaltungen/linked-data-day-2025/)
+Weitere Informationen und Anmeldung [hier](https://www.bfh.ch/wirtschaft/de/aktuell/fachveranstaltungen/linked-data-day-2025/).
 
 ## LINDAS
 
