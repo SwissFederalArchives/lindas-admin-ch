@@ -144,6 +144,7 @@ Supported values for the format query parameter:
 | xml    | application/rdf+xml   |
 | jsonld | application/ld+json   |
 | csv    | text/csv              |
+| trig   | application/trig      |
 
 ## Example Usage
 
