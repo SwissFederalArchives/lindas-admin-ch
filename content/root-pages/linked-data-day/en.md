@@ -1,7 +1,9 @@
-![Linked Data Day, 15.05.2024, Welle 7, Bern](/static-assets/img/linked-data-day-2024-de.png)
+## Linked Data Day 2025
+![Linked data day](/static-assets/img/Linked-data-day-2025.png)
 
-![   ](/static-assets/img/white-space-2.jpg)
-
-Details only in [German](?lang=de) or in [French](?lang=fr).
+The Linked Data Day 2025 will take place on **10 November 2025** in cooperation with the Bern University of Applied Sciences. [All information and registration (in German only) here](https://www.bfh.ch/de/aktuell/fachveranstaltungen/linked-data-day-2025/).
   
-Details of the previous edition can be found here [Community/Linked Data Day 2023](/community/linked-data-day-2023/)
+## Past Linked Data Days
+
+* [2024](/community/linked-data-day-2024/)
+* [2023](/community/linked-data-day-2023/)
