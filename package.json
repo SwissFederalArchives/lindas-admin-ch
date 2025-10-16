@@ -5,9 +5,9 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "@zazuko/trifid-markdown-content": "^2.0.5",
-    "@zazuko/trifid-plugin-ckan": "^4.2.2",
-    "trifid": "^5.0.11"
+    "@zazuko/trifid-markdown-content": "git+https://github.com/SwissFederalArchives/lindas-trifid.git#main:packages/markdown-content",
+    "@zazuko/trifid-plugin-ckan": "git+https://github.com/SwissFederalArchives/lindas-trifid.git#main:packages/ckan",
+    "trifid": "git+https://github.com/SwissFederalArchives/lindas-trifid.git#main:packages/trifid"
   },
   "license": "UNLICENSED",
   "scripts": {
