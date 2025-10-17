@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url'
 import { strictEqual } from 'node:assert'
 import { describe, it } from 'node:test'
 
-import trifid from 'trifid-core'
+import trifid from 'lindas-trifid-core'
 
 const configPathLocal = join(dirname(fileURLToPath(import.meta.url)), '..', 'config.local.yaml')
 const configPathNoRewrite = join(dirname(fileURLToPath(import.meta.url)), '..', 'config.local.yaml')
