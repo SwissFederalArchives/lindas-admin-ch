@@ -13,6 +13,11 @@ server:
   logFormat: json
   options:
     logger: true
+  headers:
+    Content-Security-Policy: "default-src 'self'; script-src 'self' 'nonce-{NONCE}'; style-src 'self' 'unsafe-inline'; object-src 'none'; base-uri 'self'; frame-ancestors 'none'; report-uri /api/csp-violations"
+    X-Content-Type-Options: "nosniff"
+    X-Frame-Options: "DENY"
+    Referrer-Policy: "no-referrer"
 
 globals:
   datasetBaseUrl: env:DATASET_BASE_URL
@@ -119,6 +124,9 @@ plugins:
 
   search:
     module: file:plugins/search/index.js
+
+  csp-violations:
+    module: file:plugins/csp-violations/index.js
 
   sparql-proxy:
     module: "@zazuko/trifid-plugin-sparql-proxy"
