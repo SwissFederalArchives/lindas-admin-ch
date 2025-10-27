@@ -7,7 +7,7 @@ describe('Simple Trifid Import Test', () => {
   it('should import trifid without crashing', async () => {
     strictEqual(typeof trifid, 'function')
   })
-  
+
   it('should create minimal trifid instance', async () => {
     const instance = await trifid({
       server: {
@@ -17,7 +17,7 @@ describe('Simple Trifid Import Test', () => {
     })
     strictEqual(typeof instance.start, 'function')
     strictEqual(typeof instance.server, 'object')
-    
+
     // Start and immediately stop
     const server = await instance.start()
     await server.close()
