@@ -1,18 +1,16 @@
 /**
  * CSP Violation Reporting Endpoint
  * Receives and logs CSP violations for security monitoring and alerting
- * 
+ *
  * CSP violations indicate potential XSS attacks being blocked
  */
 
 export default async function (trifid) {
-  const { config } = trifid
-
   return {
     defaultConfiguration: async () => {
       return {
         methods: ['POST'],
-        paths: ['/api/csp-violations'],
+        paths: ['/api/csp-violations']
       }
     },
     routeHandler: async () => {
@@ -24,7 +22,7 @@ export default async function (trifid) {
           'blocked-uri': blockedUri = '',
           'violated-directive': violatedDirective = '',
           'source-file': sourceFile = '',
-          'original-policy': originalPolicy = '',
+          'original-policy': originalPolicy = ''
         } = violation
 
         // Log the violation
@@ -36,7 +34,7 @@ export default async function (trifid) {
           sourceFile,
           originalPolicy,
           clientIp: request.ip,
-          userAgent: request.headers['user-agent'],
+          userAgent: request.headers['user-agent']
         }
 
         console.error('[CSP VIOLATION]', logEntry)
@@ -45,7 +43,7 @@ export default async function (trifid) {
         const isAttackPattern = detectAttackPattern({
           blockedUri,
           violatedDirective,
-          sourceFile,
+          sourceFile
         })
 
         if (isAttackPattern) {
@@ -54,7 +52,7 @@ export default async function (trifid) {
             blockedUri,
             violatedDirective,
             sourceFile,
-            clientIp: request.ip,
+            clientIp: request.ip
           })
           // TODO: Send email alert to security team
           // TODO: Add to incident tracking system
@@ -63,7 +61,7 @@ export default async function (trifid) {
         // Return 204 No Content (standard for CSP reports)
         reply.sendStatus(204)
       }
-    },
+    }
   }
 }
 
@@ -72,23 +70,23 @@ export default async function (trifid) {
  * @param {Object} violation - The CSP violation object
  * @returns {boolean} true if attack pattern detected
  */
-function detectAttackPattern(violation) {
+function detectAttackPattern (violation) {
   const { blockedUri = '', violatedDirective = '', sourceFile = '' } = violation
 
   // Common XSS attack patterns
   const attackPatterns = [
-    /javascript:/i,           // javascript: protocol
-    /onerror/i,               // onerror event handler
-    /onload/i,                // onload event handler
-    /onclick/i,               // onclick event handler
-    /onpointerover/i,         // onpointerover event handler
-    /onmouseover/i,           // onmouseover event handler
-    /onmouseenter/i,          // onmouseenter event handler
-    /<script/i,               // script tag
-    /eval\(/i,                // eval() call
-    /expression\(/i,          // CSS expression
-    /src\s*=/i,               // src attribute
-    /href\s*=/i,              // href attribute
+    /javascript:/i, // javascript: protocol
+    /onerror/i, // onerror event handler
+    /onload/i, // onload event handler
+    /onclick/i, // onclick event handler
+    /onpointerover/i, // onpointerover event handler
+    /onmouseover/i, // onmouseover event handler
+    /onmouseenter/i, // onmouseenter event handler
+    /<script/i, // script tag
+    /eval\(/i, // eval() call
+    /expression\(/i, // CSS expression
+    /src\s*=/i, // src attribute
+    /href\s*=/i // href attribute
   ]
 
   const violationText = `${blockedUri}|${violatedDirective}|${sourceFile}`.toLowerCase()
