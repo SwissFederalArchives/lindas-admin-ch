@@ -228,7 +228,7 @@ plugins:
         #   mountPath: /visualize/
 
   entity-renderer:
-    module: "@zazuko/trifid-entity-renderer"
+    module: "lindas-trifid-entity-renderer"
     config:
       path: views/entity.hbs
       labelLoader:
