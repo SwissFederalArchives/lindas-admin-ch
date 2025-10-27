@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=https://unpkg.com/trifid-core@latest/lib/config/schema.json
+# yaml-language-server: $schema=https://unpkg.com/lindas-trifid-core@latest/lib/config/schema.json
 
 extends:
   - config.yaml
