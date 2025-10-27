@@ -1,7 +1,7 @@
 import { describe, it } from 'node:test'
 import { strictEqual } from 'node:assert'
 
-import trifid from '../../lindas-trifid/packages/core/index.js'
+import trifid from 'lindas-trifid-core'
 
 describe('Simple Trifid Import Test', () => {
   it('should import trifid without crashing', async () => {
