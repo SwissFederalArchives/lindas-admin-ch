@@ -20,6 +20,7 @@
     "test": "standard && node --test **/*.test.js"
   },
   "devDependencies": {
+    "lindas-trifid-core": "file:../lindas-trifid/packages/core",
     "standard": "^17.1.2"
   }
 }
