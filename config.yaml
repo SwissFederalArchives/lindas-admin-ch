@@ -96,7 +96,7 @@ plugins:
       - /visualize
 
   ckan:
-    module: "@zazuko/trifid-plugin-ckan"
+    module: "lindas-trifid-plugin-ckan"
     paths:
       - /ckan
       - /ckan/
@@ -124,7 +124,7 @@ plugins:
     module: file:plugins/csp-violations/index.js
 
   sparql-proxy:
-    module: "@zazuko/trifid-plugin-sparql-proxy"
+    module: "lindas-trifid-plugin-sparql-proxy"
     paths: /x-query
     config:
       allowRewriteToggle: true
@@ -180,7 +180,7 @@ plugins:
           label: Community
 
   content:
-    module: "@zazuko/trifid-markdown-content"
+    module: "lindas-trifid-markdown-content"
     config:
       defaults:
         autoLink: true # create links from headings
