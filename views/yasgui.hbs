@@ -14,21 +14,21 @@
     </p>
 
     <script src="/yasgui-dist/yasgui.min.js"></script>
-    <script>
+    <script nonce="{{ nonce }}">
       const YasguiMapPluginDefaultOptions = {
         mapKind: '{{ mapKind }}'
       };
     </script>
     <script src="/yasgui-plugins/map.js"></script>
 
-    <script>
+    <script nonce="{{ nonce }}">
       const config = {
         "api": {}
       }
     </script>
 
     {{#if urlShortener }}
-    <script>
+    <script nonce="{{ nonce }}">
       config.yasqe = {
         createShortLink: (yasqe, longString) => {
           return fetch('{{ urlShortener }}', {
@@ -45,7 +45,7 @@
     </script>
     {{/if}}
 
-    <script>
+    <script nonce="{{ nonce }}">
       Yasgui.defaults.requestConfig.endpoint = '{{ endpointUrl }}'
       const yasgui = new Yasgui(document.getElementById('yasgui'), config)
     </script>
