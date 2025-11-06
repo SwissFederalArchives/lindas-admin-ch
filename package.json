@@ -5,7 +5,7 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "lindas-trifid": "^6.0.0",
+    "lindas-trifid": "^6.0.1",
     "lindas-trifid-core": "^6.0.0",
     "lindas-trifid-entity-renderer": "^2.0.0",
     "lindas-trifid-markdown-content": "^3.0.0",
