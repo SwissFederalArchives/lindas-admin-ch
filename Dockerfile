@@ -25,4 +25,4 @@ COPY . .
 EXPOSE 8080
 
 ENTRYPOINT [ "tini", "--" ]
-CMD [ "node", "./node_modules/.bin/trifid" ]
+CMD [ "node", "./node_modules/.bin/lindas-trifid" ]
