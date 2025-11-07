@@ -25,7 +25,7 @@
               prefix void:   <http://rdfs.org/ns/void#>
 
               SELECT (COUNT(DISTINCT ?sub) AS ?count) WHERE {
-                ?sub (schema:name|schema:decription) ?name;
+                ?sub (schema:name|schema:description) ?name;
                   rdf:type ?resultType.
                 FILTER(?resultType IN(void:Dataset))
                 FILTER(NOT EXISTS { ?sub schema:expires ?x. })
