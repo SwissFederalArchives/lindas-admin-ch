@@ -12,7 +12,7 @@
     "lindas-trifid-plugin-ckan": "^5.0.0",
     "lindas-trifid-plugin-graph-explorer": "^3.0.0",
     "lindas-trifid-plugin-i18n": "^4.0.0",
-    "lindas-trifid-plugin-sparql-proxy": "^3.0.3",
+    "lindas-trifid-plugin-sparql-proxy": "^3.0.4",
     "lindas-trifid-plugin-spex": "^4.0.0",
     "lindas-trifid-plugin-yasgui": "^4.0.2"
   },
