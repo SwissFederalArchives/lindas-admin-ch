@@ -8,7 +8,7 @@ import { getListenerURL } from 'lindas-trifid-core'
  */
 
 const factory = async (trifid) => {
-  const { server } = trifid
+  const { server, logger } = trifid
 
   return {
     defaultConfiguration: async () => {
@@ -39,17 +39,25 @@ const factory = async (trifid) => {
           requestOptions.body = body
         }
         const req = await fetch(instanceQueryUrl, requestOptions)
+        // Forward all headers from sparql-proxy response
+        // Note: sparql-proxy v3.0.4+ always requests uncompressed data (Accept-Encoding: identity)
+        // so content-encoding should not be present. We forward all headers for compatibility.
         Array.from(req.headers.entries()).forEach(([key, value]) => {
-          const lowerCaseKey = key.toLowerCase()
-          if (lowerCaseKey === 'content-encoding') {
-            return
-          }
-
           reply.header(key, value)
         })
         if (req.status === 200) {
           const path = request.raw.url.split('?')[0].split('/').slice(2).join('/')
           const xkeyValue = cleanupHeaderValue(path, 'default')
+
+          if (xkeyValue !== path) {
+            logger.warn({
+              plugin: 'xquery',
+              requestUrl: request.raw.url,
+              originalPath: path,
+              sanitizedValue: xkeyValue
+            }, 'Sanitized xkey header value detected')
+          }
+
           reply.header('xkey', xkeyValue)
         }
         let readableBody = req.body
@@ -77,8 +85,16 @@ const cleanupHeaderValue = (headerValue, defaultValue) => {
     return defaultValue
   }
 
-  // Split, remove all lines except the first one (can be CRLF, LF or CR), trim, and return
-  const newValue = headerValue.split(/\r\n|\r|\n/)[0].trim()
+  // Decode FIRST to prevent bypassing CRLF filtering with URL encoding
+  let decoded
+  try {
+    decoded = decodeURIComponent(headerValue)
+  } catch {
+    return defaultValue
+  }
+
+  // THEN split, remove all lines except the first one (can be CRLF, LF or CR), trim, and return
+  const newValue = decoded.split(/\r\n|\r|\n/)[0].trim()
   if (newValue.length === 0) {
     return defaultValue
   }
@@ -86,8 +102,8 @@ const cleanupHeaderValue = (headerValue, defaultValue) => {
     return defaultValue
   }
 
-  // Support URL encoded values
-  return decodeURIComponent(newValue)
+  // Remove all control characters to prevent header injection
+  return newValue.replace(/[\x00-\x1F\x7F]/g, '')
 }
 
 export default factory
