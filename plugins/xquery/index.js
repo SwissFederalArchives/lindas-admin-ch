@@ -103,6 +103,7 @@ const cleanupHeaderValue = (headerValue, defaultValue) => {
   }
 
   // Remove all control characters to prevent header injection
+  // eslint-disable-next-line no-control-regex
   return newValue.replace(/[\x00-\x1F\x7F]/g, '')
 }
 
