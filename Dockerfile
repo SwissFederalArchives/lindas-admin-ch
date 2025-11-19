@@ -2,7 +2,7 @@ FROM docker.io/library/node:22-alpine
 
 # Some default values
 ENV DATASET_BASE_URL="https://ld.admin.ch/"
-ENV SPARQL_ENDPOINT_URL="https://test.lindas.admin.ch/query"
+ENV SPARQL_ENDPOINT_URL="https://graphdb.test.cz-aws.net/repositories/lindas"
 ENV SPARQL_USERNAME="public"
 ENV SPARQL_PASSWORD="public"
 ENV SPARQL_PROXY_CACHE_PREFIX="default"
