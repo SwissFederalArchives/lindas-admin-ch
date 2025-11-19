@@ -19,10 +19,10 @@
   "license": "UNLICENSED",
   "scripts": {
     "start": "trifid",
-    "start:test": "DATASET_BASE_URL=https://ld.admin.ch/ SPARQL_ENDPOINT_URL=https://test.lindas.admin.ch/query SPARQL_USERNAME=public SPARQL_PASSWORD=public SPARQL_PROXY_CACHE_PREFIX=default SPARQL_PROXY_CACHE_CLEAR_AT_STARTUP=true trifid -c config.local.yaml",
-    "start:int": "DATASET_BASE_URL=https://ld.admin.ch/ SPARQL_ENDPOINT_URL=https://int.lindas.admin.ch/query SPARQL_USERNAME=public SPARQL_PASSWORD=public SPARQL_PROXY_CACHE_PREFIX=default SPARQL_PROXY_CACHE_CLEAR_AT_STARTUP=true trifid -c config.local.yaml",
-    "start:prod": "DATASET_BASE_URL=https://ld.admin.ch/ SPARQL_ENDPOINT_URL=https://lindas.admin.ch/query SPARQL_USERNAME=public SPARQL_PASSWORD=public SPARQL_PROXY_CACHE_PREFIX=default SPARQL_PROXY_CACHE_CLEAR_AT_STARTUP=true trifid -c config.local.yaml",
-    "start:energy": "DATASET_BASE_URL=https://energy.ld.admin.ch/ SPARQL_ENDPOINT_URL=https://test.lindas.admin.ch/query SPARQL_USERNAME=public SPARQL_PASSWORD=public SPARQL_PROXY_CACHE_PREFIX=default SPARQL_PROXY_CACHE_CLEAR_AT_STARTUP=true trifid -c config.local.yaml",
+    "start:test": "DATASET_BASE_URL=https://ld.admin.ch/ SPARQL_ENDPOINT_URL=https://lindas.test.cz-aws.net/query SPARQL_USERNAME=public SPARQL_PASSWORD=public SPARQL_PROXY_CACHE_PREFIX=default SPARQL_PROXY_CACHE_CLEAR_AT_STARTUP=true trifid -c config.local.yaml",
+    "start:int": "DATASET_BASE_URL=https://ld.admin.ch/ SPARQL_ENDPOINT_URL=https://lindas.int.cz-aws.net/query SPARQL_USERNAME=public SPARQL_PASSWORD=public SPARQL_PROXY_CACHE_PREFIX=default SPARQL_PROXY_CACHE_CLEAR_AT_STARTUP=true trifid -c config.local.yaml",
+    "start:prod": "DATASET_BASE_URL=https://ld.admin.ch/ SPARQL_ENDPOINT_URL=https://lindas.cz-aws.net/query SPARQL_USERNAME=public SPARQL_PASSWORD=public SPARQL_PROXY_CACHE_PREFIX=default SPARQL_PROXY_CACHE_CLEAR_AT_STARTUP=true trifid -c config.local.yaml",
+    "start:energy": "DATASET_BASE_URL=https://energy.ld.admin.ch/ SPARQL_ENDPOINT_URL=https://lindas.test.cz-aws.net/query SPARQL_USERNAME=public SPARQL_PASSWORD=public SPARQL_PROXY_CACHE_PREFIX=default SPARQL_PROXY_CACHE_CLEAR_AT_STARTUP=true trifid -c config.local.yaml",
     "start:local": "npm run start:test",
     "test": "standard && node --test **/*.test.js"
   },

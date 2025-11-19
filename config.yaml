@@ -138,11 +138,11 @@ plugins:
           username: env:SPARQL_USERNAME
           password: env:SPARQL_PASSWORD
         prod:
-          url: https://lindas.admin.ch/query
+          url: https://lindas.cz-aws.net/query
         int:
-          url: https://int.lindas.admin.ch/query
+          url: https://lindas.int.cz-aws.net/query
         test:
-          url: https://test.lindas.admin.ch/query
+          url: https://lindas.test.cz-aws.net/query
       endpointUrl: env:SPARQL_ENDPOINT_URL
       username: env:SPARQL_USERNAME
       password: env:SPARQL_PASSWORD
@@ -243,9 +243,9 @@ plugins:
 
       # Custom queries to get information about a resource or container
       resourceExistsQuery: "ASK { GRAPH ?g { <{{iri}}> ?p ?o }}"
-      resourceGraphQuery: "#pragma describe.strategy cbd\nDESCRIBE <{{iri}}>"
+      resourceGraphQuery: "DESCRIBE <{{iri}}> FROM <http://www.ontotext.com/describe/outgoing>"
       containerExistsQuery: "ASK { GRAPH ?g { <{{iri}}> ?p ?o }}"
-      containerGraphQuery: "#pragma describe.strategy cbd\nDESCRIBE <{{iri}}>"
+      containerGraphQuery: "DESCRIBE <{{iri}}> FROM <http://www.ontotext.com/describe/outgoing>"
 
       datasetBaseUrl:
         - https://ld.admin.ch/
