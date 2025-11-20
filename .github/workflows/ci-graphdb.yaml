@@ -44,7 +44,7 @@ jobs:
 
       - name: Create custom Docker tag
         id: docker_tag
-        run: echo "tag=test_$(date '+%Y-%m-%d_%H%M%S')-graphdb" >> "$GITHUB_OUTPUT"
+        run: echo "tag=graphdb-test_$(date '+%Y-%m-%d_%H%M%S')" >> "$GITHUB_OUTPUT"
 
       - name: Docker meta
         id: docker_meta
@@ -88,7 +88,7 @@ jobs:
 
       - name: Create custom Docker tag
         id: docker_tag
-        run: echo "tag=int_$(date '+%Y-%m-%d_%H%M%S')-graphdb" >> "$GITHUB_OUTPUT"
+        run: echo "tag=graphdb-int_$(date '+%Y-%m-%d_%H%M%S')" >> "$GITHUB_OUTPUT"
 
       - name: Docker meta
         id: docker_meta
@@ -132,7 +132,7 @@ jobs:
 
       - name: Create custom Docker tag
         id: docker_tag
-        run: echo "tag=prod_$(date '+%Y-%m-%d_%H%M%S')-graphdb" >> "$GITHUB_OUTPUT"
+        run: echo "tag=graphdb-prod_$(date '+%Y-%m-%d_%H%M%S')" >> "$GITHUB_OUTPUT"
 
       - name: Docker meta
         id: docker_meta
