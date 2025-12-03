@@ -6,6 +6,18 @@
  */
 
 export default async function (trifid) {
+  const { server } = trifid
+
+  // Register content type parser for CSP reports
+  server.addContentTypeParser('application/csp-report', { parseAs: 'string' }, (req, body, done) => {
+    try {
+      const json = JSON.parse(body)
+      done(null, json['csp-report'] || json)
+    } catch (err) {
+      done(err)
+    }
+  })
+
   return {
     defaultConfiguration: async () => {
       return {
@@ -59,7 +71,7 @@ export default async function (trifid) {
         }
 
         // Return 204 No Content (standard for CSP reports)
-        reply.sendStatus(204)
+        reply.code(204).send()
       }
     }
   }
