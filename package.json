@@ -5,16 +5,16 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "lindas-trifid": "^6.0.1",
-    "lindas-trifid-core": "^6.0.0",
-    "lindas-trifid-entity-renderer": "^2.0.1",
-    "lindas-trifid-markdown-content": "^3.0.0",
-    "lindas-trifid-plugin-ckan": "^5.0.0",
-    "lindas-trifid-plugin-graph-explorer": "^3.0.0",
-    "lindas-trifid-plugin-i18n": "^4.0.0",
-    "lindas-trifid-plugin-sparql-proxy": "^3.0.5",
-    "lindas-trifid-plugin-spex": "^4.0.0",
-    "lindas-trifid-plugin-yasgui": "^4.0.2"
+    "lindas-trifid": "^6.0.2",
+    "lindas-trifid-core": "^6.0.1",
+    "lindas-trifid-entity-renderer": "^2.0.2",
+    "lindas-trifid-markdown-content": "^3.0.1",
+    "lindas-trifid-plugin-ckan": "^5.0.1",
+    "lindas-trifid-plugin-graph-explorer": "^3.0.1",
+    "lindas-trifid-plugin-i18n": "^4.0.1",
+    "lindas-trifid-plugin-sparql-proxy": "^3.0.6",
+    "lindas-trifid-plugin-spex": "^4.0.1",
+    "lindas-trifid-plugin-yasgui": "^4.0.3"
   },
   "license": "UNLICENSED",
   "scripts": {
@@ -27,7 +27,7 @@
     "test": "standard && node --test **/*.test.js"
   },
   "devDependencies": {
-    "lindas-trifid-core": "^6.0.0",
+    "lindas-trifid-core": "^6.0.1",
     "standard": "^17.1.2"
   }
 }
