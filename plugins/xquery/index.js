@@ -23,12 +23,19 @@ const factory = async (trifid) => {
         const searchParams = new URLSearchParams(request.query)
         const serializedParams = searchParams.toString()
         const instanceQueryUrl = `${listenerUrl}/x-query${serializedParams ? `?${serializedParams}` : ''}`
+        // Filter out content-length and force Accept-Encoding: identity to prevent
+        // compression issues. Node.js fetch auto-decompresses responses, which would
+        // cause a mismatch between Content-Encoding header and actual body if we
+        // allowed compressed responses from the internal request.
         const headers = new Headers(Object.fromEntries(Object.entries(request.headers).filter((header) => {
           if (!Array.isArray(header) || header.length !== 2) {
             return false
           }
-          return header[0].toLowerCase() !== 'content-length'
+          const headerName = header[0].toLowerCase()
+          return headerName !== 'content-length' && headerName !== 'accept-encoding'
         })))
+        // Force identity encoding to prevent compression on internal request
+        headers.set('accept-encoding', 'identity')
         const body = typeof request.body === 'string' ? request.body : new URLSearchParams(request.body)
         const method = request.method
         const requestOptions = {
@@ -39,11 +46,15 @@ const factory = async (trifid) => {
           requestOptions.body = body
         }
         const req = await fetch(instanceQueryUrl, requestOptions)
-        // Forward all headers from sparql-proxy response
-        // Note: sparql-proxy v3.0.4+ always requests uncompressed data (Accept-Encoding: identity)
-        // so content-encoding should not be present. We forward all headers for compatibility.
+        // Forward headers from sparql-proxy response, excluding compression-related headers.
+        // We request with Accept-Encoding: identity, so there should be no Content-Encoding,
+        // but we filter it out just in case to prevent mismatches.
+        // Fastify's @fastify/compress will handle compression for the outer response.
+        const excludedResponseHeaders = ['content-encoding', 'transfer-encoding', 'content-length']
         Array.from(req.headers.entries()).forEach(([key, value]) => {
-          reply.header(key, value)
+          if (!excludedResponseHeaders.includes(key.toLowerCase())) {
+            reply.header(key, value)
+          }
         })
         if (req.status === 200) {
           const path = request.raw.url.split('?')[0].split('/').slice(2).join('/')
