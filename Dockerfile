@@ -15,6 +15,9 @@ RUN apk add --no-cache tini git
 # Run as the "node" user
 USER 1000
 
+# Configure git safe directory for mounted volumes (as the node user)
+RUN git config --global --add safe.directory /app
+
 # Build the app
 WORKDIR /app
 COPY package.json package-lock.json ./
