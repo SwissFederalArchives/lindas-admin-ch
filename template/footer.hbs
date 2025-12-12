@@ -1,4 +1,52 @@
   <footer id="main-footer" class="footer">
+    <!-- Hidden CMS access - triple click to reveal -->
+    <style>
+      .cms-hidden-link {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        width: 20px;
+        height: 20px;
+        opacity: 0;
+        cursor: default;
+        z-index: 1000;
+      }
+      .cms-hidden-link:hover {
+        opacity: 0.1;
+      }
+      .cms-hidden-link.revealed {
+        opacity: 1;
+        width: auto;
+        height: auto;
+        padding: 8px 16px;
+        background: #1a365d;
+        color: white;
+        border-radius: 4px;
+        font-size: 12px;
+        text-decoration: none;
+        cursor: pointer;
+      }
+    </style>
+    <a href="/cms/" class="cms-hidden-link" id="cms-link" title="CMS">CMS</a>
+    <script>
+      (function() {
+        var clickCount = 0;
+        var clickTimer = null;
+        var link = document.getElementById('cms-link');
+        link.addEventListener('click', function(e) {
+          if (!link.classList.contains('revealed')) {
+            e.preventDefault();
+            clickCount++;
+            if (clickTimer) clearTimeout(clickTimer);
+            clickTimer = setTimeout(function() { clickCount = 0; }, 500);
+            if (clickCount >= 3) {
+              link.classList.add('revealed');
+              clickCount = 0;
+            }
+          }
+        });
+      })();
+    </script>
     <div class="bg--secondary-600">
       <div class="container">
         <div class="footer-information">

@@ -179,6 +179,25 @@ plugins:
         - path: /community/
           label: Community
 
+  # CMS Plugin - Content Management System
+  # To enable OIDC authentication, set the following environment variables:
+  # - CMS_OIDC_ISSUER: The OIDC provider URL (e.g., https://keycloak.example.com/realms/myrealm)
+  # - CMS_OIDC_CLIENT_ID: The OAuth client ID
+  # - CMS_OIDC_CLIENT_SECRET: The OAuth client secret
+  # - CMS_OIDC_REDIRECT_URI: The callback URL (default: auto-detected)
+  cms:
+    module: file:plugins/cms/index.js
+    config:
+      contentDir: file:content
+      localesDir: file:locales
+      repoDir: file:.
+      oidc:
+        issuer: env:CMS_OIDC_ISSUER
+        clientId: env:CMS_OIDC_CLIENT_ID
+        clientSecret: env:CMS_OIDC_CLIENT_SECRET
+        redirectUri: env:CMS_OIDC_REDIRECT_URI
+        scope: "openid email profile"
+
   content:
     module: "@lindas/trifid-plugin-markdown-content"
     config:
