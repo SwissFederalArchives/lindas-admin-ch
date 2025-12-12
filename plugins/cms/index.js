@@ -1,10 +1,33 @@
 import { dirname, join } from 'path'
 import { fileURLToPath } from 'url'
+import { readFile } from 'fs/promises'
 import { createAuthMiddleware, getOidcConfig } from './lib/auth.js'
 import { listContentFiles, readContentFile, writeContentFile, listLocaleFiles, readLocaleFile, writeLocaleFile } from './lib/content.js'
 import { gitStatus, gitCommit, gitDiff } from './lib/git.js'
 
 const currentDir = dirname(fileURLToPath(import.meta.url))
+
+// Simple Handlebars-like template rendering for standalone pages
+function renderTemplate(template, data) {
+  let result = template
+
+  // Handle {{#if variable}} ... {{/if}} blocks
+  result = result.replace(/\{\{#if\s+(\w+)\}\}([\s\S]*?)\{\{\/if\}\}/g, (match, varName, content) => {
+    return data[varName] ? content : ''
+  })
+
+  // Handle {{variable}} replacements
+  result = result.replace(/\{\{(\w+(?:\.\w+)*)\}\}/g, (match, path) => {
+    const parts = path.split('.')
+    let value = data
+    for (const part of parts) {
+      value = value?.[part]
+    }
+    return value !== undefined ? value : ''
+  })
+
+  return result
+}
 
 const factory = async (trifid) => {
   const { render, config, logger, server } = trifid
@@ -82,7 +105,7 @@ const factory = async (trifid) => {
           return { authenticated: true, user: session.user }
         }
 
-        // CMS Editor UI
+        // CMS Editor UI - rendered as standalone page (not wrapped in main template)
         if (pathname === '/cms' || pathname === '/cms/') {
           const auth = await checkAuth()
 
@@ -92,14 +115,19 @@ const factory = async (trifid) => {
             return reply
           }
 
-          reply.type('text/html').send(await render(request, `${currentDir}/views/editor.hbs`, {
-            user: auth.user,
-            authEnabled,
-            devMode: auth.devMode || false,
-            oidcConfig: authEnabled ? { issuer: oidcConfig.issuer, clientId: oidcConfig.clientId } : null
-          }, {
-            title: 'CMS - Content Management'
-          }))
+          try {
+            const templatePath = join(currentDir, 'views', 'editor.hbs')
+            const template = await readFile(templatePath, 'utf-8')
+            const html = renderTemplate(template, {
+              user: auth.user,
+              authEnabled,
+              devMode: auth.devMode || false
+            })
+            reply.type('text/html').send(html)
+          } catch (err) {
+            logger.error('Error rendering CMS editor:', err)
+            reply.code(500).send('Error loading CMS editor')
+          }
           return reply
         }
 
