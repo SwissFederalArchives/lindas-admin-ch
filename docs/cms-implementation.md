@@ -152,10 +152,41 @@ cms:
 
 ## Development Mode
 
-When OIDC environment variables are not set, the CMS operates in development mode:
-- Authentication is bypassed
-- A default "Developer" user is used for commits
+The CMS supports explicit dev bypass mode via the `CMS_DEV_BYPASS` environment variable:
+
+```bash
+CMS_DEV_BYPASS=true      # Enable dev bypass
+CMS_DEV_USER="Developer" # Optional: custom user name
+CMS_DEV_EMAIL="dev@localhost" # Optional: custom email
+```
+
+When dev bypass is enabled:
+- Authentication is completely bypassed
+- A configurable dev user identity is used for commits
+- An orange "Development Mode" banner appears in the CMS UI
 - This should only be used in development environments
+
+### Local Docker Setup
+
+The docker-compose.yml is pre-configured for local development with:
+
+```yaml
+admin-ch:
+  environment:
+    CMS_DEV_BYPASS: "true"
+    CMS_DEV_USER: "Local Developer"
+    CMS_DEV_EMAIL: "dev@localhost"
+  volumes:
+    - ./lindas-admin-ch/content:/app/content
+    - ./lindas-admin-ch/locales:/app/locales
+    - ./lindas-admin-ch/.git:/app/.git
+    - ./lindas-admin-ch/plugins/cms:/app/plugins/cms
+```
+
+This configuration:
+- Enables dev bypass for easy testing
+- Mounts content, locales, and .git for live editing and git integration
+- Mounts the CMS plugin for hot-reload during development
 
 ## Workflow
 
