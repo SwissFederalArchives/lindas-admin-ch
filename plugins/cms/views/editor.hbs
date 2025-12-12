@@ -390,6 +390,22 @@
     .notification.error { background: var(--error); }
     .notification.info { background: var(--secondary); }
 
+    .dev-banner {
+      background: linear-gradient(90deg, #f59e0b, #d97706);
+      color: white;
+      text-align: center;
+      padding: 0.5rem;
+      font-size: 0.85rem;
+      font-weight: 500;
+    }
+
+    .dev-banner code {
+      background: rgba(0,0,0,0.2);
+      padding: 0.1rem 0.4rem;
+      border-radius: 3px;
+      font-family: monospace;
+    }
+
     @keyframes slideIn {
       from { transform: translateX(100%); opacity: 0; }
       to { transform: translateX(0); opacity: 1; }
@@ -434,6 +450,11 @@
   </style>
 </head>
 <body>
+  {{#if devMode}}
+  <div class="dev-banner">
+    Development Mode - Authentication bypassed. User: <code>{{user.name}}</code> ({{user.email}})
+  </div>
+  {{/if}}
   <header class="cms-header">
     <h1>
       <svg class="logo" viewBox="0 0 40 44" role="img">

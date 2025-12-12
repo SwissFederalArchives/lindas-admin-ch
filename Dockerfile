@@ -9,7 +9,8 @@ ENV SPARQL_PROXY_CACHE_PREFIX="default"
 ENV SPARQL_PROXY_CACHE_CLEAR_AT_STARTUP="true"
 ENV TRIFID_CONFIG="/app/config.yaml"
 
-RUN apk add --no-cache tini
+# Install tini and git (git needed for CMS git integration)
+RUN apk add --no-cache tini git
 
 # Run as the "node" user
 USER 1000

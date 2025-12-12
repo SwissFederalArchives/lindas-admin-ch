@@ -24,10 +24,18 @@ const factory = async (trifid) => {
   // Session storage for authenticated users
   const sessions = new Map()
 
-  // Check if auth is enabled
-  const authEnabled = Boolean(oidcConfig.issuer && oidcConfig.clientId)
+  // Dev bypass mode - allows access without authentication in development
+  // Set CMS_DEV_BYPASS=true and optionally CMS_DEV_USER and CMS_DEV_EMAIL
+  const devBypass = config.devBypass || process.env.CMS_DEV_BYPASS === 'true'
+  const devUser = {
+    name: config.devUser?.name || process.env.CMS_DEV_USER || 'Developer',
+    email: config.devUser?.email || process.env.CMS_DEV_EMAIL || 'dev@localhost'
+  }
 
-  logger.info(`CMS plugin initialized. Auth enabled: ${authEnabled}`)
+  // Check if auth is enabled (not enabled if dev bypass is active)
+  const authEnabled = !devBypass && Boolean(oidcConfig.issuer && oidcConfig.clientId)
+
+  logger.info(`CMS plugin initialized. Auth enabled: ${authEnabled}, Dev bypass: ${devBypass}`)
 
   return {
     defaultConfiguration: async () => {
@@ -50,9 +58,14 @@ const factory = async (trifid) => {
 
         // Helper to check authentication
         const checkAuth = async () => {
+          if (devBypass) {
+            // Dev bypass mode - allow access with dev user
+            return { authenticated: true, user: devUser, devMode: true }
+          }
+
           if (!authEnabled) {
-            // In development mode without OIDC, allow access
-            return { authenticated: true, user: { email: 'dev@localhost', name: 'Developer' } }
+            // No auth configured - allow access with default dev user
+            return { authenticated: true, user: { email: 'dev@localhost', name: 'Developer' }, devMode: true }
           }
 
           const sessionId = request.cookies?.cms_session
@@ -82,6 +95,7 @@ const factory = async (trifid) => {
           reply.type('text/html').send(await render(request, `${currentDir}/views/editor.hbs`, {
             user: auth.user,
             authEnabled,
+            devMode: auth.devMode || false,
             oidcConfig: authEnabled ? { issuer: oidcConfig.issuer, clientId: oidcConfig.clientId } : null
           }, {
             title: 'CMS - Content Management'
