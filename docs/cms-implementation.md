@@ -43,6 +43,8 @@ plugins/cms/
     auth.js          # OIDC authentication
     content.js       # Content file operations
     git.js           # Git operations
+    navigation.js    # Navigation config operations
+    archive.js       # Export/import operations
   views/
     editor.hbs       # CMS editor UI
 ```
@@ -53,17 +55,36 @@ plugins/cms/
 - Browse all markdown files in the content/ directory
 - Edit markdown content with live preview
 - Save changes directly to the file system
+- Create new pages (with folder selection)
+- Delete existing pages (with confirmation)
 
 ### Translation Editing
 - Browse all locale JSON files (en, de, fr, it)
 - Edit translation key-value pairs
 - Save changes directly to the file system
 
+### Navigation Editing
+- Edit header and footer navigation links
+- Each link has a translation key and URL
+- Add and remove navigation items dynamically
+- Changes saved to config/navigation.json
+
 ### Git Integration
 - View current git status (branch, changes, last commit)
 - See which files have been modified
 - Commit changes with a custom message
 - Commits are attributed to the authenticated user
+- Branch management:
+  - View and switch between local branches
+  - Create new branches
+  - Fetch from remote
+  - Pull and push changes
+
+### Backup/Restore (Export/Import)
+- Export all CMS content as a JSON backup file
+- Import backup files to restore content
+- Selective import: choose content, translations, navigation
+- Option to overwrite existing files during import
 
 ### Authentication
 - OIDC/OAuth2 authentication (same as cube-creator)
@@ -118,10 +139,15 @@ cms:
 ### Content API
 
 - `GET /cms/api/content` - Lists all content files
+- `GET /cms/api/content/folders` - Lists all content folders
 - `POST /cms/api/content/read` - Reads a content file
   - Body: `{ "path": "ecosystem/about-LINDAS/en.md" }`
 - `POST /cms/api/content/write` - Writes a content file
   - Body: `{ "path": "...", "content": "..." }`
+- `POST /cms/api/content/create` - Creates a new content file
+  - Body: `{ "path": "folder/filename.md", "content": "..." }`
+- `POST /cms/api/content/delete` - Deletes a content file
+  - Body: `{ "path": "folder/filename.md" }`
 
 ### Locales API
 
@@ -131,12 +157,36 @@ cms:
 - `POST /cms/api/locales/write` - Writes a locale file
   - Body: `{ "locale": "en", "content": { ... } }`
 
+### Navigation API
+
+- `POST /cms/api/navigation/read` - Reads navigation config
+  - Body: `{ "section": "header" }` (or "footer")
+- `POST /cms/api/navigation/write` - Writes navigation config
+  - Body: `{ "section": "header", "content": [{ "labelKey": "nav.home", "url": "/" }] }`
+
+### Archive API (Backup/Restore)
+
+- `GET /cms/api/archive/export` - Downloads a JSON backup of all CMS content
+- `POST /cms/api/archive/import` - Imports a backup file
+  - Body: `{ "archive": { ... }, "options": { "overwrite": false, "skipContent": false, "skipLocales": false, "skipNavigation": false } }`
+
 ### Git API
 
 - `GET /cms/api/git/status` - Returns git status
 - `GET /cms/api/git/diff` - Returns current diff
+- `GET /cms/api/git/branches` - Lists all branches
 - `POST /cms/api/git/commit` - Commits staged changes
   - Body: `{ "message": "Updated content" }`
+- `POST /cms/api/git/checkout` - Switch to a branch
+  - Body: `{ "branch": "feature/my-branch" }`
+- `POST /cms/api/git/branch/create` - Create a new branch
+  - Body: `{ "name": "feature/my-branch", "checkout": true }`
+- `POST /cms/api/git/branch/delete` - Delete a branch
+  - Body: `{ "name": "feature/my-branch", "force": false }`
+- `POST /cms/api/git/fetch` - Fetch from remote
+- `POST /cms/api/git/pull` - Pull from remote
+- `POST /cms/api/git/push` - Push to remote
+  - Body: `{ "setUpstream": true }`
 
 ## Security Considerations
 
@@ -203,19 +253,16 @@ This configuration:
 
 ## Limitations
 
-1. **No Remote Push**: The CMS commits locally but does not push to remote. This is intentional for safety.
+1. **No Template Editing**: Handlebars templates are not editable through the CMS for security reasons.
 
-2. **No File Creation/Deletion**: The CMS can only edit existing files.
+2. **Single User**: The session management is simple and may have issues with concurrent users.
 
-3. **No Template Editing**: Handlebars templates are not editable through the CMS for security reasons.
-
-4. **Single User**: The session management is simple and may have issues with concurrent users.
+3. **No Image Upload**: Images must be managed through git directly.
 
 ## Future Improvements
 
-- Add file creation and deletion capabilities
-- Add remote push functionality with confirmation
 - Add multi-user support with proper locking
 - Add content version history viewing
-- Add markdown editor toolbar
+- Add markdown editor toolbar (bold, italic, links, etc.)
 - Add image upload functionality
+- Add drag-and-drop reordering for navigation items

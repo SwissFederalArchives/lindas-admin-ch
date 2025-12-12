@@ -447,6 +447,130 @@
     .empty-state h3 {
       margin-bottom: 0.5rem;
     }
+
+    .sidebar-actions {
+      padding: 0.5rem 1rem;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      gap: 0.5rem;
+    }
+
+    .btn-danger {
+      background: var(--error);
+      color: white;
+    }
+
+    .btn-danger:hover {
+      background: #9b2c2c;
+    }
+
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 300;
+    }
+
+    .modal {
+      background: white;
+      border-radius: 8px;
+      padding: 1.5rem;
+      min-width: 400px;
+      max-width: 500px;
+    }
+
+    .modal h3 {
+      margin-bottom: 1rem;
+    }
+
+    .modal-actions {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: flex-end;
+      margin-top: 1rem;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 500;
+      margin-bottom: 0.25rem;
+    }
+
+    .form-group input,
+    .form-group select {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      font-size: 0.9rem;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus {
+      outline: 2px solid var(--primary);
+      outline-offset: -1px;
+    }
+
+    .branch-selector {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+      padding: 0.75rem;
+      background: var(--bg);
+      border-radius: 4px;
+    }
+
+    .branch-selector select {
+      flex: 1;
+      padding: 0.5rem;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+    }
+
+    .git-actions {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+
+    .git-remote-info {
+      font-size: 0.8rem;
+      color: #666;
+      margin-bottom: 1rem;
+      word-break: break-all;
+    }
+
+    .file-item-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .file-item-delete {
+      opacity: 0;
+      background: none;
+      border: none;
+      color: var(--error);
+      cursor: pointer;
+      padding: 0.25rem;
+      font-size: 1rem;
+    }
+
+    .file-item:hover .file-item-delete {
+      opacity: 1;
+    }
   </style>
 </head>
 <body>
@@ -467,6 +591,8 @@
       {{#if user}}
       <span class="user-info">{{user.name}}</span>
       {{/if}}
+      <button class="btn btn-secondary" onclick="exportBackup()">Export</button>
+      <button class="btn btn-secondary" onclick="showImportModal()">Import</button>
       <button class="btn btn-secondary" onclick="toggleGitPanel()">Git</button>
       <a href="/" class="btn btn-secondary">Back to Site</a>
       {{#if authEnabled}}
@@ -480,6 +606,10 @@
       <div class="sidebar-tabs">
         <button class="sidebar-tab active" onclick="switchTab('content')">Content</button>
         <button class="sidebar-tab" onclick="switchTab('locales')">Translations</button>
+        <button class="sidebar-tab" onclick="switchTab('navigation')">Navigation</button>
+      </div>
+      <div class="sidebar-actions" id="sidebar-actions">
+        <button class="btn btn-primary btn-small" onclick="showNewFileModal()">+ New Page</button>
       </div>
       <div class="sidebar-content" id="sidebar-content">
         <div class="loading"><div class="spinner"></div> Loading...</div>
@@ -492,6 +622,7 @@
         <div class="editor-actions">
           <button class="btn btn-secondary btn-small" onclick="reloadFile()">Reload</button>
           <button class="btn btn-success btn-small" onclick="saveFile()">Save</button>
+          <button class="btn btn-danger btn-small" onclick="showDeleteFileModal()" id="delete-btn" style="display: none;">Delete</button>
         </div>
       </div>
       <div class="editor-container" id="editor-container">
@@ -505,7 +636,7 @@
 
   <div class="git-panel" id="git-panel">
     <div class="git-panel-header">
-      <h3>Git Changes</h3>
+      <h3>Git</h3>
       <button class="btn btn-secondary btn-small" onclick="toggleGitPanel()">Close</button>
     </div>
     <div class="git-panel-content" id="git-status">
@@ -513,7 +644,14 @@
     </div>
     <div class="commit-form">
       <textarea id="commit-message" placeholder="Commit message..."></textarea>
-      <button class="btn btn-success" onclick="commitChanges()">Commit Changes</button>
+      <button class="btn btn-success" style="width: 100%;" onclick="commitChanges()">Commit Changes</button>
+    </div>
+  </div>
+
+  <!-- Modals -->
+  <div class="modal-overlay" id="modal-overlay" style="display: none;" onclick="closeModal(event)">
+    <div class="modal" id="modal-content" onclick="event.stopPropagation()">
+      <!-- Modal content injected by JS -->
     </div>
   </div>
 
@@ -523,7 +661,9 @@
     let currentFile = null;
     let contentFiles = [];
     let localeFiles = [];
+    let contentFolders = [];
     let unsavedChanges = {};
+    let gitBranches = { current: '', local: [], remote: [] };
 
     // API calls
     async function api(endpoint, options = {}) {
@@ -554,12 +694,135 @@
       setTimeout(() => notification.remove(), 3000);
     }
 
+    // Modal functions
+    function showModal(content) {
+      document.getElementById('modal-content').innerHTML = content;
+      document.getElementById('modal-overlay').style.display = 'flex';
+    }
+
+    function closeModal(event) {
+      if (event && event.target !== event.currentTarget) return;
+      document.getElementById('modal-overlay').style.display = 'none';
+    }
+
+    // New file modal
+    async function showNewFileModal() {
+      try {
+        const { folders } = await api('content/folders');
+        contentFolders = folders;
+
+        let folderOptions = '<option value="">Root</option>';
+        folders.forEach(f => {
+          folderOptions += `<option value="${f}">${f}</option>`;
+        });
+
+        showModal(`
+          <h3>Create New Page</h3>
+          <div class="form-group">
+            <label>Folder</label>
+            <select id="new-file-folder">
+              ${folderOptions}
+            </select>
+          </div>
+          <div class="form-group">
+            <label>File Name</label>
+            <input type="text" id="new-file-name" placeholder="my-page.md">
+          </div>
+          <div class="form-group">
+            <label>Initial Content</label>
+            <textarea id="new-file-content" style="width: 100%; height: 100px; padding: 0.5rem; border: 1px solid var(--border); border-radius: 4px;"># New Page
+
+Add your content here.
+</textarea>
+          </div>
+          <div class="modal-actions">
+            <button class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+            <button class="btn btn-primary" onclick="createFile()">Create</button>
+          </div>
+        `);
+      } catch (err) {
+        notify('Error loading folders: ' + err.message, 'error');
+      }
+    }
+
+    // Create file
+    async function createFile() {
+      const folder = document.getElementById('new-file-folder').value;
+      const name = document.getElementById('new-file-name').value.trim();
+      const content = document.getElementById('new-file-content').value;
+
+      if (!name) {
+        notify('Please enter a file name', 'error');
+        return;
+      }
+
+      const path = folder ? `${folder}/${name}` : name;
+
+      try {
+        const { path: createdPath } = await api('content/create', {
+          method: 'POST',
+          body: { path, content }
+        });
+        closeModal();
+        notify('File created: ' + createdPath, 'success');
+        loadSidebar();
+        openContentFile(createdPath);
+      } catch (err) {
+        notify('Error creating file: ' + err.message, 'error');
+      }
+    }
+
+    // Delete file modal
+    function showDeleteFileModal() {
+      if (!currentFile || currentFile.type !== 'content') {
+        notify('No content file selected', 'error');
+        return;
+      }
+
+      showModal(`
+        <h3>Delete File</h3>
+        <p>Are you sure you want to delete <strong>${currentFile.path}</strong>?</p>
+        <p style="color: var(--error); margin-top: 0.5rem;">This action cannot be undone.</p>
+        <div class="modal-actions">
+          <button class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+          <button class="btn btn-danger" onclick="deleteFile()">Delete</button>
+        </div>
+      `);
+    }
+
+    // Delete file
+    async function deleteFile() {
+      if (!currentFile || currentFile.type !== 'content') return;
+
+      try {
+        await api('content/delete', { method: 'POST', body: { path: currentFile.path } });
+        closeModal();
+        notify('File deleted', 'success');
+        clearEditor();
+        loadSidebar();
+      } catch (err) {
+        notify('Error deleting file: ' + err.message, 'error');
+      }
+    }
+
     // Tab switching
     function switchTab(tab) {
       currentTab = tab;
       document.querySelectorAll('.sidebar-tab').forEach(t => {
         t.classList.toggle('active', t.textContent.toLowerCase().includes(tab));
       });
+
+      // Update sidebar actions based on tab
+      const sidebarActions = document.getElementById('sidebar-actions');
+      if (tab === 'content') {
+        sidebarActions.innerHTML = '<button class="btn btn-primary btn-small" onclick="showNewFileModal()">+ New Page</button>';
+        sidebarActions.style.display = 'flex';
+      } else if (tab === 'locales') {
+        sidebarActions.style.display = 'none';
+      } else if (tab === 'navigation') {
+        sidebarActions.style.display = 'none';
+      }
+
       loadSidebar();
       clearEditor();
     }
@@ -574,10 +837,12 @@
           const { files } = await api('content');
           contentFiles = files;
           renderContentList(files);
-        } else {
+        } else if (currentTab === 'locales') {
           const { files } = await api('locales');
           localeFiles = files;
           renderLocaleList(files);
+        } else if (currentTab === 'navigation') {
+          renderNavigationList();
         }
       } catch (err) {
         sidebar.innerHTML = `<p style="color: var(--error); padding: 1rem;">Error: ${err.message}</p>`;
@@ -628,10 +893,24 @@
       sidebar.innerHTML = html;
     }
 
+    // Render navigation list
+    function renderNavigationList() {
+      const sidebar = document.getElementById('sidebar-content');
+      sidebar.innerHTML = `
+        <ul class="file-list">
+          <li class="file-item ${currentFile && currentFile.type === 'navigation' && currentFile.section === 'header' ? 'active' : ''}"
+              onclick="openNavigationEditor('header')">Header Navigation</li>
+          <li class="file-item ${currentFile && currentFile.type === 'navigation' && currentFile.section === 'footer' ? 'active' : ''}"
+              onclick="openNavigationEditor('footer')">Footer Navigation</li>
+        </ul>
+      `;
+    }
+
     // Open content file
     async function openContentFile(path) {
       document.getElementById('editor-toolbar').style.display = 'flex';
       document.getElementById('editor-path').textContent = path;
+      document.getElementById('delete-btn').style.display = 'inline-block';
 
       const container = document.getElementById('editor-container');
       container.innerHTML = '<div class="loading"><div class="spinner"></div> Loading...</div>';
@@ -662,6 +941,7 @@
     async function openLocaleFile(locale) {
       document.getElementById('editor-toolbar').style.display = 'flex';
       document.getElementById('editor-path').textContent = `${locale}.json`;
+      document.getElementById('delete-btn').style.display = 'none';
 
       const container = document.getElementById('editor-container');
       container.innerHTML = '<div class="loading"><div class="spinner"></div> Loading...</div>';
@@ -688,10 +968,96 @@
       }
     }
 
+    // Open navigation editor
+    async function openNavigationEditor(section) {
+      document.getElementById('editor-toolbar').style.display = 'flex';
+      document.getElementById('editor-path').textContent = `Navigation: ${section}`;
+      document.getElementById('delete-btn').style.display = 'none';
+
+      const container = document.getElementById('editor-container');
+      container.innerHTML = '<div class="loading"><div class="spinner"></div> Loading...</div>';
+
+      try {
+        const { content } = await api('navigation/read', { method: 'POST', body: { section } });
+        currentFile = { type: 'navigation', section, originalContent: content };
+
+        let html = '<div class="locale-editor" style="max-width: 800px;">';
+        html += '<p style="margin-bottom: 1rem; color: #666;">Edit navigation links for the ' + section + '. Each entry has a translation key and a URL.</p>';
+
+        content.forEach((item, index) => {
+          html += `
+            <div class="locale-entry" style="margin-bottom: 1.5rem;">
+              <div class="locale-key" style="display: flex; justify-content: space-between; align-items: center;">
+                <span>Link ${index + 1}</span>
+                <button class="btn btn-danger btn-small" onclick="removeNavItem(${index})" style="padding: 0.15rem 0.4rem;">Remove</button>
+              </div>
+              <div style="padding: 0.75rem;">
+                <div class="form-group" style="margin-bottom: 0.5rem;">
+                  <label style="font-size: 0.85rem;">Label Key (translation)</label>
+                  <input type="text" class="nav-label" data-index="${index}" value="${escapeHtml(item.labelKey || '')}" oninput="markUnsaved()">
+                </div>
+                <div class="form-group" style="margin-bottom: 0;">
+                  <label style="font-size: 0.85rem;">URL</label>
+                  <input type="text" class="nav-url" data-index="${index}" value="${escapeHtml(item.url || '')}" oninput="markUnsaved()">
+                </div>
+              </div>
+            </div>
+          `;
+        });
+
+        html += '<button class="btn btn-secondary" onclick="addNavItem()" style="width: 100%;">+ Add Link</button>';
+        html += '</div>';
+
+        container.innerHTML = html;
+        loadSidebar();
+      } catch (err) {
+        container.innerHTML = `<div class="empty-state"><p style="color: var(--error);">Error: ${err.message}</p></div>`;
+      }
+    }
+
+    // Add navigation item
+    function addNavItem() {
+      if (!currentFile || currentFile.type !== 'navigation') return;
+
+      const content = getNavigationContent();
+      content.push({ labelKey: '', url: '' });
+      currentFile.originalContent = content;
+      openNavigationEditor(currentFile.section);
+      markUnsaved();
+    }
+
+    // Remove navigation item
+    function removeNavItem(index) {
+      if (!currentFile || currentFile.type !== 'navigation') return;
+
+      const content = getNavigationContent();
+      content.splice(index, 1);
+      currentFile.originalContent = content;
+      openNavigationEditor(currentFile.section);
+      markUnsaved();
+    }
+
+    // Get navigation content from form
+    function getNavigationContent() {
+      const items = [];
+      const labels = document.querySelectorAll('.nav-label');
+      const urls = document.querySelectorAll('.nav-url');
+
+      labels.forEach((label, index) => {
+        items.push({
+          labelKey: label.value,
+          url: urls[index].value
+        });
+      });
+
+      return items;
+    }
+
     // Clear editor
     function clearEditor() {
       currentFile = null;
       document.getElementById('editor-toolbar').style.display = 'none';
+      document.getElementById('delete-btn').style.display = 'none';
       document.getElementById('editor-container').innerHTML = `
         <div class="empty-state">
           <h3>No file selected</h3>
@@ -703,7 +1069,7 @@
     // Mark file as having unsaved changes
     function markUnsaved() {
       if (currentFile) {
-        unsavedChanges[currentFile.path || currentFile.locale] = true;
+        unsavedChanges[currentFile.path || currentFile.locale || currentFile.section] = true;
         loadSidebar();
       }
 
@@ -739,16 +1105,20 @@
           const content = document.getElementById('content-editor').value;
           await api('content/write', { method: 'POST', body: { path: currentFile.path, content } });
           currentFile.originalContent = content;
-        } else {
+        } else if (currentFile.type === 'locale') {
           const content = {};
           document.querySelectorAll('.locale-value').forEach(textarea => {
             content[textarea.dataset.key] = textarea.value;
           });
           await api('locales/write', { method: 'POST', body: { locale: currentFile.locale, content } });
           currentFile.originalContent = content;
+        } else if (currentFile.type === 'navigation') {
+          const content = getNavigationContent();
+          await api('navigation/write', { method: 'POST', body: { section: currentFile.section, content } });
+          currentFile.originalContent = content;
         }
 
-        delete unsavedChanges[currentFile.path || currentFile.locale];
+        delete unsavedChanges[currentFile.path || currentFile.locale || currentFile.section];
         loadSidebar();
         notify('File saved successfully', 'success');
       } catch (err) {
@@ -762,11 +1132,13 @@
 
       if (currentFile.type === 'content') {
         await openContentFile(currentFile.path);
-      } else {
+      } else if (currentFile.type === 'locale') {
         await openLocaleFile(currentFile.locale);
+      } else if (currentFile.type === 'navigation') {
+        await openNavigationEditor(currentFile.section);
       }
 
-      delete unsavedChanges[currentFile.path || currentFile.locale];
+      delete unsavedChanges[currentFile.path || currentFile.locale || currentFile.section];
       notify('File reloaded', 'info');
     }
 
@@ -784,8 +1156,39 @@
       container.innerHTML = '<div class="loading"><div class="spinner"></div> Loading...</div>';
 
       try {
-        const { status } = await api('git/status');
-        let html = `<p><strong>Branch:</strong> ${status.branch}</p>`;
+        const [statusResult, branchesResult] = await Promise.all([
+          api('git/status'),
+          api('git/branches')
+        ]);
+
+        const status = statusResult.status;
+        const branches = branchesResult.branches;
+        gitBranches = branches;
+
+        let branchOptions = '';
+        branches.local.forEach(b => {
+          branchOptions += `<option value="${b}" ${b === branches.current ? 'selected' : ''}>${b}</option>`;
+        });
+
+        let html = `
+          <div class="branch-selector">
+            <label style="font-weight: 500;">Branch:</label>
+            <select id="branch-select" onchange="switchBranch(this.value)">
+              ${branchOptions}
+            </select>
+            <button class="btn btn-secondary btn-small" onclick="showNewBranchModal()" title="New Branch">+</button>
+          </div>
+          <div class="git-actions">
+            <button class="btn btn-secondary btn-small" onclick="gitFetch()">Fetch</button>
+            <button class="btn btn-secondary btn-small" onclick="gitPull()">Pull</button>
+            <button class="btn btn-secondary btn-small" onclick="gitPush()">Push</button>
+          </div>
+        `;
+
+        if (branches.remoteUrl) {
+          html += `<div class="git-remote-info">Remote: ${branches.remoteUrl}</div>`;
+        }
+
         html += `<p><strong>Last commit:</strong> ${status.lastCommit}</p>`;
         html += '<hr style="margin: 1rem 0; border: none; border-top: 1px solid var(--border);">';
 
@@ -810,6 +1213,111 @@
       }
     }
 
+    // Branch operations
+    async function switchBranch(branch) {
+      if (Object.keys(unsavedChanges).length > 0) {
+        notify('Please save or discard changes before switching branches', 'error');
+        document.getElementById('branch-select').value = gitBranches.current;
+        return;
+      }
+
+      try {
+        const { result } = await api('git/checkout', { method: 'POST', body: { branch } });
+        if (result.success) {
+          notify(result.message, 'success');
+          loadGitStatus();
+          loadSidebar();
+        } else {
+          notify(result.message, 'error');
+          document.getElementById('branch-select').value = gitBranches.current;
+        }
+      } catch (err) {
+        notify('Error switching branch: ' + err.message, 'error');
+        document.getElementById('branch-select').value = gitBranches.current;
+      }
+    }
+
+    function showNewBranchModal() {
+      showModal(`
+        <h3>Create New Branch</h3>
+        <div class="form-group">
+          <label>Branch Name</label>
+          <input type="text" id="new-branch-name" placeholder="feature/my-feature">
+        </div>
+        <div class="modal-actions">
+          <button class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+          <button class="btn btn-primary" onclick="createBranch()">Create</button>
+        </div>
+      `);
+    }
+
+    async function createBranch() {
+      const name = document.getElementById('new-branch-name').value.trim();
+      if (!name) {
+        notify('Please enter a branch name', 'error');
+        return;
+      }
+
+      try {
+        const { result } = await api('git/branch/create', { method: 'POST', body: { name, checkout: true } });
+        if (result.success) {
+          closeModal();
+          notify(result.message, 'success');
+          loadGitStatus();
+        } else {
+          notify(result.message, 'error');
+        }
+      } catch (err) {
+        notify('Error creating branch: ' + err.message, 'error');
+      }
+    }
+
+    async function gitFetch() {
+      try {
+        notify('Fetching...', 'info');
+        const { result } = await api('git/fetch', { method: 'POST' });
+        if (result.success) {
+          notify(result.message, 'success');
+          loadGitStatus();
+        } else {
+          notify(result.message, 'error');
+        }
+      } catch (err) {
+        notify('Error fetching: ' + err.message, 'error');
+      }
+    }
+
+    async function gitPull() {
+      try {
+        notify('Pulling...', 'info');
+        const { result } = await api('git/pull', { method: 'POST' });
+        if (result.success) {
+          notify(result.message, 'success');
+          loadGitStatus();
+          loadSidebar();
+        } else {
+          notify(result.message, 'error');
+        }
+      } catch (err) {
+        notify('Error pulling: ' + err.message, 'error');
+      }
+    }
+
+    async function gitPush() {
+      try {
+        notify('Pushing...', 'info');
+        const { result } = await api('git/push', { method: 'POST', body: { setUpstream: true } });
+        if (result.success) {
+          notify(result.message, 'success');
+          loadGitStatus();
+        } else {
+          notify(result.message, 'error');
+        }
+      } catch (err) {
+        notify('Error pushing: ' + err.message, 'error');
+      }
+    }
+
     async function commitChanges() {
       const message = document.getElementById('commit-message').value.trim();
       if (!message) {
@@ -828,6 +1336,121 @@
         }
       } catch (err) {
         notify(`Commit failed: ${err.message}`, 'error');
+      }
+    }
+
+    // Archive functions
+    async function exportBackup() {
+      try {
+        notify('Preparing export...', 'info');
+        const response = await fetch('/cms/api/archive/export');
+        if (!response.ok) {
+          throw new Error('Export failed');
+        }
+
+        const blob = await response.blob();
+        const filename = response.headers.get('Content-Disposition')?.match(/filename="(.+)"/)?.[1] || 'cms-backup.json';
+
+        // Create download link
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        URL.revokeObjectURL(url);
+
+        notify('Backup exported successfully', 'success');
+      } catch (err) {
+        notify('Export failed: ' + err.message, 'error');
+      }
+    }
+
+    function showImportModal() {
+      showModal(`
+        <h3>Import Backup</h3>
+        <p style="margin-bottom: 1rem; color: #666;">Select a backup file to restore content, translations, and navigation settings.</p>
+        <div class="form-group">
+          <label>Backup File (.json)</label>
+          <input type="file" id="import-file" accept=".json" style="width: 100%; padding: 0.5rem; border: 1px solid var(--border); border-radius: 4px;">
+        </div>
+        <div class="form-group">
+          <label style="display: flex; align-items: center; gap: 0.5rem; font-weight: normal;">
+            <input type="checkbox" id="import-overwrite">
+            Overwrite existing files
+          </label>
+        </div>
+        <div class="form-group">
+          <label style="font-weight: 500; margin-bottom: 0.5rem; display: block;">Import options:</label>
+          <label style="display: flex; align-items: center; gap: 0.5rem; font-weight: normal; margin-bottom: 0.25rem;">
+            <input type="checkbox" id="import-content" checked>
+            Content pages
+          </label>
+          <label style="display: flex; align-items: center; gap: 0.5rem; font-weight: normal; margin-bottom: 0.25rem;">
+            <input type="checkbox" id="import-locales" checked>
+            Translations
+          </label>
+          <label style="display: flex; align-items: center; gap: 0.5rem; font-weight: normal;">
+            <input type="checkbox" id="import-navigation" checked>
+            Navigation
+          </label>
+        </div>
+        <div class="modal-actions">
+          <button class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+          <button class="btn btn-primary" onclick="importBackup()">Import</button>
+        </div>
+      `);
+    }
+
+    async function importBackup() {
+      const fileInput = document.getElementById('import-file');
+      const overwrite = document.getElementById('import-overwrite').checked;
+      const skipContent = !document.getElementById('import-content').checked;
+      const skipLocales = !document.getElementById('import-locales').checked;
+      const skipNavigation = !document.getElementById('import-navigation').checked;
+
+      if (!fileInput.files || fileInput.files.length === 0) {
+        notify('Please select a file', 'error');
+        return;
+      }
+
+      try {
+        notify('Reading file...', 'info');
+        const file = fileInput.files[0];
+        const text = await file.text();
+        const archive = JSON.parse(text);
+
+        if (!archive.version) {
+          throw new Error('Invalid backup file format');
+        }
+
+        notify('Importing...', 'info');
+        const { results } = await api('archive/import', {
+          method: 'POST',
+          body: {
+            archive,
+            options: { overwrite, skipContent, skipLocales, skipNavigation }
+          }
+        });
+
+        closeModal();
+
+        let summary = 'Import completed: ';
+        if (!skipContent) {
+          summary += `Content: ${results.content.created} created, ${results.content.updated} updated, ${results.content.skipped} skipped. `;
+        }
+        if (!skipLocales) {
+          summary += `Locales: ${results.locales.created} created, ${results.locales.updated} updated, ${results.locales.skipped} skipped. `;
+        }
+        if (!skipNavigation && results.navigation.updated) {
+          summary += 'Navigation updated.';
+        }
+
+        notify(summary, 'success');
+        loadSidebar();
+      } catch (err) {
+        notify('Import failed: ' + err.message, 'error');
       }
     }
 

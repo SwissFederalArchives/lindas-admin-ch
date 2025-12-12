@@ -2,8 +2,10 @@ import { dirname, join } from 'path'
 import { fileURLToPath } from 'url'
 import { readFile } from 'fs/promises'
 import { createAuthMiddleware, getOidcConfig } from './lib/auth.js'
-import { listContentFiles, readContentFile, writeContentFile, listLocaleFiles, readLocaleFile, writeLocaleFile } from './lib/content.js'
-import { gitStatus, gitCommit, gitDiff } from './lib/git.js'
+import { listContentFiles, readContentFile, writeContentFile, createContentFile, deleteContentFile, listContentFolders, listLocaleFiles, readLocaleFile, writeLocaleFile } from './lib/content.js'
+import { gitStatus, gitCommit, gitDiff, gitListBranches, gitCheckoutBranch, gitCreateBranch, gitDeleteBranch, gitFetch, gitPull, gitPush } from './lib/git.js'
+import { readNavigation, writeNavigation } from './lib/navigation.js'
+import { exportArchive, importArchive } from './lib/archive.js'
 
 const currentDir = dirname(fileURLToPath(import.meta.url))
 
@@ -286,6 +288,26 @@ const factory = async (trifid) => {
               return reply
             }
 
+            if (apiRoute === 'content/create' && method === 'POST') {
+              const { path, content } = request.body
+              const createdPath = await createContentFile(contentDir, path, content)
+              reply.type('application/json').send({ success: true, path: createdPath })
+              return reply
+            }
+
+            if (apiRoute === 'content/delete' && method === 'POST') {
+              const { path } = request.body
+              await deleteContentFile(contentDir, path)
+              reply.type('application/json').send({ success: true })
+              return reply
+            }
+
+            if (apiRoute === 'content/folders' && method === 'GET') {
+              const folders = await listContentFolders(contentDir)
+              reply.type('application/json').send({ folders })
+              return reply
+            }
+
             // Locale endpoints
             if (apiRoute === 'locales' && method === 'GET') {
               const files = await listLocaleFiles(localesDir)
@@ -307,6 +329,51 @@ const factory = async (trifid) => {
               return reply
             }
 
+            // Navigation endpoints
+            if (apiRoute === 'navigation/read' && method === 'POST') {
+              const { section } = request.body
+              if (!['header', 'footer'].includes(section)) {
+                reply.code(400).send({ error: 'Invalid section. Must be header or footer.' })
+                return reply
+              }
+              const content = await readNavigation(repoDir, section)
+              reply.type('application/json').send({ content })
+              return reply
+            }
+
+            if (apiRoute === 'navigation/write' && method === 'POST') {
+              const { section, content } = request.body
+              if (!['header', 'footer'].includes(section)) {
+                reply.code(400).send({ error: 'Invalid section. Must be header or footer.' })
+                return reply
+              }
+              await writeNavigation(repoDir, section, content)
+              reply.type('application/json').send({ success: true })
+              return reply
+            }
+
+            // Archive endpoints
+            if (apiRoute === 'archive/export' && method === 'GET') {
+              const archiveBuffer = await exportArchive(contentDir, localesDir, repoDir)
+              const filename = `lindas-cms-backup-${new Date().toISOString().slice(0, 10)}.json`
+              reply
+                .header('Content-Type', 'application/json')
+                .header('Content-Disposition', `attachment; filename="${filename}"`)
+                .send(archiveBuffer)
+              return reply
+            }
+
+            if (apiRoute === 'archive/import' && method === 'POST') {
+              const { archive, options } = request.body
+              if (!archive || !archive.version) {
+                reply.code(400).send({ error: 'Invalid archive format' })
+                return reply
+              }
+              const results = await importArchive(contentDir, localesDir, repoDir, archive, options || {})
+              reply.type('application/json').send({ success: true, results })
+              return reply
+            }
+
             // Git endpoints
             if (apiRoute === 'git/status' && method === 'GET') {
               const status = await gitStatus(repoDir)
@@ -325,6 +392,52 @@ const factory = async (trifid) => {
               const author = auth.user.name || auth.user.email
               const email = auth.user.email || 'cms@lindas.admin.ch'
               const result = await gitCommit(repoDir, message, author, email)
+              reply.type('application/json').send({ result })
+              return reply
+            }
+
+            if (apiRoute === 'git/branches' && method === 'GET') {
+              const branches = await gitListBranches(repoDir)
+              reply.type('application/json').send({ branches })
+              return reply
+            }
+
+            if (apiRoute === 'git/checkout' && method === 'POST') {
+              const { branch } = request.body
+              const result = await gitCheckoutBranch(repoDir, branch)
+              reply.type('application/json').send({ result })
+              return reply
+            }
+
+            if (apiRoute === 'git/branch/create' && method === 'POST') {
+              const { name, checkout } = request.body
+              const result = await gitCreateBranch(repoDir, name, checkout !== false)
+              reply.type('application/json').send({ result })
+              return reply
+            }
+
+            if (apiRoute === 'git/branch/delete' && method === 'POST') {
+              const { name, force } = request.body
+              const result = await gitDeleteBranch(repoDir, name, force === true)
+              reply.type('application/json').send({ result })
+              return reply
+            }
+
+            if (apiRoute === 'git/fetch' && method === 'POST') {
+              const result = await gitFetch(repoDir)
+              reply.type('application/json').send({ result })
+              return reply
+            }
+
+            if (apiRoute === 'git/pull' && method === 'POST') {
+              const result = await gitPull(repoDir)
+              reply.type('application/json').send({ result })
+              return reply
+            }
+
+            if (apiRoute === 'git/push' && method === 'POST') {
+              const { setUpstream } = request.body
+              const result = await gitPush(repoDir, setUpstream === true)
               reply.type('application/json').send({ result })
               return reply
             }

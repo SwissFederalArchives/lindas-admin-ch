@@ -206,3 +206,199 @@ export async function gitDiscardAll(repoDir) {
     return { success: false, message: err.message }
   }
 }
+
+/**
+ * List all branches (local and remote)
+ * @param {string} repoDir - The repository directory
+ * @returns {Promise<Object>} Object with local and remote branches
+ */
+export async function gitListBranches(repoDir) {
+  try {
+    // Get current branch
+    const currentBranch = await gitExec(repoDir, 'rev-parse --abbrev-ref HEAD')
+
+    // Get local branches
+    const localOutput = await gitExec(repoDir, 'branch --format="%(refname:short)"')
+    const localBranches = localOutput.split('\n').filter(Boolean)
+
+    // Get remote branches
+    let remoteBranches = []
+    try {
+      const remoteOutput = await gitExec(repoDir, 'branch -r --format="%(refname:short)"')
+      remoteBranches = remoteOutput.split('\n')
+        .filter(Boolean)
+        .filter(b => !b.includes('HEAD'))
+        .map(b => b.replace(/^origin\//, ''))
+    } catch {
+      // No remotes configured
+    }
+
+    // Get remote URL if available
+    let remoteUrl = null
+    try {
+      remoteUrl = await gitExec(repoDir, 'remote get-url origin')
+    } catch {
+      // No remote configured
+    }
+
+    return {
+      current: currentBranch,
+      local: localBranches,
+      remote: remoteBranches,
+      remoteUrl
+    }
+  } catch (err) {
+    return {
+      error: err.message,
+      current: 'unknown',
+      local: [],
+      remote: [],
+      remoteUrl: null
+    }
+  }
+}
+
+/**
+ * Switch to a different branch
+ * @param {string} repoDir - The repository directory
+ * @param {string} branchName - The branch to switch to
+ * @returns {Promise<Object>} Result of the operation
+ */
+export async function gitCheckoutBranch(repoDir, branchName) {
+  try {
+    // Sanitize branch name
+    const sanitizedBranch = branchName.replace(/[^a-zA-Z0-9_\-\/\.]/g, '')
+
+    // Check for uncommitted changes
+    const status = await gitExec(repoDir, 'status --porcelain')
+    if (status.trim()) {
+      return {
+        success: false,
+        message: 'Cannot switch branches with uncommitted changes. Please commit or discard your changes first.'
+      }
+    }
+
+    await gitExec(repoDir, `checkout ${sanitizedBranch}`)
+    const currentBranch = await gitExec(repoDir, 'rev-parse --abbrev-ref HEAD')
+
+    return {
+      success: true,
+      message: `Switched to branch '${currentBranch}'`,
+      branch: currentBranch
+    }
+  } catch (err) {
+    return { success: false, message: err.message }
+  }
+}
+
+/**
+ * Create a new branch
+ * @param {string} repoDir - The repository directory
+ * @param {string} branchName - The name for the new branch
+ * @param {boolean} checkout - Whether to switch to the new branch
+ * @returns {Promise<Object>} Result of the operation
+ */
+export async function gitCreateBranch(repoDir, branchName, checkout = true) {
+  try {
+    // Sanitize branch name
+    const sanitizedBranch = branchName.replace(/[^a-zA-Z0-9_\-\/\.]/g, '')
+
+    if (!sanitizedBranch) {
+      return { success: false, message: 'Invalid branch name' }
+    }
+
+    if (checkout) {
+      await gitExec(repoDir, `checkout -b ${sanitizedBranch}`)
+    } else {
+      await gitExec(repoDir, `branch ${sanitizedBranch}`)
+    }
+
+    return {
+      success: true,
+      message: `Created branch '${sanitizedBranch}'${checkout ? ' and switched to it' : ''}`,
+      branch: sanitizedBranch
+    }
+  } catch (err) {
+    return { success: false, message: err.message }
+  }
+}
+
+/**
+ * Delete a branch
+ * @param {string} repoDir - The repository directory
+ * @param {string} branchName - The branch to delete
+ * @param {boolean} force - Force delete even if not merged
+ * @returns {Promise<Object>} Result of the operation
+ */
+export async function gitDeleteBranch(repoDir, branchName, force = false) {
+  try {
+    // Sanitize branch name
+    const sanitizedBranch = branchName.replace(/[^a-zA-Z0-9_\-\/\.]/g, '')
+
+    // Don't allow deleting current branch
+    const currentBranch = await gitExec(repoDir, 'rev-parse --abbrev-ref HEAD')
+    if (currentBranch === sanitizedBranch) {
+      return { success: false, message: 'Cannot delete the current branch' }
+    }
+
+    // Don't allow deleting main/master
+    if (['main', 'master'].includes(sanitizedBranch)) {
+      return { success: false, message: 'Cannot delete main/master branch' }
+    }
+
+    const flag = force ? '-D' : '-d'
+    await gitExec(repoDir, `branch ${flag} ${sanitizedBranch}`)
+
+    return {
+      success: true,
+      message: `Deleted branch '${sanitizedBranch}'`
+    }
+  } catch (err) {
+    return { success: false, message: err.message }
+  }
+}
+
+/**
+ * Fetch from remote
+ * @param {string} repoDir - The repository directory
+ * @returns {Promise<Object>} Result of the operation
+ */
+export async function gitFetch(repoDir) {
+  try {
+    await gitExec(repoDir, 'fetch --all --prune')
+    return { success: true, message: 'Fetched from remote' }
+  } catch (err) {
+    return { success: false, message: err.message }
+  }
+}
+
+/**
+ * Pull from remote
+ * @param {string} repoDir - The repository directory
+ * @returns {Promise<Object>} Result of the operation
+ */
+export async function gitPull(repoDir) {
+  try {
+    const output = await gitExec(repoDir, 'pull')
+    return { success: true, message: output || 'Already up to date' }
+  } catch (err) {
+    return { success: false, message: err.message }
+  }
+}
+
+/**
+ * Push to remote
+ * @param {string} repoDir - The repository directory
+ * @param {boolean} setUpstream - Set upstream for new branches
+ * @returns {Promise<Object>} Result of the operation
+ */
+export async function gitPush(repoDir, setUpstream = false) {
+  try {
+    const currentBranch = await gitExec(repoDir, 'rev-parse --abbrev-ref HEAD')
+    const command = setUpstream ? `push -u origin ${currentBranch}` : 'push'
+    const output = await gitExec(repoDir, command)
+    return { success: true, message: output || 'Pushed successfully' }
+  } catch (err) {
+    return { success: false, message: err.message }
+  }
+}
