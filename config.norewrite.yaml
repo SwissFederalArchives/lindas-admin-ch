@@ -1,4 +1,4 @@
-# yaml-language-server: $schema=https://unpkg.com/lindas-trifid-core@latest/lib/config/schema.json
+# yaml-language-server: $schema=https://unpkg.com/@lindas/trifid-core@latest/lib/config/schema.json
 
 extends:
   - config.yaml
@@ -8,7 +8,7 @@ globals:
 
 plugins:
   sparql-proxy:
-    module: "lindas-trifid-plugin-sparql-proxy"
+    module: "@lindas/trifid-plugin-sparql-proxy"
     paths: /x-query
     config:
       # BEGIN: disable rewrites
@@ -42,7 +42,7 @@ plugins:
       queryLogLevel: info
 
   entity-renderer:
-    module: "lindas-trifid-entity-renderer"
+    module: "@lindas/trifid-entity-renderer"
     config:
       path: views/entity.hbs
       labelLoader:
