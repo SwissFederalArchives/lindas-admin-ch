@@ -1,6 +1,6 @@
 import { Readable } from 'node:stream'
 import { ReadableStream } from 'node:stream/web'
-import { getListenerURL } from 'lindas-trifid-core'
+import { getListenerURL } from '@lindas/trifid-core'
 
 /**
  * This plugin is for adding xkey headers to the response.
