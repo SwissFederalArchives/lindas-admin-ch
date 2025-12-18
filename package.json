@@ -9,7 +9,7 @@
     "lindas-trifid-core": "^6.0.0",
     "lindas-trifid-entity-renderer": "^2.0.1",
     "lindas-trifid-markdown-content": "^3.0.0",
-    "lindas-trifid-plugin-ckan": "^5.0.0",
+    "@lindas/trifid-plugin-ckan": "^5.0.3",
     "lindas-trifid-plugin-graph-explorer": "^3.0.0",
     "lindas-trifid-plugin-i18n": "^4.0.0",
     "lindas-trifid-plugin-sparql-proxy": "^3.0.5",

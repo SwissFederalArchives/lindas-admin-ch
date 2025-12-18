@@ -96,7 +96,7 @@ plugins:
       - /visualize
 
   ckan:
-    module: lindas-trifid-plugin-ckan
+    module: "@lindas/trifid-plugin-ckan"
     paths:
       - /ckan
       - /ckan/
