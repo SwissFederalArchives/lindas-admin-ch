@@ -22,23 +22,23 @@ globals:
 
 plugins:
   health-old:
-    module: lindas-trifid-core/plugins/health.js
+    module: "@lindas/trifid-core/plugins/health.js"
     paths: /health
 
   static-assets:
-    module: lindas-trifid-core/plugins/static.js
+    module: "@lindas/trifid-core/plugins/static.js"
     paths: /static-assets
     config:
       directory: file:static
 
   redirect-security-well-known:
-    module: lindas-trifid-core/plugins/redirect.js
+    module: "@lindas/trifid-core/plugins/redirect.js"
     paths: /.well-known/security.txt
     config:
       target: https://www.ncsc.admin.ch/.well-known/security.txt
 
   i18n:
-    module: lindas-trifid-plugin-i18n
+    module: "@lindas/trifid-plugin-i18n"
     config:
       directory: file:locales
       updateFiles: false
@@ -49,38 +49,38 @@ plugins:
         - it
 
   welcome:
-    module: lindas-trifid-core/plugins/view.js
+    module: "@lindas/trifid-core/plugins/view.js"
     paths: /
     config:
       path: views/welcome.hbs
 
   ecosystem:
-    module: lindas-trifid-core/plugins/view.js
+    module: "@lindas/trifid-core/plugins/view.js"
     paths: /ecosystem/
     config:
       path: views/ecosystem.hbs
   data-usage:
-    module: lindas-trifid-core/plugins/view.js
+    module: "@lindas/trifid-core/plugins/view.js"
     paths: /data-usage/
     config:
       path: views/data-usage.hbs
   governance:
-    module: lindas-trifid-core/plugins/view.js
+    module: "@lindas/trifid-core/plugins/view.js"
     paths: /governance/
     config:
       path: views/governance.hbs
   know-how:
-    module: lindas-trifid-core/plugins/view.js
+    module: "@lindas/trifid-core/plugins/view.js"
     paths: /know-how/
     config:
       path: views/know-how.hbs
   community:
-    module: lindas-trifid-core/plugins/view.js
+    module: "@lindas/trifid-core/plugins/view.js"
     paths: /community/
     config:
       path: views/community.hbs
   visualize:
-    module: lindas-trifid-core/plugins/view.js
+    module: "@lindas/trifid-core/plugins/view.js"
     paths: /visualize/
     config:
       path: views/visualize.hbs
@@ -102,20 +102,20 @@ plugins:
       - /ckan/
 
   yasgui:
-    module: lindas-trifid-plugin-yasgui
+    module: "@lindas/trifid-plugin-yasgui"
     config:
       urlShortener: https://s.zazuko.com/api/v1/shorten
       template: file:views/yasgui.hbs
 
   graph-explorer:
-    module: lindas-trifid-plugin-graph-explorer
+    module: "@lindas/trifid-plugin-graph-explorer"
     config:
       dataLabelProperty: <http://schema.org/name> | rdfs:label
       schemaLabelProperty: <http://schema.org/name> | rdfs:label
       template: file:views/graph-explorer.hbs
 
   spex:
-    module: lindas-trifid-plugin-spex
+    module: "@lindas/trifid-plugin-spex"
 
   search:
     module: file:plugins/search/index.js
@@ -124,7 +124,7 @@ plugins:
     module: file:plugins/csp-violations/index.js
 
   sparql-proxy:
-    module: lindas-trifid-plugin-sparql-proxy
+    module: "@lindas/trifid-plugin-sparql-proxy"
     paths: /x-query
     config:
       allowRewriteToggle: true
@@ -180,7 +180,7 @@ plugins:
           label: Community
 
   content:
-    module: lindas-trifid-markdown-content
+    module: "@lindas/trifid-plugin-markdown-content"
     config:
       defaults:
         autoLink: true # create links from headings
@@ -228,7 +228,7 @@ plugins:
         #   mountPath: /visualize/
 
   entity-renderer:
-    module: lindas-trifid-entity-renderer
+    module: "@lindas/trifid-entity-renderer"
     config:
       path: views/entity.hbs
       labelLoader:
