@@ -104,7 +104,8 @@ plugins:
   yasgui:
     module: "@lindas/trifid-plugin-yasgui"
     config:
-      urlShortener: https://s.zazuko.com/api/v1/shorten
+      # TODO: URL shortener temporarily disabled, to be replaced with a new service
+      # urlShortener: https://s.zazuko.com/api/v1/shorten
       template: file:views/yasgui.hbs
 
   graph-explorer:
