@@ -247,9 +247,12 @@ plugins:
       # Custom queries (these override the preset if specified)
       # For Stardog, use CBD pragma. For GraphDB, use plain DESCRIBE.
       resourceExistsQuery: "ASK { GRAPH ?g { <{{iri}}> ?p ?o }}"
-      resourceGraphQuery: "DESCRIBE <{{iri}}> FROM <http://www.ontotext.com/describe/outgoing>"
+      # Use CONSTRUCT instead of DESCRIBE for GraphDB to avoid SCBD expanding blank nodes (RDF lists)
+      resourceGraphQuery: "CONSTRUCT { <{{iri}}> ?p ?o } WHERE { <{{iri}}> ?p ?o }"
       containerExistsQuery: "ASK { GRAPH ?g { <{{iri}}> ?p ?o }}"
-      containerGraphQuery: "DESCRIBE <{{iri}}> FROM <http://www.ontotext.com/describe/outgoing>"
+      containerGraphQuery: "CONSTRUCT { <{{iri}}> ?p ?o } WHERE { <{{iri}}> ?p ?o }"
+      # Enrich quads with named graph info (GraphDB DESCRIBE/CONSTRUCT doesn't return graph context)
+      enrichWithNamedGraph: true
 
       datasetBaseUrl:
         - https://ld.admin.ch/
