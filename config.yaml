@@ -244,11 +244,12 @@ plugins:
 
       # Custom queries to get information about a resource or container
       resourceExistsQuery: "ASK { GRAPH ?g { <{{iri}}> ?p ?o }}"
-      # Use CONSTRUCT instead of DESCRIBE for GraphDB to avoid SCBD expanding blank nodes (RDF lists)
-      resourceGraphQuery: "CONSTRUCT { <{{iri}}> ?p ?o } WHERE { <{{iri}}> ?p ?o }"
+      # Use GraphDB's CBD virtual graph to avoid SCBD expanding blank nodes (RDF lists)
+      # See: https://graphdb.ontotext.com/documentation/10.8/virtual-graphs.html#describe-outgoing
+      resourceGraphQuery: "DESCRIBE <{{iri}}> FROM <http://www.ontotext.com/describe/outgoing>"
       containerExistsQuery: "ASK { GRAPH ?g { <{{iri}}> ?p ?o }}"
-      containerGraphQuery: "CONSTRUCT { <{{iri}}> ?p ?o } WHERE { <{{iri}}> ?p ?o }"
-      # Enrich quads with named graph info (GraphDB DESCRIBE/CONSTRUCT doesn't return graph context)
+      containerGraphQuery: "DESCRIBE <{{iri}}> FROM <http://www.ontotext.com/describe/outgoing>"
+      # Enrich quads with named graph info (GraphDB DESCRIBE doesn't return graph context)
       enrichWithNamedGraph: true
 
       datasetBaseUrl:
