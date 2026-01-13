@@ -1,6 +1,6 @@
 import { Readable } from 'node:stream'
 import { ReadableStream } from 'node:stream/web'
-import { getListenerURL } from 'lindas-trifid-core'
+import { getListenerURL } from '@lindas/trifid-core'
 
 /**
  * This plugin is for adding xkey headers to the response.
@@ -8,7 +8,7 @@ import { getListenerURL } from 'lindas-trifid-core'
  */
 
 const factory = async (trifid) => {
-  const { server } = trifid
+  const { server, logger } = trifid
 
   return {
     defaultConfiguration: async () => {
@@ -23,12 +23,19 @@ const factory = async (trifid) => {
         const searchParams = new URLSearchParams(request.query)
         const serializedParams = searchParams.toString()
         const instanceQueryUrl = `${listenerUrl}/x-query${serializedParams ? `?${serializedParams}` : ''}`
+        // Filter out content-length and force Accept-Encoding: identity to prevent
+        // compression issues. Node.js fetch auto-decompresses responses, which would
+        // cause a mismatch between Content-Encoding header and actual body if we
+        // allowed compressed responses from the internal request.
         const headers = new Headers(Object.fromEntries(Object.entries(request.headers).filter((header) => {
           if (!Array.isArray(header) || header.length !== 2) {
             return false
           }
-          return header[0].toLowerCase() !== 'content-length'
+          const headerName = header[0].toLowerCase()
+          return headerName !== 'content-length' && headerName !== 'accept-encoding'
         })))
+        // Force identity encoding to prevent compression on internal request
+        headers.set('accept-encoding', 'identity')
         const body = typeof request.body === 'string' ? request.body : new URLSearchParams(request.body)
         const method = request.method
         const requestOptions = {
@@ -39,17 +46,29 @@ const factory = async (trifid) => {
           requestOptions.body = body
         }
         const req = await fetch(instanceQueryUrl, requestOptions)
+        // Forward headers from sparql-proxy response, excluding compression-related headers.
+        // We request with Accept-Encoding: identity, so there should be no Content-Encoding,
+        // but we filter it out just in case to prevent mismatches.
+        // Fastify's @fastify/compress will handle compression for the outer response.
+        const excludedResponseHeaders = ['content-encoding', 'transfer-encoding', 'content-length']
         Array.from(req.headers.entries()).forEach(([key, value]) => {
-          const lowerCaseKey = key.toLowerCase()
-          if (lowerCaseKey === 'content-encoding') {
-            return
+          if (!excludedResponseHeaders.includes(key.toLowerCase())) {
+            reply.header(key, value)
           }
-
-          reply.header(key, value)
         })
         if (req.status === 200) {
           const path = request.raw.url.split('?')[0].split('/').slice(2).join('/')
           const xkeyValue = cleanupHeaderValue(path, 'default')
+
+          if (xkeyValue !== path) {
+            logger.warn({
+              plugin: 'xquery',
+              requestUrl: request.raw.url,
+              originalPath: path,
+              sanitizedValue: xkeyValue
+            }, 'Sanitized xkey header value detected')
+          }
+
           reply.header('xkey', xkeyValue)
         }
         let readableBody = req.body
@@ -77,8 +96,16 @@ const cleanupHeaderValue = (headerValue, defaultValue) => {
     return defaultValue
   }
 
-  // Split, remove all lines except the first one (can be CRLF, LF or CR), trim, and return
-  const newValue = headerValue.split(/\r\n|\r|\n/)[0].trim()
+  // Decode FIRST to prevent bypassing CRLF filtering with URL encoding
+  let decoded
+  try {
+    decoded = decodeURIComponent(headerValue)
+  } catch {
+    return defaultValue
+  }
+
+  // THEN split, remove all lines except the first one (can be CRLF, LF or CR), trim, and return
+  const newValue = decoded.split(/\r\n|\r|\n/)[0].trim()
   if (newValue.length === 0) {
     return defaultValue
   }
@@ -86,8 +113,8 @@ const cleanupHeaderValue = (headerValue, defaultValue) => {
     return defaultValue
   }
 
-  // Support URL encoded values
-  return decodeURIComponent(newValue)
+  // Remove all control characters to prevent header injection
+  return newValue.replace(/[\x00-\x1F\x7F]/g, '') // eslint-disable-line no-control-regex
 }
 
 export default factory
