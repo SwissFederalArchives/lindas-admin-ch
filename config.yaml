@@ -241,7 +241,11 @@ plugins:
 
       rewrite: true
 
-      # Custom queries to get information about a resource or container
+      # Triplestore backend switching - set TRIPLESTORE_BACKEND env var to 'stardog' or 'graphdb'
+      triplestoreBackend: env:TRIPLESTORE_BACKEND
+
+      # Custom queries (these override the preset if specified)
+      # For Stardog, use CBD pragma. For GraphDB, use plain DESCRIBE.
       resourceExistsQuery: "ASK { GRAPH ?g { <{{iri}}> ?p ?o }}"
       resourceGraphQuery: "#pragma describe.strategy cbd\nDESCRIBE <{{iri}}>"
       containerExistsQuery: "ASK { GRAPH ?g { <{{iri}}> ?p ?o }}"
