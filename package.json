@@ -5,16 +5,16 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "@lindas/trifid": "file:../lindas-trifid/packages/trifid",
-    "@lindas/trifid-core": "file:../lindas-trifid/packages/core",
-    "@lindas/trifid-entity-renderer": "file:../lindas-trifid/packages/entity-renderer",
-    "@lindas/trifid-plugin-markdown-content": "file:../lindas-trifid/packages/markdown-content",
-    "@lindas/trifid-plugin-ckan": "file:../lindas-trifid/packages/ckan",
-    "@lindas/trifid-plugin-graph-explorer": "file:../lindas-trifid/packages/graph-explorer",
-    "@lindas/trifid-plugin-i18n": "file:../lindas-trifid/packages/i18n",
-    "@lindas/trifid-plugin-sparql-proxy": "file:../lindas-trifid/packages/sparql-proxy",
-    "@lindas/trifid-plugin-spex": "file:../lindas-trifid/packages/spex",
-    "@lindas/trifid-plugin-yasgui": "file:../lindas-trifid/packages/yasgui"
+    "@lindas/trifid": "^7.0.2",
+    "@lindas/trifid-core": "^7.0.2",
+    "@lindas/trifid-entity-renderer": "^7.0.2",
+    "@lindas/trifid-plugin-markdown-content": "^7.0.2",
+    "@lindas/trifid-plugin-ckan": "^7.0.2",
+    "@lindas/trifid-plugin-graph-explorer": "^7.0.2",
+    "@lindas/trifid-plugin-i18n": "^7.0.2",
+    "@lindas/trifid-plugin-sparql-proxy": "^7.0.2",
+    "@lindas/trifid-plugin-spex": "^7.0.2",
+    "@lindas/trifid-plugin-yasgui": "^7.0.2"
   },
   "license": "UNLICENSED",
   "scripts": {
@@ -27,7 +27,7 @@
     "test": "standard && node --test **/*.test.js"
   },
   "devDependencies": {
-    "@lindas/trifid-core": "file:../lindas-trifid/packages/core",
+    "@lindas/trifid-core": "^7.0.2",
     "standard": "^17.1.2"
   }
 }
