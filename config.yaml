@@ -251,6 +251,8 @@ plugins:
       containerGraphQuery: "DESCRIBE <{{iri}}> FROM <http://www.ontotext.com/describe/outgoing>"
       # Enrich quads with named graph info (GraphDB DESCRIBE doesn't return graph context)
       enrichWithNamedGraph: true
+      # Filter out blank node subjects to match Stardog's CBD behavior
+      filterBlankNodeSubjects: true
 
       datasetBaseUrl:
         - https://ld.admin.ch/
