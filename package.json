@@ -5,16 +5,16 @@
   "private": true,
   "type": "module",
   "dependencies": {
-    "@lindas/trifid": "^7.1.0",
-    "@lindas/trifid-core": "^7.1.0",
-    "@lindas/trifid-entity-renderer": "^7.1.0",
-    "@lindas/trifid-plugin-markdown-content": "^7.1.0",
-    "@lindas/trifid-plugin-ckan": "^7.1.0",
-    "@lindas/trifid-plugin-graph-explorer": "^7.1.0",
-    "@lindas/trifid-plugin-i18n": "^7.1.0",
-    "@lindas/trifid-plugin-sparql-proxy": "^7.1.0",
-    "@lindas/trifid-plugin-spex": "^7.1.0",
-    "@lindas/trifid-plugin-yasgui": "^7.1.0"
+    "@lindas/trifid": "^7.1.1",
+    "@lindas/trifid-core": "^7.1.1",
+    "@lindas/trifid-entity-renderer": "^7.1.1",
+    "@lindas/trifid-plugin-markdown-content": "^7.1.1",
+    "@lindas/trifid-plugin-ckan": "^7.1.1",
+    "@lindas/trifid-plugin-graph-explorer": "^7.1.1",
+    "@lindas/trifid-plugin-i18n": "^7.1.1",
+    "@lindas/trifid-plugin-sparql-proxy": "^7.1.1",
+    "@lindas/trifid-plugin-spex": "^7.1.1",
+    "@lindas/trifid-plugin-yasgui": "^7.1.1"
   },
   "license": "UNLICENSED",
   "scripts": {
