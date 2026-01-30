@@ -242,7 +242,11 @@ plugins:
 
       rewrite: true
 
-      # Custom queries to get information about a resource or container
+      # Triplestore backend switching - set TRIPLESTORE_BACKEND env var to 'stardog' or 'graphdb'
+      triplestoreBackend: env:TRIPLESTORE_BACKEND
+
+      # Custom queries (these override the preset if specified)
+      # For Stardog, use CBD pragma. For GraphDB, use plain DESCRIBE.
       resourceExistsQuery: "ASK { GRAPH ?g { <{{iri}}> ?p ?o }}"
       # Use GraphDB's CBD virtual graph to avoid SCBD expanding blank nodes (RDF lists)
       # See: https://graphdb.ontotext.com/documentation/10.8/virtual-graphs.html#describe-outgoing
