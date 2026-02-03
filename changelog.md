@@ -2,6 +2,17 @@
 
 All notable changes to lindas-admin-ch will be documented in this file.
 
+## [0.15.2] - 2026-02-03
+
+### Changed
+- **DevOps overhaul: build-once-deploy-many pattern**
+  - Replaced ci.yaml Docker builds with dedicated docker.yaml workflow
+  - ci.yaml now runs tests only (npm ci + npm test)
+  - docker.yaml builds image once on main push, tags with version + SHA, auto-deploys to TEST
+  - Added Changesets for automated version management (release.yaml workflow)
+  - Updated deploy-int and deploy-prod input descriptions to use version-based tags
+  - Added RELEASE.md documenting the full release process
+
 ## [0.15.1] - 2026-02-03
 
 ### Added

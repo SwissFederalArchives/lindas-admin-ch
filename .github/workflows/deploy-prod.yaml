@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: 'Version to deploy (e.g., test_2026-02-03_073053)'
+        description: 'Version to deploy (e.g., 0.15.0)'
         required: true
         type: string
 
