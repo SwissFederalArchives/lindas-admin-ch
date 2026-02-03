@@ -1,20 +1,20 @@
 {
   "name": "lindas.admin.ch",
-  "version": "0.14.0",
+  "version": "0.15.0",
   "description": "Trifid deployment for lindas.admin.ch",
   "private": true,
   "type": "module",
   "dependencies": {
-    "@lindas/trifid": "^7.0.2",
-    "@lindas/trifid-core": "^7.0.2",
-    "@lindas/trifid-entity-renderer": "^7.0.2",
-    "@lindas/trifid-plugin-markdown-content": "^7.0.2",
-    "@lindas/trifid-plugin-ckan": "^7.0.2",
-    "@lindas/trifid-plugin-graph-explorer": "^7.0.2",
-    "@lindas/trifid-plugin-i18n": "^7.0.2",
-    "@lindas/trifid-plugin-sparql-proxy": "^7.0.2",
-    "@lindas/trifid-plugin-spex": "^7.0.2",
-    "@lindas/trifid-plugin-yasgui": "^7.0.2"
+    "@lindas/trifid": "^7.1.2",
+    "@lindas/trifid-core": "^7.1.2",
+    "@lindas/trifid-entity-renderer": "^7.1.2",
+    "@lindas/trifid-plugin-markdown-content": "^7.1.2",
+    "@lindas/trifid-plugin-ckan": "^7.1.2",
+    "@lindas/trifid-plugin-graph-explorer": "^7.1.2",
+    "@lindas/trifid-plugin-i18n": "^7.1.2",
+    "@lindas/trifid-plugin-sparql-proxy": "^7.1.2",
+    "@lindas/trifid-plugin-spex": "^7.1.2",
+    "@lindas/trifid-plugin-yasgui": "^7.1.2"
   },
   "license": "UNLICENSED",
   "scripts": {
@@ -27,7 +27,7 @@
     "test": "standard && node --test **/*.test.js"
   },
   "devDependencies": {
-    "@lindas/trifid-core": "^7.0.2",
+    "@lindas/trifid-core": "^7.1.2",
     "standard": "^17.1.2"
   }
 }
