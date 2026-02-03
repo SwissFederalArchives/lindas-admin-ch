@@ -1,0 +1,50 @@
+name: Rollback TEST
+
+on:
+  workflow_dispatch:
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: swissfederalarchives/lindas-admin-ch
+
+jobs:
+  rollback:
+    name: Rollback TEST
+    runs-on: ubuntu-latest
+
+    permissions:
+      packages: write
+
+    steps:
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Pull current and previous
+        run: |
+          docker pull $REGISTRY/$IMAGE_NAME:test
+          docker pull $REGISTRY/$IMAGE_NAME:test-previous
+
+      - name: Swap tags
+        run: |
+          # Save current as temp
+          docker tag $REGISTRY/$IMAGE_NAME:test $REGISTRY/$IMAGE_NAME:test-temp
+
+          # Previous becomes current
+          docker tag $REGISTRY/$IMAGE_NAME:test-previous $REGISTRY/$IMAGE_NAME:test
+          docker push $REGISTRY/$IMAGE_NAME:test
+
+          # Old current becomes previous
+          docker tag $REGISTRY/$IMAGE_NAME:test-temp $REGISTRY/$IMAGE_NAME:test-previous
+          docker push $REGISTRY/$IMAGE_NAME:test-previous
+
+      - name: Summary
+        run: |
+          echo "## Rollback TEST Complete" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Swapped \`test\` and \`test-previous\` tags." >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Run this workflow again to swap back." >> $GITHUB_STEP_SUMMARY

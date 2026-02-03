@@ -1,0 +1,61 @@
+name: Deploy to INT
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to deploy (e.g., test_2026-02-03_073053)'
+        required: true
+        type: string
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: swissfederalarchives/lindas-admin-ch
+
+jobs:
+  deploy:
+    name: Deploy to INT
+    runs-on: ubuntu-latest
+
+    permissions:
+      packages: write
+
+    steps:
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Save current as previous
+        run: |
+          if docker pull $REGISTRY/$IMAGE_NAME:int 2>/dev/null; then
+            echo "Saving current 'int' as 'int-previous'"
+            docker tag $REGISTRY/$IMAGE_NAME:int $REGISTRY/$IMAGE_NAME:int-previous
+            docker push $REGISTRY/$IMAGE_NAME:int-previous
+          else
+            echo "No existing 'int' tag to save"
+          fi
+
+      - name: Pull version image
+        run: |
+          echo "Pulling $REGISTRY/$IMAGE_NAME:${{ github.event.inputs.version }}"
+          docker pull $REGISTRY/$IMAGE_NAME:${{ github.event.inputs.version }}
+
+      - name: Tag as int
+        run: |
+          docker tag $REGISTRY/$IMAGE_NAME:${{ github.event.inputs.version }} $REGISTRY/$IMAGE_NAME:int
+          docker push $REGISTRY/$IMAGE_NAME:int
+          echo "Tagged ${{ github.event.inputs.version }} as int"
+
+      - name: Summary
+        run: |
+          echo "## Deployed to INT" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Tag | Version |" >> $GITHUB_STEP_SUMMARY
+          echo "|-----|---------|" >> $GITHUB_STEP_SUMMARY
+          echo "| \`int\` | \`${{ github.event.inputs.version }}\` |" >> $GITHUB_STEP_SUMMARY
+          echo "| \`int-previous\` | (previous version) |" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "To rollback: Run **Rollback INT** workflow" >> $GITHUB_STEP_SUMMARY

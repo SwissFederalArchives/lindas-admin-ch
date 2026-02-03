@@ -1,0 +1,50 @@
+name: Rollback INT
+
+on:
+  workflow_dispatch:
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: swissfederalarchives/lindas-admin-ch
+
+jobs:
+  rollback:
+    name: Rollback INT
+    runs-on: ubuntu-latest
+
+    permissions:
+      packages: write
+
+    steps:
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Pull current and previous
+        run: |
+          docker pull $REGISTRY/$IMAGE_NAME:int
+          docker pull $REGISTRY/$IMAGE_NAME:int-previous
+
+      - name: Swap tags
+        run: |
+          # Save current as temp
+          docker tag $REGISTRY/$IMAGE_NAME:int $REGISTRY/$IMAGE_NAME:int-temp
+
+          # Previous becomes current
+          docker tag $REGISTRY/$IMAGE_NAME:int-previous $REGISTRY/$IMAGE_NAME:int
+          docker push $REGISTRY/$IMAGE_NAME:int
+
+          # Old current becomes previous
+          docker tag $REGISTRY/$IMAGE_NAME:int-temp $REGISTRY/$IMAGE_NAME:int-previous
+          docker push $REGISTRY/$IMAGE_NAME:int-previous
+
+      - name: Summary
+        run: |
+          echo "## Rollback INT Complete" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Swapped \`int\` and \`int-previous\` tags." >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Run this workflow again to swap back." >> $GITHUB_STEP_SUMMARY

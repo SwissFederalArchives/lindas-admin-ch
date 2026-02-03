@@ -1,0 +1,62 @@
+name: Deploy to PROD
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to deploy (e.g., test_2026-02-03_073053)'
+        required: true
+        type: string
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: swissfederalarchives/lindas-admin-ch
+
+jobs:
+  deploy:
+    name: Deploy to PROD
+    runs-on: ubuntu-latest
+    environment: production
+
+    permissions:
+      packages: write
+
+    steps:
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Save current as previous
+        run: |
+          if docker pull $REGISTRY/$IMAGE_NAME:prod 2>/dev/null; then
+            echo "Saving current 'prod' as 'prod-previous'"
+            docker tag $REGISTRY/$IMAGE_NAME:prod $REGISTRY/$IMAGE_NAME:prod-previous
+            docker push $REGISTRY/$IMAGE_NAME:prod-previous
+          else
+            echo "No existing 'prod' tag to save"
+          fi
+
+      - name: Pull version image
+        run: |
+          echo "Pulling $REGISTRY/$IMAGE_NAME:${{ github.event.inputs.version }}"
+          docker pull $REGISTRY/$IMAGE_NAME:${{ github.event.inputs.version }}
+
+      - name: Tag as prod
+        run: |
+          docker tag $REGISTRY/$IMAGE_NAME:${{ github.event.inputs.version }} $REGISTRY/$IMAGE_NAME:prod
+          docker push $REGISTRY/$IMAGE_NAME:prod
+          echo "Tagged ${{ github.event.inputs.version }} as prod"
+
+      - name: Summary
+        run: |
+          echo "## Deployed to PROD" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Tag | Version |" >> $GITHUB_STEP_SUMMARY
+          echo "|-----|---------|" >> $GITHUB_STEP_SUMMARY
+          echo "| \`prod\` | \`${{ github.event.inputs.version }}\` |" >> $GITHUB_STEP_SUMMARY
+          echo "| \`prod-previous\` | (previous version) |" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "To rollback: Run **Rollback PROD** workflow" >> $GITHUB_STEP_SUMMARY
