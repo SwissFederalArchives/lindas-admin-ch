@@ -8,10 +8,10 @@
     "@lindas/trifid": "^7.1.2",
     "@lindas/trifid-core": "^7.1.2",
     "@lindas/trifid-entity-renderer": "^7.1.2",
-    "@lindas/trifid-plugin-markdown-content": "^7.1.2",
     "@lindas/trifid-plugin-ckan": "^7.1.2",
     "@lindas/trifid-plugin-graph-explorer": "^7.1.2",
     "@lindas/trifid-plugin-i18n": "^7.1.2",
+    "@lindas/trifid-plugin-markdown-content": "^7.1.2",
     "@lindas/trifid-plugin-sparql-proxy": "^7.1.2",
     "@lindas/trifid-plugin-spex": "^7.1.2",
     "@lindas/trifid-plugin-yasgui": "^7.1.2"
@@ -29,6 +29,7 @@
   "devDependencies": {
     "@changesets/cli": "^2.27.0",
     "@lindas/trifid-core": "^7.1.2",
+    "@types/node": "^22.19.8",
     "standard": "^17.1.2"
   }
 }
