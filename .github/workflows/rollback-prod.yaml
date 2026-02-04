@@ -45,6 +45,15 @@ jobs:
           docker tag $REGISTRY/$IMAGE_NAME:${{ github.event.inputs.version }} $REGISTRY/$IMAGE_NAME:${{ steps.tags.outputs.prod_tag }}
           docker push $REGISTRY/$IMAGE_NAME:${{ steps.tags.outputs.prod_tag }}
 
+      - name: Update prod-current and prod-previous markers
+        run: |
+          if docker pull $REGISTRY/$IMAGE_NAME:prod-current 2>/dev/null; then
+            docker tag $REGISTRY/$IMAGE_NAME:prod-current $REGISTRY/$IMAGE_NAME:prod-previous
+            docker push $REGISTRY/$IMAGE_NAME:prod-previous
+          fi
+          docker tag $REGISTRY/$IMAGE_NAME:${{ github.event.inputs.version }} $REGISTRY/$IMAGE_NAME:prod-current
+          docker push $REGISTRY/$IMAGE_NAME:prod-current
+
       - name: Summary
         run: |
           echo "## Rollback PROD Complete" >> $GITHUB_STEP_SUMMARY

@@ -68,6 +68,16 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
+      - name: Update test-current and test-previous markers
+        if: ${{ github.event_name != 'pull_request' }}
+        run: |
+          if docker pull $REGISTRY/$IMAGE_NAME:test-current 2>/dev/null; then
+            docker tag $REGISTRY/$IMAGE_NAME:test-current $REGISTRY/$IMAGE_NAME:test-previous
+            docker push $REGISTRY/$IMAGE_NAME:test-previous
+          fi
+          docker tag $REGISTRY/$IMAGE_NAME:${{ steps.version.outputs.version }} $REGISTRY/$IMAGE_NAME:test-current
+          docker push $REGISTRY/$IMAGE_NAME:test-current
+
       - name: Summary
         if: ${{ github.event_name != 'pull_request' }}
         run: |

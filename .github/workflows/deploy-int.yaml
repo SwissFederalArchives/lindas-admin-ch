@@ -45,6 +45,15 @@ jobs:
           docker push $REGISTRY/$IMAGE_NAME:${{ steps.tags.outputs.int_tag }}
           echo "Tagged ${{ github.event.inputs.version }} as ${{ steps.tags.outputs.int_tag }}"
 
+      - name: Update int-current and int-previous markers
+        run: |
+          if docker pull $REGISTRY/$IMAGE_NAME:int-current 2>/dev/null; then
+            docker tag $REGISTRY/$IMAGE_NAME:int-current $REGISTRY/$IMAGE_NAME:int-previous
+            docker push $REGISTRY/$IMAGE_NAME:int-previous
+          fi
+          docker tag $REGISTRY/$IMAGE_NAME:${{ github.event.inputs.version }} $REGISTRY/$IMAGE_NAME:int-current
+          docker push $REGISTRY/$IMAGE_NAME:int-current
+
       - name: Summary
         run: |
           echo "## Deployed to INT" >> $GITHUB_STEP_SUMMARY
