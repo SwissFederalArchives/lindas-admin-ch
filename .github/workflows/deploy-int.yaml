@@ -8,6 +8,10 @@ on:
         required: true
         type: string
 
+concurrency:
+  group: deploy-int
+  cancel-in-progress: false
+
 env:
   REGISTRY: ghcr.io
   IMAGE_NAME: swissfederalarchives/lindas-admin-ch

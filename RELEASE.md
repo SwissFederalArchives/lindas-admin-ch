@@ -99,14 +99,13 @@ Every push to `main` triggers docker.yaml which:
 4. Flux detects the new `test_*` tag and deploys
 5. E2E tests run automatically after a 3-minute wait for Flux
 
-### DEV (manual, for testing Docker builds)
+### DEV (automatic on develop push, or manual from any branch)
 
-1. Go to **Actions** > **Build and Deploy to TEST**
-2. Select the branch to build from
-3. Click **Run workflow**
+Dev builds are triggered automatically on every push to `develop`, or manually via
+**Actions** > **Build and Deploy to TEST** > **Run workflow** from any branch.
 
 The image is tagged with `sha-{sha}` and `dev_{timestamp}` only. Flux ignores `dev_*` tags.
-No markers are updated.
+No markers are updated. E2E tests do not run for dev builds.
 
 ### INT (manual)
 
@@ -144,7 +143,7 @@ The `{env}-current` / `{env}-previous` markers are updated accordingly.
 | Workflow | Trigger | Purpose |
 |----------|---------|---------|
 | `ci.yaml` | Push / PR | Run tests (npm ci + npm test) |
-| `docker.yaml` | Push to main / PR / Manual | Build image + auto-deploy TEST (or dev build) |
+| `docker.yaml` | Push to main or develop / PR / Manual | Build image + auto-deploy TEST (main) or dev build (develop/manual) |
 | `release.yaml` | Push to main | Changesets version PR + v{version} tag creation |
 | `deploy-int.yaml` | Manual (version input) | Promote a version to INT |
 | `deploy-prod.yaml` | Manual (version input) | Promote a version to PROD |

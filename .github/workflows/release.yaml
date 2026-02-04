@@ -40,6 +40,8 @@ jobs:
       - name: Create version tag
         if: steps.changesets.outputs.hasChangesets == 'false'
         run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
           VERSION=$(node -p "require('./package.json').version")
           TAG="v${VERSION}"
           if git rev-parse "$TAG" >/dev/null 2>&1; then
