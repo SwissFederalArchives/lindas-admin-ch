@@ -4,26 +4,42 @@ This document describes how versions are managed and how images flow through env
 
 ## Overview
 
-Images are built **once** on push to `main` and promoted through environments using floating tags:
+Images are built **once** on push to `main`. The same image is promoted through environments
+by creating new `{env}_{timestamp}` tags that Flux watches.
 
 ```
-main push -> build v0.15.0 -> auto-tag as "test" -> Flux deploys to TEST
-manual promote -> retag v0.15.0 as "int" -> Flux deploys to INT
-manual promote -> retag v0.15.0 as "prod" -> Flux deploys to PROD
+main push -> build 0.15.0 + sha-xxx + test_2026-02-04_133106 -> Flux deploys to TEST
+manual    -> pull 0.15.0, push int_2026-02-04_140000          -> Flux deploys to INT
+manual    -> pull 0.15.0, push prod_2026-02-04_150000          -> Flux deploys to PROD
 ```
 
 ## Image Tags
 
-| Tag | Description | Mutable |
-|-----|-------------|---------|
-| `0.15.0` | Version from package.json (immutable reference) | No |
-| `sha-abc1234` | Git commit SHA (immutable reference) | No |
-| `test` | Currently deployed to TEST | Yes |
-| `int` | Currently deployed to INT | Yes |
-| `prod` | Currently deployed to PROD | Yes |
-| `test-previous` | Previous TEST version (for rollback) | Yes |
-| `int-previous` | Previous INT version (for rollback) | Yes |
-| `prod-previous` | Previous PROD version (for rollback) | Yes |
+Each build produces three tags for the same image:
+
+| Tag | Purpose | Mutable |
+|-----|---------|---------|
+| `0.15.0` | Immutable version reference (from package.json) | No |
+| `sha-abc1234` | Immutable git commit reference | No |
+| `test_2026-02-04_133106` | Flux deployment tag for TEST | No (new tag per deploy) |
+
+Promotion and rollback workflows pull by **version** and push a fresh `{env}_{timestamp}` tag.
+Flux picks the highest timestamp alphabetically, so the latest action always wins.
+
+## Why Timestamps for Flux
+
+Flux image automation (`ImagePolicy` + `ImageUpdateAutomation`) selects the highest tag
+matching a pattern like `^test_` using alphabetical sorting. This means:
+
+- **Timestamps always increase**, so Flux always picks the latest deployment
+- **Rollback works**: pushing a new `test_{timestamp}` for an older version sorts higher
+  than the previous deployment tag, so Flux picks it up
+- **Floating tags** (`test`, `int`) would not work because Flux compares tag strings,
+  not image digests. A mutable tag that doesn't change its name is invisible to Flux.
+- **Version-only tags** (`test_0.15.0`) break rollback: rolling back from `test_0.16.0`
+  to `test_0.15.0` would never sort higher
+
+The immutable `{version}` tag provides traceability. The `{env}_{timestamp}` tag drives Flux.
 
 ## Version Bumping with Changesets
 
@@ -52,13 +68,16 @@ When the PR is merged to `main`:
 When the "Version Packages" PR is merged:
 - The `release` script runs `changeset tag`, creating a git tag (e.g., `v0.16.0`)
 - The **docker.yaml** workflow builds the image with the new version tag
-- The image is auto-deployed to TEST
+- The image is auto-deployed to TEST via a `test_{timestamp}` tag
 
 ## Deploying to Environments
 
 ### TEST (automatic)
 
-Every push to `main` triggers docker.yaml, which builds and auto-deploys to TEST.
+Every push to `main` triggers docker.yaml which:
+1. Builds the image
+2. Tags it with `{version}`, `sha-{sha}`, and `test_{timestamp}`
+3. Flux detects the new `test_*` tag and deploys
 
 ### INT (manual)
 
@@ -66,7 +85,7 @@ Every push to `main` triggers docker.yaml, which builds and auto-deploys to TEST
 2. Enter the version to deploy (e.g., `0.15.0`)
 3. Click **Run workflow**
 
-The workflow saves the current `int` tag as `int-previous`, then retags the version as `int`.
+The workflow pulls the version image and pushes it with a fresh `int_{timestamp}` tag.
 
 ### PROD (manual, requires approval)
 
@@ -75,28 +94,29 @@ The workflow saves the current `int` tag as `int-previous`, then retags the vers
 3. Click **Run workflow**
 4. Approve the deployment (production environment protection)
 
-The workflow saves the current `prod` tag as `prod-previous`, then retags the version as `prod`.
+The workflow pulls the version image and pushes it with a fresh `prod_{timestamp}` tag.
 
 ## Rollback
 
-Each environment has a rollback workflow that swaps the current tag with the previous one:
+Each environment has a rollback workflow that takes a **version** to rollback to:
 
-- **Rollback TEST**: Swaps `test` and `test-previous`
-- **Rollback INT**: Swaps `int` and `int-previous`
-- **Rollback PROD**: Swaps `prod` and `prod-previous`
+1. Go to **Actions** > **Rollback TEST/INT/PROD**
+2. Enter the version to rollback to (e.g., `0.14.0`)
+3. Click **Run workflow**
 
-Run the same rollback workflow again to undo the rollback (swap back).
+The workflow pulls the specified version and pushes it with a fresh `{env}_{timestamp}` tag.
+Since the new timestamp is higher than the previous one, Flux picks it up and deploys.
 
 ## Workflows
 
 | Workflow | Trigger | Purpose |
 |----------|---------|---------|
 | `ci.yaml` | Push / PR | Run tests (npm ci + npm test) |
-| `docker.yaml` | Push to main / PR | Build image + auto-deploy to TEST |
+| `docker.yaml` | Push to main / PR | Build image + auto-deploy TEST |
 | `release.yaml` | Push to main | Changesets version PR + tag creation |
-| `deploy-int.yaml` | Manual | Promote a version to INT |
-| `deploy-prod.yaml` | Manual | Promote a version to PROD |
-| `rollback-test.yaml` | Manual | Rollback TEST |
-| `rollback-int.yaml` | Manual | Rollback INT |
-| `rollback-prod.yaml` | Manual | Rollback PROD |
+| `deploy-int.yaml` | Manual (version input) | Promote a version to INT |
+| `deploy-prod.yaml` | Manual (version input) | Promote a version to PROD |
+| `rollback-test.yaml` | Manual (version input) | Rollback TEST to a version |
+| `rollback-int.yaml` | Manual (version input) | Rollback INT to a version |
+| `rollback-prod.yaml` | Manual (version input) | Rollback PROD to a version |
 | `test.yaml` | Manual | Run E2E tests against an environment |

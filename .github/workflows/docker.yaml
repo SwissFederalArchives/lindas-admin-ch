@@ -38,7 +38,9 @@ jobs:
         id: tags
         run: |
           SHA_SHORT=$(git rev-parse --short HEAD)
+          TIMESTAMP=$(date -u '+%Y-%m-%d_%H%M%S')
           echo "sha_tag=sha-${SHA_SHORT}" >> $GITHUB_OUTPUT
+          echo "test_tag=test_${TIMESTAMP}" >> $GITHUB_OUTPUT
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
@@ -60,29 +62,11 @@ jobs:
           tags: |
             ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ steps.version.outputs.version }}
             ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ steps.tags.outputs.sha_tag }}
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ steps.tags.outputs.test_tag }}
           platforms: |
             linux/amd64
           cache-from: type=gha
           cache-to: type=gha,mode=max
-
-      - name: Save current TEST as previous
-        if: ${{ github.event_name != 'pull_request' }}
-        run: |
-          if docker pull $REGISTRY/$IMAGE_NAME:test 2>/dev/null; then
-            echo "Saving current 'test' as 'test-previous'"
-            docker tag $REGISTRY/$IMAGE_NAME:test $REGISTRY/$IMAGE_NAME:test-previous
-            docker push $REGISTRY/$IMAGE_NAME:test-previous
-          else
-            echo "No existing 'test' tag to save"
-          fi
-
-      - name: Deploy to TEST
-        if: ${{ github.event_name != 'pull_request' }}
-        run: |
-          docker pull $REGISTRY/$IMAGE_NAME:${{ steps.version.outputs.version }}
-          docker tag $REGISTRY/$IMAGE_NAME:${{ steps.version.outputs.version }} $REGISTRY/$IMAGE_NAME:test
-          docker push $REGISTRY/$IMAGE_NAME:test
-          echo "Deployed ${{ steps.version.outputs.version }} to TEST"
 
       - name: Summary
         if: ${{ github.event_name != 'pull_request' }}
@@ -93,7 +77,6 @@ jobs:
           echo "|-----|-------------|" >> $GITHUB_STEP_SUMMARY
           echo "| \`${{ steps.version.outputs.version }}\` | Version tag (immutable) |" >> $GITHUB_STEP_SUMMARY
           echo "| \`${{ steps.tags.outputs.sha_tag }}\` | SHA tag (immutable) |" >> $GITHUB_STEP_SUMMARY
-          echo "| \`test\` | TEST environment |" >> $GITHUB_STEP_SUMMARY
-          echo "| \`test-previous\` | Previous TEST version |" >> $GITHUB_STEP_SUMMARY
+          echo "| \`${{ steps.tags.outputs.test_tag }}\` | TEST deployment tag (Flux) |" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "To promote: Run **Deploy to INT** workflow with version \`${{ steps.version.outputs.version }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "To promote to INT: Run **Deploy to INT** with version \`${{ steps.version.outputs.version }}\`" >> $GITHUB_STEP_SUMMARY

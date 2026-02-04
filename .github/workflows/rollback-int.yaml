@@ -2,6 +2,11 @@ name: Rollback INT
 
 on:
   workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to rollback to (e.g., 0.14.0)'
+        required: true
+        type: string
 
 env:
   REGISTRY: ghcr.io
@@ -23,28 +28,27 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Pull current and previous
+      - name: Generate deployment tag
+        id: tags
         run: |
-          docker pull $REGISTRY/$IMAGE_NAME:int
-          docker pull $REGISTRY/$IMAGE_NAME:int-previous
+          TIMESTAMP=$(date -u '+%Y-%m-%d_%H%M%S')
+          echo "int_tag=int_${TIMESTAMP}" >> $GITHUB_OUTPUT
 
-      - name: Swap tags
+      - name: Pull version image
         run: |
-          # Save current as temp
-          docker tag $REGISTRY/$IMAGE_NAME:int $REGISTRY/$IMAGE_NAME:int-temp
+          echo "Rolling back INT to version ${{ github.event.inputs.version }}"
+          docker pull $REGISTRY/$IMAGE_NAME:${{ github.event.inputs.version }}
 
-          # Previous becomes current
-          docker tag $REGISTRY/$IMAGE_NAME:int-previous $REGISTRY/$IMAGE_NAME:int
-          docker push $REGISTRY/$IMAGE_NAME:int
-
-          # Old current becomes previous
-          docker tag $REGISTRY/$IMAGE_NAME:int-temp $REGISTRY/$IMAGE_NAME:int-previous
-          docker push $REGISTRY/$IMAGE_NAME:int-previous
+      - name: Tag and push as INT
+        run: |
+          docker tag $REGISTRY/$IMAGE_NAME:${{ github.event.inputs.version }} $REGISTRY/$IMAGE_NAME:${{ steps.tags.outputs.int_tag }}
+          docker push $REGISTRY/$IMAGE_NAME:${{ steps.tags.outputs.int_tag }}
 
       - name: Summary
         run: |
           echo "## Rollback INT Complete" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "Swapped \`int\` and \`int-previous\` tags." >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "Run this workflow again to swap back." >> $GITHUB_STEP_SUMMARY
+          echo "| Detail | Value |" >> $GITHUB_STEP_SUMMARY
+          echo "|--------|-------|" >> $GITHUB_STEP_SUMMARY
+          echo "| Rolled back to | \`${{ github.event.inputs.version }}\` |" >> $GITHUB_STEP_SUMMARY
+          echo "| Flux tag | \`${{ steps.tags.outputs.int_tag }}\` |" >> $GITHUB_STEP_SUMMARY

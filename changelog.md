@@ -2,16 +2,20 @@
 
 All notable changes to lindas-admin-ch will be documented in this file.
 
-## [0.15.2] - 2026-02-03
+## [0.15.2] - 2026-02-04
 
 ### Changed
 - **DevOps overhaul: build-once-deploy-many pattern**
   - Replaced ci.yaml Docker builds with dedicated docker.yaml workflow
   - ci.yaml now runs tests only (npm ci + npm test)
-  - docker.yaml builds image once on main push, tags with version + SHA, auto-deploys to TEST
+  - docker.yaml builds image once on main push, tags with version + SHA + test_{timestamp}
   - Added Changesets for automated version management (release.yaml workflow)
-  - Updated deploy-int and deploy-prod input descriptions to use version-based tags
   - Added RELEASE.md documenting the full release process
+- **Flux-compatible tag strategy**
+  - Deploy/rollback workflows now take version as input, produce {env}_{timestamp} tags for Flux
+  - Immutable version tags (0.15.0, sha-xxx) provide traceability
+  - Timestamps drive Flux alphabetical sorting (supports both deploys and rollbacks)
+  - Documented decision rationale in docs/2026-02-04-flux-tag-decision.md
 
 ## [0.15.1] - 2026-02-03
 

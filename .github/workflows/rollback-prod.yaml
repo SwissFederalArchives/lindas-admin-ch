@@ -2,6 +2,11 @@ name: Rollback PROD
 
 on:
   workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to rollback to (e.g., 0.14.0)'
+        required: true
+        type: string
 
 env:
   REGISTRY: ghcr.io
@@ -24,28 +29,27 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Pull current and previous
+      - name: Generate deployment tag
+        id: tags
         run: |
-          docker pull $REGISTRY/$IMAGE_NAME:prod
-          docker pull $REGISTRY/$IMAGE_NAME:prod-previous
+          TIMESTAMP=$(date -u '+%Y-%m-%d_%H%M%S')
+          echo "prod_tag=prod_${TIMESTAMP}" >> $GITHUB_OUTPUT
 
-      - name: Swap tags
+      - name: Pull version image
         run: |
-          # Save current as temp
-          docker tag $REGISTRY/$IMAGE_NAME:prod $REGISTRY/$IMAGE_NAME:prod-temp
+          echo "Rolling back PROD to version ${{ github.event.inputs.version }}"
+          docker pull $REGISTRY/$IMAGE_NAME:${{ github.event.inputs.version }}
 
-          # Previous becomes current
-          docker tag $REGISTRY/$IMAGE_NAME:prod-previous $REGISTRY/$IMAGE_NAME:prod
-          docker push $REGISTRY/$IMAGE_NAME:prod
-
-          # Old current becomes previous
-          docker tag $REGISTRY/$IMAGE_NAME:prod-temp $REGISTRY/$IMAGE_NAME:prod-previous
-          docker push $REGISTRY/$IMAGE_NAME:prod-previous
+      - name: Tag and push as PROD
+        run: |
+          docker tag $REGISTRY/$IMAGE_NAME:${{ github.event.inputs.version }} $REGISTRY/$IMAGE_NAME:${{ steps.tags.outputs.prod_tag }}
+          docker push $REGISTRY/$IMAGE_NAME:${{ steps.tags.outputs.prod_tag }}
 
       - name: Summary
         run: |
           echo "## Rollback PROD Complete" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "Swapped \`prod\` and \`prod-previous\` tags." >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "Run this workflow again to swap back." >> $GITHUB_STEP_SUMMARY
+          echo "| Detail | Value |" >> $GITHUB_STEP_SUMMARY
+          echo "|--------|-------|" >> $GITHUB_STEP_SUMMARY
+          echo "| Rolled back to | \`${{ github.event.inputs.version }}\` |" >> $GITHUB_STEP_SUMMARY
+          echo "| Flux tag | \`${{ steps.tags.outputs.prod_tag }}\` |" >> $GITHUB_STEP_SUMMARY
