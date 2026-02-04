@@ -9,22 +9,39 @@ by creating new `{env}_{timestamp}` tags that Flux watches.
 
 ```
 main push -> build 0.15.0 + sha-xxx + test_2026-02-04_133106 -> Flux deploys to TEST
-manual    -> pull 0.15.0, push int_2026-02-04_140000          -> Flux deploys to INT
+                                                               -> E2E tests run automatically
+manual    -> pull 0.15.0, push int_2026-02-04_140000           -> Flux deploys to INT
 manual    -> pull 0.15.0, push prod_2026-02-04_150000          -> Flux deploys to PROD
 ```
 
 ## Image Tags
 
-Each build produces three tags for the same image:
+### Build tags (main push)
 
 | Tag | Purpose | Mutable |
 |-----|---------|---------|
-| `0.15.0` | Immutable version reference (from package.json) | No |
-| `sha-abc1234` | Immutable git commit reference | No |
+| `0.15.0` | Version reference (from package.json) | Overwritten on same-version rebuild |
+| `sha-abc1234` | Git commit reference (immutable) | No |
 | `test_2026-02-04_133106` | Flux deployment tag for TEST | No (new tag per deploy) |
 
-Promotion and rollback workflows pull by **version** and push a fresh `{env}_{timestamp}` tag.
-Flux picks the highest timestamp alphabetically, so the latest action always wins.
+### Dev build tags (manual trigger from any branch)
+
+| Tag | Purpose |
+|-----|---------|
+| `sha-abc1234` | Git commit reference |
+| `dev_2026-02-04_160000` | Dev build marker (Flux ignores `dev_*`) |
+
+Dev builds do **not** push a version tag to avoid overwriting the production version reference.
+
+### Marker tags (maintained by all deploy/rollback workflows)
+
+| Tag | Purpose |
+|-----|---------|
+| `test-current` / `test-previous` | Which image is deployed to TEST now / before |
+| `int-current` / `int-previous` | Which image is deployed to INT now / before |
+| `prod-current` / `prod-previous` | Which image is deployed to PROD now / before |
+
+These are for human reference only. Flux does not use them.
 
 ## Why Timestamps for Flux
 
@@ -61,23 +78,35 @@ A markdown file is created in `.changeset/` and should be committed with your PR
 
 When the PR is merged to `main`:
 - The **Release** workflow detects pending changesets
-- It creates a "Version Packages" PR that bumps `package.json` version and updates `CHANGELOG.md`
+- It creates a "Version Packages" PR that bumps `package.json` version
 
 ### 3. Merge the Version PR
 
 When the "Version Packages" PR is merged:
-- The `release` script runs `changeset tag`, creating a git tag (e.g., `v0.16.0`)
+- The Release workflow creates a `v{version}` git tag (e.g., `v0.16.0`)
 - The **docker.yaml** workflow builds the image with the new version tag
 - The image is auto-deployed to TEST via a `test_{timestamp}` tag
+- E2E tests run automatically against TEST
 
 ## Deploying to Environments
 
 ### TEST (automatic)
 
 Every push to `main` triggers docker.yaml which:
-1. Builds the image
+1. Builds the image once
 2. Tags it with `{version}`, `sha-{sha}`, and `test_{timestamp}`
-3. Flux detects the new `test_*` tag and deploys
+3. Updates `test-current` / `test-previous` markers
+4. Flux detects the new `test_*` tag and deploys
+5. E2E tests run automatically after a 3-minute wait for Flux
+
+### DEV (manual, for testing Docker builds)
+
+1. Go to **Actions** > **Build and Deploy to TEST**
+2. Select the branch to build from
+3. Click **Run workflow**
+
+The image is tagged with `sha-{sha}` and `dev_{timestamp}` only. Flux ignores `dev_*` tags.
+No markers are updated.
 
 ### INT (manual)
 
@@ -85,7 +114,8 @@ Every push to `main` triggers docker.yaml which:
 2. Enter the version to deploy (e.g., `0.15.0`)
 3. Click **Run workflow**
 
-The workflow pulls the version image and pushes it with a fresh `int_{timestamp}` tag.
+The workflow pulls the version image, pushes it with a fresh `int_{timestamp}` tag,
+and updates `int-current` / `int-previous` markers.
 
 ### PROD (manual, requires approval)
 
@@ -94,7 +124,8 @@ The workflow pulls the version image and pushes it with a fresh `int_{timestamp}
 3. Click **Run workflow**
 4. Approve the deployment (production environment protection)
 
-The workflow pulls the version image and pushes it with a fresh `prod_{timestamp}` tag.
+The workflow pulls the version image, pushes it with a fresh `prod_{timestamp}` tag,
+and updates `prod-current` / `prod-previous` markers.
 
 ## Rollback
 
@@ -106,17 +137,18 @@ Each environment has a rollback workflow that takes a **version** to rollback to
 
 The workflow pulls the specified version and pushes it with a fresh `{env}_{timestamp}` tag.
 Since the new timestamp is higher than the previous one, Flux picks it up and deploys.
+The `{env}-current` / `{env}-previous` markers are updated accordingly.
 
 ## Workflows
 
 | Workflow | Trigger | Purpose |
 |----------|---------|---------|
 | `ci.yaml` | Push / PR | Run tests (npm ci + npm test) |
-| `docker.yaml` | Push to main / PR | Build image + auto-deploy TEST |
-| `release.yaml` | Push to main | Changesets version PR + tag creation |
+| `docker.yaml` | Push to main / PR / Manual | Build image + auto-deploy TEST (or dev build) |
+| `release.yaml` | Push to main | Changesets version PR + v{version} tag creation |
 | `deploy-int.yaml` | Manual (version input) | Promote a version to INT |
 | `deploy-prod.yaml` | Manual (version input) | Promote a version to PROD |
 | `rollback-test.yaml` | Manual (version input) | Rollback TEST to a version |
 | `rollback-int.yaml` | Manual (version input) | Rollback INT to a version |
 | `rollback-prod.yaml` | Manual (version input) | Rollback PROD to a version |
-| `test.yaml` | Manual | Run E2E tests against an environment |
+| `test.yaml` | Manual | Run E2E tests against any environment |

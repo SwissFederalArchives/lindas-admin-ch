@@ -10,12 +10,22 @@ All notable changes to lindas-admin-ch will be documented in this file.
   - ci.yaml now runs tests only (npm ci + npm test)
   - docker.yaml builds image once on main push, tags with version + SHA + test_{timestamp}
   - Added Changesets for automated version management (release.yaml workflow)
+  - release.yaml creates v{version} git tags (not changeset default format)
   - Added RELEASE.md documenting the full release process
 - **Flux-compatible tag strategy**
-  - Deploy/rollback workflows now take version as input, produce {env}_{timestamp} tags for Flux
+  - Deploy/rollback workflows take version as input, produce {env}_{timestamp} tags for Flux
   - Immutable version tags (0.15.0, sha-xxx) provide traceability
   - Timestamps drive Flux alphabetical sorting (supports both deploys and rollbacks)
   - Documented decision rationale in docs/2026-02-04-flux-tag-decision.md
+- **Environment marker tags**
+  - All deploy/rollback workflows maintain {env}-current and {env}-previous floating tags
+  - For human reference only (Flux does not use them)
+- **Dev builds**
+  - Manual workflow_dispatch trigger on docker.yaml for Docker builds from any branch
+  - Dev builds tagged with dev_{timestamp} + sha only (no version tag, Flux ignores dev_*)
+- **Automated E2E tests**
+  - E2E tests (hurl) run automatically after TEST deploy, with 3-minute Flux wait
+  - Manual test.yaml still available for INT/PROD
 
 ## [0.15.1] - 2026-02-03
 

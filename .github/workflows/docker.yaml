@@ -64,17 +64,46 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build and push Docker image
-        id: docker_build
+      - name: Build and push Docker image (main)
+        if: steps.mode.outputs.is_main == 'true'
         uses: docker/build-push-action@v6
         with:
           context: .
           file: ./Dockerfile
-          push: ${{ github.event_name != 'pull_request' }}
+          push: true
           tags: |
             ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ steps.version.outputs.version }}
             ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ steps.tags.outputs.sha_tag }}
             ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ steps.tags.outputs.env_tag }}
+          platforms: |
+            linux/amd64
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Build and push Docker image (dev)
+        if: steps.mode.outputs.is_main == 'false' && github.event_name != 'pull_request'
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: ./Dockerfile
+          push: true
+          tags: |
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ steps.tags.outputs.sha_tag }}
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ steps.tags.outputs.env_tag }}
+          platforms: |
+            linux/amd64
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Build Docker image (PR validation)
+        if: github.event_name == 'pull_request'
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: ./Dockerfile
+          push: false
+          tags: |
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:pr-validation
           platforms: |
             linux/amd64
           cache-from: type=gha
@@ -91,15 +120,21 @@ jobs:
           docker push $REGISTRY/$IMAGE_NAME:test-current
 
       - name: Summary
-        if: ${{ github.event_name != 'pull_request' }}
+        if: github.event_name != 'pull_request'
         run: |
-          echo "## Built and Deployed to ${{ steps.mode.outputs.env_prefix == 'test' && 'TEST' || 'DEV' }}" >> $GITHUB_STEP_SUMMARY
+          if [[ "${{ steps.mode.outputs.is_main }}" == "true" ]]; then
+            echo "## Built and Deployed to TEST" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "## Dev Build" >> $GITHUB_STEP_SUMMARY
+          fi
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "| Tag | Description |" >> $GITHUB_STEP_SUMMARY
           echo "|-----|-------------|" >> $GITHUB_STEP_SUMMARY
-          echo "| \`${{ steps.version.outputs.version }}\` | Version tag |" >> $GITHUB_STEP_SUMMARY
+          if [[ "${{ steps.mode.outputs.is_main }}" == "true" ]]; then
+            echo "| \`${{ steps.version.outputs.version }}\` | Version tag |" >> $GITHUB_STEP_SUMMARY
+          fi
           echo "| \`${{ steps.tags.outputs.sha_tag }}\` | SHA tag |" >> $GITHUB_STEP_SUMMARY
-          echo "| \`${{ steps.tags.outputs.env_tag }}\` | Deployment tag (Flux) |" >> $GITHUB_STEP_SUMMARY
+          echo "| \`${{ steps.tags.outputs.env_tag }}\` | Deployment tag |" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           if [[ "${{ steps.mode.outputs.is_main }}" == "true" ]]; then
             echo "To promote to INT: Run **Deploy to INT** with version \`${{ steps.version.outputs.version }}\`" >> $GITHUB_STEP_SUMMARY
