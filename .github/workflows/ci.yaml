@@ -23,9 +23,9 @@ jobs:
       - name: Run Tests
         run: npm run test
 
-  # Build TEST environment (push on develop branch)
+  # Build TEST environment (push on main branch)
   build-test:
-    if: github.ref == 'refs/heads/develop'
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
     needs: test
     runs-on: ubuntu-latest
     steps:
@@ -67,9 +67,9 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
-  # Build INT environment (push on main branch)
+  # Build INT environment (manual trigger on main branch)
   build-int:
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main' && github.event_name == 'workflow_dispatch'
     needs: test
     runs-on: ubuntu-latest
     steps:
