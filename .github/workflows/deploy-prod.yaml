@@ -1,0 +1,67 @@
+name: Deploy to PROD
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to deploy (e.g., 0.15.0)'
+        required: true
+        type: string
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: swissfederalarchives/lindas-admin-ch
+
+jobs:
+  deploy:
+    name: Deploy to PROD
+    runs-on: ubuntu-latest
+    environment: production
+
+    permissions:
+      packages: write
+
+    steps:
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate deployment tag
+        id: tags
+        run: |
+          TIMESTAMP=$(date -u '+%Y-%m-%d_%H%M%S')
+          echo "prod_tag=prod_${TIMESTAMP}" >> $GITHUB_OUTPUT
+
+      - name: Pull version image
+        run: |
+          echo "Pulling $REGISTRY/$IMAGE_NAME:${{ github.event.inputs.version }}"
+          docker pull $REGISTRY/$IMAGE_NAME:${{ github.event.inputs.version }}
+
+      - name: Tag and push as PROD
+        run: |
+          docker tag $REGISTRY/$IMAGE_NAME:${{ github.event.inputs.version }} $REGISTRY/$IMAGE_NAME:${{ steps.tags.outputs.prod_tag }}
+          docker push $REGISTRY/$IMAGE_NAME:${{ steps.tags.outputs.prod_tag }}
+          echo "Tagged ${{ github.event.inputs.version }} as ${{ steps.tags.outputs.prod_tag }}"
+
+      - name: Update prod-current and prod-previous markers
+        run: |
+          if docker pull $REGISTRY/$IMAGE_NAME:prod-current 2>/dev/null; then
+            docker tag $REGISTRY/$IMAGE_NAME:prod-current $REGISTRY/$IMAGE_NAME:prod-previous
+            docker push $REGISTRY/$IMAGE_NAME:prod-previous
+          fi
+          docker tag $REGISTRY/$IMAGE_NAME:${{ github.event.inputs.version }} $REGISTRY/$IMAGE_NAME:prod-current
+          docker push $REGISTRY/$IMAGE_NAME:prod-current
+
+      - name: Summary
+        run: |
+          echo "## Deployed to PROD" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Detail | Value |" >> $GITHUB_STEP_SUMMARY
+          echo "|--------|-------|" >> $GITHUB_STEP_SUMMARY
+          echo "| Version | \`${{ github.event.inputs.version }}\` |" >> $GITHUB_STEP_SUMMARY
+          echo "| Flux tag | \`${{ steps.tags.outputs.prod_tag }}\` |" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "To rollback: Run **Rollback PROD** with the previous version" >> $GITHUB_STEP_SUMMARY
