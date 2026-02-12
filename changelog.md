@@ -2,6 +2,26 @@
 
 All notable changes to lindas-admin-ch will be documented in this file.
 
+## [0.15.1] - 2026-02-03
+
+### Added
+- **Deploy/rollback workflows**: Added manual promotion workflows (deploy-int, deploy-prod) and rollback workflows (rollback-test, rollback-int, rollback-prod) using image retagging pattern
+- **CODEOWNERS**: Added code ownership file (@giulio-vannini @psiotwo)
+
+## [0.15.0] - 2026-02-03
+
+### Changed
+- **Updated all @lindas/trifid-* packages from ^7.0.2 to ^7.1.2**
+
+### Bug Fixes (from trifid v7.1.2)
+- **TERMDAT redirect fix**: Added `admin.ch` to the redirect URL allowlist so all Swiss federal administration subdomains (e.g. `termdat.bk.admin.ch`) are accepted for `schema:URL` redirects
+- **Graph Explorer fix**: Fixed DOM element ID mismatch preventing the React workspace from mounting
+
+### Improvements (from trifid v7.1.0/v7.1.1)
+- Simplified GraphDB setup using `FROM <http://www.ontotext.com/describe/outgoing>` pseudo-graph
+- Improved per-triple named graph enrichment for GraphDB (replaces single-graph assignment)
+- Removed `filterBlankNodeSubjects` option (no longer needed with outgoing pseudo-graph)
+
 ## [0.14.0] - 2026-01-15
 
 ### Changed

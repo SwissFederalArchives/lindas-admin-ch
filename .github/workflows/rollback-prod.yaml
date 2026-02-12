@@ -1,0 +1,51 @@
+name: Rollback PROD
+
+on:
+  workflow_dispatch:
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: swissfederalarchives/lindas-admin-ch
+
+jobs:
+  rollback:
+    name: Rollback PROD
+    runs-on: ubuntu-latest
+    environment: production
+
+    permissions:
+      packages: write
+
+    steps:
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Pull current and previous
+        run: |
+          docker pull $REGISTRY/$IMAGE_NAME:graphdb-prod
+          docker pull $REGISTRY/$IMAGE_NAME:graphdb-prod-previous
+
+      - name: Swap tags
+        run: |
+          # Save current as temp
+          docker tag $REGISTRY/$IMAGE_NAME:graphdb-prod $REGISTRY/$IMAGE_NAME:graphdb-prod-temp
+
+          # Previous becomes current
+          docker tag $REGISTRY/$IMAGE_NAME:graphdb-prod-previous $REGISTRY/$IMAGE_NAME:graphdb-prod
+          docker push $REGISTRY/$IMAGE_NAME:graphdb-prod
+
+          # Old current becomes previous
+          docker tag $REGISTRY/$IMAGE_NAME:graphdb-prod-temp $REGISTRY/$IMAGE_NAME:graphdb-prod-previous
+          docker push $REGISTRY/$IMAGE_NAME:graphdb-prod-previous
+
+      - name: Summary
+        run: |
+          echo "## Rollback PROD Complete" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Swapped \`graphdb-prod\` and \`graphdb-prod-previous\` tags." >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Run this workflow again to swap back." >> $GITHUB_STEP_SUMMARY
