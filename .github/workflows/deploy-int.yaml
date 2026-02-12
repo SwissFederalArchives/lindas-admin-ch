@@ -30,12 +30,12 @@ jobs:
 
       - name: Save current as previous
         run: |
-          if docker pull $REGISTRY/$IMAGE_NAME:int 2>/dev/null; then
-            echo "Saving current 'int' as 'int-previous'"
-            docker tag $REGISTRY/$IMAGE_NAME:int $REGISTRY/$IMAGE_NAME:int-previous
-            docker push $REGISTRY/$IMAGE_NAME:int-previous
+          if docker pull $REGISTRY/$IMAGE_NAME:graphdb-int 2>/dev/null; then
+            echo "Saving current 'graphdb-int' as 'graphdb-int-previous'"
+            docker tag $REGISTRY/$IMAGE_NAME:graphdb-int $REGISTRY/$IMAGE_NAME:graphdb-int-previous
+            docker push $REGISTRY/$IMAGE_NAME:graphdb-int-previous
           else
-            echo "No existing 'int' tag to save"
+            echo "No existing 'graphdb-int' tag to save"
           fi
 
       - name: Pull version image
@@ -43,11 +43,11 @@ jobs:
           echo "Pulling $REGISTRY/$IMAGE_NAME:${{ github.event.inputs.version }}"
           docker pull $REGISTRY/$IMAGE_NAME:${{ github.event.inputs.version }}
 
-      - name: Tag as int
+      - name: Tag as graphdb-int
         run: |
-          docker tag $REGISTRY/$IMAGE_NAME:${{ github.event.inputs.version }} $REGISTRY/$IMAGE_NAME:int
-          docker push $REGISTRY/$IMAGE_NAME:int
-          echo "Tagged ${{ github.event.inputs.version }} as int"
+          docker tag $REGISTRY/$IMAGE_NAME:${{ github.event.inputs.version }} $REGISTRY/$IMAGE_NAME:graphdb-int
+          docker push $REGISTRY/$IMAGE_NAME:graphdb-int
+          echo "Tagged ${{ github.event.inputs.version }} as graphdb-int"
 
       - name: Summary
         run: |
@@ -55,7 +55,7 @@ jobs:
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "| Tag | Version |" >> $GITHUB_STEP_SUMMARY
           echo "|-----|---------|" >> $GITHUB_STEP_SUMMARY
-          echo "| \`int\` | \`${{ github.event.inputs.version }}\` |" >> $GITHUB_STEP_SUMMARY
-          echo "| \`int-previous\` | (previous version) |" >> $GITHUB_STEP_SUMMARY
+          echo "| \`graphdb-int\` | \`${{ github.event.inputs.version }}\` |" >> $GITHUB_STEP_SUMMARY
+          echo "| \`graphdb-int-previous\` | (previous version) |" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "To rollback: Run **Rollback INT** workflow" >> $GITHUB_STEP_SUMMARY

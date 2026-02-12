@@ -26,26 +26,26 @@ jobs:
 
       - name: Pull current and previous
         run: |
-          docker pull $REGISTRY/$IMAGE_NAME:prod
-          docker pull $REGISTRY/$IMAGE_NAME:prod-previous
+          docker pull $REGISTRY/$IMAGE_NAME:graphdb-prod
+          docker pull $REGISTRY/$IMAGE_NAME:graphdb-prod-previous
 
       - name: Swap tags
         run: |
           # Save current as temp
-          docker tag $REGISTRY/$IMAGE_NAME:prod $REGISTRY/$IMAGE_NAME:prod-temp
+          docker tag $REGISTRY/$IMAGE_NAME:graphdb-prod $REGISTRY/$IMAGE_NAME:graphdb-prod-temp
 
           # Previous becomes current
-          docker tag $REGISTRY/$IMAGE_NAME:prod-previous $REGISTRY/$IMAGE_NAME:prod
-          docker push $REGISTRY/$IMAGE_NAME:prod
+          docker tag $REGISTRY/$IMAGE_NAME:graphdb-prod-previous $REGISTRY/$IMAGE_NAME:graphdb-prod
+          docker push $REGISTRY/$IMAGE_NAME:graphdb-prod
 
           # Old current becomes previous
-          docker tag $REGISTRY/$IMAGE_NAME:prod-temp $REGISTRY/$IMAGE_NAME:prod-previous
-          docker push $REGISTRY/$IMAGE_NAME:prod-previous
+          docker tag $REGISTRY/$IMAGE_NAME:graphdb-prod-temp $REGISTRY/$IMAGE_NAME:graphdb-prod-previous
+          docker push $REGISTRY/$IMAGE_NAME:graphdb-prod-previous
 
       - name: Summary
         run: |
           echo "## Rollback PROD Complete" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "Swapped \`prod\` and \`prod-previous\` tags." >> $GITHUB_STEP_SUMMARY
+          echo "Swapped \`graphdb-prod\` and \`graphdb-prod-previous\` tags." >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "Run this workflow again to swap back." >> $GITHUB_STEP_SUMMARY

@@ -25,26 +25,26 @@ jobs:
 
       - name: Pull current and previous
         run: |
-          docker pull $REGISTRY/$IMAGE_NAME:int
-          docker pull $REGISTRY/$IMAGE_NAME:int-previous
+          docker pull $REGISTRY/$IMAGE_NAME:graphdb-int
+          docker pull $REGISTRY/$IMAGE_NAME:graphdb-int-previous
 
       - name: Swap tags
         run: |
           # Save current as temp
-          docker tag $REGISTRY/$IMAGE_NAME:int $REGISTRY/$IMAGE_NAME:int-temp
+          docker tag $REGISTRY/$IMAGE_NAME:graphdb-int $REGISTRY/$IMAGE_NAME:graphdb-int-temp
 
           # Previous becomes current
-          docker tag $REGISTRY/$IMAGE_NAME:int-previous $REGISTRY/$IMAGE_NAME:int
-          docker push $REGISTRY/$IMAGE_NAME:int
+          docker tag $REGISTRY/$IMAGE_NAME:graphdb-int-previous $REGISTRY/$IMAGE_NAME:graphdb-int
+          docker push $REGISTRY/$IMAGE_NAME:graphdb-int
 
           # Old current becomes previous
-          docker tag $REGISTRY/$IMAGE_NAME:int-temp $REGISTRY/$IMAGE_NAME:int-previous
-          docker push $REGISTRY/$IMAGE_NAME:int-previous
+          docker tag $REGISTRY/$IMAGE_NAME:graphdb-int-temp $REGISTRY/$IMAGE_NAME:graphdb-int-previous
+          docker push $REGISTRY/$IMAGE_NAME:graphdb-int-previous
 
       - name: Summary
         run: |
           echo "## Rollback INT Complete" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "Swapped \`int\` and \`int-previous\` tags." >> $GITHUB_STEP_SUMMARY
+          echo "Swapped \`graphdb-int\` and \`graphdb-int-previous\` tags." >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "Run this workflow again to swap back." >> $GITHUB_STEP_SUMMARY

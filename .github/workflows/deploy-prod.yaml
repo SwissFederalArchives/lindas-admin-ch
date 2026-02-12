@@ -31,12 +31,12 @@ jobs:
 
       - name: Save current as previous
         run: |
-          if docker pull $REGISTRY/$IMAGE_NAME:prod 2>/dev/null; then
-            echo "Saving current 'prod' as 'prod-previous'"
-            docker tag $REGISTRY/$IMAGE_NAME:prod $REGISTRY/$IMAGE_NAME:prod-previous
-            docker push $REGISTRY/$IMAGE_NAME:prod-previous
+          if docker pull $REGISTRY/$IMAGE_NAME:graphdb-prod 2>/dev/null; then
+            echo "Saving current 'graphdb-prod' as 'graphdb-prod-previous'"
+            docker tag $REGISTRY/$IMAGE_NAME:graphdb-prod $REGISTRY/$IMAGE_NAME:graphdb-prod-previous
+            docker push $REGISTRY/$IMAGE_NAME:graphdb-prod-previous
           else
-            echo "No existing 'prod' tag to save"
+            echo "No existing 'graphdb-prod' tag to save"
           fi
 
       - name: Pull version image
@@ -44,11 +44,11 @@ jobs:
           echo "Pulling $REGISTRY/$IMAGE_NAME:${{ github.event.inputs.version }}"
           docker pull $REGISTRY/$IMAGE_NAME:${{ github.event.inputs.version }}
 
-      - name: Tag as prod
+      - name: Tag as graphdb-prod
         run: |
-          docker tag $REGISTRY/$IMAGE_NAME:${{ github.event.inputs.version }} $REGISTRY/$IMAGE_NAME:prod
-          docker push $REGISTRY/$IMAGE_NAME:prod
-          echo "Tagged ${{ github.event.inputs.version }} as prod"
+          docker tag $REGISTRY/$IMAGE_NAME:${{ github.event.inputs.version }} $REGISTRY/$IMAGE_NAME:graphdb-prod
+          docker push $REGISTRY/$IMAGE_NAME:graphdb-prod
+          echo "Tagged ${{ github.event.inputs.version }} as graphdb-prod"
 
       - name: Summary
         run: |
@@ -56,7 +56,7 @@ jobs:
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "| Tag | Version |" >> $GITHUB_STEP_SUMMARY
           echo "|-----|---------|" >> $GITHUB_STEP_SUMMARY
-          echo "| \`prod\` | \`${{ github.event.inputs.version }}\` |" >> $GITHUB_STEP_SUMMARY
-          echo "| \`prod-previous\` | (previous version) |" >> $GITHUB_STEP_SUMMARY
+          echo "| \`graphdb-prod\` | \`${{ github.event.inputs.version }}\` |" >> $GITHUB_STEP_SUMMARY
+          echo "| \`graphdb-prod-previous\` | (previous version) |" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "To rollback: Run **Rollback PROD** workflow" >> $GITHUB_STEP_SUMMARY

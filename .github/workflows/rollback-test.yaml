@@ -25,26 +25,26 @@ jobs:
 
       - name: Pull current and previous
         run: |
-          docker pull $REGISTRY/$IMAGE_NAME:test
-          docker pull $REGISTRY/$IMAGE_NAME:test-previous
+          docker pull $REGISTRY/$IMAGE_NAME:graphdb-test
+          docker pull $REGISTRY/$IMAGE_NAME:graphdb-test-previous
 
       - name: Swap tags
         run: |
           # Save current as temp
-          docker tag $REGISTRY/$IMAGE_NAME:test $REGISTRY/$IMAGE_NAME:test-temp
+          docker tag $REGISTRY/$IMAGE_NAME:graphdb-test $REGISTRY/$IMAGE_NAME:graphdb-test-temp
 
           # Previous becomes current
-          docker tag $REGISTRY/$IMAGE_NAME:test-previous $REGISTRY/$IMAGE_NAME:test
-          docker push $REGISTRY/$IMAGE_NAME:test
+          docker tag $REGISTRY/$IMAGE_NAME:graphdb-test-previous $REGISTRY/$IMAGE_NAME:graphdb-test
+          docker push $REGISTRY/$IMAGE_NAME:graphdb-test
 
           # Old current becomes previous
-          docker tag $REGISTRY/$IMAGE_NAME:test-temp $REGISTRY/$IMAGE_NAME:test-previous
-          docker push $REGISTRY/$IMAGE_NAME:test-previous
+          docker tag $REGISTRY/$IMAGE_NAME:graphdb-test-temp $REGISTRY/$IMAGE_NAME:graphdb-test-previous
+          docker push $REGISTRY/$IMAGE_NAME:graphdb-test-previous
 
       - name: Summary
         run: |
           echo "## Rollback TEST Complete" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "Swapped \`test\` and \`test-previous\` tags." >> $GITHUB_STEP_SUMMARY
+          echo "Swapped \`graphdb-test\` and \`graphdb-test-previous\` tags." >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "Run this workflow again to swap back." >> $GITHUB_STEP_SUMMARY

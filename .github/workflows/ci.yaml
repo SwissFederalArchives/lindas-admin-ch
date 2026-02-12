@@ -1,4 +1,4 @@
-name: CI Workflow
+name: CI Workflow for GraphDB
 
 on:
   push: # Trigger on push to any branch for tests
@@ -23,9 +23,9 @@ jobs:
       - name: Run Tests
         run: npm run test
 
-  # Build TEST environment (push on develop branch)
+  # Build TEST environment (push on develop-graphdb branch)
   build-test:
-    if: github.ref == 'refs/heads/develop'
+    if: github.ref == 'refs/heads/develop-graphdb'
     needs: test
     runs-on: ubuntu-latest
     steps:
@@ -44,7 +44,7 @@ jobs:
 
       - name: Create custom Docker tag
         id: docker_tag
-        run: echo "tag=test_$(date '+%Y-%m-%d_%H%M%S')" >> "$GITHUB_OUTPUT"
+        run: echo "tag=graphdb-test_$(date '+%Y-%m-%d_%H%M%S')" >> "$GITHUB_OUTPUT"
 
       - name: Docker meta
         id: docker_meta
@@ -69,7 +69,7 @@ jobs:
 
   # Build INT environment (push on main branch)
   build-int:
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main-graphdb'
     needs: test
     runs-on: ubuntu-latest
     steps:
@@ -88,7 +88,7 @@ jobs:
 
       - name: Create custom Docker tag
         id: docker_tag
-        run: echo "tag=int_$(date '+%Y-%m-%d_%H%M%S')" >> "$GITHUB_OUTPUT"
+        run: echo "tag=graphdb-int_$(date '+%Y-%m-%d_%H%M%S')" >> "$GITHUB_OUTPUT"
 
       - name: Docker meta
         id: docker_meta
@@ -113,7 +113,7 @@ jobs:
 
   # Build PROD environment (manual trigger for main branch)
   build-prod:
-    if: github.ref == 'refs/heads/main' && github.event_name == 'workflow_dispatch'
+    if: github.ref == 'refs/heads/main-graphdb' && github.event_name == 'workflow_dispatch'
     needs: build-int
     runs-on: ubuntu-latest
     steps:
@@ -132,7 +132,7 @@ jobs:
 
       - name: Create custom Docker tag
         id: docker_tag
-        run: echo "tag=prod_$(date '+%Y-%m-%d_%H%M%S')" >> "$GITHUB_OUTPUT"
+        run: echo "tag=graphdb-prod_$(date '+%Y-%m-%d_%H%M%S')" >> "$GITHUB_OUTPUT"
 
       - name: Docker meta
         id: docker_meta
