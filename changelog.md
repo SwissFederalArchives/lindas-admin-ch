@@ -1,5 +1,35 @@
 # Changelog - lindas-admin-ch
 
+## 2026-02-15
+
+### Changed
+- CI workflow (`ci.yaml`): INT and PROD promotions no longer rebuild the Docker image.
+  Instead, they retag the existing TEST image using `docker buildx imagetools create`,
+  ensuring the exact same binary runs across all environments.
+  - `build-int`: retags `source_tag` as `int_YYYY-MM-DD_HHMMSS`
+  - `build-prod`: retags `source_tag` as `prod_YYYY-MM-DD_HHMMSS`
+  - `workflow_dispatch` now requires a `source_tag` input (the TEST tag to promote)
+  - Tests are skipped during promotion (only run on push)
+- Fixed `cache-purge.yaml` workflow to use xkey-based purge (`xkey: default` header) instead
+  of bare URL purge. Trifid tags all SPARQL responses with `xkey: default`, so purging this
+  key effectively clears the entire cache. No VCL changes required.
+  - Ticket: #213.
+
+## 2026-02-13
+
+### Added
+- GitHub Actions workflow `cache-purge.yaml` for on-demand Varnish cache purging via `workflow_dispatch`.
+  - Supports `test`, `int`, and `prod` environments with GitHub environment-based approval gates.
+  - Sends an HTTP PURGE request to the environment-specific Varnish purge endpoint.
+  - Uses `CACHE_ENDPOINT_PASSWORD` secret for Basic authentication (username: `admin`).
+  - Ticket: #213.
+
+### Changed
+- README: Updated deployment documentation to reflect trunk-based development model (single `main` branch, no more `develop`).
+- README: TEST now deploys from `main` on push (was `develop`). INT+PROD deploy via manual `workflow_dispatch`.
+- README: Added rollback instructions (revert gitops-main commit or re-trigger workflow_dispatch).
+- README: Fixed typo "Anatonomy" -> "Anatomy".
+
 ## 2026-02-10
 
 ### Fixed
