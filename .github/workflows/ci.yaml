@@ -2,15 +2,25 @@ name: CI Workflow
 
 on:
   push: # Trigger on push to any branch for tests
-  workflow_dispatch: # Allow manual trigger for INT/PROD promotion
+  workflow_dispatch: # Manual trigger for promotion and rollback
     inputs:
+      action:
+        description: "Action to perform"
+        required: true
+        type: choice
+        options:
+          - promote
+          - rollback-test
+          - rollback-int
+          - rollback-prod
+        default: promote
       source_tag:
-        description: "Source image tag to promote (e.g., test_2026-02-15_143022)"
+        description: "Source image tag (e.g., test_2026-02-15_143022)"
         required: true
         type: string
 
 jobs:
-  # Run tests (only on push, not needed for promotion)
+  # Run tests (only on push, not needed for promotion/rollback)
   test:
     if: github.event_name == 'push'
     runs-on: ubuntu-latest
@@ -73,9 +83,9 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
-  # Promote to INT environment (retag the TEST image, no rebuild)
-  build-int:
-    if: github.ref == 'refs/heads/main' && github.event_name == 'workflow_dispatch'
+  # Promote to INT (retag source image as int_*, no rebuild)
+  move-to-int:
+    if: github.ref == 'refs/heads/main' && github.event_name == 'workflow_dispatch' && inputs.action == 'promote'
     runs-on: ubuntu-latest
     steps:
       - name: Set up Docker Buildx
@@ -99,10 +109,10 @@ jobs:
             --tag ghcr.io/${{ github.repository }}:${{ steps.docker_tag.outputs.tag }} \
             ghcr.io/${{ github.repository }}:${{ inputs.source_tag }}
 
-  # Promote to PROD environment (retag the same TEST image, no rebuild)
-  build-prod:
-    if: github.ref == 'refs/heads/main' && github.event_name == 'workflow_dispatch'
-    needs: build-int
+  # Promote to PROD (retag source image as prod_*, no rebuild)
+  move-to-prod:
+    if: github.ref == 'refs/heads/main' && github.event_name == 'workflow_dispatch' && inputs.action == 'promote'
+    needs: move-to-int
     runs-on: ubuntu-latest
     steps:
       - name: Set up Docker Buildx
@@ -122,6 +132,84 @@ jobs:
       - name: Retag image for PROD
         run: |
           echo "Promoting ${{ inputs.source_tag }} to ${{ steps.docker_tag.outputs.tag }}"
+          docker buildx imagetools create \
+            --tag ghcr.io/${{ github.repository }}:${{ steps.docker_tag.outputs.tag }} \
+            ghcr.io/${{ github.repository }}:${{ inputs.source_tag }}
+
+  # Rollback TEST to a previous image
+  rollback-test:
+    if: github.ref == 'refs/heads/main' && github.event_name == 'workflow_dispatch' && inputs.action == 'rollback-test'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create TEST rollback tag
+        id: docker_tag
+        run: echo "tag=test_$(date '+%Y-%m-%d_%H%M%S')" >> "$GITHUB_OUTPUT"
+
+      - name: Retag image for TEST
+        run: |
+          echo "Rolling back TEST to ${{ inputs.source_tag }} as ${{ steps.docker_tag.outputs.tag }}"
+          docker buildx imagetools create \
+            --tag ghcr.io/${{ github.repository }}:${{ steps.docker_tag.outputs.tag }} \
+            ghcr.io/${{ github.repository }}:${{ inputs.source_tag }}
+
+  # Rollback INT to a previous image
+  rollback-int:
+    if: github.ref == 'refs/heads/main' && github.event_name == 'workflow_dispatch' && inputs.action == 'rollback-int'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create INT rollback tag
+        id: docker_tag
+        run: echo "tag=int_$(date '+%Y-%m-%d_%H%M%S')" >> "$GITHUB_OUTPUT"
+
+      - name: Retag image for INT
+        run: |
+          echo "Rolling back INT to ${{ inputs.source_tag }} as ${{ steps.docker_tag.outputs.tag }}"
+          docker buildx imagetools create \
+            --tag ghcr.io/${{ github.repository }}:${{ steps.docker_tag.outputs.tag }} \
+            ghcr.io/${{ github.repository }}:${{ inputs.source_tag }}
+
+  # Rollback PROD to a previous image
+  rollback-prod:
+    if: github.ref == 'refs/heads/main' && github.event_name == 'workflow_dispatch' && inputs.action == 'rollback-prod'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Create PROD rollback tag
+        id: docker_tag
+        run: echo "tag=prod_$(date '+%Y-%m-%d_%H%M%S')" >> "$GITHUB_OUTPUT"
+
+      - name: Retag image for PROD
+        run: |
+          echo "Rolling back PROD to ${{ inputs.source_tag }} as ${{ steps.docker_tag.outputs.tag }}"
           docker buildx imagetools create \
             --tag ghcr.io/${{ github.repository }}:${{ steps.docker_tag.outputs.tag }} \
             ghcr.io/${{ github.repository }}:${{ inputs.source_tag }}

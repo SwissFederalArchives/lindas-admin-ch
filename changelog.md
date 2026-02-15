@@ -6,10 +6,12 @@
 - CI workflow (`ci.yaml`): INT and PROD promotions no longer rebuild the Docker image.
   Instead, they retag the existing TEST image using `docker buildx imagetools create`,
   ensuring the exact same binary runs across all environments.
-  - `build-int`: retags `source_tag` as `int_YYYY-MM-DD_HHMMSS`
-  - `build-prod`: retags `source_tag` as `prod_YYYY-MM-DD_HHMMSS`
-  - `workflow_dispatch` now requires a `source_tag` input (the TEST tag to promote)
-  - Tests are skipped during promotion (only run on push)
+  - `move-to-int`: retags `source_tag` as `int_YYYY-MM-DD_HHMMSS`
+  - `move-to-prod`: retags `source_tag` as `prod_YYYY-MM-DD_HHMMSS`
+  - `workflow_dispatch` now requires an `action` dropdown (promote, rollback-test,
+    rollback-int, rollback-prod) and a `source_tag` input
+  - Rollback jobs retag a previous image with a new timestamp so Flux picks it up
+  - Tests are skipped during promotion/rollback (only run on push)
 - Fixed `cache-purge.yaml` workflow to use xkey-based purge (`xkey: default` header) instead
   of bare URL purge. Trifid tags all SPARQL responses with `xkey: default`, so purging this
   key effectively clears the entire cache. No VCL changes required.
