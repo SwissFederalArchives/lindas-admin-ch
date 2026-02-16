@@ -1,0 +1,60 @@
+name: Cache Purge
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Target environment for cache purge"
+        required: true
+        type: choice
+        options:
+          - test
+          - int
+          - prod
+
+jobs:
+  purge-cache:
+    runs-on: ubuntu-latest
+    environment: ${{ inputs.environment }}
+
+    steps:
+      - name: Set cache endpoint URL
+        id: endpoint
+        run: |
+          case "${{ inputs.environment }}" in
+            test)
+              echo "url=https://lindas-cached-purge.test.cluster.ldbar.ch/" >> "$GITHUB_OUTPUT"
+              ;;
+            int)
+              echo "url=https://lindas-cached-purge.int.cluster.ldbar.ch/" >> "$GITHUB_OUTPUT"
+              ;;
+            prod)
+              echo "url=https://lindas-cached-purge.cluster.ldbar.ch/" >> "$GITHUB_OUTPUT"
+              ;;
+          esac
+
+      - name: Purge entire cache
+        run: |
+          echo "Purging cache for environment: ${{ inputs.environment }}"
+          echo "Endpoint: ${{ steps.endpoint.outputs.url }}"
+
+          CREDENTIALS=$(echo -n "admin:${{ secrets.CACHE_ENDPOINT_PASSWORD }}" | base64)
+
+          # Purge all cached objects tagged with the default xkey
+          # Trifid tags all SPARQL responses with xkey: default
+          HTTP_STATUS=$(curl -s -o response.txt -w "%{http_code}" \
+            -X PURGE \
+            -H "Authorization: Basic ${CREDENTIALS}" \
+            -H "xkey: default" \
+            "${{ steps.endpoint.outputs.url }}")
+
+          echo "Response status: ${HTTP_STATUS}"
+          echo "Response body:"
+          cat response.txt
+
+          if [ "${HTTP_STATUS}" -ne 200 ]; then
+            echo "Cache purge failed with status ${HTTP_STATUS}"
+            exit 1
+          fi
+
+          echo "Cache purge completed successfully."
