@@ -1,5 +1,21 @@
 # Changelog - lindas-admin-ch
 
+## 2026-02-26
+
+### Added
+- Banner plugin (`plugins/banner/index.js`): reads a `banner.json` config file and
+  injects banner data into `server.locals.banner` for template rendering. Polls the
+  file every 10 seconds so K8s ConfigMap updates propagate without restarts.
+- Overlay directory with default `overlay/banner.json` for maintenance/announcement banners.
+- Banner HTML block in `template/main.hbs` with per-language message selection via
+  Handlebars `lookup` helper, cookie-based dismissal keyed to message content hash.
+- Banner CSS in `static/css/style.css` with severity variants: info (blue), warning (amber),
+  critical (red #dc0018).
+- GitHub Actions workflow `banner-toggle.yaml` for toggling the site banner via
+  `workflow_dispatch`. Non-technical users fill a form (enabled, severity, messages in
+  DE/FR/IT/EN) and the workflow commits `banner.json` to gitops-main for K8s ConfigMap sync.
+- Ticket: #282.
+
 ## 2026-02-15
 
 ### Changed

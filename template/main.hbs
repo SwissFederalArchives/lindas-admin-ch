@@ -9,6 +9,40 @@
 </head>
 <body>
 
+  {{#if locals.banner}}
+  <div id="site-banner" class="site-banner site-banner--{{locals.banner.severity}}" role="alert"
+       data-message="{{lookup locals.banner.messages session.currentLanguage}}">
+    <div class="site-banner__content">
+      <span class="site-banner__message">{{lookup locals.banner.messages session.currentLanguage}}</span>
+      {{#if locals.banner.dismissible}}
+      <button class="site-banner__close" type="button" aria-label="Close">&#x2715;</button>
+      {{/if}}
+    </div>
+  </div>
+  <script>
+  (function () {
+    var banner = document.getElementById('site-banner')
+    if (!banner) return
+    var msg = banner.getAttribute('data-message') || ''
+    var hash = 0
+    for (var i = 0; i < msg.length; i++) {
+      hash = ((hash << 5) - hash + msg.charCodeAt(i)) | 0
+    }
+    var key = 'banner_dismissed_' + hash
+    if (document.cookie.indexOf(key + '=1') !== -1) {
+      banner.style.display = 'none'
+    }
+    var closeBtn = banner.querySelector('.site-banner__close')
+    if (closeBtn) {
+      closeBtn.addEventListener('click', function () {
+        banner.style.display = 'none'
+        document.cookie = key + '=1;path=/;max-age=604800;SameSite=Lax'
+      })
+    }
+  })()
+  </script>
+  {{/if}}
+
   {{#unless disableHeader}}
     {{{header}}}
   {{/unless}}

@@ -159,6 +159,11 @@ plugins:
   xquery:
     module: file:plugins/xquery/index.js
 
+  banner:
+    module: file:plugins/banner/index.js
+    config:
+      filePath: file:overlay/banner.json
+
   menu:
     module: file:plugins/menu/index.js
     config:

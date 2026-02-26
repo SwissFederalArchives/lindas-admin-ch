@@ -1,0 +1,11 @@
+{
+  "enabled": true,
+  "severity": "warning",
+  "dismissible": true,
+  "messages": {
+    "de": "Geplante Wartung am 28.02.2026 von 08:00-10:00",
+    "fr": "Maintenance prevue le 28.02.2026 de 08h00 a 10h00",
+    "it": "Manutenzione programmata il 28.02.2026 dalle 08:00 alle 10:00",
+    "en": "Planned maintenance on 2026-02-28 from 08:00-10:00 CET"
+  }
+}
