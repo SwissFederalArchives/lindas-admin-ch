@@ -1,5 +1,16 @@
 # Changelog - lindas-admin-ch
 
+## 2026-02-26
+
+### Added
+- One-click cache purge workflows per environment (`purge-test.yaml`, `purge-int.yaml`, `purge-prod.yaml`).
+  - Each workflow is a separate `workflow_dispatch` entry in the Actions sidebar.
+  - Runs the `lindas-clear-sparql-cache-endpoint` Docker image to do a full cache purge
+    (queries SPARQL for all datasets and sends individual PURGE requests per dataset + default xkey).
+  - S3 disabled so manual purges do not interfere with the automated CronJob state.
+  - Requires `CACHE_ENDPOINT_PASSWORD` secret configured per GitHub environment (test, int, prod).
+  - Ticket: GitLab "create a button (action) that purges the cache".
+
 ## 2026-02-15
 
 ### Changed
