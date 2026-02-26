@@ -1,4 +1,11 @@
 {
+  "_docs": {
+    "description": "Site-wide announcement banner configuration. The banner plugin polls this file and applies changes without restart.",
+    "enabled": "boolean - true to show the banner, false to hide it",
+    "severity": "string - visual style of the banner. Possible values: 'info' (blue #006699), 'warning' (yellow #e6a800 with black text), 'critical' (red #dc0018)",
+    "dismissible": "boolean - true lets users close the banner with an X button. Dismissed state is remembered per message in localStorage.",
+    "messages": "object - one key per language code (de, fr, it, en). Each value is the banner text shown to users in that language."
+  },
   "enabled": false,
   "severity": "warning",
   "dismissible": true,

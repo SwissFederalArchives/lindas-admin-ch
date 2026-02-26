@@ -2,6 +2,11 @@
 
 ## 2026-02-26
 
+### Changed
+- `overlay/banner.json`: added inline `_docs` block documenting all configuration
+  options (enabled, severity, dismissible, messages) with allowed values and behavior.
+  Banner remains disabled by default.
+
 ### Added (Phase 2)
 - Dynamic menu hot-reload (`plugins/menu/index.js`): optional `filePath` config polls a
   JSON file every 10s and updates `server.locals.menu`. Static entries in config.yaml
