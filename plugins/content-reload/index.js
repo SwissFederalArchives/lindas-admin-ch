@@ -14,7 +14,7 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 
 import addClasses from './addClasses.js'
 
-const RELOAD_INTERVAL_MS = 10_000
+const RELOAD_INTERVAL_MS = 600_000
 const LOCALS_PLUGIN_KEY = 'markdown-content-plugin'
 
 /**
