@@ -48,27 +48,37 @@ jobs:
           path: gitops
 
       - name: Generate banner.json
+        env:
+          BANNER_ENABLED: ${{ inputs.enabled }}
+          BANNER_SEVERITY: ${{ inputs.severity }}
+          MSG_DE: ${{ inputs.message_de }}
+          MSG_FR: ${{ inputs.message_fr }}
+          MSG_IT: ${{ inputs.message_it }}
+          MSG_EN: ${{ inputs.message_en }}
         run: |
-          cat > gitops/gitops-main/lindas-admin-ch/banner.json <<'JSONEOF'
-          {
-            "enabled": ${{ inputs.enabled }},
-            "severity": "${{ inputs.severity }}",
-            "dismissible": true,
-            "messages": {
-              "de": "${{ inputs.message_de }}",
-              "fr": "${{ inputs.message_fr }}",
-              "it": "${{ inputs.message_it }}",
-              "en": "${{ inputs.message_en }}"
-            }
-          }
-          JSONEOF
+          jq -n \
+            --argjson enabled "$BANNER_ENABLED" \
+            --arg severity "$BANNER_SEVERITY" \
+            --arg de "$MSG_DE" \
+            --arg fr "$MSG_FR" \
+            --arg it "$MSG_IT" \
+            --arg en "$MSG_EN" \
+            '{
+              enabled: $enabled,
+              severity: $severity,
+              dismissible: true,
+              messages: { de: $de, fr: $fr, it: $it, en: $en }
+            }' > gitops/gitops-main/lindas-admin-ch/banner.json
 
       - name: Commit and push banner config
         working-directory: gitops
+        env:
+          BANNER_SEVERITY: ${{ inputs.severity }}
+          BANNER_ENABLED: ${{ inputs.enabled }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add gitops-main/lindas-admin-ch/banner.json
           git diff --cached --quiet && echo "No changes to commit" && exit 0
-          git commit -m "banner: update site banner (${{ inputs.severity }}, enabled=${{ inputs.enabled }})"
+          git commit -m "banner: update site banner (${BANNER_SEVERITY}, enabled=${BANNER_ENABLED})"
           git push

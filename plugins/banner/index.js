@@ -1,13 +1,14 @@
 import { readFile } from 'node:fs/promises'
-import { resolve } from 'node:path'
 
 const RELOAD_INTERVAL_MS = 10_000
 
 const factory = async (trifid) => {
   const { config, logger, server } = trifid
-  const filePath = config.filePath
-    ? resolve(config.filePath)
-    : resolve('overlay/banner.json')
+  const { filePath } = config
+
+  if (!filePath || typeof filePath !== 'string') {
+    throw new Error("'filePath' config option is required")
+  }
 
   const locals = server.locals
   if (!locals) {
@@ -36,7 +37,11 @@ const factory = async (trifid) => {
   }
 
   await loadBanner()
-  setInterval(loadBanner, RELOAD_INTERVAL_MS)
+  const interval = setInterval(loadBanner, RELOAD_INTERVAL_MS)
+
+  server.addHook('onClose', () => {
+    clearInterval(interval)
+  })
 
   logger.info(`banner plugin initialized, polling ${filePath} every ${RELOAD_INTERVAL_MS / 1000}s`)
 }

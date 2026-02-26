@@ -65,7 +65,7 @@ main a {
   line-height: 1.4;
 }
 .site-banner--info { background-color: #006699; }
-.site-banner--warning { background-color: #e6a800; color: #1a1a1a; }
+.site-banner--warning { background-color: #e6a800; color: #000; }
 .site-banner--critical { background-color: #dc0018; }
 .site-banner__content {
   max-width: 1200px;
