@@ -14,7 +14,7 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 
 import addClasses from './addClasses.js'
 
-const RELOAD_INTERVAL_MS = 600_000
+const DEFAULT_RELOAD_INTERVAL_MS = 600_000
 const LOCALS_PLUGIN_KEY = 'markdown-content-plugin'
 
 /**
@@ -155,6 +155,10 @@ const factory = async (trifid) => {
   const entries = config?.entries || {}
   const defaults = config?.defaults || {}
 
+  const reloadIntervalMs = config?.reloadInterval
+    ? config.reloadInterval * 1000
+    : DEFAULT_RELOAD_INTERVAL_MS
+
   const idPrefix = defaults.idPrefix ?? 'content-'
   const classes = defaults.classes ?? {}
   const autoLink = defaults.autoLink ?? true
@@ -221,7 +225,7 @@ const factory = async (trifid) => {
         logger.warn(`content-reload: failed to reload content: ${err.message}`)
       }
     }
-  }, RELOAD_INTERVAL_MS)
+  }, reloadIntervalMs)
 
   server.addHook('onClose', () => {
     stopped = true
@@ -251,7 +255,7 @@ const factory = async (trifid) => {
     done()
   })
 
-  logger.info(`content-reload: polling ${Object.keys(entries).length} namespace(s) every ${RELOAD_INTERVAL_MS / 1000}s`)
+  logger.info(`content-reload: polling ${Object.keys(entries).length} namespace(s) every ${reloadIntervalMs / 1000}s`)
 }
 
 export default factory

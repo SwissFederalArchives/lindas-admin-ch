@@ -1,10 +1,13 @@
 import { readFile } from 'node:fs/promises'
 
-const RELOAD_INTERVAL_MS = 10_000
+const defaultReloadIntervalMs = 10_000
 
 const factory = async (trifid) => {
   const { config, logger, server } = trifid
-  const { filePath } = config
+  const { filePath, reloadInterval } = config
+  const reloadIntervalMs = reloadInterval
+    ? reloadInterval * 1000
+    : defaultReloadIntervalMs
 
   if (!filePath || typeof filePath !== 'string') {
     throw new Error("'filePath' config option is required")
@@ -37,13 +40,13 @@ const factory = async (trifid) => {
   }
 
   await loadBanner()
-  const interval = setInterval(loadBanner, RELOAD_INTERVAL_MS)
+  const interval = setInterval(loadBanner, reloadIntervalMs)
 
   server.addHook('onClose', () => {
     clearInterval(interval)
   })
 
-  logger.info(`banner plugin initialized, polling ${filePath} every ${RELOAD_INTERVAL_MS / 1000}s`)
+  logger.info(`banner plugin initialized, polling ${filePath} every ${reloadIntervalMs / 1000}s`)
 }
 
 export default factory
