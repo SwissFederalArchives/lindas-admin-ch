@@ -76,7 +76,7 @@ main a {
   justify-content: space-between;
   gap: 16px;
 }
-.site-banner__message { flex: 1; }
+.site-banner__message { flex: 1; white-space: pre-line; }
 .site-banner__close {
   background: none;
   border: none;
@@ -88,3 +88,4 @@ main a {
   opacity: 0.8;
 }
 .site-banner__close:hover { opacity: 1; }
+

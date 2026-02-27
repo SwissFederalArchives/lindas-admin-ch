@@ -6,13 +6,13 @@
     "dismissible": "boolean - true lets users close the banner with an X button. Dismissed state is remembered per message in localStorage.",
     "messages": "object - one key per language code (de, fr, it, en). Each value is the banner text shown to users in that language."
   },
-  "enabled": false,
+  "enabled": true,
   "severity": "warning",
   "dismissible": true,
   "messages": {
-    "de": "Geplante Wartung am 28.02.2026 von 08:00-10:00",
-    "fr": "Maintenance prevue le 28.02.2026 de 08h00 a 10h00",
-    "it": "Manutenzione programmata il 28.02.2026 dalle 08:00 alle 10:00",
-    "en": "Planned maintenance on 2026-02-28 from 08:00-10:00 CET"
+    "de": "In der Woche vom 16. M\u00e4rz 2026 wird LINDAS im Rahmen des Projekts LindasNext migriert.\nDabei erfolgt der Wechsel der Datenbank von Stardog auf GraphDB. W\u00e4hrend der Migration kann es zu kurzfristigen Unterbr\u00fcchen in der Verf\u00fcgbarkeit kommen. Bei Problemen k\u00f6nnen sie sich an den Service Desk wenden: https://servicedesk.lindas.admin.ch/",
+    "fr": "Au cours de la semaine du 16 mars 2026, LINDAS sera migr\u00e9 dans le cadre du projet LindasNext.\nLa base de donn\u00e9es passera alors de Stardog \u00e0 GraphDB. Pendant la migration, il peut y avoir des interruptions de disponibilit\u00e9 de courte dur\u00e9e. En cas de probl\u00e8me, vous pouvez contacter le service desk: https://servicedesk.lindas.admin.ch/",
+    "it": "Nella settimana del 16 marzo 2026, LINDAS verr\u00e0 migrato nell\u2019ambito del progetto LindasNext.\nCi\u00f2 comporter\u00e0 il passaggio dal database Stardog a GraphDB. Durante la migrazione potrebbero verificarsi brevi interruzioni della disponibilit\u00e0. In caso di problemi, \u00e8 possibile contattare il Service Desk: https://servicedesk.lindas.admin.ch/",
+    "en": "During the week of March 16, 2026, LINDAS will be migrated as part of the LindasNext project.\nThis will involve switching the database from Stardog to GraphDB. There may be brief interruptions in availability during the migration. If you encounter any problems, please contact the Service Desk: https://servicedesk.lindas.admin.ch/"
   }
 }

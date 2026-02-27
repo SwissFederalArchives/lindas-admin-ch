@@ -39,6 +39,29 @@
         document.cookie = key + '=1;path=/;max-age=604800;SameSite=Lax'
       })
     }
+    var msgEl = banner.querySelector('.site-banner__message')
+    if (msgEl) {
+      var text = msgEl.textContent
+      var urlPattern = /https?:\/\/[^\s]+/g
+      var parts = text.split(urlPattern)
+      var urls = text.match(urlPattern)
+      if (urls && urls.length > 0) {
+        msgEl.textContent = ''
+        for (var i = 0; i < parts.length; i++) {
+          msgEl.appendChild(document.createTextNode(parts[i]))
+          if (urls[i]) {
+            var a = document.createElement('a')
+            a.href = urls[i]
+            a.target = '_blank'
+            a.rel = 'noopener'
+            a.style.color = 'inherit'
+            a.style.textDecoration = 'underline'
+            a.textContent = urls[i]
+            msgEl.appendChild(a)
+          }
+        }
+      }
+    }
   })()
   </script>
   {{/if}}
