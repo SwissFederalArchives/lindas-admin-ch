@@ -159,10 +159,16 @@ plugins:
   xquery:
     module: file:plugins/xquery/index.js
 
+  banner:
+    module: file:plugins/banner/index.js
+    config:
+      filePath: file:overlay/banner.json
+
   menu:
     module: file:plugins/menu/index.js
     config:
       namespace: header
+      filePath: file:menu.json
       entries:
         - path: /datasets/
           label: Data Catalog
@@ -226,6 +232,35 @@ plugins:
         # lindas-visualize:
         #   directory: file:content/visualize
         #   mountPath: /visualize/
+
+  content-reload:
+    module: file:plugins/content-reload/index.js
+    config:
+      entries:
+        lindas:
+          directory: file:content/template-parts
+        lindas-root:
+          directory: file:content/root-pages
+        lindas-ecosystem:
+          directory: file:content/ecosystem
+        lindas-data-usage:
+          directory: file:content/data-usage
+        lindas-governance:
+          directory: file:content/governance
+        lindas-know-how:
+          directory: file:content/know-how
+        lindas-community:
+          directory: file:content/community
+      defaults:
+        idPrefix: "content-"
+        autoLink: true
+        classes:
+          h1: h1
+          h2: h2
+          h3: h3
+          h4: h4
+          h5: h5
+          table: table
 
   entity-renderer:
     module: "@lindas/trifid-entity-renderer"

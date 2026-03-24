@@ -1,0 +1,55 @@
+name: Update Site Menu
+
+on:
+  workflow_dispatch:
+    inputs:
+      entries:
+        description: "Menu entries as JSON array (e.g. [{\"path\":\"/datasets/\",\"label\":\"Data Catalog\"}])"
+        required: true
+        type: string
+
+jobs:
+  update-menu:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout gitops-main
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/lindas-local-environment
+          ref: main
+          token: ${{ secrets.GITOPS_TOKEN }}
+          path: gitops
+
+      - name: Validate and generate menu.json
+        env:
+          MENU_ENTRIES: ${{ inputs.entries }}
+        run: |
+          # Validate that entries is a valid JSON array
+          echo "$MENU_ENTRIES" | jq -e 'type == "array"' > /dev/null 2>&1 || {
+            echo "Error: entries must be a valid JSON array"
+            exit 1
+          }
+
+          # Validate each entry has path and label
+          echo "$MENU_ENTRIES" | jq -e 'all(. ; has("path") and has("label"))' > /dev/null 2>&1 || {
+            echo "Error: each entry must have 'path' and 'label' fields"
+            exit 1
+          }
+
+          jq -n --argjson entries "$MENU_ENTRIES" \
+            '{ entries: $entries }' > gitops/gitops-main/lindas-admin-ch/menu.json
+
+          echo "Generated menu.json:"
+          cat gitops/gitops-main/lindas-admin-ch/menu.json
+
+      - name: Commit and push menu config
+        working-directory: gitops
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add gitops-main/lindas-admin-ch/menu.json
+          git diff --cached --quiet && echo "No changes to commit" && exit 0
+          ENTRY_COUNT=$(echo '${{ inputs.entries }}' | jq 'length')
+          git commit -m "menu: update site menu (${ENTRY_COUNT} entries)"
+          git push

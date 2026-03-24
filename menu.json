@@ -1,0 +1,11 @@
+{
+  "entries": [
+    { "path": "/datasets/", "label": "Data Catalog" },
+    { "path": "/sparql/", "label": "Query Data" },
+    { "path": "/ecosystem/", "label": "Ecosystem" },
+    { "path": "/data-usage/", "label": "Data Usage" },
+    { "path": "/governance/", "label": "Governance" },
+    { "path": "/know-how/", "label": "Know How" },
+    { "path": "/community/", "label": "Community" }
+  ]
+}

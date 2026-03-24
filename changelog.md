@@ -1,5 +1,42 @@
 # Changelog - lindas-admin-ch
 
+## 2026-02-26
+
+### Changed
+- `overlay/banner.json`: added inline `_docs` block documenting all configuration
+  options (enabled, severity, dismissible, messages) with allowed values and behavior.
+  Banner remains disabled by default.
+
+### Added (Phase 2)
+- Dynamic menu hot-reload (`plugins/menu/index.js`): optional `filePath` config polls a
+  JSON file every 10s and updates `server.locals.menu`. Static entries in config.yaml
+  serve as startup fallback. On file error, last known good menu is preserved.
+- Menu config file (`menu.json`): externalized menu entries at project root. Labels are
+  i18n keys resolved by the template. No template changes required.
+- Content hot-reload plugin (`plugins/content-reload/index.js`): re-reads existing
+  `content/` directories every 10s, recompiles changed markdown to HTML using the same
+  remark/rehype pipeline as `@lindas/trifid-plugin-markdown-content`, and overrides
+  per-request session data. Uses file mtime to skip recompilation of unchanged files.
+  Registered after the content plugin in config.yaml so its `onRequest` hook runs last.
+- GitHub Actions workflow `menu-update.yaml` for updating the site menu via
+  `workflow_dispatch`. Accepts a JSON array of menu entries, validates structure, and
+  commits `menu.json` to gitops-main for K8s ConfigMap sync.
+- Ticket: #282 Phase 2.
+
+### Added (Phase 1)
+- Banner plugin (`plugins/banner/index.js`): reads a `banner.json` config file and
+  injects banner data into `server.locals.banner` for template rendering. Polls the
+  file every 10 seconds so K8s ConfigMap updates propagate without restarts.
+- Overlay directory with default `overlay/banner.json` for maintenance/announcement banners.
+- Banner HTML block in `template/main.hbs` with per-language message selection via
+  Handlebars `lookup` helper, cookie-based dismissal keyed to message content hash.
+- Banner CSS in `static/css/style.css` with severity variants: info (blue), warning (amber),
+  critical (red #dc0018).
+- GitHub Actions workflow `banner-toggle.yaml` for toggling the site banner via
+  `workflow_dispatch`. Non-technical users fill a form (enabled, severity, messages in
+  DE/FR/IT/EN) and the workflow commits `banner.json` to gitops-main for K8s ConfigMap sync.
+- Ticket: #282.
+
 ## 2026-02-15
 
 ### Changed

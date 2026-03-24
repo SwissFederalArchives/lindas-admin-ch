@@ -1,0 +1,84 @@
+name: Toggle Site Banner
+
+on:
+  workflow_dispatch:
+    inputs:
+      enabled:
+        description: "Enable banner"
+        required: true
+        type: boolean
+        default: true
+      severity:
+        description: "Banner severity"
+        required: true
+        type: choice
+        options:
+          - info
+          - warning
+          - critical
+        default: warning
+      message_de:
+        description: "Message (German)"
+        required: true
+        type: string
+      message_fr:
+        description: "Message (French)"
+        required: true
+        type: string
+      message_it:
+        description: "Message (Italian)"
+        required: true
+        type: string
+      message_en:
+        description: "Message (English)"
+        required: true
+        type: string
+
+jobs:
+  update-banner:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout gitops-main
+        uses: actions/checkout@v4
+        with:
+          repository: ${{ github.repository_owner }}/lindas-local-environment
+          ref: main
+          token: ${{ secrets.GITOPS_TOKEN }}
+          path: gitops
+
+      - name: Generate banner.json
+        env:
+          BANNER_ENABLED: ${{ inputs.enabled }}
+          BANNER_SEVERITY: ${{ inputs.severity }}
+          MSG_DE: ${{ inputs.message_de }}
+          MSG_FR: ${{ inputs.message_fr }}
+          MSG_IT: ${{ inputs.message_it }}
+          MSG_EN: ${{ inputs.message_en }}
+        run: |
+          jq -n \
+            --argjson enabled "$BANNER_ENABLED" \
+            --arg severity "$BANNER_SEVERITY" \
+            --arg de "$MSG_DE" \
+            --arg fr "$MSG_FR" \
+            --arg it "$MSG_IT" \
+            --arg en "$MSG_EN" \
+            '{
+              enabled: $enabled,
+              severity: $severity,
+              dismissible: true,
+              messages: { de: $de, fr: $fr, it: $it, en: $en }
+            }' > gitops/gitops-main/lindas-admin-ch/banner.json
+
+      - name: Commit and push banner config
+        working-directory: gitops
+        env:
+          BANNER_SEVERITY: ${{ inputs.severity }}
+          BANNER_ENABLED: ${{ inputs.enabled }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add gitops-main/lindas-admin-ch/banner.json
+          git diff --cached --quiet && echo "No changes to commit" && exit 0
+          git commit -m "banner: update site banner (${BANNER_SEVERITY}, enabled=${BANNER_ENABLED})"
+          git push
