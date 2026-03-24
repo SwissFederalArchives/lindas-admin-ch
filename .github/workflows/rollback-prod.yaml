@@ -1,10 +1,10 @@
-name: Deploy to PROD
+name: Rollback PROD
 
 on:
   workflow_dispatch:
     inputs:
       version:
-        description: 'Version to deploy (e.g., 0.15.0)'
+        description: 'Version to rollback to (e.g., 0.14.0)'
         required: true
         type: string
 
@@ -17,8 +17,8 @@ env:
   IMAGE_NAME: swissfederalarchives/lindas-admin-ch
 
 jobs:
-  deploy:
-    name: Deploy to PROD
+  rollback:
+    name: Rollback PROD
     runs-on: ubuntu-latest
     environment: production
 
@@ -41,14 +41,13 @@ jobs:
 
       - name: Pull version image
         run: |
-          echo "Pulling $REGISTRY/$IMAGE_NAME:${{ github.event.inputs.version }}"
+          echo "Rolling back PROD to version ${{ github.event.inputs.version }}"
           docker pull $REGISTRY/$IMAGE_NAME:${{ github.event.inputs.version }}
 
       - name: Tag and push as PROD
         run: |
           docker tag $REGISTRY/$IMAGE_NAME:${{ github.event.inputs.version }} $REGISTRY/$IMAGE_NAME:${{ steps.tags.outputs.prod_tag }}
           docker push $REGISTRY/$IMAGE_NAME:${{ steps.tags.outputs.prod_tag }}
-          echo "Tagged ${{ github.event.inputs.version }} as ${{ steps.tags.outputs.prod_tag }}"
 
       - name: Update prod-current and prod-previous markers
         run: |
@@ -61,11 +60,9 @@ jobs:
 
       - name: Summary
         run: |
-          echo "## Deployed to PROD" >> $GITHUB_STEP_SUMMARY
+          echo "## Rollback PROD Complete" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "| Detail | Value |" >> $GITHUB_STEP_SUMMARY
           echo "|--------|-------|" >> $GITHUB_STEP_SUMMARY
-          echo "| Version | \`${{ github.event.inputs.version }}\` |" >> $GITHUB_STEP_SUMMARY
+          echo "| Rolled back to | \`${{ github.event.inputs.version }}\` |" >> $GITHUB_STEP_SUMMARY
           echo "| Flux tag | \`${{ steps.tags.outputs.prod_tag }}\` |" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "To rollback: Run **Rollback PROD** with the previous version" >> $GITHUB_STEP_SUMMARY

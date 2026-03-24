@@ -1,81 +1,77 @@
-# Changelog - lindas-admin-ch
+# Changelog
 
-## 2026-02-26
+All notable changes to lindas-admin-ch will be documented in this file.
 
-### Changed
-- `overlay/banner.json`: added inline `_docs` block documenting all configuration
-  options (enabled, severity, dismissible, messages) with allowed values and behavior.
-  Banner remains disabled by default.
-
-### Added (Phase 2)
-- Dynamic menu hot-reload (`plugins/menu/index.js`): optional `filePath` config polls a
-  JSON file every 10s and updates `server.locals.menu`. Static entries in config.yaml
-  serve as startup fallback. On file error, last known good menu is preserved.
-- Menu config file (`menu.json`): externalized menu entries at project root. Labels are
-  i18n keys resolved by the template. No template changes required.
-- Content hot-reload plugin (`plugins/content-reload/index.js`): re-reads existing
-  `content/` directories every 10s, recompiles changed markdown to HTML using the same
-  remark/rehype pipeline as `@lindas/trifid-plugin-markdown-content`, and overrides
-  per-request session data. Uses file mtime to skip recompilation of unchanged files.
-  Registered after the content plugin in config.yaml so its `onRequest` hook runs last.
-- GitHub Actions workflow `menu-update.yaml` for updating the site menu via
-  `workflow_dispatch`. Accepts a JSON array of menu entries, validates structure, and
-  commits `menu.json` to gitops-main for K8s ConfigMap sync.
-- Ticket: #282 Phase 2.
-
-### Added (Phase 1)
-- Banner plugin (`plugins/banner/index.js`): reads a `banner.json` config file and
-  injects banner data into `server.locals.banner` for template rendering. Polls the
-  file every 10 seconds so K8s ConfigMap updates propagate without restarts.
-- Overlay directory with default `overlay/banner.json` for maintenance/announcement banners.
-- Banner HTML block in `template/main.hbs` with per-language message selection via
-  Handlebars `lookup` helper, cookie-based dismissal keyed to message content hash.
-- Banner CSS in `static/css/style.css` with severity variants: info (blue), warning (amber),
-  critical (red #dc0018).
-- GitHub Actions workflow `banner-toggle.yaml` for toggling the site banner via
-  `workflow_dispatch`. Non-technical users fill a form (enabled, severity, messages in
-  DE/FR/IT/EN) and the workflow commits `banner.json` to gitops-main for K8s ConfigMap sync.
-- Ticket: #282.
-
-## 2026-02-15
+## [0.15.2] - 2026-02-04
 
 ### Changed
-- CI workflow (`ci.yaml`): INT and PROD promotions no longer rebuild the Docker image.
-  Instead, they retag the existing TEST image using `docker buildx imagetools create`,
-  ensuring the exact same binary runs across all environments.
-  - `move-to-int`: retags `source_tag` as `int_YYYY-MM-DD_HHMMSS`
-  - `move-to-prod`: retags `source_tag` as `prod_YYYY-MM-DD_HHMMSS`
-  - `workflow_dispatch` now requires an `action` dropdown (promote, rollback-test,
-    rollback-int, rollback-prod) and a `source_tag` input
-  - Rollback jobs retag a previous image with a new timestamp so Flux picks it up
-  - Tests are skipped during promotion/rollback (only run on push)
-- Fixed `cache-purge.yaml` workflow to use xkey-based purge (`xkey: default` header) instead
-  of bare URL purge. Trifid tags all SPARQL responses with `xkey: default`, so purging this
-  key effectively clears the entire cache. No VCL changes required.
-  - Ticket: #213.
+- **DevOps overhaul: build-once-deploy-many pattern**
+  - Replaced ci.yaml Docker builds with dedicated docker.yaml workflow
+  - ci.yaml now runs tests only (npm ci + npm test)
+  - docker.yaml builds image once on main push, tags with version + SHA + test_{timestamp}
+  - Added Changesets for automated version management (release.yaml workflow)
+  - release.yaml creates v{version} git tags (not changeset default format)
+  - Added RELEASE.md documenting the full release process
+- **Flux-compatible tag strategy**
+  - Deploy/rollback workflows take version as input, produce {env}_{timestamp} tags for Flux
+  - Immutable version tags (0.15.0, sha-xxx) provide traceability
+  - Timestamps drive Flux alphabetical sorting (supports both deploys and rollbacks)
+  - Documented decision rationale in docs/2026-02-04-flux-tag-decision.md
+- **Environment marker tags**
+  - All deploy/rollback workflows maintain {env}-current and {env}-previous floating tags
+  - For human reference only (Flux does not use them)
+- **Dev builds**
+  - Manual workflow_dispatch trigger on docker.yaml for Docker builds from any branch
+  - Dev builds tagged with dev_{timestamp} + sha only (no version tag, Flux ignores dev_*)
+- **Automated E2E tests**
+  - E2E tests (hurl) run automatically after TEST deploy, with 3-minute Flux wait
+  - Manual test.yaml still available for INT/PROD
 
-## 2026-02-13
+## [0.15.1] - 2026-02-03
 
 ### Added
-- GitHub Actions workflow `cache-purge.yaml` for on-demand Varnish cache purging via `workflow_dispatch`.
-  - Supports `test`, `int`, and `prod` environments with GitHub environment-based approval gates.
-  - Sends an HTTP PURGE request to the environment-specific Varnish purge endpoint.
-  - Uses `CACHE_ENDPOINT_PASSWORD` secret for Basic authentication (username: `admin`).
-  - Ticket: #213.
+- **Deploy/rollback workflows**: Added manual promotion workflows (deploy-int, deploy-prod) and rollback workflows (rollback-test, rollback-int, rollback-prod) using image retagging pattern
+- **CODEOWNERS**: Added code ownership file (@giulio-vannini @psiotwo)
+
+## [0.15.0] - 2026-02-03
 
 ### Changed
-- README: Updated deployment documentation to reflect trunk-based development model (single `main` branch, no more `develop`).
-- README: TEST now deploys from `main` on push (was `develop`). INT+PROD deploy via manual `workflow_dispatch`.
-- README: Added rollback instructions (revert gitops-main commit or re-trigger workflow_dispatch).
-- README: Fixed typo "Anatonomy" -> "Anatomy".
+- **Updated all @lindas/trifid-* packages from ^7.0.2 to ^7.1.2**
 
-## 2026-02-10
+### Bug Fixes (from trifid v7.1.2)
+- **TERMDAT redirect fix**: Added `admin.ch` to the redirect URL allowlist so all Swiss federal administration subdomains (e.g. `termdat.bk.admin.ch`) are accepted for `schema:URL` redirects
+- **Graph Explorer fix**: Fixed DOM element ID mismatch preventing the React workspace from mounting
 
-### Fixed
-- YASGUI template: Updated broken "About YASGUI" link (triply.cc 404) and "Trifid plugin" link (Zazuko GitHub) to point to the lindas-admin-ch repository.
+### Improvements (from trifid v7.1.0/v7.1.1)
+- Simplified GraphDB setup using `FROM <http://www.ontotext.com/describe/outgoing>` pseudo-graph
+- Improved per-triple named graph enrichment for GraphDB (replaces single-graph assignment)
+- Removed `filterBlankNodeSubjects` option (no longer needed with outgoing pseudo-graph)
 
-## 2026-02-09
+## [0.14.0] - 2026-01-15
 
-### Deployed
-- Promoted v0.15.0 (Trifid v7.1.2) from INT to PROD with tag `prod_2026-02-09_120000`.
-- Fixes: TERMDAT redirect allowlist and Graph Explorer DOM ID mismatch.
+### Changed
+- **Updated to @lindas/trifid v7.0.2** - Switched from local file references to npm packages
+  - @lindas/trifid: ^7.0.2
+  - @lindas/trifid-core: ^7.0.2
+  - @lindas/trifid-entity-renderer: ^7.0.2
+  - @lindas/trifid-plugin-markdown-content: ^7.0.2
+  - @lindas/trifid-plugin-ckan: ^7.0.2
+  - @lindas/trifid-plugin-graph-explorer: ^7.0.2
+  - @lindas/trifid-plugin-i18n: ^7.0.2
+  - @lindas/trifid-plugin-sparql-proxy: ^7.0.2
+  - @lindas/trifid-plugin-spex: ^7.0.2
+  - @lindas/trifid-plugin-yasgui: ^7.0.2
+
+- **Zazuko References Cleanup**: Removed or updated remaining Zazuko references
+  - Disabled URL shortener (was pointing to s.zazuko.com) - configure your own if needed
+  - Updated yasgui.hbs link to SwissFederalArchives/lindas-trifid
+  - Updated data-usage content to link to LINDAS Trifid instead of Zazuko product page
+
+### New Features (from trifid v7.0.2)
+- **Triplestore backend switching**: Support for switching between Stardog and GraphDB via `TRIPLESTORE_BACKEND` environment variable in `.env` file
+- Named graph enrichment for GraphDB compatibility
+- Blank node filtering for GraphDB SCBD behavior
+- Windows path compatibility fixes for ESM module loading
+
+### Deployment
+- Deployed to test.ld.admin.ch via Flux GitOps (image: test_2026-01-15_131541)
