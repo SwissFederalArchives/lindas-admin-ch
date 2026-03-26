@@ -4,9 +4,13 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: 'Version to deploy (e.g., test_2026-02-03_073053)'
+        description: 'Version to deploy (e.g., 0.15.0)'
         required: true
         type: string
+
+concurrency:
+  group: deploy-int
+  cancel-in-progress: false
 
 env:
   REGISTRY: ghcr.io
@@ -28,34 +32,39 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Save current as previous
+      - name: Generate deployment tag
+        id: tags
         run: |
-          if docker pull $REGISTRY/$IMAGE_NAME:graphdb-int 2>/dev/null; then
-            echo "Saving current 'graphdb-int' as 'graphdb-int-previous'"
-            docker tag $REGISTRY/$IMAGE_NAME:graphdb-int $REGISTRY/$IMAGE_NAME:graphdb-int-previous
-            docker push $REGISTRY/$IMAGE_NAME:graphdb-int-previous
-          else
-            echo "No existing 'graphdb-int' tag to save"
-          fi
+          TIMESTAMP=$(date -u '+%Y-%m-%d_%H%M%S')
+          echo "int_tag=int_${TIMESTAMP}" >> $GITHUB_OUTPUT
 
       - name: Pull version image
         run: |
           echo "Pulling $REGISTRY/$IMAGE_NAME:${{ github.event.inputs.version }}"
           docker pull $REGISTRY/$IMAGE_NAME:${{ github.event.inputs.version }}
 
-      - name: Tag as graphdb-int
+      - name: Tag and push as INT
         run: |
-          docker tag $REGISTRY/$IMAGE_NAME:${{ github.event.inputs.version }} $REGISTRY/$IMAGE_NAME:graphdb-int
-          docker push $REGISTRY/$IMAGE_NAME:graphdb-int
-          echo "Tagged ${{ github.event.inputs.version }} as graphdb-int"
+          docker tag $REGISTRY/$IMAGE_NAME:${{ github.event.inputs.version }} $REGISTRY/$IMAGE_NAME:${{ steps.tags.outputs.int_tag }}
+          docker push $REGISTRY/$IMAGE_NAME:${{ steps.tags.outputs.int_tag }}
+          echo "Tagged ${{ github.event.inputs.version }} as ${{ steps.tags.outputs.int_tag }}"
+
+      - name: Update int-current and int-previous markers
+        run: |
+          if docker pull $REGISTRY/$IMAGE_NAME:int-current 2>/dev/null; then
+            docker tag $REGISTRY/$IMAGE_NAME:int-current $REGISTRY/$IMAGE_NAME:int-previous
+            docker push $REGISTRY/$IMAGE_NAME:int-previous
+          fi
+          docker tag $REGISTRY/$IMAGE_NAME:${{ github.event.inputs.version }} $REGISTRY/$IMAGE_NAME:int-current
+          docker push $REGISTRY/$IMAGE_NAME:int-current
 
       - name: Summary
         run: |
           echo "## Deployed to INT" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "| Tag | Version |" >> $GITHUB_STEP_SUMMARY
-          echo "|-----|---------|" >> $GITHUB_STEP_SUMMARY
-          echo "| \`graphdb-int\` | \`${{ github.event.inputs.version }}\` |" >> $GITHUB_STEP_SUMMARY
-          echo "| \`graphdb-int-previous\` | (previous version) |" >> $GITHUB_STEP_SUMMARY
+          echo "| Detail | Value |" >> $GITHUB_STEP_SUMMARY
+          echo "|--------|-------|" >> $GITHUB_STEP_SUMMARY
+          echo "| Version | \`${{ github.event.inputs.version }}\` |" >> $GITHUB_STEP_SUMMARY
+          echo "| Flux tag | \`${{ steps.tags.outputs.int_tag }}\` |" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "To rollback: Run **Rollback INT** workflow" >> $GITHUB_STEP_SUMMARY
+          echo "To rollback: Run **Rollback INT** with the previous version" >> $GITHUB_STEP_SUMMARY

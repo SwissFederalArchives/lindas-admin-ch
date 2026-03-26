@@ -1,52 +1,55 @@
-# Changelog
+# Changelog - lindas-admin-ch
 
-All notable changes to lindas-admin-ch will be documented in this file.
-
-## [0.15.1] - 2026-02-03
+## 2026-02-26
 
 ### Added
-- **Deploy/rollback workflows**: Added manual promotion workflows (deploy-int, deploy-prod) and rollback workflows (rollback-test, rollback-int, rollback-prod) using image retagging pattern
-- **CODEOWNERS**: Added code ownership file (@giulio-vannini @psiotwo)
+- One-click cache purge workflows per environment (`purge-test.yaml`, `purge-int.yaml`, `purge-prod.yaml`).
+  - Each workflow is a separate `workflow_dispatch` entry in the Actions sidebar.
+  - Runs the `lindas-clear-sparql-cache-endpoint` Docker image to do a full cache purge
+    (queries SPARQL for all datasets and sends individual PURGE requests per dataset + default xkey).
+  - S3 disabled so manual purges do not interfere with the automated CronJob state.
+  - Requires `CACHE_ENDPOINT_PASSWORD` secret configured per GitHub environment (test, int, prod).
+  - Ticket: GitLab "create a button (action) that purges the cache".
 
-## [0.15.0] - 2026-02-03
-
-### Changed
-- **Updated all @lindas/trifid-* packages from ^7.0.2 to ^7.1.2**
-
-### Bug Fixes (from trifid v7.1.2)
-- **TERMDAT redirect fix**: Added `admin.ch` to the redirect URL allowlist so all Swiss federal administration subdomains (e.g. `termdat.bk.admin.ch`) are accepted for `schema:URL` redirects
-- **Graph Explorer fix**: Fixed DOM element ID mismatch preventing the React workspace from mounting
-
-### Improvements (from trifid v7.1.0/v7.1.1)
-- Simplified GraphDB setup using `FROM <http://www.ontotext.com/describe/outgoing>` pseudo-graph
-- Improved per-triple named graph enrichment for GraphDB (replaces single-graph assignment)
-- Removed `filterBlankNodeSubjects` option (no longer needed with outgoing pseudo-graph)
-
-## [0.14.0] - 2026-01-15
+## 2026-02-15
 
 ### Changed
-- **Updated to @lindas/trifid v7.0.2** - Switched from local file references to npm packages
-  - @lindas/trifid: ^7.0.2
-  - @lindas/trifid-core: ^7.0.2
-  - @lindas/trifid-entity-renderer: ^7.0.2
-  - @lindas/trifid-plugin-markdown-content: ^7.0.2
-  - @lindas/trifid-plugin-ckan: ^7.0.2
-  - @lindas/trifid-plugin-graph-explorer: ^7.0.2
-  - @lindas/trifid-plugin-i18n: ^7.0.2
-  - @lindas/trifid-plugin-sparql-proxy: ^7.0.2
-  - @lindas/trifid-plugin-spex: ^7.0.2
-  - @lindas/trifid-plugin-yasgui: ^7.0.2
+- CI workflow (`ci.yaml`): INT and PROD promotions no longer rebuild the Docker image.
+  Instead, they retag the existing TEST image using `docker buildx imagetools create`,
+  ensuring the exact same binary runs across all environments.
+  - `move-to-int`: retags `source_tag` as `int_YYYY-MM-DD_HHMMSS`
+  - `move-to-prod`: retags `source_tag` as `prod_YYYY-MM-DD_HHMMSS`
+  - `workflow_dispatch` now requires an `action` dropdown (promote, rollback-test,
+    rollback-int, rollback-prod) and a `source_tag` input
+  - Rollback jobs retag a previous image with a new timestamp so Flux picks it up
+  - Tests are skipped during promotion/rollback (only run on push)
+- Fixed `cache-purge.yaml` workflow to use xkey-based purge (`xkey: default` header) instead
+  of bare URL purge. Trifid tags all SPARQL responses with `xkey: default`, so purging this
+  key effectively clears the entire cache. No VCL changes required.
+  - Ticket: #213.
 
-- **Zazuko References Cleanup**: Removed or updated remaining Zazuko references
-  - Disabled URL shortener (was pointing to s.zazuko.com) - configure your own if needed
-  - Updated yasgui.hbs link to SwissFederalArchives/lindas-trifid
-  - Updated data-usage content to link to LINDAS Trifid instead of Zazuko product page
+## 2026-02-13
 
-### New Features (from trifid v7.0.2)
-- **Triplestore backend switching**: Support for switching between Stardog and GraphDB via `TRIPLESTORE_BACKEND` environment variable in `.env` file
-- Named graph enrichment for GraphDB compatibility
-- Blank node filtering for GraphDB SCBD behavior
-- Windows path compatibility fixes for ESM module loading
+### Added
+- GitHub Actions workflow `cache-purge.yaml` for on-demand Varnish cache purging via `workflow_dispatch`.
+  - Supports `test`, `int`, and `prod` environments with GitHub environment-based approval gates.
+  - Sends an HTTP PURGE request to the environment-specific Varnish purge endpoint.
+  - Uses `CACHE_ENDPOINT_PASSWORD` secret for Basic authentication (username: `admin`).
+  - Ticket: #213.
 
-### Deployment
-- Deployed to test.ld.admin.ch via Flux GitOps (image: test_2026-01-15_131541)
+### Changed
+- README: Updated deployment documentation to reflect trunk-based development model (single `main` branch, no more `develop`).
+- README: TEST now deploys from `main` on push (was `develop`). INT+PROD deploy via manual `workflow_dispatch`.
+- README: Added rollback instructions (revert gitops-main commit or re-trigger workflow_dispatch).
+- README: Fixed typo "Anatonomy" -> "Anatomy".
+
+## 2026-02-10
+
+### Fixed
+- YASGUI template: Updated broken "About YASGUI" link (triply.cc 404) and "Trifid plugin" link (Zazuko GitHub) to point to the lindas-admin-ch repository.
+
+## 2026-02-09
+
+### Deployed
+- Promoted v0.15.0 (Trifid v7.1.2) from INT to PROD with tag `prod_2026-02-09_120000`.
+- Fixes: TERMDAT redirect allowlist and Graph Explorer DOM ID mismatch.

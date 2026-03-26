@@ -1,4 +1,7 @@
 # yaml-language-server: $schema=https://unpkg.com/lindas-trifid-core@latest/lib/config/schema.json
+#
+# Local development config -- extends config.yaml with fast reload intervals
+# so edits to banner, menu and content are reflected within seconds.
 
 extends:
   - config.yaml
@@ -6,3 +9,47 @@ extends:
 server:
   logLevel: debug
   logFormat: pretty
+
+plugins:
+  banner:
+    module: file:plugins/banner/index.js
+    config:
+      filePath: file:overlay/banner.json
+      reloadInterval: 3
+
+  menu:
+    module: file:plugins/menu/index.js
+    config:
+      namespace: header
+      filePath: file:menu.json
+      reloadInterval: 3
+
+  content-reload:
+    module: file:plugins/content-reload/index.js
+    config:
+      reloadInterval: 3
+      entries:
+        lindas:
+          directory: file:content/template-parts
+        lindas-root:
+          directory: file:content/root-pages
+        lindas-ecosystem:
+          directory: file:content/ecosystem
+        lindas-data-usage:
+          directory: file:content/data-usage
+        lindas-governance:
+          directory: file:content/governance
+        lindas-know-how:
+          directory: file:content/know-how
+        lindas-community:
+          directory: file:content/community
+      defaults:
+        idPrefix: "content-"
+        autoLink: true
+        classes:
+          h1: h1
+          h2: h2
+          h3: h3
+          h4: h4
+          h5: h5
+          table: table

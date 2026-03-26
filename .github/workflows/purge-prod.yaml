@@ -1,0 +1,23 @@
+name: Purge Cache - PROD
+
+on:
+  workflow_dispatch:
+
+jobs:
+  purge-cache:
+    runs-on: ubuntu-latest
+    environment: prod
+
+    steps:
+      - name: Run cache purge
+        uses: docker://ghcr.io/swissfederalarchives/lindas-clear-sparql-cache-endpoint:main
+        env:
+          CACHE_ENDPOINT: https://lindas-cached-purge.cluster.ldbar.ch/
+          CACHE_ENDPOINT_USERNAME: admin
+          CACHE_ENDPOINT_PASSWORD: ${{ secrets.CACHE_ENDPOINT_PASSWORD }}
+          CACHE_DEFAULT_ENTRY_NAME: default
+          CACHE_TAG_HEADER: xkey
+          SUPPORT_URL_ENCODED: "true"
+          SPARQL_ENDPOINT_URL: https://ld.admin.ch/query
+          S3_ENABLED: "false"
+          DEFAULT_PREVIOUS_DATE: "1970-01-01T00:00:00Z"
