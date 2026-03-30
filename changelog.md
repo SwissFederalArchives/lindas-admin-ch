@@ -1,5 +1,15 @@
 # Changelog - lindas-admin-ch
 
+## 2026-03-27
+
+### Fixed (PR #126 review feedback from Petr Kremer)
+- `ci.yaml`: Removed `develop` from pull_request branch filter (only `main` needed).
+- `docker.yaml`: Removed `develop` from push and pull_request branch filters.
+- `dependabot.yml`: Changed `target-branch` from `develop` to `main` to match trunk-based workflow.
+
+### Removed
+- `cache-purge.yaml`: Removed redundant workflow. The per-environment workflows (`purge-test.yaml`, `purge-int.yaml`, `purge-prod.yaml`) already cover this with the proper Docker-based approach.
+
 ## 2026-02-26
 
 ### Added

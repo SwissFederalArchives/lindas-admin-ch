@@ -104,7 +104,8 @@ plugins:
   yasgui:
     module: "@lindas/trifid-plugin-yasgui"
     config:
-      urlShortener: https://s.zazuko.com/api/v1/shorten
+      # TODO: URL shortener temporarily disabled, to be replaced with a new service
+      # urlShortener: https://s.zazuko.com/api/v1/shorten
       template: file:views/yasgui.hbs
 
   graph-explorer:
@@ -138,11 +139,11 @@ plugins:
           username: env:SPARQL_USERNAME
           password: env:SPARQL_PASSWORD
         prod:
-          url: https://lindas.admin.ch/query
+          url: env:PUBLIC_PROD_SPARQL_ENDPOINT_URL
         int:
-          url: https://int.lindas.admin.ch/query
+          url: env:PUBLIC_INT_SPARQL_ENDPOINT_URL
         test:
-          url: https://test.lindas.admin.ch/query
+          url: env:PUBLIC_TEST_SPARQL_ENDPOINT_URL
       endpointUrl: env:SPARQL_ENDPOINT_URL
       username: env:SPARQL_USERNAME
       password: env:SPARQL_PASSWORD
@@ -282,9 +283,15 @@ plugins:
       # Custom queries (these override the preset if specified)
       # For Stardog, use CBD pragma. For GraphDB, use plain DESCRIBE.
       resourceExistsQuery: "ASK { GRAPH ?g { <{{iri}}> ?p ?o }}"
-      resourceGraphQuery: "#pragma describe.strategy cbd\nDESCRIBE <{{iri}}>"
+      # Use GraphDB's CBD virtual graph to avoid SCBD expanding blank nodes (RDF lists)
+      # See: https://graphdb.ontotext.com/documentation/10.8/virtual-graphs.html#describe-outgoing
+      resourceGraphQuery: "DESCRIBE <{{iri}}> FROM <http://www.ontotext.com/describe/outgoing>"
       containerExistsQuery: "ASK { GRAPH ?g { <{{iri}}> ?p ?o }}"
-      containerGraphQuery: "#pragma describe.strategy cbd\nDESCRIBE <{{iri}}>"
+      containerGraphQuery: "DESCRIBE <{{iri}}> FROM <http://www.ontotext.com/describe/outgoing>"
+      # Enrich quads with named graph info (GraphDB DESCRIBE doesn't return graph context)
+      enrichWithNamedGraph: true
+      # Filter out blank node subjects to match Stardog's CBD behavior
+      filterBlankNodeSubjects: true
 
       datasetBaseUrl:
         - https://ld.admin.ch/
