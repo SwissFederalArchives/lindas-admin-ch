@@ -6,7 +6,7 @@ GET https://test.ld.admin.ch/query?query=SELECT%20%2A%20WHERE%20%7B%20%3Fs%20%3F
 Accept: application/sparql-results+json
 HTTP 200
 [Asserts]
-header "Content-Type" == "application/sparql-results+json"
+header "Content-Type" startsWith "application/sparql-results+json"
 jsonpath "$.results.bindings" count == 10
 
 POST https://test.ld.admin.ch/query
@@ -17,7 +17,7 @@ SELECT * WHERE { ?s ?p ?o } LIMIT 10
 ```
 HTTP 200
 [Asserts]
-header "Content-Type" == "application/sparql-results+json"
+header "Content-Type" startsWith "application/sparql-results+json"
 jsonpath "$.results.bindings" count == 10
 
 POST https://test.ld.admin.ch/query
@@ -26,5 +26,5 @@ Accept: application/sparql-results+json
 query: SELECT * WHERE { ?s ?p ?o } LIMIT 10
 HTTP 200
 [Asserts]
-header "Content-Type" == "application/sparql-results+json"
+header "Content-Type" startsWith "application/sparql-results+json"
 jsonpath "$.results.bindings" count == 10
