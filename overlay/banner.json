@@ -6,7 +6,7 @@
     "dismissible": "boolean - true lets users close the banner with an X button. Dismissed state is remembered per message in localStorage.",
     "messages": "object - one key per language code (de, fr, it, en). Each value is the banner text shown to users in that language."
   },
-  "enabled": true,
+  "enabled": false,
   "severity": "warning",
   "dismissible": true,
   "messages": {
