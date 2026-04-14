@@ -45,6 +45,17 @@ jobs:
             echo "is_main=false" >> $GITHUB_OUTPUT
           fi
 
+      - name: Determine release tagging mode
+        id: release_mode
+        run: |
+          CHANGESET_COUNT=$(find .changeset -maxdepth 1 -type f -name '*.md' | wc -l)
+          if [[ "${{ steps.mode.outputs.is_main }}" == "true" && "$CHANGESET_COUNT" -eq 0 ]]; then
+            echo "publish_version=true" >> $GITHUB_OUTPUT
+          else
+            echo "publish_version=false" >> $GITHUB_OUTPUT
+          fi
+          echo "Pending changesets: $CHANGESET_COUNT"
+
       - name: Generate tags
         id: tags
         run: |
@@ -63,8 +74,8 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build and push Docker image (main)
-        if: steps.mode.outputs.is_main == 'true'
+      - name: Build and push Docker image (main release)
+        if: steps.mode.outputs.is_main == 'true' && steps.release_mode.outputs.publish_version == 'true'
         uses: docker/build-push-action@v6
         with:
           context: .
@@ -72,6 +83,21 @@ jobs:
           push: true
           tags: |
             ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ steps.version.outputs.version }}
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ steps.tags.outputs.sha_tag }}
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ steps.tags.outputs.env_tag }}
+          platforms: |
+            linux/amd64
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Build and push Docker image (main test)
+        if: steps.mode.outputs.is_main == 'true' && steps.release_mode.outputs.publish_version != 'true'
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: ./Dockerfile
+          push: true
+          tags: |
             ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ steps.tags.outputs.sha_tag }}
             ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ steps.tags.outputs.env_tag }}
           platforms: |
@@ -111,11 +137,12 @@ jobs:
       - name: Update test-current and test-previous markers
         if: steps.mode.outputs.is_main == 'true'
         run: |
+          docker pull $REGISTRY/$IMAGE_NAME:${{ steps.tags.outputs.env_tag }}
           if docker pull $REGISTRY/$IMAGE_NAME:test-current 2>/dev/null; then
             docker tag $REGISTRY/$IMAGE_NAME:test-current $REGISTRY/$IMAGE_NAME:test-previous
             docker push $REGISTRY/$IMAGE_NAME:test-previous
           fi
-          docker tag $REGISTRY/$IMAGE_NAME:${{ steps.version.outputs.version }} $REGISTRY/$IMAGE_NAME:test-current
+          docker tag $REGISTRY/$IMAGE_NAME:${{ steps.tags.outputs.env_tag }} $REGISTRY/$IMAGE_NAME:test-current
           docker push $REGISTRY/$IMAGE_NAME:test-current
 
       - name: Summary
@@ -129,14 +156,16 @@ jobs:
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "| Tag | Description |" >> $GITHUB_STEP_SUMMARY
           echo "|-----|-------------|" >> $GITHUB_STEP_SUMMARY
-          if [[ "${{ steps.mode.outputs.is_main }}" == "true" ]]; then
+          if [[ "${{ steps.release_mode.outputs.publish_version }}" == "true" ]]; then
             echo "| \`${{ steps.version.outputs.version }}\` | Version tag |" >> $GITHUB_STEP_SUMMARY
           fi
           echo "| \`${{ steps.tags.outputs.sha_tag }}\` | SHA tag |" >> $GITHUB_STEP_SUMMARY
           echo "| \`${{ steps.tags.outputs.env_tag }}\` | Deployment tag |" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          if [[ "${{ steps.mode.outputs.is_main }}" == "true" ]]; then
+          if [[ "${{ steps.release_mode.outputs.publish_version }}" == "true" ]]; then
             echo "To promote to INT: Run **Deploy to INT** with version \`${{ steps.version.outputs.version }}\`" >> $GITHUB_STEP_SUMMARY
+          elif [[ "${{ steps.mode.outputs.is_main }}" == "true" ]]; then
+            echo "This TEST deployment is not a release build because pending changesets still exist." >> $GITHUB_STEP_SUMMARY
           else
             echo "This is a **dev build** and will not be deployed by Flux." >> $GITHUB_STEP_SUMMARY
           fi
