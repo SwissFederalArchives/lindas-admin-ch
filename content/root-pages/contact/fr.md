@@ -6,4 +6,4 @@ Archivstrasse 24
 
 Tél. : +41 58 462 89 89   
 Web : [lindas.admin.ch](https://lindas.admin.ch)   
-Centre de services : https://servicedesk.lindas.admin.ch   
+Centre de services : [servicedesk.lindas.admin.ch](https://servicedesk.lindas.admin.ch)   
