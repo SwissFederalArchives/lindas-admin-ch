@@ -16,7 +16,7 @@ Un élément central pour le travail avec les Linked Data est un triplestore (ba
 
 ## Cube Creator pour la conversion des données
 
-Afin de réaliser l'intégration de données tabulaires dans LINDAS avec le moins d'effort possible, le [Cube Creator](https://cube-creator.lindas.admin.ch/) a été développé. Il permet d'enrichir les données tabulaires avec des métadonnées afin de créer des [Cubes](https://cube.link) qui peuvent être publiés sur LINDAS. Pour le Cube Creator, un [CH-LOGIN](https://www.eiam.admin.ch) est nécessaire, qui doit être activé pour le Cube Creator via [support.lindas@bar.admin.ch](mailto:support.lindas@bar.admin.ch).
+Afin de réaliser l'intégration de données tabulaires dans LINDAS avec le moins d'effort possible, le [Cube Creator](https://cube-creator.lindas.admin.ch/) a été développé. Il permet d'enrichir les données tabulaires avec des métadonnées afin de créer des [Cubes](https://cube.link) qui peuvent être publiés sur LINDAS. Pour le Cube Creator, un [CH-LOGIN](https://www.eiam.admin.ch) est nécessaire, qui doit être activé pour le Cube Creator via [LINDAS Support](https://servicedesk.lindas.admin.ch).
 
 ## GitLab
 
