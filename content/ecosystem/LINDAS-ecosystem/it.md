@@ -15,7 +15,7 @@ Nome | URL | SPARQL Endpoint | SPARQL Interface | Prodotto tecnico |
 | Cancelleria federale | https://fedlex.data.admin.ch | https://fedlex.data.admin.ch/sparqlendpoint | https://fedlex.data.admin.ch/de-CH/sparql | [Virtuoso](https://virtuoso.openlinksw.com/)             |
 
 ## Creatore di cubi per la conversione dei dati
-Per integrare i dati tabulari in LINDAS con il minor sforzo possibile, è stato sviluppato il [Cube Creator](https://cube-creator.lindas.admin.ch/). Questo permette di arricchire i dati tabulari con meta-dati per creare [cubi](https://cube.link) che possono essere pubblicati su LINDAS. Il Cube Creator richiede un [CH-LOGIN](https://www.eiam.admin.ch), che deve essere attivato per il Cube Creator tramite [support.lindas@bar.admin.ch](mailto:support.lindas@bar.admin.ch).
+Per integrare i dati tabulari in LINDAS con il minor sforzo possibile, è stato sviluppato il [Cube Creator](https://cube-creator.lindas.admin.ch/). Questo permette di arricchire i dati tabulari con meta-dati per creare [cubi](https://cube.link) che possono essere pubblicati su LINDAS. Il Cube Creator richiede un [CH-LOGIN](https://www.eiam.admin.ch), che deve essere attivato per il Cube Creator tramite [LINDAS Support](https://servicedesk.lindas.admin.ch).
 ## GitLab
 L'Archivio federale gestisce un proprio [GitLab](https://gitlab.ldbar.ch/), utilizzato da un lato per archiviare i dati per LINDAS utilizzando le pipeline CI/CD nel Triplestore LINDAS. Dall'altro lato, questo Gitlab è utilizzato anche per la gestione dei problemi dei vari set di dati.
 

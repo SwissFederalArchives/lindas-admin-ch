@@ -5,5 +5,5 @@ Archivstrasse 24
 3003 Berna
 
 Tel. : +41 58 462 89 89   
-E-mail : support-lindas[at]bar.admin.ch   
 Web : [lindas.admin.ch](https://lindas.admin.ch)
+Service Desk : https://servicedesk.lindas.admin.ch
