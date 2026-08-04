@@ -14,7 +14,9 @@
     "@lindas/trifid-plugin-markdown-content": "^7.1.2",
     "@lindas/trifid-plugin-sparql-proxy": "^7.1.2",
     "@lindas/trifid-plugin-spex": "^7.1.2",
-    "@lindas/trifid-plugin-yasgui": "^7.1.2"
+    "@lindas/trifid-plugin-yasgui": "^7.1.2",
+    "@lindas/yasgui": "^4.7.0",
+    "@lindas/yasr": "^4.7.1"
   },
   "license": "UNLICENSED",
   "scripts": {
