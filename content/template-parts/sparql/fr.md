@@ -1,3 +1,5 @@
 ## Consulter des données avec SPARQL
 
 Vous pouvez également consulter des données provenant d’un jeu de données spécifique en utilisant le point d’accès SPARQL. L’acronyme SPARQL (de l’anglais SPARQL Protocol and RDF Query Language) désigne le langage de requête utilisé pour consulter des données au format RDF. L’ensemble des données saisies sur la plateforme LINDAS sont disponibles dans ce format. Les utilisateurs peuvent ensuite réutiliser ces données et les relier à d’autres données.
+
+Avant d'executer des requetes volumineuses ou automatisees, veuillez consulter la [base de connaissances LINDAS](https://cognizone.atlassian.net/wiki/external/MjI3MmMwZjVmM2ViNGE2OTgyY2MzNzY1M2I4YTg4ZGU) pour les recommandations sur l'utilisation efficace de SPARQL et le fair use. Pour l'etat operationnel actuel, consultez la [page de statut LINDAS](https://status.lindas.admin.ch). Si votre acces est restreint ou si vous avez besoin d'aide pour un probleme specifique, contactez le [Service Desk LINDAS](https://servicedesk.lindas.admin.ch/).
