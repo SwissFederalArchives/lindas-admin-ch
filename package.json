@@ -1,6 +1,6 @@
 {
   "name": "lindas.admin.ch",
-  "version": "0.17.1",
+  "version": "0.17.2",
   "description": "Trifid deployment for lindas.admin.ch",
   "private": true,
   "type": "module",
