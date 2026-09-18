@@ -41,8 +41,6 @@ plugins:
           directory: file:content/governance
         lindas-know-how:
           directory: file:content/know-how
-        lindas-community:
-          directory: file:content/community
       defaults:
         idPrefix: "content-"
         autoLink: true

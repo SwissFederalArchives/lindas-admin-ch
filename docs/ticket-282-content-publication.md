@@ -48,7 +48,7 @@ The `_docs` block in `banner.json` itself also documents these options inline.
 - GitHub workflow: `.github/workflows/menu-update.yaml`
 
 ### Content-Reload Plugin (`plugins/content-reload/index.js`)
-- Watches 7 content namespaces (template-parts, root-pages, ecosystem, data-usage, governance, know-how, community)
+- Watches 7 content namespaces (template-parts, root-pages, ecosystem, data-usage, governance, know-how)
 - Uses file mtime to skip recompilation of unchanged markdown
 - Identical remark/rehype pipeline as `@lindas/trifid-plugin-markdown-content`
 - Utility `addClasses.js` copied locally to avoid internal module path dependency

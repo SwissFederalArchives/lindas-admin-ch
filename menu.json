@@ -5,7 +5,6 @@
     { "path": "/ecosystem/", "label": "Ecosystem" },
     { "path": "/data-usage/", "label": "Data Usage" },
     { "path": "/governance/", "label": "Governance" },
-    { "path": "/know-how/", "label": "Know How" },
-    { "path": "/community/", "label": "Community" }
+    { "path": "/know-how/", "label": "Know How" }
   ]
 }

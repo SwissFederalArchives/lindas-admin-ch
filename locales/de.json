@@ -6,7 +6,6 @@
     "Data Usage": "Daten nutzen",
     "Governance": "Governance",
     "Know How": "Know How",
-    "Community": "Community",
 
   "_Header": "All header elements",
     "All federal authorities": "Alle Schweizer Bundesbehörden",
@@ -70,16 +69,6 @@
     "dereferencing long": "Erklärungen zum Dereferencing von Daten auf LINDAS. \n\n(nur in Englisch)",
     "Contribute short": "Mithilfe",
     "Contribute long": "Wie man zu dieser Dokumentation beitragen kann. \n\n(nur in Englisch)",
-
-  "_Menu Community": "",
-    "News short": "Neuigkeiten",
-    "News long": "Neuigkeiten rund um das Linked Data Ökosystem LINDAS.",
-    "Linked Data Day short": "Linked Data Day",
-    "Linked Data Day long": "Rück- und Ausblick zu den jährlichen Linked Data Days des Bundesarchivs.",
-    "Linked Data Meetup short": "Linked Data Meetup",
-    "Linked Data Meetup long": "Rück- und Ausblick zu den regelmässig stattfindenden PraktikerInnen-Treffen für Linked Data NutzerInnen.",
-    "Communication Channels short": "Kommunikationskanäle",
-    "Communication Channels long": "Welche Kommunikationskanäle rund um LINDAS existieren.",
 
   "_Div": "",
     "homePageYouTubeVideoID": "c9miuepW03A"

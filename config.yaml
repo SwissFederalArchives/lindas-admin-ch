@@ -74,11 +74,6 @@ plugins:
     paths: /know-how/
     config:
       path: views/know-how.hbs
-  community:
-    module: "@lindas/trifid-core/plugins/view.js"
-    paths: /community/
-    config:
-      path: views/community.hbs
   visualize:
     module: "@lindas/trifid-core/plugins/view.js"
     paths: /visualize/
@@ -92,7 +87,6 @@ plugins:
       - /data-usage
       - /governance
       - /know-how
-      - /community
       - /visualize
 
   ckan:
@@ -183,8 +177,6 @@ plugins:
           label: Governance
         - path: /know-how/
           label: Know How
-        - path: /community/
-          label: Community
 
   content:
     module: "@lindas/trifid-plugin-markdown-content"
@@ -226,10 +218,6 @@ plugins:
           directory: file:content/know-how
           mountPath: /know-how/
 
-        lindas-community:
-          directory: file:content/community
-          mountPath: /community/
-
         # lindas-visualize:
         #   directory: file:content/visualize
         #   mountPath: /visualize/
@@ -250,8 +238,6 @@ plugins:
           directory: file:content/governance
         lindas-know-how:
           directory: file:content/know-how
-        lindas-community:
-          directory: file:content/community
       defaults:
         idPrefix: "content-"
         autoLink: true
