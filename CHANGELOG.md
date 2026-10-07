@@ -1,5 +1,11 @@
 # lindas.admin.ch
 
+## 0.17.3
+
+### Patch Changes
+
+- a7cebed: Remove the community section and its navigation links.
+
 ## 0.17.2
 
 ### Patch Changes
