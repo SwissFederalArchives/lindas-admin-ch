@@ -10,7 +10,7 @@ This approach works better, if the data structure of the triples in question is 
 
 ## SPARQL Interface
 
-The [SPARQL Interface of LINDAS](/sparql) allows to write SPARQL queries directly in the webbrowser in a slightly assisted way. These queries can be directly sent to the SPARQL endpoint of LINDAS and the result will be shown in the web browser as well. These results can be downloaded as a CSV file. The technical product used for this SPARQL interface is [YASGUI](https://triply.cc/docs/yasgui-api/).
+The [SPARQL Interface of LINDAS](/sparql) allows to write SPARQL queries directly in the webbrowser in a slightly assisted way. These queries can be directly sent to the SPARQL endpoint of LINDAS and the result will be shown in the web browser as well. These results can be downloaded as a CSV file. The technical product used for this SPARQL interface is [YASGUI](https://yasgui-doc.matdata.eu/docs/user-guide).
 
 ## Full Text Search
 

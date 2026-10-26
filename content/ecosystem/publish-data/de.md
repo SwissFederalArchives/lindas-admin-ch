@@ -6,7 +6,7 @@ Weiter kann LINDAS auch für Closed Government Data benutzt werden, also Daten d
 
 ## Vorgehen
 
-Für das Hosting von Daten auf LINDAS wird ein Jahresbeitrag zur Deckung der Betriebskosten der Infrastruktur erhoben. Alle entsprechenden Details sind [hier](https://www.bar.admin.ch/dam/bar/de/dokumente/diverses/lindas_dienstleistung.pdf.download.pdf/LINDAS_Dienstleistung_de.pdf) zu finden.
+Für das Hosting von Daten auf LINDAS wird ein Jahresbeitrag zur Deckung der Betriebskosten der Infrastruktur erhoben. Für weitere Informationen oder bei Fragen wenden Sie sich bitte an unseren [Service Desk](https://servicedesk.lindas.admin.ch/).
 
 ## Datenschutz und Rechtliches
 

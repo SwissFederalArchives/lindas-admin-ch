@@ -6,7 +6,7 @@ De plus, LINDAS peut également être utilisé pour des données gouvernementale
 
 ## Procédure
 
-Pour l'hébergement de données sur LINDAS, une cotisation annuelle est perçue pour couvrir les frais d'exploitation de l'infrastructure. Tous les détails correspondants se trouvent [ici](https://www.bar.admin.ch/dam/bar/de/dokumente/diverses/lindas_dienstleistung.pdf.download.pdf/LINDAS_Dienstleistung_de.pdf) (disponible uniquement en allemand).
+Pour l'hébergement de données sur LINDAS, une cotisation annuelle est perçue pour couvrir les frais d'exploitation de l'infrastructure. Pour plus d'informations ou si vous avez des questions, veuillez contacter notre [Service Desk](https://servicedesk.lindas.admin.ch/).
 
 ## Protection des données et aspects juridiques
 
