@@ -13,7 +13,7 @@ La vidéo suivante donne un bon aperçu des possibilités fondamentales de LINDA
 ## Interlocuteurs et personnes impliquées
 
 **Contact général** :
-[Support LINDAS](mailto:support.lindas@bar.admin.ch)
+[LINDAS Support](https://servicedesk.lindas.admin.ch)
 
 **Chef de produit** :
 [Claudio Di Gallo](mailto:claudio.digallo@bar.admin.ch)

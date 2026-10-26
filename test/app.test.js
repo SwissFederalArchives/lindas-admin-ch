@@ -8,13 +8,16 @@ import { describe, it } from 'node:test'
 import trifid from '@lindas/trifid-core'
 
 const configPathLocal = join(dirname(fileURLToPath(import.meta.url)), '..', 'config.local.yaml')
-const configPathNoRewrite = join(dirname(fileURLToPath(import.meta.url)), '..', 'config.local.yaml')
+const configPathNoRewrite = join(dirname(fileURLToPath(import.meta.url)), '..', 'config.norewrite.yaml')
 
 // Just to remove some warnings
 process.env.SPARQL_USERNAME = 'public'
 process.env.SPARQL_PASSWORD = 'public'
 process.env.DATASET_BASE_URL = 'https://ld.admin.ch/'
 process.env.SPARQL_ENDPOINT_URL = 'https://example.com/query'
+process.env.PUBLIC_PROD_SPARQL_ENDPOINT_URL = 'https://lindas.admin.ch/query'
+process.env.PUBLIC_INT_SPARQL_ENDPOINT_URL = 'https://int.lindas.admin.ch/query'
+process.env.PUBLIC_TEST_SPARQL_ENDPOINT_URL = 'https://test.lindas.admin.ch/query'
 
 /**
  * Create a Trifid instance.

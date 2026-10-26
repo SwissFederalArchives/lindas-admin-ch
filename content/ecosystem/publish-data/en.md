@@ -6,7 +6,7 @@ Furthermore, LINDAS can also be used for Closed Government Data, i.e. data that 
 
 ## Procedure
 
-An annual fee is charged for hosting data on LINDAS to cover the operating costs of the infrastructure. All relevant details can be found [here](https://www.bar.admin.ch/dam/bar/de/dokumente/diverses/lindas_dienstleistung.pdf.download.pdf/LINDAS_Dienstleistung_de.pdf) (only available in German).
+An annual fee is charged for hosting data on LINDAS to cover the operating costs of the infrastructure. For further information or if you have any questions, please contact our [Service Desk](https://servicedesk.lindas.admin.ch/).
 
 ## Data protection and legal issues
 
