@@ -1,4 +1,4 @@
-FROM docker.io/library/node:22-alpine
+FROM docker.io/library/node:22.23.4-alpine
 
 # Some default values
 ENV DATASET_BASE_URL="https://ld.admin.ch/"
