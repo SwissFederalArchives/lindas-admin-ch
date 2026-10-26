@@ -9,7 +9,7 @@ In the Linked Data universe, the use of namespaces helps to organize the identif
 
 ## The namespace `ld.admin.ch`
 
-The [Standard I003 - Chapter 2.3.2](https://www.bk.admin.ch/bk/de/home/digitale-transformation-ikt-lenkung/ikt-vorgaben/standards/i003-domain_name_system_dns.html) defines `ld.admin.ch` as the namespace for all Linked Data publications under the authority of the Federal Administration.
+The [Standard I003 - Chapter 2.3.2](https://www.bk.admin.ch/de/i003-domain-name-system-dns) defines `ld.admin.ch` as the namespace for all Linked Data publications under the authority of the Federal Administration.
 
 ## Anatomy of a namespace
 
@@ -37,7 +37,7 @@ agriculture.ld.admin.ch/vocabulary/ ->  controlled vocabularies for agriculture
 
 ## Theme-based subdomains
 
-The following table lists the already used and intended subdomains. If there is no suitable theme for a new dataset, this can be requested via [LINDAS Support](https://servicedesk.lindas.admin.ch). According to [I003](https://www.bk.admin.ch/bk/de/home/digitale-transformation-ikt-lenkung/ikt-vorgaben/standards/i003-domain_name_system_dns.html) (only available in German), the final decision on the use of subdomains lies with the Federal Chancellery (BK).
+The following table lists the already used and intended subdomains. If there is no suitable theme for a new dataset, this can be requested via [LINDAS Support](https://servicedesk.lindas.admin.ch). According to [I003](https://www.bk.admin.ch/de/i003-domain-name-system-dns) (only available in German), the final decision on the use of subdomains lies with the Federal Chancellery (BK).
 
 | *.ld.admin.ch | Topics | Examples Offices |
 |-------------------------|----------------------------------------|-----------------|

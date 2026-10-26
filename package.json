@@ -1,6 +1,6 @@
 {
   "name": "lindas.admin.ch",
-  "version": "0.17.1",
+  "version": "0.17.3",
   "description": "Trifid deployment for lindas.admin.ch",
   "private": true,
   "type": "module",
@@ -14,7 +14,9 @@
     "@lindas/trifid-plugin-markdown-content": "^7.1.2",
     "@lindas/trifid-plugin-sparql-proxy": "^7.1.2",
     "@lindas/trifid-plugin-spex": "^7.1.2",
-    "@lindas/trifid-plugin-yasgui": "^7.1.2"
+    "@lindas/trifid-plugin-yasgui": "^7.1.2",
+    "@lindas/yasgui": "^4.7.1",
+    "@lindas/yasr": "^4.7.1"
   },
   "license": "UNLICENSED",
   "scripts": {
