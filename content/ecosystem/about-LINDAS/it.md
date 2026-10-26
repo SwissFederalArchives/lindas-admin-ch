@@ -13,7 +13,7 @@ Il seguente video offre una buona panoramica delle possibilità di base di LINDA
 ## Punti di contatto e persone coinvolte
 
 **Contatto generale**:
-[Supporto LINDAS](mailto:support.lindas@bar.admin.ch)
+[LINDAS Support](https://servicedesk.lindas.admin.ch)
 
 **Product Manager**:
 [Claudio Di Gallo](mailto:claudio.digallo@bar.admin.ch)

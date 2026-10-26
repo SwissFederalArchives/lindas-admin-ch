@@ -4,7 +4,7 @@ Con l'aiuto di LINDAS, qualsiasi amministrazione pubblica in Svizzera può rende
 Inoltre, LINDAS può essere utilizzato anche per i Closed Government Data, ossia i dati visibili solo all'interno dell'amministrazione. Ciò significa che i vantaggi dei Linked Data possono essere utilizzati anche internamente all'amministrazione.
 
 ## Procedura
-Per l'hosting dei dati su LINDAS viene richiesto un canone annuo per coprire i costi operativi dell'infrastruttura. Tutti i relativi dettagli sono disponibili [qui (solo in tedesco)](https://www.bar.admin.ch/dam/bar/de/dokumente/diverses/lindas_dienstleistung.pdf.download.pdf/LINDAS_Dienstleistung_de.pdf).
+Per l'hosting dei dati su LINDAS viene richiesto un canone annuo per coprire i costi operativi dell'infrastruttura. Per ulteriori informazioni o per qualsiasi domanda, si prega di contattare il nostro [Service Desk](https://servicedesk.lindas.admin.ch/).
 
 ## Protezione dei dati e questioni legali
 

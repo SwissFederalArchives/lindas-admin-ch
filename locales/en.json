@@ -6,7 +6,6 @@
     "Data Usage": "Using Data",
     "Governance": "Governance",
     "Know How": "Know-how",
-    "Community": "Community",
 
   "_Header": "All header elements",
     "All federal authorities": "All federal authorities",
@@ -70,16 +69,6 @@
     "dereferencing long": "Explanations of the dereferencing of data on LINDAS.",
     "Contribute short": "Contributions",
     "Contribute long": "How to contribute to the LINDAS documentation.",
-
-  "_Menu Community": "",
-    "News short": "News",
-    "News long": "News about the Linked Data Ecosystem LINDAS.",
-    "Linked Data Day short": "Linked Data Day",
-    "Linked Data Day long": "A look back and ahead at the Federal Archives' annual Linked Data Days.",
-    "Linked Data Meetup short": "Linked Data Meetup",
-    "Linked Data Meetup long": "A look back and ahead at the regular practitioner meetings for linked data users.",
-    "Communication Channels short": "Communication Channels",
-    "Communication Channels long": "What communication channels exist around LINDAS.",
 
   "_Div": "",
     "homePageYouTubeVideoID": "FFrK0ZyYAl4"
