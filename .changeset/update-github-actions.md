@@ -1,0 +1,3 @@
+  --- 
+  "lindas.admin.ch": patch 
+  ---
