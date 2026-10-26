@@ -1,5 +1,11 @@
 # lindas.admin.ch
 
+## 0.17.4
+
+### Patch Changes
+
+- faddbe2: Update GitHub Actions used for builds, deployments and releases.
+
 ## 0.17.3
 
 ### Patch Changes
