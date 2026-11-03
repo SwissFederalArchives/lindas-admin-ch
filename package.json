@@ -13,7 +13,7 @@
     "@lindas/trifid-plugin-i18n": "^7.1.2",
     "@lindas/trifid-plugin-markdown-content": "^7.1.2",
     "@lindas/trifid-plugin-sparql-proxy": "^7.1.2",
-    "@lindas/trifid-plugin-spex": "^7.1.3",
+    "@lindas/trifid-plugin-spex": "^7.1.4",
     "@lindas/trifid-plugin-yasgui": "^7.1.2",
     "@lindas/yasgui": "^4.7.1",
     "@lindas/yasr": "^4.7.1"
