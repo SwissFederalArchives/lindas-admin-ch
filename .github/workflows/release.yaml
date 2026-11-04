@@ -30,7 +30,7 @@ jobs:
 
       - name: Create Release Pull Request
         id: changesets
-        uses: changesets/action@v1
+        uses: changesets/action@v2
         with:
           title: "Version Packages"
           commit: "chore: version packages"
