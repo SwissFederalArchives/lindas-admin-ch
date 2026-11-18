@@ -263,6 +263,7 @@ plugins:
 
       # Canonical dereferencing must query the exact requested IRI (#249).
       rewrite: false
+      rewriteResults: env:TRIFID_ENTITY_REWRITE_RESULTS
 
       # Triplestore backend switching - set TRIPLESTORE_BACKEND env var to 'stardog' or 'graphdb'
       triplestoreBackend: env:TRIPLESTORE_BACKEND
