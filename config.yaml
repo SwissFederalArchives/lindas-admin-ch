@@ -261,7 +261,8 @@ plugins:
       enableSchemaUrlRedirect: true
       allowEndpointSwitch: true
 
-      rewrite: true
+      # Canonical dereferencing must query the exact requested IRI (#249).
+      rewrite: false
 
       # Triplestore backend switching - set TRIPLESTORE_BACKEND env var to 'stardog' or 'graphdb'
       triplestoreBackend: env:TRIPLESTORE_BACKEND
@@ -279,19 +280,6 @@ plugins:
       # Filter out blank node subjects to match Stardog's CBD behavior
       filterBlankNodeSubjects: true
 
-      datasetBaseUrl:
-        - https://ld.admin.ch/
-        - https://schema.ld.admin.ch/
-        - https://culture.ld.admin.ch/
-        - https://energy.ld.admin.ch/
-        - https://education.ld.admin.ch/
-        - https://agriculture.ld.admin.ch/
-        - https://environment.ld.admin.ch/
-        - https://finance.ld.admin.ch/
-        - https://register.ld.admin.ch/
-        - https://politics.ld.admin.ch/
-        - https://health.ld.admin.ch/
-        - https://communication.ld.admin.ch/
-        - https://transport.ld.admin.ch/
-        - https://population.ld.admin.ch/
-        - https://ld.zh.ch/
+      # No namespace search is needed for exact canonical lookups.
+      # Environment-specific mappings are supplied by deployment configuration (#243).
+      datasetBaseUrl: ""
