@@ -1,5 +1,21 @@
 # lindas.admin.ch
 
+## 0.17.6
+
+### Patch Changes
+
+- 0cb8b56: Use exact canonical IRI dereferencing to prevent resources resolving under unrelated namespaces (#249).
+
+  Update entity renderer to 7.1.3 and expose the optional result rewriting policy for environment-specific dereferencing (#243).
+
+## 0.17.5
+
+### Patch Changes
+
+- c255b06: Update SPEX plugin to fix browser bundle loading with nosniff enabled.
+- 173f8bb: Update the transitive protobufjs dependency from 7.5.4 to 7.6.6, including hardening and serialization fixes used by OpenTelemetry and gRPC.
+- f9ea8a9: Update Trifid core and SPEX to include Handlebars security fixes and resolve the SPEX query endpoint against the browser's page URL instead of request headers.
+
 ## 0.17.4
 
 ### Patch Changes
